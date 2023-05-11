@@ -1,0 +1,28 @@
+.subheader{
+    color: #0070ad;
+}
+.btncmp{
+    color: black;
+}
+
+.backbutton{
+    border-radius: 8px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white !important;
+    background-color: #0070ad !important;
+}
+.closeicon{
+    cursor: pointer;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+    section.main header {
+        padding: 1rem .85rem;
+    }
+    .modal-dialog {
+        margin-top: 60px;
+        max-width: 100% !important;
+    }
+}

@@ -1,0 +1,216 @@
+<section class="main">
+    <div class="container-liquid">
+
+        <header class="">
+            <h2 class="">Library <span>Component</span></h2>
+        </header>
+        <div class="main-page">
+
+            <div class="row  py-3 homecmp">
+                <div class="col-md-4 mb-3" *ngFor="let item of array">
+                    <div class="card feature">
+                        <div class="card-header">
+                            {{item?.name}}
+                        </div>
+
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Special title treatment</h5> -->
+                            <p class="card-text" [title]='subheading'>{{truncate(subheading)}}...</p>
+                            
+                            <div class="button-sec" *ngIf="item?.id == 1">
+                                <button aria-label="Header Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal12">Details</button>
+                                <button aria-label="Header Create" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal2">Create</button>
+                            </div>
+                            <div class="button-sec" *ngIf="item?.id == 2">
+                                <button aria-label="Card Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal11">Details</button>
+                                <button aria-label="Card Create" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal1">Create </button>
+                            </div>
+                            <div class="button-sec" *ngIf="item?.id == 3">
+                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal13">Details</button>
+                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal3">Create</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Card</h4>
+                        <button class="clearbtn" aria-label="close card modal dialog" #myModalClose data-bs-dismiss="modal"> 
+                        <img [src]="closeicon" #myModalClose data-bs-dismiss="modal">
+                        </button>
+                    </div>
+                    <app-form (onclose)="close()"></app-form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade details" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel1"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Cards</h4>
+                        <button class="clearbtn" aria-label="Card modal close icon"  #myModalClose data-bs-dismiss="modal"> 
+                        <img [src]="closeicon" >
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="details-container ">
+                            <h3> Details for the Cards section are below.</h3>
+                            <p class="pref">Please do follow the below given instructions while creating your Card component.</p>
+                            <div class="detail-content">
+                                <ul>
+                                    <li class="points">Title of the card should be less than 15 characters</li>
+
+                                    <li class="points">Description of the card should be less than 200
+                                        characters</li>
+
+                                    <li class="points">Button text of the card should be less than 10
+                                        characters</li>
+
+                                    <li class="points">It is mandatory for you to specify whether you want
+                                        card image with (Yes/No)</li>
+
+                                   <li class="points">It is mandatory for you to specify whether you want to
+                                        add buttons with (Yes/No)</li>
+
+                                    <li class="points">It is mandatory for you to specify number of buttons to
+                                        add if you have selected yes to add buttons</li>
+
+                                     <li class="points">You can change the default width selected value and
+                                        specify the width of the card from the given options</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade details" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel1"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Headers</h4>
+                        <button class="clearbtn" aria-label="Header modal close icon" #myModalClose data-bs-dismiss="modal"> 
+                            <img [src]="closeicon" >
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="details-container ">
+                            <h3> Details for the Header section are below.</h3>
+                            <p class="pref">Please do follow the below given instructions while creating your Header component.</p>
+                            <div class="detail-content">
+                                <ul>
+                                    <li>Header name should be less than 15 characters.</li>
+
+                                    <li>It is mandatory for you to specify whether you want app logo with (Yes/No)</li>
+
+                                    <li>If you have selected yes for profile icon than it is mandatory to speficy
+                                        username
+                                    </li>
+
+                                    <li>Username should be less than 10 characters</li>
+
+                                    <li>It is mandatory for you to specify whether you want capgemini logo with (Yes/No)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade details" id="exampleModal13" tabindex="-1" aria-labelledby="exampleModalLabel1"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Buttons</h4>
+                        <button class="clearbtn" aria-label="Button modal close icon"   #myModalClose data-bs-dismiss="modal"> 
+                            <img [src]="closeicon">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="details-container ">
+                            <h3> Details for the Button section are below.</h3>
+                            <p class="pref">Please do follow the below given instructions while creating your Button component.</p>
+                            <div class="detail-content">
+                                <ul>
+                                    <li class="points">Button text should be less than 15 characters</li>
+
+                                    <li class="points">Border radius should be less than 50px</li>
+
+                                    <li class="points">Border width should be less than 5px</li>
+
+                                    <li class="points">It is mandatory for you to select the width of the button
+                                        from the given options</li>
+
+                                    <li class="points">It is mandatory for you to specify whether you want border
+                                        radius with (Yes/No)</li>
+
+                                    <li class="points">If you have selected yes for border radius than it is
+                                        mandatory to speficy the radius</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content header-modal">
+                    <div class="modal-header">
+                        <h4>Header</h4>
+                        <button class="clearbtn"  aria-label="Header Create modal close icon"  #myModalClose1 data-bs-dismiss="modal">
+                            <img [src]="closeicon">
+
+                        </button>
+                    </div>
+                    <app-headerform (onclose)="close()"></app-headerform>
+                    <!-- <app-form (onclose)="close()"></app-form> -->
+
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+
+        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Button</h4>
+                        <button class="clearbtn" aria-label="Button Create modal close icon" #myModalClose2 data-bs-dismiss="modal"><img [src]="closeicon"></button>
+                    </div>
+                    <app-buttonform (onclose)="close()"></app-buttonform>
+                    <!-- <app-form (onclose)="close()"></app-form> -->
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+
+    </div>
+</section>
