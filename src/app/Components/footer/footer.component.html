@@ -1,0 +1,57 @@
+<div class="main">
+    <div class="top-header">
+      <div class="insideheader">
+        <h4 class="subheader">Footer <span class="side">Component</span></h4>
+      </div>
+      <div class="button-sec">
+        <button class=" backbutton" (click)="backwindow()">Back</button>
+        <button class=" backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal2">Edit</button>
+      </div> 
+    </div>
+    <footer class="footer fixed-bottom" role="contentinfo" aria-label="Footer" [ngStyle]="{'background-Color':footerdata?.color, 'color':color}">
+      <div class="d-lg-flex flex-md-row-reverse align-items-center justify-content-between footerwidth">
+        <div class="socialmedia-list">
+          <ul class="nav social-default">
+            <li *ngIf="footerdata?.linkedln == 'Yes'">
+                <button class="social-icon">
+                    <img [src]="linkedln" alt="linkedln" class="social-iconimage">
+                </button>
+              <span class="social-tooltip">LinkedIn</span>
+            </li>
+            <li *ngIf="footerdata?.twitter == 'Yes'">
+              <button class="social-icon">
+                <img [src]="twitter" alt="twitter" class="social-iconimage">
+              </button>
+              <span aria-hidden="true" class="social-tooltip">Twitter</span>
+            </li>
+            <li *ngIf="footerdata?.insta == 'Yes'">
+                <button class="social-icon">
+                    <img [src]="insta" alt="insta" class="social-iconimage">
+                  </button>
+              <span aria-hidden="true" class="social-tooltip">Instagram</span>
+            </li>
+            <li *ngIf="footerdata?.facebook == 'Yes'">
+                <button class="social-icon">
+                    <img [src]="facebook" alt="facebook" class="social-iconimage">
+                  </button>
+              <span aria-hidden="true" class="social-tooltip">Facebook</span>
+            </li>
+            <li *ngIf="footerdata?.youtube == 'Yes'">
+                <button class="social-icon">
+                    <img [src]="youtube" alt="youtube" class="social-iconimage">
+                  </button>
+              <span aria-hidden="true" class="social-tooltip">Youtube</span>
+            </li>
+            <li *ngIf="footerdata?.glassdoor == 'Yes'">
+                <button class="social-icon">
+                    <img [src]="glassdoor" alt="glassdoor" class="social-iconimage">
+                  </button>
+              <span aria-hidden="true" class="social-tooltip">Glassdoor</span>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">{{footerdata.text}}</div>
+      </div>
+    </footer>
+</div>
+  

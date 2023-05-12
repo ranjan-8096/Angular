@@ -35,6 +35,24 @@
                                 <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal3">Create</button>
                             </div>
+                            <div class="button-sec" *ngIf="item?.id == 4">
+                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal14">Details</button>
+                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal4">Create</button>
+                            </div>
+                            <div class="button-sec" *ngIf="item?.id == 5">
+                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal15">Details</button>
+                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal5">Create</button>
+                            </div>
+                            <div class="button-sec" *ngIf="item?.id ==6">
+                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal16">Details</button>
+                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal6">Create</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -42,20 +60,6 @@
         </div>
 
 
-        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
-            aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4>Card</h4>
-                        <button class="clearbtn" aria-label="close card modal dialog" #myModalClose data-bs-dismiss="modal"> 
-                        <img [src]="closeicon" #myModalClose data-bs-dismiss="modal">
-                        </button>
-                    </div>
-                    <app-form (onclose)="close()"></app-form>
-                </div>
-            </div>
-        </div>
         <div class="modal fade details" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel1"
             aria-hidden="true">
             <div class="modal-dialog">
@@ -174,7 +178,53 @@
             </div>
         </div>
 
+        <div class="modal fade details" id="exampleModal14" tabindex="-1" aria-labelledby="exampleModalLabel1"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Footer</h4>
+                        <button class="clearbtn" aria-label="Footer Detail modal close"   #myModalClose data-bs-dismiss="modal"> 
+                            <img [src]="closeicon">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="details-container ">
+                            <h3> Details for the Footer section are below.</h3>
+                            <p class="pref">Please do follow the below given instructions while creating your Button component.</p>
+                            <div class="detail-content">
+                                <ul>
+                                    <li class="points">Footer text should be less than 20 characters</li>
+                                    <li class="points">Please specify whether you want linkedln social icon with(Yes/No)</li>
+                                    <li class="points">Please specify whether you want twitter social icon with(Yes/No)</li>
+                                    <li class="points">Please specify whether you want Instagram social icon with(Yes/No)</li>
+                                    <li class="points">Please specify whether you want facebook social icon with(Yes/No)</li>
+                                    <li class="points">Please specify whether you want youtube social icon with(Yes/No)</li>
+                                    <li class="points">Please specify whether you want glassdoor social icon with(Yes/No)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!--  -->
+
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Card</h4>
+                        <button class="clearbtn" aria-label="close card modal dialog" #myModalClose data-bs-dismiss="modal"> 
+                        <img [src]="closeicon" #myModalClose data-bs-dismiss="modal">
+                        </button>
+                    </div>
+                    <app-form (onclose)="close()"></app-form>
+                </div>
+            </div>
+        </div>
 
         <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
             aria-hidden="true">
@@ -205,6 +255,21 @@
                         <button class="clearbtn" aria-label="Button Create modal close icon" #myModalClose2 data-bs-dismiss="modal"><img [src]="closeicon"></button>
                     </div>
                     <app-buttonform (onclose)="close()"></app-buttonform>
+                    <!-- <app-form (onclose)="close()"></app-form> -->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel3"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Footer</h4>
+                        <button class="clearbtn" aria-label="Button Create modal close icon" #myModalClose3 data-bs-dismiss="modal"><img [src]="closeicon"></button>
+                    </div>
+                    <app-footerform (onclose)="close()"></app-footerform>
                     <!-- <app-form (onclose)="close()"></app-form> -->
                 </div>
             </div>

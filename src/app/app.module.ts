@@ -7,12 +7,14 @@ import { ModalComponent } from './Components/modal/modal.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { CardsComponent } from './Components/cards/cards.component';
 import { ButtonsComponent } from './Components/buttons/buttons.component';
-import { ButtonformComponent } from './buttonform/buttonform.component';
-import { HeaderformComponent } from './headerform/headerform.component';
-import { FormComponent } from './form/form.component';
-import { EditcardComponent } from './editcard/editcard.component';
-import { EditheaderComponent } from './editheader/editheader.component';
-import { EditbuttonComponent } from './editbutton/editbutton.component';
+import { EditcardComponent } from './FormComponents/editcard/editcard.component';
+import { FormComponent } from './FormComponents/form/form.component';
+import { HeaderformComponent } from './FormComponents/headerform/headerform.component';
+import { ButtonformComponent } from './FormComponents/buttonform/buttonform.component';
+import { EditheaderComponent } from './FormComponents/editheader/editheader.component';
+import { EditbuttonComponent } from './FormComponents/editbutton/editbutton.component';
+import { FooterformComponent } from './FormComponents/footerform/footerform.component';
+import { FooterComponent } from './Components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { EditbuttonComponent } from './editbutton/editbutton.component';
     ButtonformComponent,
     EditheaderComponent,
     EditcardComponent,
-    EditbuttonComponent
+    EditbuttonComponent,
+    FooterformComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
