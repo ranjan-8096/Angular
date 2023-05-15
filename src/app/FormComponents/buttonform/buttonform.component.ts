@@ -34,6 +34,7 @@ export class ButtonformComponent implements OnInit  {
 
     this.registerForm = this.formBuilder.group({ 
       // fontsize: ['', [Validators.required]],
+      
       borderradius: ['', [Validators.required]],
       borderwidth: ['', [Validators.required]], 
       textvalue: ['', [Validators.required]],
