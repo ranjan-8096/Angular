@@ -14,6 +14,14 @@
     align-items: center;
 }
  
+.htmlelement{
+    background-color: white;
+    overflow-y: scroll;
+    width:90%;
+    height:400px;
+    margin: auto;
+    margin-top: 30px;
+}
 .sub-div{
     padding-right: 0.85rem;
     display: flex;
@@ -160,13 +168,4 @@ button.clearbtn {
     .username {
         display: inline-block;
     }
-}
-
-.htmlelement{
-    background-color: white;
-    overflow: scroll;
-    width:90%;
-    height:400px;
-    margin: auto;
-    margin-top: 30px;
 }

@@ -9,6 +9,7 @@
         <button class="backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal2">Edit</button>
       </div> 
     </div>
+    <div #buttons>
      <div class="text-center main-page mt-5">
       <button data-bs-toggle="modal" data-bs-target="#exampleModal"
       [ngStyle]="{'font-size':buttondesign?.buttondesign.fontsize + 'px','background':buttondesign?.bgcolor,'color':buttondesign?.color, 'width':buttondesign?.btnwitdth, 'border-radius':buttondesign?.buttondesign.borderradius + 'px', 'border-width':buttondesign?.buttondesign.borderwidth + 'px', 'padding':buttondesign?.btnpadding,'box-shadow':buttondesign?.boxshadow}"
@@ -16,6 +17,10 @@
       >{{buttondesign?.buttondesign.textvalue}}</button>
       
      </div>
+    </div>
+  </div>
+  <div class="htmlelement">
+    <pre><code [highlight]="getHtmlContent()">{{getHtmlContent()}}</code></pre>
   </div>
 </div>
 
@@ -24,7 +29,7 @@
       <div class="modal-content">
           <div class="modal-header">
               <h4>Button</h4>
-               <img [src]="closeicon" class="closeicon" #myModalClose1 data-bs-dismiss="modal">   
+               <img [src]="closeicon" class="closeicon" #myModalClose2 data-bs-dismiss="modal">   
           </div>
           <app-editbutton  (onclose)="close()"></app-editbutton>
 

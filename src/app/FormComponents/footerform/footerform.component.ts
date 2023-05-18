@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CommonService } from 'src/app/common-service';
 
 @Component({
   selector: 'app-footerform',
@@ -11,10 +12,12 @@ export class FooterformComponent {
 
   registerForm: FormGroup;
   submitted = false;
+  footerdata:any;
   @Output() onclose = new EventEmitter<any>;
 
   constructor( private router:Router,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private commonservice:CommonService
    ) {}
 
    ngOnInit() {
@@ -29,6 +32,31 @@ export class FooterformComponent {
       glassdoor:['',[Validators.required]],
       color:['light',[Validators.required]]
     });
+
+    if(localStorage.getItem("footerdata")){
+      var data1:any =  localStorage.getItem("footerdata");
+      this.footerdata = JSON.parse(data1);
+
+      this.registerForm.get("text")?.setValue(this.footerdata?.text);
+      this.registerForm.get("linkedln")?.setValue(this.footerdata?.linkedln);
+      this.registerForm.get("twitter")?.setValue(this.footerdata?.twitter);
+      this.registerForm.get("insta")?.setValue(this.footerdata?.insta);
+      this.registerForm.get("facebook")?.setValue(this.footerdata?.facebook);
+      this.registerForm.get("youtube")?.setValue(this.footerdata?.youtube);
+      this.registerForm.get("glassdoor")?.setValue(this.footerdata?.glassdoor);
+      this.registerForm.get("color")?.setValue(this.footerdata?.color);
+
+      if(this.footerdata?.color == "#F1F4F8" ){
+      this.registerForm.get("color")?.setValue("light");
+      } else if(this.footerdata.color == "black"){
+      this.registerForm.get("color")?.setValue("dark");
+      } else if(this.footerdata.color == "#0070ad"){
+      this.registerForm.get("color")?.setValue("blue");
+      } else if(this.footerdata.color == "#2b0a3d"){
+      this.registerForm.get("color")?.setValue("purple");
+    }
+
+  }
   
   };
   
@@ -68,6 +96,7 @@ export class FooterformComponent {
 
       localStorage.setItem("footerdata",JSON.stringify(data));
       this.router.navigate(['/component/footer']);
+      this.commonservice.footercompletedata(data);
     }
   }
 }

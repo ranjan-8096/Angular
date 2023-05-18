@@ -1,4 +1,4 @@
-import { Component ,OnInit, ViewChild } from '@angular/core';
+import { Component ,ElementRef,OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
@@ -23,7 +23,11 @@ description:any;
 closeicon="../assets/images/close.png";
 
 @ViewChild('myModalClose1') modalClose1:any;
-constructor(private router : Router, private sanitizer: DomSanitizer){}
+
+@ViewChild("cards") elRef: ElementRef;
+constructor(private router : Router, private sanitizer: DomSanitizer,elRef: ElementRef){
+  this.elRef = elRef;
+}
 
   
   ngOnInit() {
@@ -34,6 +38,7 @@ constructor(private router : Router, private sanitizer: DomSanitizer){}
       if(this.carddata.cardwidth == "100%"){
         this.cardwidth = 100;
         this.cardheight=250;
+        this.description= this.carddata.welcome;
       } else if(this.carddata.cardwidth == "25%"){
         this.cardwidth = 100;
         this.cardheight=150;
@@ -44,6 +49,7 @@ constructor(private router : Router, private sanitizer: DomSanitizer){}
       } else if(this.carddata.cardwidth == "75%"){
         this.cardwidth = 100;
         this.cardheight=250;
+        this.description= this.carddata.welcome;
       } else if(this.carddata.cardwidth == "50%"){
         this.cardwidth = 100;
         this.cardheight=200;
@@ -85,7 +91,23 @@ constructor(private router : Router, private sanitizer: DomSanitizer){}
   backwindow(){
     this.router.navigate(['/modal']);
   }
-  
+  getHtmlContent() {
+    const html = this.elRef.nativeElement.innerHTML;
+    const lines = html.split('>');
+    var indentSize = 2;
+    for (let i = 0; i < lines.length - 1; i++) {
+      if (i >= 1 && i < lines.length - 2) {
+        // indentSize++;
+        // lines[i] = ' '.startsWith('</')
+        lines[i] = ' '.repeat(indentSize) + lines[i].trim() + '>';
+      } else {
+        lines[i] = lines[i].trim() + '>';
+      }
+    }
+    const formattedCode = lines.join('\n');
+    // console.log(formattedCode);
+    return formattedCode;
+  }
 
 
 }

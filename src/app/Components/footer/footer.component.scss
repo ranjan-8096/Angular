@@ -13,6 +13,21 @@
     padding-right: 10px;
     color: white !important;
 }
+.htmlelement{
+    background-color: white;
+    overflow-y: scroll;
+    width:90%;
+    height:400px;
+    margin: auto;
+    margin-top: 30px;
+}
+.whitefont {
+    color: #f7f7f7;
+}
+
+.blackfont {
+    color: #000;
+}
 
 .footer{
     .footerwidth{
@@ -25,7 +40,7 @@
                 li{
                     .social-icon{
                         background-color: white;
-                        border: 1px solid black;
+                        // border: 1px solid black;
                         border-radius: 50%;
                         width: 40px;
                         height: 40px;

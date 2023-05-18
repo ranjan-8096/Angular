@@ -8,7 +8,7 @@
       <button class=" backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal2">Edit</button>
     </div> 
   </div>
-    <header>
+    <header #myheader>
         <div class="header" [ngStyle]="{'background-color':headerdata?.bgcolor}">
             <div class="div1">
               <div class="subdiv">
@@ -44,11 +44,11 @@
         </div> -->
         </header>
         <div class="htmlelement">
-          {{getHtmlContent()}}
+          <pre><code [highlight]="getHtmlContent()">{{getHtmlContent()}}</code></pre>
         </div>
-      </div>
+</div>
 
-<!-- <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
@@ -61,5 +61,5 @@
 
       </div>
   </div>
-</div> -->
+</div>
 

@@ -18,40 +18,40 @@
                             <p class="card-text" [title]='subheading'>{{truncate(subheading)}}...</p>
                             
                             <div class="button-sec" *ngIf="item?.id == 1">
-                                <button aria-label="Header Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                <button aria-label="Header Detail Button" class="btn btn-primary me-2" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal12">Details</button>
-                                <button aria-label="Header Create" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                <button aria-label="Header Create Button" class="btn btn-primary me-2" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal2">Create</button>
                             </div>
                             <div class="button-sec" *ngIf="item?.id == 2">
-                                <button aria-label="Card Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                <button aria-label="Card Detail Button" class="btn btn-primary me-2" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal11">Details</button>
-                                <button aria-label="Card Create" class="btn btn-primary" data-bs-toggle="modal"
+                                <button aria-label="Card Create Button" class="btn btn-primary" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal1">Create </button>
                             </div>
                             <div class="button-sec" *ngIf="item?.id == 3">
-                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                <button aria-label="Button Detail Button" class="btn btn-primary me-2" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal13">Details</button>
-                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                <button aria-label="Button Create Button" class="btn btn-primary" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal3">Create</button>
                             </div>
                             <div class="button-sec" *ngIf="item?.id == 4">
-                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                <button aria-label="Button Detail Button" class="btn btn-primary me-2" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal14">Details</button>
-                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                <button aria-label="Button Create Button" class="btn btn-primary" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal4">Create</button>
                             </div>
                             <div class="button-sec" *ngIf="item?.id == 5">
                                 <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal15">Details</button>
                                 <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal5">Create</button>
-                            </div>
-                            <div class="button-sec" *ngIf="item?.id ==6">
-                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal16">Details</button>
-                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal6">Create</button>
+                            </div>
+                            <div class="button-sec" *ngIf="item?.id == 6">
+                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal17">Details</button>
+                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal7">Create</button>
                             </div>
                         </div>
                     </div>
@@ -60,13 +60,27 @@
         </div>
 
 
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Card</h4>
+                        <button class="clearbtn" #myModalClose data-bs-dismiss="modal"> 
+                        <img [src]="closeicon" #myModalClose data-bs-dismiss="modal">
+                        </button>
+                    </div>
+                    <app-form (onclose)="close()"></app-form>
+                </div>
+            </div>
+        </div>
         <div class="modal fade details" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel1"
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Cards</h4>
-                        <button class="clearbtn" aria-label="Card modal close icon"  #myModalClose data-bs-dismiss="modal"> 
+                        <button class="clearbtn" #myModalClose data-bs-dismiss="modal"> 
                         <img [src]="closeicon" >
                     </button>
                     </div>
@@ -110,7 +124,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Headers</h4>
-                        <button class="clearbtn" aria-label="Header modal close icon" #myModalClose data-bs-dismiss="modal"> 
+                        <button class="clearbtn" #myModalClose data-bs-dismiss="modal"> 
                             <img [src]="closeicon" >
                         </button>
                     </div>
@@ -146,7 +160,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Buttons</h4>
-                        <button class="clearbtn" aria-label="Button modal close icon"   #myModalClose data-bs-dismiss="modal"> 
+                        <button class="clearbtn"  #myModalClose data-bs-dismiss="modal"> 
                             <img [src]="closeicon">
                         </button>
                     </div>
@@ -177,8 +191,41 @@
                 </div>
             </div>
         </div>
-
         <div class="modal fade details" id="exampleModal14" tabindex="-1" aria-labelledby="exampleModalLabel1"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Navbar</h4>
+                        <button class="clearbtn"  #myModalClose data-bs-dismiss="modal"> 
+                            <img [src]="closeicon">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="details-container ">
+                            <h3> Details for the Navbar section are below.</h3>
+                            <p class="pref">Please do follow the given instruction while creating the Navbar component.</p>
+                            <div class="detail-content">
+                                <ul>
+                                    <li class="points">User can choose the Number of Navbar Menus.</li>
+
+                                    <li class="points">For Each Navbar menu the user can choose the type of menu.</li>
+
+                                    <li class="points">In Case user selects Basic Menu then he/she can choose the menu text.</li>
+
+                                    <li class="points">If User choose Dropdown then he/she can choose the number of options and menu text for each options.</li>
+ 
+                                    <li class="points">User can choose if he/she wants to add navbar icons</li>
+                                    <li class="points">User Can select the Navbar theme</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade details" id="exampleModal15" tabindex="-1" aria-labelledby="exampleModalLabel1"
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -208,20 +255,38 @@
                 </div>
             </div>
         </div>
-
         <!--  -->
-
-        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+        <div class="modal fade details" id="exampleModal17" tabindex="-1" aria-labelledby="exampleModalLabel1"
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4>Card</h4>
-                        <button class="clearbtn" aria-label="close card modal dialog" #myModalClose data-bs-dismiss="modal"> 
-                        <img [src]="closeicon" #myModalClose data-bs-dismiss="modal">
+                        <h4>Tooltip</h4>
+                        <button class="clearbtn" aria-label="Footer Detail modal close"   #myModalClose data-bs-dismiss="modal"> 
+                            <img [src]="closeicon">
                         </button>
                     </div>
-                    <app-form (onclose)="close()"></app-form>
+                    <div class="modal-body">
+                        <div class="details-container ">
+                            <h3> Details for the Footer section are below.</h3>
+                            <p class="pref">Please do follow the below given instructions while creating your Button component.</p>
+                            <div class="detail-content">
+                                <ul>
+                                    <li class="points">Button Text should be less then 10 characters</li>
+
+                                     <li class="points">Tooltip Text should be less then 15 characters</li>
+        
+                                     <li class="points">Button text is a mandatory field</li>
+        
+                                     <li class="points">Tooltip text is a mandatory field</li>
+        
+                                     <li class="points">You can select direction of tooltip from the given options</li>
+        
+                                     <li class="points">You can select the theme of tooltip</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -232,7 +297,7 @@
                 <div class="modal-content header-modal">
                     <div class="modal-header">
                         <h4>Header</h4>
-                        <button class="clearbtn"  aria-label="Header Create modal close icon"  #myModalClose1 data-bs-dismiss="modal">
+                        <button class="clearbtn"  #myModalClose1 data-bs-dismiss="modal">
                             <img [src]="closeicon">
 
                         </button>
@@ -252,7 +317,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Button</h4>
-                        <button class="clearbtn" aria-label="Button Create modal close icon" #myModalClose2 data-bs-dismiss="modal"><img [src]="closeicon"></button>
+                        <button class="clearbtn" #myModalClose2 data-bs-dismiss="modal"><img [src]="closeicon"></button>
                     </div>
                     <app-buttonform (onclose)="close()"></app-buttonform>
                     <!-- <app-form (onclose)="close()"></app-form> -->
@@ -260,22 +325,51 @@
             </div>
         </div>
 
-
+        <!--  -->
         <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel3"
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4>Footer</h4>
-                        <button class="clearbtn" aria-label="Button Create modal close icon" #myModalClose3 data-bs-dismiss="modal"><img [src]="closeicon"></button>
+                        <h4>Navbar</h4>
+                        <button class="clearbtn" #myModalClose3 data-bs-dismiss="modal"><img [src]="closeicon"></button>
                     </div>
-                    <app-footerform (onclose)="close()"></app-footerform>
+                    <!-- <app-buttonform (onclose)="close()"></app-buttonform> -->
+                    <app-navbarform (onclose)="close()"></app-navbarform>
                     <!-- <app-form (onclose)="close()"></app-form> -->
                 </div>
             </div>
         </div>
 
+        <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel3"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Footer</h4>
+                    <button class="clearbtn" aria-label="Button Create modal close icon" #myModalClose4 data-bs-dismiss="modal"><img [src]="closeicon"></button>
+                </div>
+                <app-footerform (onclose)="close()"></app-footerform>
+                
+                <!-- <app-form (onclose)="close()"></app-form> -->
+            </div>
+        </div>
+    </div>
+        <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel3"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Tooltip</h4>
+                    <button class="clearbtn" aria-label="Button Create modal close icon" #myModalClose5 data-bs-dismiss="modal"><img [src]="closeicon"></button>
+                </div> 
+                <app-tooltipform (onclose)="close()"></app-tooltipform>
+            </div>
+        </div>
+    </div>
         <!--  -->
 
     </div>
 </section>
+
+
