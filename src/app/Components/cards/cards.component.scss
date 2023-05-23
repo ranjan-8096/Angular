@@ -1,0 +1,119 @@
+.modal {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin: 1em;
+    width: 300px;
+}
+.common-btn {
+color: black;
+border: 1px solid;
+padding: 0.25em 1.6em;
+background: white;
+margin-bottom: 0.5em;
+margin-top: 0.5em;
+}
+.htmlelement{
+    background-color: white;
+    overflow-y: scroll;
+    width:90%;
+    height:400px;
+    margin: auto;
+    margin-top: 30px;
+}
+.closeicon{
+    cursor: pointer;
+}
+.card-header {
+    background: #038ecd;
+    color: #fff;
+    border: none;
+    font-weight: 500;
+}
+button.clearbtn {
+    border: none;
+    background: transparent;
+    filter: grayscale(1);
+    cursor: pointer;
+}
+.card.feature { 
+    box-shadow: 0 1px 6px 0 rgb(175, 203, 244);
+    border: none;
+    padding: 0;
+    a{
+        background: #038ecd;
+        border: none;
+        border-radius: 3px;
+    }
+}
+
+.subheader{
+    color: #0070ad;
+}
+.sideheader{
+    color: black;
+}
+.backbutton{
+    border-radius: 8px;
+    background: #0070ad !important;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white !important;
+}
+.container{ 
+    .card{
+        .card-body{
+            padding: 0px !important;
+            .defaultimage{
+                // background-size: cover;
+            }
+            .card-title{
+                margin-top: 15px;
+                padding-left: 20px;
+            }
+            .card-text{
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        .card-footer1{
+            width: 100%;
+            .footerright{
+                float: right;
+                padding: 20px;
+                .text1{
+                    border-radius: 5px;
+                    padding: 5px;
+                    border:1px solid white;
+                }
+                .gap{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+.editcard{
+    width: 100%;
+    margin: 0px;
+}
+
+.cardfotter button.text1.gap {
+    padding: 5px 15px !important;
+}
+@media only screen and (max-width: 767px) {
+    .width100{
+        width: 100% !important;
+    }
+    h4.subheader {
+        margin: 0px;
+        font-size: 1.2rem;
+    }
+    section.main header {
+        padding: 1rem .85rem;
+    }
+    .modal-dialog { 
+        max-width: 100% !important;
+    }
+}
