@@ -25,7 +25,7 @@ export class NavbarformComponent implements OnInit{
   ngOnInit() {
 
   this.registerForm = this.formBuilder.group({
-    menus:['--select menu--'],
+    menus:['', [Validators.required]],
     
     optionsv:['1'],
     optionsv2:['1'],

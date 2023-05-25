@@ -11,16 +11,29 @@
     </div>
     <div #buttons>
      <div class="text-center main-page mt-5">
-      <button data-bs-toggle="modal" data-bs-target="#exampleModal"
+      <button data-bs-toggle="modal" data-bs-target="#exampleModal" aria-label="button component"
       [ngStyle]="{'font-size':buttondesign?.buttondesign.fontsize + 'px','background':buttondesign?.bgcolor,'color':buttondesign?.color, 'width':buttondesign?.btnwitdth, 'border-radius':buttondesign?.buttondesign.borderradius + 'px', 'border-width':buttondesign?.buttondesign.borderwidth + 'px', 'padding':buttondesign?.btnpadding,'box-shadow':buttondesign?.boxshadow}"
-      
+      [ngClass]="buttondesign?.buttondesign.bgcolor"
       >{{buttondesign?.buttondesign.textvalue}}</button>
       
      </div>
     </div>
   </div>
-  <div class="htmlelement">
+  <ul class="list-inline">
+    <li (click)="openhtml()"><button [class]="htmlcontent">HTML</button></li>
+    <li (click)="opencss()"><button [class]="csscontent">CSS</button></li>
+  </ul>
+  <div class="htmlelement" *ngIf="htmlcontent == 'active'">
+    <div class="copybutton">
+      <button ngxClipboard [cbContent]="getHtmlContent()" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
+    </div>
     <pre><code [highlight]="getHtmlContent()">{{getHtmlContent()}}</code></pre>
+  </div>
+  <div class="htmlelement" *ngIf="csscontent == 'active'">
+    <div class="copybutton">
+      <button ngxClipboard [cbContent]="CSS" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
+    </div>
+    <pre><code [highlight]="CSS">{{CSS}}</code></pre>
   </div>
 </div>
 

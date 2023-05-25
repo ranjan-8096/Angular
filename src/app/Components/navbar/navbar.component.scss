@@ -14,8 +14,12 @@
     display: flex;
     align-items: center;
 }
+.nav-button{
+    border: 0px;
+    background-color: transparent;
+}
 .htmlelement{
-    background-color: white;
+    background-color: var(--color-white);
     overflow-y: scroll;
     width:90%;
     height:400px;
@@ -35,7 +39,7 @@
 }
 
 .label1 {
-    color: #0070ad;
+    color: var(--color-wbh-blue);
     margin-left: 13px;
     font-size: 24px;
     font-family: Ubuntu;
@@ -46,7 +50,7 @@
 }
 
 .label2 {
-    color: #0070ad;
+    color: var(--color-wbh-blue);
     margin-left: 8px;
     font-size: 20px;
     font-family: Ubuntu;
@@ -58,15 +62,15 @@
 }
 
 .error {
-    color: red;
+    color:var(--color-red);
 }
 
 .top-header {
     h4 {
-        color: #0070ad;
+        color: var(--color-wbh-blue);
 
         span {
-            color: black;
+            color: var(--color-black);
         }
     }
 }
@@ -76,8 +80,8 @@
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    color: white !important;
-    background-color: #0070ad !important;
+    color: var(--color-white) !important;
+    background-color: var(--color-wbh-blue)!important;
 }
 
 h4.subheader {
@@ -99,6 +103,43 @@ button.clearbtn {
     filter: grayscale(1);
     cursor: pointer;
 }
+.copybutton{
+    text-align: end;
+        margin-right: 40px;
+        margin-top: 30px;
+        button{
+            border: 1.5px solid black;
+            background: transparent;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+        .copyicon{
+            margin-right: 5px;
+        }
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    li:first-child{
+        margin-right: 10px;
+    }
+    li{
+        cursor: pointer;
+        button{
+            border: none;
+            background: transparent;
+            padding: 0px;
+        }
+    }
+}
+
+.active{
+    border-bottom: 1px solid black !important;
+    padding-bottom: 5px !important;
+}
 
 .navbarclass {
     ul.navbar-nav li {
@@ -106,7 +147,7 @@ button.clearbtn {
 
         a {
             font-size: 1rem;
-            color: #fff;
+            color: var(--color-white);
             cursor: pointer;
             font-weight: 500;
  
@@ -122,7 +163,7 @@ ul.navbar-menu span li a i {
 .dropdownmenu {
     position: absolute;
     left: 0px;
-    background: #fff;
+    background: var(--color-white);
     padding: 0;
     box-shadow: 0 1px 3px rgba(20, 90, 128, 0.4196078431);
     top: 40px;
@@ -149,28 +190,31 @@ ul.navbar-menu span li a i {
 }
 
 header.headerclass .rightmenu li a i {
-    color: #333;
+    color: var(--color-black);
     font-size: 1.3em;
     padding-right: 0.2em;
 }
 
 
 header.headerclass a.nav-link {
-    color: #333 !important;
+    color: var(--color-black) !important;
 }
 
 header.headerclass a.nav-link i {
-    color: #333 !important;
+    color: var(--color-black) !important;
+}
+.dropdown-toggle::after {
+    display: none;
 }
 
 header .rightmenu li a i {
-    color: #fff;
+    color: var(--color-white);
     font-size: 1.3em;
     padding-right: 0.2em;
 }
 
 header .dropdownmenu a {
-    color: #333 !important;
+    color: var(--color-black) !important;
     font-size: 1em;
     padding-right: 0.2em;
 }
@@ -192,7 +236,7 @@ button.navbartoggler {
 ul.navbar-menu {
     display: flex;
     list-style: none;
-    color: #fff;
+    color: var(--color-white);
     padding: 0;
     align-items: center;
     margin: 0;
@@ -206,8 +250,8 @@ ul.navbar-menu span {
     text-transform: capitalize;
 }
 header a.dropdown-item:hover {
-    background: #0070ad ;
-    color: #fff !important;
+    background: var(--color-wbh-blue) ;
+    color: var(--color-white) !important;
     transition: .25s;
 }
 
@@ -278,7 +322,7 @@ header a.dropdown-item:hover {
         }
 
         .label1 {
-            color: #0070ad;
+            color: var(--color-wbh-blue);
             margin-left: 6px;
             font-size: 20px;
             font-family: Ubuntu;

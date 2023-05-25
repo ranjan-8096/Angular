@@ -37,6 +37,8 @@ export class TooltipformComponent implements OnInit  {
     this.registerForm.get("title")?.setValue(this.tooltipdata?.title);
     this.registerForm.get("tooltipname")?.setValue(this.tooltipdata?.tooltipname);
     this.registerForm.get("direction")?.setValue(this.tooltipdata?.direction);
+    this.registerForm.get("color")?.setValue(this.tooltipdata?.color);
+
   }
 
 };
@@ -85,22 +87,9 @@ export class TooltipformComponent implements OnInit  {
       localStorage.setItem("tooltip",JSON.stringify(data));
       this.commonservice.dashboardmatchjob(data);
       this.router.navigate(['/component/tooltip']);
-      
 
     }
 
   };
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 }

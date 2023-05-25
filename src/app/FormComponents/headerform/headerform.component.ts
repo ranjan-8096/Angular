@@ -48,86 +48,60 @@ export class HeaderformComponent implements OnInit {
     }
     else {
       console.log(">>>",this.registerForm.value);
-      // if(this.registerForm.value['image1']== "Yes"){
-      //   this.registerForm.value['image1']="block";
-      // } else {
-      //   this.registerForm.value['image1']="none";
-      // }
-      if(this.registerForm.value['image2']== "Yes"){
-        this.registerForm.value['image2']="block";
-      } else {
-        this.registerForm.value['image2']="none";
-      }
       if(this.registerForm.value['color'] == "blue"){
         this.bgcolor="#0070ad";
         this.color="white";
         if(this.registerForm.value['image1']== "Yes"){
-          this.registerForm.value['image1']="none";
-          this.registerForm.value['whitewbh']="block";
+          this.registerForm.value['whitewbh']="Yes";
         } else {
-          this.registerForm.value['image1']="none";
-          this.registerForm.value['whitewbh']="none";
+          this.registerForm.value['whitewbh']="No";
         }
         if(this.registerForm.value['image3']== "Yes"){
-          this.registerForm.value['image3']="none";
-          this.registerForm.value.image4="block";
+          this.registerForm.value.image4="Yes";
         } else {
-          this.registerForm.value['image3']="none";
-          this.registerForm.value.image4="none";
+          this.registerForm.value.image4="No";
         }
       }
       if(this.registerForm.value['color'] == "purple"){
         this.bgcolor="#2b0a3d";
         this.color="white";
         if(this.registerForm.value['image1']== "Yes"){
-          this.registerForm.value['image1']="block";
-          this.registerForm.value['whitewbh']="none";
+          this.registerForm.value['whitewbh']="No";
         } else {
-          this.registerForm.value['image1']="none";
-          this.registerForm.value['whitewbh']="none";
+          this.registerForm.value['whitewbh']="No";
         }
         if(this.registerForm.value['image3']== "Yes"){
-          this.registerForm.value['image3']="none";
-          this.registerForm.value.image4="block";
+          this.registerForm.value.image4="Yes";
         } else {
-          this.registerForm.value['image3']="none";
-          this.registerForm.value.image4="none";
+          this.registerForm.value.image4="No";
         }
       }
       if(this.registerForm.value['color'] == "dark"){
         this.bgcolor="black";
         this.color="white";
         if(this.registerForm.value['image1']== "Yes"){
-          this.registerForm.value['image1']="block";
-          this.registerForm.value['whitewbh']="none";
+          this.registerForm.value['whitewbh']="No";
         } else {
-          this.registerForm.value['image1']="none";
-          this.registerForm.value['whitewbh']="none";
+          this.registerForm.value['whitewbh']="No";
         }
-        if(this.registerForm.value['image3']== 'Yes'){
-          this.registerForm.value['image3']="none";
-          this.registerForm.value.image4="block";
+        if(this.registerForm.value['image3']== "Yes"){
+          this.registerForm.value.image4="Yes";
         } else {
-          this.registerForm.value['image3']="none";
-          this.registerForm.value.image4="none";
+          this.registerForm.value.image4="No";
         }
       }
       if(this.registerForm.value['color'] == "light"){
         this.bgcolor="#F1F4F8";
         this.color="#0070ad";
         if(this.registerForm.value['image1']== "Yes"){
-          this.registerForm.value['image1']="block";
-          this.registerForm.value['whitewbh']="none";
+          this.registerForm.value['whitewbh']="No";
         } else {
-          this.registerForm.value['image1']="none";
-          this.registerForm.value['whitewbh']="none";
+          this.registerForm.value['whitewbh']="No";
         }
         if(this.registerForm.value['image3']== "Yes"){
-          this.registerForm.value['image3']="block";
-          this.registerForm.value.image4="none";
+          this.registerForm.value.image4="No";
         } else {
-          this.registerForm.value['image3']="none";
-          this.registerForm.value.image4="none";
+          this.registerForm.value.image4="No";
         }
       }
       this.onclose.emit();

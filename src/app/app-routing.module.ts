@@ -4,7 +4,7 @@ import { ButtonsComponent } from './Components/buttons/buttons.component';
 import { CardsComponent } from './Components/cards/cards.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HeaderComponent } from './Components/header/header.component';
-import { ModalComponent } from './Components/modal/modal.component';
+import { ModalComponent } from './modal/modal.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';  
 import { TooltipComponent } from './Components/tooltip/tooltip.component';
 const routes: Routes = [

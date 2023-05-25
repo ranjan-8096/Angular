@@ -48,27 +48,27 @@ export class EditheaderComponent implements OnInit {
 
      const image1value = () => {
       if(this.headerdata.bgcolor == "#0070ad"){
-        if(this.headerdata.image1  == "block" && this.headerdata.whitewbh  == "none"){
+        if(this.headerdata.image1  == "Yes" && this.headerdata.whitewbh  == "Yes"){
           return "Yes";
-        } else if(this.headerdata.image1  == "none" && this.headerdata.whitewbh  == "block") {
+        } else if(this.headerdata.image1  == "No" && this.headerdata.whitewbh  == "Yes") {
           return "Yes";
         } else {
           return "No";
         }
       } else if(this.headerdata.bgcolor == "black"){
-        if(this.headerdata.image1  == "block"){
+        if(this.headerdata.image1  == "Yes"){
           return "Yes";
         } else {
           return "No";
         }
       } else if(this.headerdata.bgcolor == "#2b0a3d"){
-        if(this.headerdata.image1  == "block"){
+        if(this.headerdata.image1  == "Yes"){
           return "Yes";
         } else {
           return "No";
         }
       } else if(this.headerdata.bgcolor == "#F1F4F8"){
-        if(this.headerdata.image1  == "block"){
+        if(this.headerdata.image1  == "Yes"){
           return "Yes";
         } else {
           return "No";
@@ -77,7 +77,7 @@ export class EditheaderComponent implements OnInit {
      }
 
      const image2value = () => {
-      if(this.headerdata.image2  == "block"){
+      if(this.headerdata.image2  == "Yes"){
         return "Yes";
       } else {
         return "No";
@@ -86,42 +86,37 @@ export class EditheaderComponent implements OnInit {
 
      const image3value = () => {
       if(this.headerdata.bgcolor == "#0070ad"){
-        if(this.headerdata.image3  == "block" && this.headerdata.image4  == "none"){
+        if(this.headerdata.image3  == "Yes" && this.headerdata.image4  == "Yes"){
           return "Yes";
-        } else if(this.headerdata.image3  == "none" && this.headerdata.image4  == "block") {
-          return "Yes";
-        } else if(this.headerdata.image3  == "none" && this.headerdata.image4  == "none"){
+        } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "No"){
           return "No";
         } else {
           return "No";
         }
       } else if(this.headerdata.bgcolor == "#2b0a3d") {
-        if(this.headerdata.image3  == "block"){
+        if(this.headerdata.image3  == "Yes"){
           return "Yes";
-        } else if(this.headerdata.image3  == "none" && this.headerdata.image4  == "block") {
+        } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "Yes") {
           return "Yes";
-        } else if(this.headerdata.image3  == "none" && this.headerdata.image4  == "none"){
+        } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "No"){
           return "No";
         } else {
           return "";
         }
       } else if(this.headerdata.bgcolor == "black") {
-        // console.log(">>>>>",this.headerdata);
-        if(this.headerdata.image3  == "block" && this.headerdata.image4  == "none"){
+        if(this.headerdata.image3  == "Yes" && this.headerdata.image4  == "Yes"){
           return "Yes";
-        } else if(this.headerdata.image3  == "none" && this.headerdata.image4  == "block") {
-          return "Yes";
-        } else if(this.headerdata.image3  == "none" && this.headerdata.image4  == "none"){
+        } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "No"){
           return "No";
         } else {
           return "";
         }
       } else if(this.headerdata.bgcolor == "#F1F4F8") {
-        if(this.headerdata.image3  == "block"){
+        if(this.headerdata.image3  == "Yes"){
           return "Yes";
-        } else if(this.headerdata.image3  == "none" && this.headerdata.image4  == "block") {
+        } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "Yes") {
           return "Yes";
-        } else if(this.headerdata.image3  == "none" && this.headerdata.image4  == "none"){
+        } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "No"){
           return "No";
         } else {
           return "";
@@ -184,86 +179,61 @@ reloadComponent(self:boolean,urlToNavigateTo ?:string){
       return true;
     }
     else {
-      // if(this.registerForm.value['image1']== "Yes"){
-      //   this.registerForm.value['image1']="block";
-      // } else {
-      //   this.registerForm.value['image1']="none";
-      // }
-      if(this.registerForm.value['image2']== "Yes"){
-        this.registerForm.value['image2']="block";
-      } else {
-        this.registerForm.value['image2']="none";
-      }
+      
       if(this.registerForm.value['color'] == "blue"){
         this.bgcolor="#0070ad";
         this.color="white";
         if(this.registerForm.value['image1']== "Yes"){
-          this.registerForm.value['image1']="none";
-          this.registerForm.value['whitewbh']="block";
+          this.registerForm.value['whitewbh']="Yes";
         } else {
-          this.registerForm.value['image1']="none";
-          this.registerForm.value['whitewbh']="none";
+          this.registerForm.value['whitewbh']="No";
         }
         if(this.registerForm.value['image3']== "Yes"){
-          this.registerForm.value['image3']="none";
-          this.registerForm.value.image4="block";
+          this.registerForm.value.image4="Yes";
         } else {
-          this.registerForm.value['image3']="none";
-          this.registerForm.value.image4="none";
+          this.registerForm.value.image4="No";
         }
       }
       if(this.registerForm.value['color'] == "purple"){
         this.bgcolor="#2b0a3d";
         this.color="white";
         if(this.registerForm.value['image1']== "Yes"){
-          this.registerForm.value['image1']="block";
-          this.registerForm.value['whitewbh']="none";
+          this.registerForm.value['whitewbh']="No";
         } else {
-          this.registerForm.value['image1']="none";
-          this.registerForm.value['whitewbh']="none";
+          this.registerForm.value['whitewbh']="No";
         }
         if(this.registerForm.value['image3']== "Yes"){
-          this.registerForm.value['image3']="none";
-          this.registerForm.value.image4="block";
+          this.registerForm.value.image4="Yes";
         } else {
-          this.registerForm.value['image3']="none";
-          this.registerForm.value.image4="none";
+          this.registerForm.value.image4="No";
         }
       }
       if(this.registerForm.value['color'] == "dark"){
         this.bgcolor="black";
         this.color="white";
         if(this.registerForm.value['image1']== "Yes"){
-          this.registerForm.value['image1']="block";
-          this.registerForm.value['whitewbh']="none";
+          this.registerForm.value['whitewbh']="No";
         } else {
-          this.registerForm.value['image1']="none";
-          this.registerForm.value['whitewbh']="none";
+          this.registerForm.value['whitewbh']="No";
         }
-        if(this.registerForm.value['image3']== 'Yes'){
-          this.registerForm.value['image3']="none";
-          this.registerForm.value.image4="block";
+        if(this.registerForm.value['image3']== "Yes"){
+          this.registerForm.value.image4="Yes";
         } else {
-          this.registerForm.value['image3']="none";
-          this.registerForm.value.image4="none";
+          this.registerForm.value.image4="No";
         }
       }
       if(this.registerForm.value['color'] == "light"){
         this.bgcolor="#F1F4F8";
         this.color="#0070ad";
         if(this.registerForm.value['image1']== "Yes"){
-          this.registerForm.value['image1']="block";
-          this.registerForm.value['whitewbh']="none";
+          this.registerForm.value['whitewbh']="No";
         } else {
-          this.registerForm.value['image1']="none";
-          this.registerForm.value['whitewbh']="none";
+          this.registerForm.value['whitewbh']="No";
         }
         if(this.registerForm.value['image3']== "Yes"){
-          this.registerForm.value['image3']="block";
-          this.registerForm.value.image4="none";
+          this.registerForm.value.image4="No";
         } else {
-          this.registerForm.value['image3']="none";
-          this.registerForm.value.image4="none";
+          this.registerForm.value.image4="No";
         }
       }
 

@@ -39,22 +39,9 @@ export class FormComponent implements OnInit {
       welcome: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(200)]]
     });
 
-    this.registerForm.get("addbutton")?.valueChanges.subscribe((result)=>{
-
-      console.log("result",result);
-
-      if(result == "Yes") {
-        this.registerForm.get("buttons")?.setValidators([Validators.required]);
-      }  else if(result == "No") {
-        this.registerForm.get("buttons")?.clearValidators();
-        this.registerForm.get("text1")?.clearValidators();
-        this.registerForm.get("text2")?.clearValidators();
-      }
-    })
-
     this.registerForm.get("buttons")?.valueChanges.subscribe((result)=>{
 
-      console.log("result",result);
+      console.log("vishnu",result);
 
       if(result == 1) {
         this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -73,20 +60,6 @@ export class FormComponent implements OnInit {
   get f(){
     return this.registerForm.controls;
   }
-
-  // handleimage(event:any){
-  //   this.nodefaultimage = event.target.files[0];
-  //   this.storage = event.target.files[0].name;
-  //   console.log(">>>>",this.nodefaultimage);
-  // }
-
-  // imageurl(){
-  //   if(this.registerForm.value.image=="No"){
-  //     this.registerForm.value.uploadimage = "";
-  //   } else if(this.registerForm.value.image=="Yes"){
-  //     this.registerForm.value.uploadimage = window.webkitURL.createObjectURL(this.nodefaultimage);
-  //   }
-  // }
   
 
   onSubmit(){
@@ -97,11 +70,6 @@ export class FormComponent implements OnInit {
     if(this.registerForm.invalid) {
       return true;
     } else {
-      // if(this.registerForm.value.image=="No"){
-      //   this.registerForm.value.imageform = "";
-      // } else if(this.registerForm.value.image=="Yes"){
-      //   this.registerForm.value.imageform = window.webkitURL.createObjectURL(this.nodefaultimage);
-      // }
       const data = {
         "text1":this.registerForm.value.text1,
         "text2":this.registerForm.value.text2,

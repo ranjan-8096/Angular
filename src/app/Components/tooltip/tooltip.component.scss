@@ -1,11 +1,62 @@
+.subheader{
+  color: var(--color-wbh-blue);
+}
+.component{
+color: var(--color-black);
+}
 
+.backbutton{
+border-radius: 8px;
+background: var(--color-wbh-blue) !important;
+padding: 5px;
+padding-left: 10px;
+padding-right: 10px;
+color: var(--color-white) !important;
+}
+.copybutton{
+  text-align: end;
+      margin-right: 40px;
+      margin-top: 30px;
+      button{
+          border: 1.5px solid black;
+          background: transparent;
+          border-radius: 10px;
+          padding: 5px 10px;
+      }
+      .copyicon{
+          margin-right: 5px;
+      }
+}
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  li:first-child{
+      margin-right: 10px;
+  }
+  li{
+      cursor: pointer;
+      button{
+          border: none;
+          background: transparent;
+          padding: 0px;
+      }
+  }
+}
+
+.active{
+  border-bottom: 1px solid black !important;
+  padding-bottom: 5px !important;
+}
 .tooltip_sec button.btn-secondary 
 {
     margin:0px auto;
     display: block;
     padding: 10px 30px;
     font-size: 20px;
-    background-color: #0070ad;
+    background-color: var(--color-wbh-blue);
 }
 
 .tooltipbtn {
@@ -14,52 +65,51 @@
     margin: 50px auto;
     display: block;
   }
-
   
 .tooltipbtn .tooltiptext {
     visibility: hidden;
     width: auto;
-    background-color: black;
-    color: #fff;
+    background-color: var(--color-black);
+    color: var(--color-white);
     text-align: center;
     border-radius: 6px;
     padding: 5px 20px;
     position: absolute;
     z-index: 1;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-white);
   }
 
   .tooltipbtn .topright {
     bottom: 130%;
-    left: 54%;
+    left: 55%;
     margin-left: -60px;
   }
 
 span.tooltiptext.topleft {
-    left: 44%;
+    left: 40%;
     bottom: 130%;
     margin-left: -60px;
 }
 
 span.tooltiptext.bottomright {
-    left: 54% !important;
+    left: 55% !important;
     bottom: -84%;
     margin-left: -60px;
 }
 
 span.tooltiptext.bottomleft {
-    left: 44% !important;
+    left: 40% !important;
     bottom: -84%;
     margin-left: -60px;
 }
 span.tooltiptext.right {
-    left: 63%;
+    left: 68%;
     bottom:13%;
     margin-left: -60px;
 }
 
 span.tooltiptext.left {
-    left: 35% !important;
+    left: 28% !important;
     bottom: 23%;
     margin-left: -60px;
 }
@@ -78,7 +128,7 @@ span.tooltiptext.left {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: black transparent transparent transparent;
+    border-color: var(--color-black) transparent transparent transparent;
   }
   
 
@@ -87,53 +137,53 @@ span.tooltiptext.left {
   .tooltipbtn .topleft::after {
     top: 100%;
     left: 50%;
-    border-color: black transparent transparent transparent;
+    border-color: var(--color-black) transparent transparent transparent;
   }
 
   .tooltipbtn .topright::after {
     top: 100%;
     left: 50%;
-    border-color: black transparent transparent transparent;
+    border-color: var(--color-black) transparent transparent transparent;
   }
 
   .tooltipbtn .bottomright::after {
     top:-27%;
     left: 50%;
-    border-color: transparent transparent black transparent;
+    border-color: transparent transparent var(--color-black) transparent;
 }
 
   .tooltipbtn .bottomleft::after {
     top: -27%;
     left: 50%;
-    border-color: transparent transparent black transparent;
+    border-color: transparent transparent var(--color-black) transparent;
 }
 
 .tooltipbtn .right::after {
     top: 36%;
     left: -4%;
-    border-color: transparent black transparent transparent;
+    border-color: transparent var(--color-black) transparent transparent;
 }
 
 .tooltipbtn .left::after {
     top: 36%;
     left: 105%;
-    border-color: transparent transparent transparent black;
+    border-color: transparent transparent transparent var(--color-black);
 }
 
 
 .ngdark{
-    background-color:black !important;
-    border-color:black;
+    background-color:var(--color-black) !important;
+    border-color:var(--color-black);
 }
 
 .nglight{
-    background-color:#F1F4F8 !important;
-    color: #000 !important;
+    background-color:var(--color-white) !important;
+    color: var(--color-black) !important;
 }
 
 .ngblue{
-    background-color:#0070ad !important;
-    border-color:#0070ad transparent transparent transparent;
+    background-color:var(--color-wbh-blue) !important;
+    border-color:var(--color-wbh-blue) transparent transparent transparent;
 
 }
 
@@ -141,14 +191,14 @@ span.tooltiptext.left {
     background-color:#2b0a3d !important;
 }
 
-// .htmlelement{
-//     background-color: white;
-//     overflow-y: scroll;
-//     width:90%;
-//     height:400px;
-//     margin: auto;
-//     margin-top: 30px;
-// }
+.htmlelement{
+    background-color: white;
+    overflow-y: scroll;
+    width:90%;
+    height:400px;
+    margin: auto;
+    margin-top: 30px;
+}
 
 
 

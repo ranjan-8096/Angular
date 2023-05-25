@@ -4,25 +4,26 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
-import { ModalComponent } from './Components/modal/modal.component';
+import { ModalComponent } from './modal/modal.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { CardsComponent } from './Components/cards/cards.component';
 import { ButtonsComponent } from './Components/buttons/buttons.component';
-import { ButtonformComponent } from './buttonform/buttonform.component';
-import { HeaderformComponent } from './headerform/headerform.component';
-import { FormComponent } from './form/form.component';
-import { EditcardComponent } from './editcard/editcard.component';
-import { EditheaderComponent } from './editheader/editheader.component';
-import { EditbuttonComponent } from './editbutton/editbutton.component';
-import { NavbarformComponent } from './navbarform/navbarform.component';
+import { ButtonformComponent } from './FormComponents/buttonform/buttonform.component';
+import { HeaderformComponent } from './FormComponents/headerform/headerform.component';
+import { FormComponent } from './FormComponents/form/form.component';
+import { EditcardComponent } from './FormComponents/editcard/editcard.component';
+import { EditbuttonComponent } from './FormComponents/editbutton/editbutton.component';
+import { NavbarformComponent } from './FormComponents/navbarform/navbarform.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
-import { EditnavbarComponent } from './editnavbar/editnavbar.component';
-import { FooterformComponent } from './footerform/footerform.component';
+import { EditnavbarComponent } from './FormComponents/editnavbar/editnavbar.component';
+import { FooterformComponent } from './FormComponents/footerform/footerform.component';
 import { FooterComponent } from './Components/footer/footer.component';
-import { TooltipformComponent } from './tooltipform/tooltipform.component';
+import { TooltipformComponent } from './FormComponents/tooltipform/tooltipform.component';
 import { TooltipComponent } from './Components/tooltip/tooltip.component';
 import { TooltipModule } from 'ng2-tooltip-directive';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { EditheaderComponent } from './FormComponents/editheader/editheader.component';
+import { ClipboardModule } from 'ngx-clipboard';
 
 
 
@@ -54,7 +55,8 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
-    HighlightModule
+    HighlightModule,
+    ClipboardModule
   ],
   providers: [
     {

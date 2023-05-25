@@ -2,6 +2,8 @@
 // Then import Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import '~highlight.js/styles/github.css';
+@import "./app/Components/theme/colors";
+@import "./app/Components/theme/breakpoints";
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -12,6 +14,14 @@ body {
 .text-center.main-page.mt-5 {
     margin-left: 20px;
     margin-right: 20px;
+}
+
+.main-page button:focus-visible {
+
+    outline: 0;
+
+    box-shadow: 0 0 1px 3px #7b7b7b;
+
 }
 
 .img-responsive {
@@ -99,9 +109,9 @@ body {
     border-radius: 0 !important;
     color: #fff;
 
-    button {
-        filter: invert(1);
-    }
+    // button {
+    //     filter: invert(1);
+    // }
 }
 
 .details .modal-body {

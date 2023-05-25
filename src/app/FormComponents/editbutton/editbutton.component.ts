@@ -114,6 +114,8 @@ export class EditbuttonComponent implements OnInit {
    
 
   onSubmit() { 
+
+    console.log(this.registerForm,"formgroup")
     this.submitted = true;
     if (this.registerForm.invalid) { 
       return true; 

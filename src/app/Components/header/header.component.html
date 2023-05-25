@@ -12,8 +12,8 @@
         <div class="header" [ngStyle]="{'background-color':headerdata?.bgcolor}">
             <div class="div1">
               <div class="subdiv">
-                <img [src]="img1" aria-label="APP logo" class="img1" [ngStyle]="{'display':headerdata?.image1}">
-                <img [src]="whitewbh" aria-label="APP logo Icon" class="img1" [ngStyle]="{'display':headerdata?.whitewbh}">
+                <img [src]="img1" aria-label="APP logo" class="img1" *ngIf="headerdata?.image1 == 'Yes' && headerdata?.image4 == 'No'">
+                <img [src]="whitewbh" aria-label="APP logo Icon" class="img1" *ngIf="headerdata?.image4 == 'Yes'">
               </div>
               <div class="subdiv1">
                 <label class="label1" [ngStyle]="{'color':headerdata?.color}">{{headerdata?.title | uppercase}}</label>
@@ -22,29 +22,38 @@
             <div class="div2">
                 <div class="sub-div">
                   <div class="username">
-                    <img [src]="img2" class="img2" aria-label="Profile Icon" [ngStyle]="{'display':headerdata?.image2}">
+                    <img [src]="img2" class="img2" aria-label="Profile Icon" *ngIf="headerdata?.image2 == 'Yes'">
                     <label class="label2" [ngStyle]="{'color':headerdata?.color}">{{headerdata?.welcome}}</label>
                   </div>
-                  <!-- <div>
-                    
-                  </div> -->
                   <div class="capgeminilogo">
-                    <img [src]="img3" class="img3" aria-label="Capgemini logo" [ngStyle]="{'display':headerdata?.image3}">
-                    <img [src]="img4" class="img3" aria-label="Capgemini logo" [ngStyle]="{'display':headerdata?.image4}">
+                    <img [src]="img3" class="img3" aria-label="Capgemini logo" *ngIf="headerdata?.image3 == 'Yes' && headerdata?.image4 == 'No'">
+                    <img [src]="img4" class="img3" aria-label="Capgemini logo" *ngIf="headerdata?.image4 == 'Yes'">
                   </div>
                 </div>
             </div>
         </div>
-        <!-- <div>
-            <select [(ngModel)]=value (change)="handlechange(value)">
-                <option *ngFor="let o of options">
-                    {{o.name}}
-                </option>
-            </select>
-        </div> -->
         </header>
-        <div class="htmlelement">
+        <!-- <div class="tabs">
+          <label >HTML</label>
+          <label>CSS</label>
+        </div> -->
+        
+          <ul class="list-inline">
+            <li (click)="openhtml()"><button [class]="htmlcontent">HTML</button></li>
+            <li (click)="opencss()"><button [class]="csscontent">CSS</button></li>
+          </ul>
+        
+        <div class="htmlelement" *ngIf="htmlcontent == 'active'">
+          <div class="copybutton">
+            <button ngxClipboard [cbContent]="getHtmlContent()" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
+          </div>
           <pre><code [highlight]="getHtmlContent()">{{getHtmlContent()}}</code></pre>
+        </div>
+        <div class="htmlelement" *ngIf="csscontent == 'active'">
+          <div class="copybutton">
+            <button ngxClipboard [cbContent]="CSS" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
+          </div>
+          <pre><code [highlight]="CSS">{{CSS}}</code></pre>
         </div>
 </div>
 

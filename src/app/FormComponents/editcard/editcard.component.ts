@@ -31,6 +31,7 @@ export class EditcardComponent {
 
   
   ngOnInit() {
+   
     if(localStorage.getItem("carddata")) {
       var data1:any =  localStorage.getItem("carddata");
       this.carddata = JSON.parse(data1);
@@ -156,9 +157,10 @@ export class EditcardComponent {
       //  console.log(`After navigation I am on:${this.router.url}`)
      })
    })
-  }
+  } 
 
   onSubmit(){
+    console.log(this.registerForm,"formgroup")
     this.submitted = true;
     if(this.registerForm.invalid) {
       return true;

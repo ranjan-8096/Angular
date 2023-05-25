@@ -42,7 +42,7 @@ export class EditnavbarComponent implements OnInit {
  
     
   this.registerForm = this.formBuilder.group({
-    menus:['--select menu--'],
+    menus:['',[Validators.required]],
     
     optionsv:[''],
     optionsv2:[''],

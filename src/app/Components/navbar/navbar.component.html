@@ -17,80 +17,80 @@
           <ul class="navbar-menu" > 
             <span *ngIf="!navbardata?.firstsubmenu1">
               <li *ngIf="navbardata?.text1" class="nav-item active">
-                <a class="nav-link" href="#">{{navbardata?.text1}}</a>
+                <button class="nav-button" aria-label="navbardata?.text1" [ngStyle]="{'color':navbardata?.color}"><a class="nav-link">{{navbardata?.text1}}</a></button>
               </li>
             </span>
 
             <span *ngIf="navbardata?.firstsubmenu1">
               <li *ngIf="navbardata?.text1" >
-                <a class="nav-link" (click)="dropdownMenu()">
-                  {{navbardata?.text1}}<i class="fa fa-caret-down"></i>
-                </a>
-                <div class="dropdownmenu"  *ngIf="isdropdownMenuOpen">
-                  <a class="dropdown-item" *ngIf="navbardata?.firstsubmenu1" href="#">{{navbardata?.firstsubmenu1}}</a>
-                  <a class="dropdown-item" *ngIf="navbardata?.firstsubmenu2" href="#">{{navbardata?.firstsubmenu2}}</a>
-                  <a class="dropdown-item" *ngIf="navbardata?.firstsubmenu3" href="#">{{navbardata?.firstsubmenu3}}</a>
-                  <a class="dropdown-item" *ngIf="navbardata?.firstsubmenu4" href="#">{{navbardata?.firstsubmenu4}}</a>
-                </div> 
+                <!-- <a class="nav-link"> -->
+                  <button class="nav-button dropdown-toggle" data-bs-toggle="dropdown" aria-label="navbardata?.text1" [ngStyle]="{'color':navbardata?.color}"><a class="nav-link">{{navbardata?.text1}}<i class="fa fa-caret-down" role="button"></i></a></button>
+                <!-- </a> -->
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item" aria-label="navbardata?.firstsubmenu1" *ngIf="navbardata?.firstsubmenu1" href="#">{{navbardata?.firstsubmenu1}}</a>
+                  <a class="dropdown-item" aria-label="navbardata?.firstsubmenu2" *ngIf="navbardata?.firstsubmenu2" href="#">{{navbardata?.firstsubmenu2}}</a>
+                  <a class="dropdown-item" aria-label="navbardata?.firstsubmenu3" *ngIf="navbardata?.firstsubmenu3" href="#">{{navbardata?.firstsubmenu3}}</a>
+                  <a class="dropdown-item" aria-label="navbardata?.firstsubmenu4" *ngIf="navbardata?.firstsubmenu4" href="#">{{navbardata?.firstsubmenu4}}</a>
+                </ul> 
               </li>
             </span>
 
             <span *ngIf="!navbardata?.secondsubmenu1">
-              <li *ngIf="navbardata?.text1" class="nav-item active">
-                <a class="nav-link" href="#">{{navbardata?.text2}}</a>
+              <li *ngIf="navbardata?.text2" class="nav-item active">
+                <button class="nav-button" aria-label="navbardata?.text2" [ngStyle]="{'color':navbardata?.color}"><a class="nav-link" role="button">{{navbardata?.text2}}</a></button>
               </li>
             </span> 
             <span *ngIf="navbardata?.secondsubmenu1">
               <li *ngIf="navbardata?.text1" >
-                <a class="nav-link" (click)="dropdownMenu2()">
-                  {{navbardata?.text2}}<i class="fa fa-caret-down"></i>
-                </a>
-                <div class="dropdownmenu"  *ngIf="isdropdownMenuOpen2">
-                  <a class="dropdown-item" *ngIf="navbardata?.secondsubmenu1" href="#">{{navbardata?.secondsubmenu1}}</a>
-                  <a class="dropdown-item" *ngIf="navbardata?.secondsubmenu2" href="#">{{navbardata?.secondsubmenu2}}</a>
-                  <a class="dropdown-item" *ngIf="navbardata?.secondsubmenu3" href="#">{{navbardata?.secondsubmenu3}}</a>
-                  <a class="dropdown-item" *ngIf="navbardata?.secondsubmenu4" href="#">{{navbardata?.secondsubmenu4}}</a>
-                </div> 
+                <!-- <a class="nav-link"> -->
+                  <button class="nav-button dropdown-toggle" data-bs-toggle="dropdown" aria-label="navbardata?.text2" [ngStyle]="{'color':navbardata?.color}"><a class="nav-link">{{navbardata?.text2}}<i class="fa fa-caret-down"></i></a></button>
+                <!-- </a> -->
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item" aria-label="navbardata?.secondsubmenu1" *ngIf="navbardata?.secondsubmenu1" href="#">{{navbardata?.secondsubmenu1}}</a>
+                  <a class="dropdown-item" aria-label="navbardata?.secondsubmenu2" *ngIf="navbardata?.secondsubmenu2" href="#">{{navbardata?.secondsubmenu2}}</a>
+                  <a class="dropdown-item" aria-label="navbardata?.secondsubmenu3" *ngIf="navbardata?.secondsubmenu3" href="#">{{navbardata?.secondsubmenu3}}</a>
+                  <a class="dropdown-item" aria-label="navbardata?.secondsubmenu4" *ngIf="navbardata?.secondsubmenu4" href="#">{{navbardata?.secondsubmenu4}}</a>
+                </ul> 
               </li>
             </span>
 
             <span *ngIf="!navbardata?.thirdsubmenu1">
-              <li *ngIf="navbardata?.text1" class="nav-item active">
-                <a class="nav-link" href="#">{{navbardata?.text3}}</a>
+              <li *ngIf="navbardata?.text3" class="nav-item active">
+                <button class="nav-button" aria-label="navbardata?.text3" [ngStyle]="{'color':navbardata?.color}"><a class="nav-link">{{navbardata?.text3}}</a></button>
               </li>
             </span>
 
             <span *ngIf="navbardata?.thirdsubmenu1">
               <li *ngIf="navbardata?.text1" >
-                <a class="nav-link" (click)="dropdownMenu3()">
-                  {{navbardata?.text3}}<i class="fa fa-caret-down"></i>
-                </a>
-                <div class="dropdownmenu"  *ngIf="isdropdownMenuOpen3">
-                  <a class="dropdown-item" *ngIf="navbardata?.thirdsubmenu1" href="#">{{navbardata?.thirdsubmenu1}}</a>
-                  <a class="dropdown-item" *ngIf="navbardata?.thirdsubmenu2" href="#">{{navbardata?.thirdsubmenu2}}</a>
-                  <a class="dropdown-item" *ngIf="navbardata?.thirdsubmenu3" href="#">{{navbardata?.thirdsubmenu3}}</a>
-                  <a class="dropdown-item" *ngIf="navbardata?.thirdsubmenu4" href="#">{{navbardata?.thirdsubmenu4}}</a>
-                </div> 
+                <!-- <a class="nav-link"> -->
+                  <button class="nav-button dropdown-toggle" data-bs-toggle="dropdown" aria-label="navbardata?.text3" [ngStyle]="{'color':navbardata?.color}"><a class="nav-link">{{navbardata?.text3}}<i class="fa fa-caret-down"></i></a></button>
+                <!-- </a> -->
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item" aria-label="navbardata?.thirdsubmenu1" *ngIf="navbardata?.thirdsubmenu1" href="#">{{navbardata?.thirdsubmenu1}}</a>
+                  <a class="dropdown-item" aria-label="navbardata?.thirdsubmenu2" *ngIf="navbardata?.thirdsubmenu2" href="#">{{navbardata?.thirdsubmenu2}}</a>
+                  <a class="dropdown-item" aria-label="navbardata?.thirdsubmenu3" *ngIf="navbardata?.thirdsubmenu3" href="#">{{navbardata?.thirdsubmenu3}}</a>
+                  <a class="dropdown-item" aria-label="navbardata?.thirdsubmenu4" *ngIf="navbardata?.thirdsubmenu4" href="#">{{navbardata?.thirdsubmenu4}}</a>
+                </ul> 
               </li>
             </span>
 
             <span *ngIf="!navbardata?.forthsubmenu1">
-              <li *ngIf="navbardata?.text1" class="nav-item active">
-                <a class="nav-link" href="#">{{navbardata?.text4}}</a>
+              <li *ngIf="navbardata?.text4" class="nav-item active">
+                <button class="nav-button" aria-label="navbardata?.text4" [ngStyle]="{'color':navbardata?.color}"><a class="nav-link">{{navbardata?.text4}}</a></button>
               </li>
             </span>
 
             <span *ngIf="navbardata?.forthsubmenu1">
               <li *ngIf="navbardata?.text1" >
-                <a class="nav-link" (click)="dropdownMenu4()">
-                  {{navbardata?.text4}}<i class="fa fa-caret-down"></i>
-                </a>
-                <div class="dropdownmenu"  *ngIf="isdropdownMenuOpen4">
-                  <a class="dropdown-item" *ngIf="navbardata?.forthsubmenu1" href="#">{{navbardata?.forthsubmenu1}}</a>
-                  <a class="dropdown-item" *ngIf="navbardata?.forthsubmenu1" href="#">{{navbardata?.forthsubmenu1}}</a>
-                  <a class="dropdown-item" *ngIf="navbardata?.forthsubmenu3" href="#">{{navbardata?.forthsubmenu3}}</a>
-                  <a class="dropdown-item" *ngIf="navbardata?.forthsubmenu4" href="#">{{navbardata?.forthsubmenu4}}</a>
-                </div> 
+                <!-- <a class="nav-link"> -->
+                  <button class="nav-button dropdown-toggle" data-bs-toggle="dropdown" aria-label="navbardata?.text4" [ngStyle]="{'color':navbardata?.color}"><a class="nav-link">{{navbardata?.text4}}<i class="fa fa-caret-down"></i></a></button>
+                <!-- </a> -->
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item" aria-label="navbardata?.forthsubmenu1" *ngIf="navbardata?.forthsubmenu1" href="#">{{navbardata?.forthsubmenu1}}</a>
+                  <a class="dropdown-item" aria-label="navbardata?.forthsubmenu2" *ngIf="navbardata?.forthsubmenu1" href="#">{{navbardata?.forthsubmenu1}}</a>
+                  <a class="dropdown-item" aria-label="navbardata?.forthsubmenu3" *ngIf="navbardata?.forthsubmenu3" href="#">{{navbardata?.forthsubmenu3}}</a>
+                  <a class="dropdown-item" aria-label="navbardata?.forthsubmenu4" *ngIf="navbardata?.forthsubmenu4" href="#">{{navbardata?.forthsubmenu4}}</a>
+                </ul>
               </li>
             </span>
  
@@ -122,8 +122,21 @@
         </div>
       </nav> 
     </header>
-    <div class="htmlelement">
+    <ul class="list-inline">
+      <li (click)="openhtml()"><button [class]="htmlcontent">HTML</button></li>
+      <li (click)="opencss()"><button [class]="csscontent">CSS</button></li>
+    </ul>
+    <div class="htmlelement" *ngIf="htmlcontent == 'active'">
+      <div class="copybutton">
+        <button ngxClipboard [cbContent]="getHtmlContent()" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
+      </div>
       <pre><code [highlight]="getHtmlContent()">{{getHtmlContent()}}</code></pre>
+    </div>
+    <div class="htmlelement" *ngIf="csscontent == 'active'">
+      <div class="copybutton">
+        <button ngxClipboard [cbContent]="CSS" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
+      </div>
+      <pre><code [highlight]="CSS">{{CSS}}</code></pre>
     </div>
 </div> 
 

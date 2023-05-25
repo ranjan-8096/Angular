@@ -95,8 +95,10 @@ export class FooterformComponent {
 
 
       localStorage.setItem("footerdata",JSON.stringify(data));
-      this.router.navigate(['/component/footer']);
       this.commonservice.footercompletedata(data);
+      this.router.navigate(['/component/footer']);
+      // this.reloadComponent(true);
     }
+
   }
 }
