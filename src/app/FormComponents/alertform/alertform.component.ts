@@ -14,6 +14,7 @@ export class AlertformComponent implements OnInit {
   registerForm: FormGroup;
   bgcolor: any;
   color: any;
+  whitetype:any;
   // nodefaultimage: any;
   // storage: any;
   // imageform: any;
@@ -70,11 +71,13 @@ export class AlertformComponent implements OnInit {
       if (this.registerForm.value['color'] == "light") {
         this.bgcolor = "#F1F4F8";
         this.color = "#000";
+        this.whitetype="whitetype";
       }
 
       const data = {
         "bgcolor":this.bgcolor,  
         "color":this.color,
+        "whitetype":this.whitetype,
         "theme": this.registerForm.value.theme,
         "alertdetails": this.registerForm.value['alertdetails'],
         "selectedtitle": this.registerForm.value.selectedtitle,

@@ -31,12 +31,12 @@ constructor(private router: Router){}
     {id:6,name:"Tooltip"},
     {id:7,name:"Alert"},
     {id:8,name:"Toaster"},
-    {id:9,name:"Forms"}
-
-
+    {id:9,name:"Forms"} 
 ];
 
 subheading = "This components help to create and customize the";
+
+
 closeicon="../assets/images/close.png";
 
 close(){

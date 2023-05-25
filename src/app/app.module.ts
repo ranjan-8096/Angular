@@ -31,6 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditalertComponent } from './FormComponents/editalert/editalert.component';
 import { ClipboardModule } from 'ngx-clipboard';
 import { FormsComponent } from './Components/forms/forms.component';
+import { CheckboxComponent } from './Components/checkbox/checkbox.component';
+import { CheckboxformComponent } from './FormComponents/checkboxform/checkboxform.component';
 
 
 
@@ -60,6 +62,8 @@ import { FormsComponent } from './Components/forms/forms.component';
     ToasterComponent,
     ToasterformComponent,
     FormsComponent,
+    CheckboxComponent,
+    CheckboxformComponent,
    
   ],
   imports: [

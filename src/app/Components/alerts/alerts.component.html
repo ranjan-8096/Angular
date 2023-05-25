@@ -25,7 +25,7 @@
           <div class="alert-content">
             <div id="success-header" [ngStyle]="{'background':alertdatas?.bgcolor, 'color':alertdatas?.color}" class="alert-header" >
               <h2 class="alert-title">{{alertdatas.selectedtitle}}!</h2>
-              <button aria-label="Alert Close Modal" class="alert-close" data-bs-dismiss="modal"><img [src]="closeicon" class="closeicon"/></button> 
+              <button aria-label="Alert Close Modal" [ngClass]="alertdatas.whitetype" class="alert-close" data-bs-dismiss="modal"><img [src]="closeicon" class="closeicon"/></button> 
             </div>
             <div class="alert-body"  id="success">
               <i class="fa fa-check" aria-hidden="true"></i> 
@@ -41,13 +41,13 @@
           <div class="alert-content">
             <div id="confirm-header" [ngStyle]="{'background':alertdatas?.bgcolor, 'color':alertdatas?.color}" class="alert-header">
               <h2 class="alert-title">{{alertdatas.selectedtitle}}!</h2>
-              <button aria-label="Alert Close Modal" class="alert-close" data-bs-dismiss="modal"><img [src]="closeicon" class="closeicon"/></button>
+              <button [ngClass]="alertdatas.whitetype" aria-label="Alert Close Modal" class="alert-close" data-bs-dismiss="modal"><img [src]="closeicon" class="closeicon"/></button>
             </div>
             <div class="alert-body" id="confirm" >
               <i class="fa fa-exclamation-triangle"></i>
               <p id="confirm-text" class="alert-text">{{alertdatas.alertdetails}}</p>
               <div class="alert-actions">
-                <button type="button" class="alert-button" data-bs-dismiss="modal">ok</button>
+                <button type="button" class="alert-button" data-bs-dismiss="modal">OK</button>
                 <!-- <button type="button" class="alert-button" id="confirm-button" data-bs-dismiss="modal">Confirm</button> -->
               </div>
             </div>
@@ -58,7 +58,7 @@
           <div class="alert-content">
             <div id="info-header" [ngStyle]="{'background':alertdatas?.bgcolor, 'color':alertdatas?.color}" class="alert-header">
               <h2 class="alert-title">{{alertdatas.selectedtitle}}!</h2>
-              <button aria-label="Alert Close Modal" class="alert-close" data-bs-dismiss="modal"><img [src]="closeicon" class="closeicon"/></button>
+              <button [ngClass]="alertdatas.whitetype" aria-label="Alert Close Modal" class="alert-close" data-bs-dismiss="modal"><img [src]="closeicon" class="closeicon"/></button>
             </div>
             <div class="alert-body"  id="info">
               <i class="fa fa-exclamation-circle" aria-hidden="true"></i>  
@@ -73,7 +73,7 @@
           <div class="alert-content">
             <div id="error-header" [ngStyle]="{'background':alertdatas?.bgcolor, 'color':alertdatas?.color}" class="alert-header">
               <h2 class="alert-title">{{alertdatas.selectedtitle}}!</h2>
-              <button aria-label="Alert Close Modal" class="alert-close" data-bs-dismiss="modal"><img [src]="closeicon" class="closeicon"/></button>
+              <button aria-label="Alert Close Modal" [ngClass]="alertdatas.whitetype" class="alert-close" data-bs-dismiss="modal"><img [src]="closeicon" class="closeicon"/></button>
             </div>
             <div class="alert-body" id="error"> 
               <i class="fa fa-times" aria-hidden="true"></i> 

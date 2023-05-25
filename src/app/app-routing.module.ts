@@ -10,6 +10,7 @@ import { TooltipComponent } from './Components/tooltip/tooltip.component';
 import { AlertsComponent } from './Components/alerts/alerts.component';
 import { ToasterComponent } from './Components/toaster/toaster.component';
 import { FormsComponent } from './Components/forms/forms.component';
+import { CheckboxComponent } from './Components/checkbox/checkbox.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path: "component/tooltip", component:TooltipComponent},
   {path: "component/alerts", component:AlertsComponent}, 
   {path : "component/toaster", component:ToasterComponent},
-  {path : "component/forms", component:FormsComponent}
+  {path : "component/forms", component:FormsComponent},
+  {path : "component/checkbox", component:CheckboxComponent},
 
 ];
 

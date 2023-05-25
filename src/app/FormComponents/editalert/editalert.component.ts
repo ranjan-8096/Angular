@@ -16,6 +16,7 @@ export class EditalertComponent implements OnInit {
   themecolor:any;
   submitted = false;
   alertdatas: any; 
+  whitetype:any;
   registerForm: FormGroup;
   
 
@@ -92,12 +93,13 @@ export class EditalertComponent implements OnInit {
       if (this.registerForm.value['color'] == "light") {
         this.bgcolor = "#F1F4F8";
         this.color = "#000";
-        this.closiconcolor="closiconcolor"
+        this.whitetype="whitetype"
       }
       
       const data = {
         "bgcolor":this.bgcolor,  
         "color":this.color,
+        "whitetype":this.whitetype,
         "theme": this.registerForm.value.theme,
         "alertdetails": this.registerForm.value['alertdetails'],
         "selectedtitle": this.registerForm.value.selectedtitle,

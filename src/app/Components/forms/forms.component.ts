@@ -7,8 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./forms.component.scss']
 })
 export class FormsComponent {
-
-
+ 
+@ViewChild("myModalCloseform1") ModalClose:any
 
   constructor(private router: Router, elRef: ElementRef) {
 
@@ -28,14 +28,19 @@ export class FormsComponent {
 
 ];
 
-  
+formsubheading = "This components help to create and customize the";
+closeicon="../assets/images/close.png";
+
   backwindow(){
     this.router.navigate(['/modal']);
-  }
+  } 
 
-  truncate =(str:any) => {
-    return str.length > 10 ? str.substring(0, 95): str;
-  };
-  
+  turncate=(str:any)=>{
+    return str.length>10? str.substring(0,95):str;
+  } 
+
+  close(){
+    this.ModalClose.nativeElement.click();
+  }
 
 }

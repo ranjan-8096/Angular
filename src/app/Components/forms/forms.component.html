@@ -1,12 +1,12 @@
 <section class="main">
     <div class="top-header">
-      <div>
-        <h4 class="subheader">Footer <span class="sideheader">Component</span></h4>
-      </div>
-      <div class="button-sec">
-        <button class="backbutton" (click)="backwindow()">Back</button>
-        <button class="backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal2">Edit</button>
-      </div>
+        <div>
+            <h4 class="subheader">Footer <span class="sideheader">Component</span></h4>
+        </div>
+        <div class="button-sec">
+            <button class="backbutton" (click)="backwindow()">Back</button>
+            <button class="backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal2">Edit</button>
+        </div>
     </div>
 
 
@@ -21,19 +21,19 @@
 
                     <div class="card-body">
                         <!-- <h5 class="card-title">Special title treatment</h5> -->
-                        <p class="card-text">{{item?.name}}.</p>
+                        <p class="card-text">{{turncate(formsubheading)}} {{item?.name}}.</p>
 
                         <div class="button-sec" *ngIf="item?.id == 1">
                             <button aria-label="Header Detail Button" class="btn btn-primary me-2"
-                                data-bs-toggle="modal" data-bs-target="#exampleModal12">Details</button>
+                                data-bs-toggle="modal" data-bs-target="#exampleModal11">Details</button>
                             <button aria-label="Header Create Button" class="btn btn-primary me-2"
-                                data-bs-toggle="modal" data-bs-target="#exampleModal2">Create</button>
+                                data-bs-toggle="modal" data-bs-target="#exampleModal1">Create</button>
                         </div>
                         <div class="button-sec" *ngIf="item?.id == 2">
-                            <button aria-label="Card Detail Button" class="btn btn-primary me-2"
-                                data-bs-toggle="modal" data-bs-target="#exampleModal11">Details</button>
+                            <button aria-label="Card Detail Button" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal12">Details</button>
                             <button aria-label="Card Create Button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal1">Create </button>
+                                data-bs-target="#exampleModal2">Create </button>
                         </div>
                         <div class="button-sec" *ngIf="item?.id == 3">
                             <button aria-label="Button Detail Button" class="btn btn-primary me-2"
@@ -82,10 +82,48 @@
             </div>
         </div>
     </div>
-
-
+    <div class="modal fade details" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel1"
+        aria-hidden="true">
+        <div class="modal-dialog modaldialog-width">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Checkbox</h4>
+                    <button class="clearbtn" #myModalClose data-bs-dismiss="modal">
+                        <img [src]="closeicon">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="details-container ">
+                        <h3> Details for the checkbox section are below.</h3>
+                        <p class="pref">Please do follow the below given instructions while creating your Checkbox
+                            component.</p>
+                        <div class="detail-content">
+                            <ul>
+                                <li>Checkbox label should be less than 20 characters.</li> 
+                                <li>You can select width of Checkbox from the given options.</li> 
+                                <li>User Can select the Checkbox theme. </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modaldialog-width">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Checkbox</h4>
+                    <button class="clearbtn" #myModalCloseform1 data-bs-dismiss="modal">
+                        <img [src]="closeicon" >
+                    </button>
+                </div>
+                <!-- <app-form (onclose)="close()"></app-form> -->
+                <app-checkboxform (onclose)="close()"></app-checkboxform>
+            </div>
+        </div>
+    </div>
 
 
 
 </section>
-
