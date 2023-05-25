@@ -9,9 +9,11 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { TooltipComponent } from './Components/tooltip/tooltip.component';
 import { AlertsComponent } from './Components/alerts/alerts.component';
 import { ToasterComponent } from './Components/toaster/toaster.component';
+import { FormsComponent } from './Components/forms/forms.component';
+
 
 const routes: Routes = [
-
+ 
   {path: '', pathMatch:'full', redirectTo:'/modal'},
   {path: "modal", component:ModalComponent},
   {path: "component/header", component:HeaderComponent},
@@ -21,7 +23,9 @@ const routes: Routes = [
   {path: "component/footer", component:FooterComponent},
   {path: "component/tooltip", component:TooltipComponent},
   {path: "component/alerts", component:AlertsComponent}, 
-  {path : "component/toaster", component:ToasterComponent}
+  {path : "component/toaster", component:ToasterComponent},
+  {path : "component/forms", component:FormsComponent}
+
 ];
 
 @NgModule({

@@ -67,6 +67,11 @@
                                 <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal8">Create</button>
                             </div>
+                            <div class="button-sec" *ngIf="item?.id == 9">
+                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal18">Details</button>
+                                <button aria-label="Button Create" class="btn btn-primary" (click)="routetocomp()">Create</button>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -30,7 +30,9 @@ constructor(private router: Router){}
     {id:5,name:"Footer"},
     {id:6,name:"Tooltip"},
     {id:7,name:"Alert"},
-    {id:8,name:"Toaster"}
+    {id:8,name:"Toaster"},
+    {id:9,name:"Forms"}
+
 
 ];
 
@@ -52,6 +54,12 @@ close(){
 
   console.log(">>>>>>>>>>>>>>>>");
 }
+
+routetocomp() {
+  this.router.navigate(['/component/forms']);
+
+}
+
 
 truncate =(str:any) => {
   return str.length > 10 ? str.substring(0, 95): str;

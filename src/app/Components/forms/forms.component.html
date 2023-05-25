@@ -1,0 +1,91 @@
+<section class="main">
+    <div class="top-header">
+      <div>
+        <h4 class="subheader">Footer <span class="sideheader">Component</span></h4>
+      </div>
+      <div class="button-sec">
+        <button class="backbutton" (click)="backwindow()">Back</button>
+        <button class="backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal2">Edit</button>
+      </div>
+    </div>
+
+
+    <div class="main-page">
+
+        <div class="row  py-3 homecmp">
+            <div class="col-md-4 mb-3" *ngFor="let item of formscomponentarray">
+                <div class="card feature">
+                    <div class="card-header">
+                        {{item?.name}}
+                    </div>
+
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Special title treatment</h5> -->
+                        <p class="card-text">{{item?.name}}.</p>
+
+                        <div class="button-sec" *ngIf="item?.id == 1">
+                            <button aria-label="Header Detail Button" class="btn btn-primary me-2"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal12">Details</button>
+                            <button aria-label="Header Create Button" class="btn btn-primary me-2"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal2">Create</button>
+                        </div>
+                        <div class="button-sec" *ngIf="item?.id == 2">
+                            <button aria-label="Card Detail Button" class="btn btn-primary me-2"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal11">Details</button>
+                            <button aria-label="Card Create Button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal1">Create </button>
+                        </div>
+                        <div class="button-sec" *ngIf="item?.id == 3">
+                            <button aria-label="Button Detail Button" class="btn btn-primary me-2"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal13">Details</button>
+                            <button aria-label="Button Create Button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal3">Create</button>
+                        </div>
+                        <div class="button-sec" *ngIf="item?.id == 4">
+                            <button aria-label="Button Detail Button" class="btn btn-primary me-2"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal14">Details</button>
+                            <button aria-label="Button Create Button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal4">Create</button>
+                        </div>
+                        <div class="button-sec" *ngIf="item?.id == 5">
+                            <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal15">Details</button>
+                            <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal5">Create</button>
+                        </div>
+                        <div class="button-sec" *ngIf="item?.id == 6">
+                            <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal16">Details</button>
+                            <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal6">Create</button>
+                        </div>
+                        <div class="button-sec" *ngIf="item?.id == 7">
+                            <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal17">Details</button>
+                            <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal7">Create</button>
+                        </div>
+                        <div class="button-sec" *ngIf="item?.id == 8">
+                            <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal18">Details</button>
+                            <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal8">Create</button>
+                        </div>
+                        <div class="button-sec" *ngIf="item?.id == 9">
+                            <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal18">Details</button>
+                            <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal8">Create</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</section>
+

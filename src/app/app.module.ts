@@ -30,6 +30,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditalertComponent } from './FormComponents/editalert/editalert.component';
 import { ClipboardModule } from 'ngx-clipboard';
+import { FormsComponent } from './Components/forms/forms.component';
 
 
 
@@ -58,6 +59,7 @@ import { ClipboardModule } from 'ngx-clipboard';
     AlertsComponent,
     ToasterComponent,
     ToasterformComponent,
+    FormsComponent,
    
   ],
   imports: [
