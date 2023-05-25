@@ -13,7 +13,7 @@ import { FormsComponent } from './Components/forms/forms.component';
 
 
 const routes: Routes = [
-
+ 
   {path: '', pathMatch:'full', redirectTo:'/modal'},
   {path: "modal", component:ModalComponent},
   {path: "component/header", component:HeaderComponent},
