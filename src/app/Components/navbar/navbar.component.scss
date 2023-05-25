@@ -98,7 +98,7 @@ button.clearbtn {
 
         a {
             font-size: 1rem;
-            color: #fff;
+            // color: #fff;
             cursor: pointer;
             font-weight: 500;
 
@@ -213,19 +213,110 @@ ul.navbar-menu.is-open span li {
     position: relative;
 }
 
-.htmlelement { 
+.htmlelement {
     background-color: white;
     overflow-y: scroll;
     width: 90%;
-    height: 400px; 
-    margin: auto; 
-    margin-top: 30px; 
+    height: 400px;
+    margin: auto;
+    margin-top: 30px;
 }
-.nav-button{
+
+.nav-button {
     border: 0px;
     background-color: transparent;
 }
+
+// .dropdownmenu {
+//     display: none;
+// }
+// a.nav-link:hover + .dropdownmenu {
+//     display: block;
+// }
+.dropdown-toggle::after {
+
+    display: none;
+
+}
+ 
+.rightmenu {
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+.mobiledevice{
+    display: none;
+}
+.mainnav span li i {
+    font-size: small;
+    margin-left: 6px;
+}
+
+.mainnav ul.dropdown-menu {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    top: 32px;
+    box-shadow: 1px 1px 3px #00000036;
+}
+.copybutton{
+    text-align: end;
+        margin-right: 40px;
+        margin-top: 30px;
+        button{
+            border: 1.5px solid black;
+            background: transparent;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+        .copyicon{
+            margin-right: 5px;
+        }
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    li:first-child{
+        margin-right: 10px;
+    }
+    li{
+        cursor: pointer;
+        button{
+            border: none;
+            background: transparent;
+            padding: 0px;
+        }
+    }
+}
+
+.inactive{
+    border-bottom: 1px solid black !important;
+    padding-bottom: 5px !important;
+}
 @media only screen and (max-width: 767px) {
+    .mobiledevice{
+        display: block;
+    }
+    .mainnav {
+        display: block !important;
+        justify-content: start !important;
+        position: absolute;
+        background: #eef2f8;
+        width: 100%;
+        left: 0;
+        top: 40px;
+        padding: 3px 16px 0px 16px;
+    }
+    .mobiledevice span {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .username {
+        display: inline-block;
+    }
     ul.navbar-menu {
         display: none;
     }
@@ -317,21 +408,21 @@ ul.navbar-menu.is-open span li {
         padding: 1rem .85rem;
     }
 
-    .modal-dialog {
+    .modaldialog-width {
         max-width: 100% !important;
     }
 
     .rightmenu {
         position: absolute;
         top: 5px;
-        right: 0;
+        right:10px;
     }
 
     .rightmenu li a {
-        font-size: 13px;
+        font-size: 13px; 
         padding: 5px !important;
     }
-    
+
     button.navbartoggler {
         border: none;
         border-radius: 2px;
@@ -348,11 +439,4 @@ ul.navbar-menu.is-open span li {
         padding: 15px;
     }
 
-}
-
-
-@media screen and (min-device-width: 320px) and (max-device-width: 350px) {
-    .username {
-        display: inline-block;
-    }
 }

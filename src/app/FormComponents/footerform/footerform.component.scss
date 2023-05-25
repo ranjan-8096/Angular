@@ -43,16 +43,7 @@ input[type="radio"]:checked{
 input[type="radio"]:checked+label{ /*no need, if you don't disable default appearance*/
   background-color: #0070ad;
   color: white;
-}
-
-
-
-
-
-
-
-
-
+} 
 .footerbutton{
     width: 100%;
     min-height:60px;

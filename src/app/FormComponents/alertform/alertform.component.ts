@@ -1,7 +1,7 @@
+ 
 import { Component, OnInit , EventEmitter , Output} from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { finalize } from 'rxjs/operators';
+import { FormGroup, FormBuilder, Validators, ValidatorFn, ValidationErrors } from '@angular/forms';
 
 
 @Component({
@@ -9,118 +9,82 @@ import { finalize } from 'rxjs/operators';
   templateUrl: './alertform.component.html',
   styleUrls: ['./alertform.component.scss']
 })
-export class AlertformComponent implements OnInit{
+export class AlertformComponent implements OnInit {
   submitted = false;
   registerForm: FormGroup;
-  @Output() onclose = new EventEmitter<any>;
-  nodefaultimage:any;
-  storage:any;
-  imageform:any;
+  bgcolor: any;
+  color: any;
+  // nodefaultimage: any;
+  // storage: any;
+  // imageform: any;
 
-  // @Output() onLogin = new EventEmitter<boolean>();
+
+  @Output() onclose = new EventEmitter<any>;
+
   constructor(private router: Router,
     private formBuilder: FormBuilder) {
 
-  }
-
-
+  } 
   
+
+
+
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
-      // addbutton:['', [Validators.required]],
-      // buttons:[''],
-      // text1:[''],
-      // text2:[''],
-      // image:['',[Validators.required]],
-      // uploadimage:[''],
-      cardwidth:['',[Validators.required]],
-      selectedtitle:['',[Validators.required]],
-      theme:['',[Validators.required]],
-      // title: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
-      welcome: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]]
+      cardwidth: ['', [Validators.required]],
+      selectedtitle: ['', [Validators.required]],
+      // theme: ['', [Validators.required]],
+      color: ['', [Validators.required]], 
+      alertdetails: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]]
     });
 
-    // this.registerForm.get("addbutton")?.valueChanges.subscribe((result)=>{
-
-    //   console.log("result",result);
-
-    //   if(result == "Yes") {
-    //     this.registerForm.get("buttons")?.setValidators([Validators.required]);
-    //   }  else if(result == "No") {
-    //     this.registerForm.get("buttons")?.clearValidators();
-    //     this.registerForm.get("text1")?.clearValidators();
-    //     this.registerForm.get("text2")?.clearValidators();
-    //   }
-    // })
-
-    this.registerForm.get("buttons")?.valueChanges.subscribe((result)=>{
-
-      console.log("vishnu",result);
-
-      if(result == 1) {
-        this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
-      } 
-       else if(result == 2) {
-        this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
-        this.registerForm.get("text2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
-      } 
-      else {
-        this.registerForm.get("text1")?.clearValidators();
-        this.registerForm.get("text2")?.clearValidators();
-      }
-    })
   }
 
-  get f(){
+  get f() {
     return this.registerForm.controls;
   }
 
-  // handleimage(event:any){
-  //   this.nodefaultimage = event.target.files[0];
-  //   this.storage = event.target.files[0].name;
-  //   console.log(">>>>",this.nodefaultimage);
-  // }
 
-  // imageurl(){
-  //   if(this.registerForm.value.image=="No"){
-  //     this.registerForm.value.uploadimage = "";
-  //   } else if(this.registerForm.value.image=="Yes"){
-  //     this.registerForm.value.uploadimage = window.webkitURL.createObjectURL(this.nodefaultimage);
-  //   }
-  // }
-  
-
-  onSubmit(){
-    console.log(">>>>",this.f);
+  onSubmit() {
+    console.log(">>>>", this.f);
     this.submitted = true;
-    console.log(">>>>>>>>this.registerForm",this.f);
+    console.log(">>>>>>>>this.registerForm", this.f);
 
-    if(this.registerForm.invalid) {
+    if (this.registerForm.invalid) {
       return true;
     } else {
-      // if(this.registerForm.value.image=="No"){
-      //   this.registerForm.value.imageform = "";
-      // } else if(this.registerForm.value.image=="Yes"){
-      //   this.registerForm.value.imageform = window.webkitURL.createObjectURL(this.nodefaultimage);
-      // }
-      const data = {
-        // "text1":this.registerForm.value.text1,
-        // "text2":this.registerForm.value.text2,
-        "theme":this.registerForm.value.theme,
-        // "image":this.registerForm.value.image,
-        // "title":this.registerForm.value['title'],
-        "welcome":this.registerForm.value['welcome'],
-        // "uploadimage": this.registerForm.value.uploadimage,
-        // "addbutton":this.registerForm.value.addbutton,
-        "selectedtitle":this.registerForm.value.selectedtitle,
-        // "buttons":this.registerForm.value.buttons,
-        // "imagename":this.storage,
-        // "imageform":this.registerForm.value.imageform
+
+      if (this.registerForm.value['color'] == "blue") {
+        this.bgcolor = "#0070ad";
+        this.color = "white";
       }
-        
-      console.log(">>>>>",this.registerForm.value);
+      if (this.registerForm.value['color'] == "purple") {
+        this.bgcolor = "#2b0a3d";
+        this.color = "white";
+
+      }
+      if (this.registerForm.value['color'] == "dark") {
+        this.bgcolor = "black";
+        this.color = "white";
+      }
+      if (this.registerForm.value['color'] == "light") {
+        this.bgcolor = "#F1F4F8";
+        this.color = "#000";
+      }
+
+      const data = {
+        "bgcolor":this.bgcolor,  
+        "color":this.color,
+        "theme": this.registerForm.value.theme,
+        "alertdetails": this.registerForm.value['alertdetails'],
+        "selectedtitle": this.registerForm.value.selectedtitle,
+        "cardwidth": this.registerForm.value.cardwidth,
+       
+      }
+
+      console.log(">>>>>", this.registerForm.value);
       this.onclose.emit();
-      localStorage.setItem("alertdata",JSON.stringify(data));
+      localStorage.setItem("alertdata", JSON.stringify(data));
       this.router.navigate(['/component/alerts']);
     }
   }

@@ -89,10 +89,7 @@ export class EditnavbarComponent implements OnInit {
     forthsubmenu3:[''],
     forthsubmenu4:[''],
   });
-  
-
-
-
+   
     if(localStorage.getItem("navbar")) {
       var data1:any =  localStorage.getItem("navbar");
       this.navbardata = JSON.parse(data1);
@@ -666,7 +663,7 @@ reloadComponent(self:boolean,urlToNavigateTo ?:string){
         this.bgcolor="f5fbff";
         this.bgcolordropdown="light";
         this.headerclass="headerclass";
-        this.color="#f5fbff";  
+        this.color="#000";  
       }
 
 

@@ -22,7 +22,9 @@
     "bootstrap": "^5.2.3",
     "font-awesome": "^4.7.0",
     "ng2-tooltip-directive": "^2.10.3",
+    "ngx-clipboard": "^16.0.0",
     "ngx-highlightjs": "^8.0.0",
+    "ngx-toastr": "^17.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

@@ -20,11 +20,16 @@ import { FooterformComponent } from './FormComponents/footerform/footerform.comp
 import { FooterComponent } from './Components/footer/footer.component';
 import { TooltipformComponent } from './FormComponents/tooltipform/tooltipform.component';
 import { TooltipComponent } from './Components/tooltip/tooltip.component';
-import { TooltipModule } from 'ng2-tooltip-directive';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { EditheaderComponent } from './FormComponents/editheader/editheader.component';
 import { AlertformComponent } from './FormComponents/alertform/alertform.component';
 import { AlertsComponent } from './Components/alerts/alerts.component';
+import { ToasterComponent } from './Components/toaster/toaster.component';
+import { ToasterformComponent } from './FormComponents/toasterform/toasterform.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditalertComponent } from './FormComponents/editalert/editalert.component';
+import { ClipboardModule } from 'ngx-clipboard';
 
 
 
@@ -49,8 +54,10 @@ import { AlertsComponent } from './Components/alerts/alerts.component';
     TooltipComponent,
     TooltipformComponent,
     AlertformComponent,
-    AlertformComponent,
+    EditalertComponent,
     AlertsComponent,
+    ToasterComponent,
+    ToasterformComponent,
    
   ],
   imports: [
@@ -59,7 +66,13 @@ import { AlertsComponent } from './Components/alerts/alerts.component';
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
-    HighlightModule
+    HighlightModule,
+    BrowserAnimationsModule,
+    ClipboardModule,
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      preventDuplicates: true
+    }), // ToastrModule added
   ],
   providers: [
     {

@@ -21,6 +21,56 @@ btncolor:any;
 nodefaultimage:any;
 description:any;
 closeicon="../assets/images/close.png";
+htmlcontent="active";
+csscontent:any;
+Copy="Copy";
+CSS=`.container{ 
+  .card{
+      .card-body{
+          padding: 0px !important;
+          .defaultimage{
+              // background-size: cover;
+          }
+          .card-title{
+              margin-top: 15px;
+              padding-left: 20px;
+          }
+          .card-text{
+              padding-left: 20px;
+              padding-right: 20px;
+          }
+      }
+      .card-footer1{
+          width: 100%;
+          .footerright{
+              float: right;
+              padding: 20px;
+              .text1{
+                  border-radius: 5px;
+                  padding: 5px;
+                  border:1px solid var(--color-white) ;
+              }
+              .gap{
+                  margin-right: 10px;
+              }
+          }
+      }
+  }
+}
+
+.cardfotter button.text1.gap {
+  padding: 5px 15px !important;
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  
+  section.main header {
+      padding: 1rem .85rem;
+  }
+  .modal-dialog { 
+      max-width: 100% !important;
+  }
+}`
+
 
 @ViewChild('myModalClose1') modalClose1:any;
 
@@ -107,6 +157,21 @@ constructor(private router : Router, private sanitizer: DomSanitizer,elRef: Elem
     const formattedCode = lines.join('\n');
     // console.log(formattedCode);
     return formattedCode;
+  }openhtml(){
+    this.htmlcontent = "active";
+    this.csscontent = "noactive";
+  }
+
+  opencss(){
+    this.csscontent = "active";
+    this.htmlcontent = "noactive";
+  }
+
+  copy(){
+    this.Copy="copied!!";
+    setTimeout(()=>{
+        this.Copy="Copy";
+    }, 2000);
   }
 
 

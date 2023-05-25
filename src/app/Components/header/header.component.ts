@@ -17,6 +17,141 @@ export class HeaderComponent {
   closeicon="../assets/images/close.png";
 
   headerdata:any;
+  htmlcontent="active";
+  csscontent:any;
+  Copy="Copy";
+  CSS=`.header
+  { 
+      height:75px ; 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%; 
+  }
+  .div1{ 
+      display: flex;
+      align-items: center;
+  }
+  .sub-div{
+      padding-right: 0.85rem;
+      display: flex;
+      align-items: center;
+  }
+  .img1
+  {
+      padding-left: 24px; 
+      height: 45px;  
+  }
+  
+  .label1
+  {
+      color: var(--color-wbh-blue); 
+      margin-left: 13px;  
+      font-size:24px;  
+      font-family:Ubuntu;
+  }
+  
+  .img2
+  {
+      height:22px;  
+  }
+  
+  .label2
+  {
+      color: var(--color-wbh-blue); 
+      margin-left: 8px;
+      font-size: 20px;
+      font-family: Ubuntu;
+  }
+  .img3
+  {
+      height:35px;  
+      margin-left:23px;
+  }
+  
+  h4.subheader {
+      margin-left: 8px;
+  }
+  .username {
+      display: flex;
+      align-items: center;
+  }
+  @media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+      .top-header{
+          display: block;
+          box-shadow: none;
+          .button-sec{
+              position: absolute;
+              right: 12px;
+              top: 12px;
+          }
+      }
+      h4.subheader {
+          margin-left: 0px;
+          font-size: 1.2rem;
+      }
+      .username {
+          display: flex;
+          text-align: center;
+          .img2 {
+              height: 22px;
+              margin: auto;
+          }
+          .label2 {  
+              font-size: 15px; 
+          }
+      }
+      .header{
+          display: flex;
+          width: 100%;
+          justify-items: center; 
+          justify-content: space-between;
+          .div1{
+              width: 100%;
+              // display: grid;
+              // width: 100%;
+              // justify-items: center;
+              .subdiv{
+                  .img1 {
+                      padding-left: 0.85rem;
+                      height: 2.2rem; 
+                  }
+              }
+          }
+          .img3{
+              margin-left: 10px;
+              width: 120px;
+              height: initial;
+          }
+          .div2{
+              .sub-div{
+                   
+                 .capgeminilogo{
+                  display: none;
+                 }
+              }
+          }
+          .label1{
+              color: var(--color-wbh-blue);
+              margin-left: 6px;
+              font-size: 20px;
+              font-family: Ubuntu;
+          }
+      }
+      section.main header {
+          padding: 1rem .85rem;
+      }
+      .modal-dialog { 
+          max-width: 100% !important;
+      }
+  }
+  
+  @media screen and (min-device-width: 320px) and (max-device-width: 350px) {
+      .username {
+          display: inline-block;
+      }
+  }`
+
   @ViewChild('myModalClose1') modalClose1:any;
   @ViewChild("myheader") elRef: ElementRef;
 
@@ -59,6 +194,22 @@ export class HeaderComponent {
     const formattedCode = lines.join('\n');
     // console.log(formattedCode);
     return formattedCode;
+  }openhtml(){
+    this.htmlcontent = "active";
+    this.csscontent = "noactive";
   }
+
+  opencss(){
+    this.csscontent = "active";
+    this.htmlcontent = "noactive";
+  }
+
+  copy(){
+    this.Copy="copied!!";
+    setTimeout(()=>{
+        this.Copy="Copy";
+    }, 2000);
+  }
+
 }
 

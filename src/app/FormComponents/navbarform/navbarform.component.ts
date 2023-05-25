@@ -415,7 +415,7 @@ export class NavbarformComponent implements OnInit{
         this.bgcolor="f5fbff";
         this.bgcolordropdown="light";
         this.headerclass="headerclass";
-        this.color="#f5fbff";  
+        this.color="#000";  
       }
 
 

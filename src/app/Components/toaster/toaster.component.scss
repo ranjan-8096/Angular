@@ -1,33 +1,23 @@
-.subheader{
-    color: #0070ad;
-}
-.btncmp{
-    color: black;
+button.toaster_btn {
+    // color: #fff;
+    padding: 10px 40px;
+    border-radius: 5px;
+    text-transform: capitalize;
 }
 
-.backbutton{
-    border-radius: 8px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: white !important;
-    background-color: #0070ad !important;
-}
+
 .htmlelement{
-    background-color: white;
+    background-color: var(--color-white);;
     overflow-y: scroll;
     width:90%;
-    height:105px;
+    height:350px;
     margin: auto;
     margin-top: 30px;
-}
-.closeicon{
-    cursor: pointer;
+    padding-top: 30px;
 }
 .copybutton{
     text-align: end;
         margin-right: 40px;
-        margin-top: 30px;
         button{
             border: 1.5px solid black;
             background: transparent;
@@ -37,6 +27,34 @@
         .copyicon{
             margin-right: 5px;
         }
+}
+
+.error{
+    color: var(--color-red);
+}
+// .top-header{
+//     h4{
+//         // color: var(--color-wbh-blue);
+//         span{
+//             color:var(--bs-black);
+//         }
+//     }
+// }
+.backbutton{
+    border-radius: 8px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--color-white) !important;
+    background-color: var(--color-wbh-blue) !important;
+}
+.tabs{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    label{
+        margin-right: 10px;
+    }
 }
 .list-inline {
     padding-left: 0;
@@ -61,22 +79,12 @@
     border-bottom: 1px solid black !important;
     padding-bottom: 5px !important;
 }
+
+
+
 @media only screen and (max-width: 767px) {
-    section.main header {
-        padding: 1rem .85rem;
-    }
-    h4.subheader {
-        margin: 0px;
-        font-size: 1.2rem;
-    }
-    .text-center.main-page {
-        line-break: anywhere;
-    }
-    .top-header button { 
-        margin-left: 8px;
-    }
     .modaldialog-width {
-        margin-top: 60px;
-        max-width: 100% !important;
-    }
-}
+      margin-top: 60px;
+      max-width: 100% !important;
+  }
+}  

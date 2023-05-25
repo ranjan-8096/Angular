@@ -17,7 +17,7 @@
 
                         <div class="card-body">
                             <!-- <h5 class="card-title">Special title treatment</h5> -->
-                            <p class="card-text" [title]='subheading'>{{truncate(subheading)}}...</p>
+                            <p class="card-text" [title]='subheading'>{{truncate(subheading)}}  {{item?.name}}.</p>
 
                             <div class="button-sec" *ngIf="item?.id == 1">
                                 <button aria-label="Header Detail Button" class="btn btn-primary me-2"
@@ -47,15 +47,21 @@
                                 <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal15">Details</button>
                                 <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal6">Create</button>
+                                    data-bs-target="#exampleModal5">Create</button>
                             </div>
                             <div class="button-sec" *ngIf="item?.id == 6">
+                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal16">Details</button>
+                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal6">Create</button>
+                            </div>
+                            <div class="button-sec" *ngIf="item?.id == 7">
                                 <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal17">Details</button>
                                 <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal7">Create</button>
                             </div>
-                            <div class="button-sec" *ngIf="item?.id == 7">
+                            <div class="button-sec" *ngIf="item?.id == 8">
                                 <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal18">Details</button>
                                 <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
@@ -70,7 +76,7 @@
 
         <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Card</h4>
@@ -84,7 +90,7 @@
         </div>
         <div class="modal fade details" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel1"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Cards</h4>
@@ -129,7 +135,7 @@
 
         <div class="modal fade details" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel1"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Headers</h4>
@@ -166,7 +172,7 @@
 
         <div class="modal fade details" id="exampleModal13" tabindex="-1" aria-labelledby="exampleModalLabel1"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Buttons</h4>
@@ -204,7 +210,7 @@
         </div>
         <div class="modal fade details" id="exampleModal14" tabindex="-1" aria-labelledby="exampleModalLabel1"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Navbar</h4>
@@ -241,7 +247,7 @@
 
         <div class="modal fade details" id="exampleModal15" tabindex="-1" aria-labelledby="exampleModalLabel1"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Footer</h4>
@@ -253,7 +259,7 @@
                     <div class="modal-body">
                         <div class="details-container ">
                             <h3> Details for the Footer section are below.</h3>
-                            <p class="pref">Please do follow the below given instructions while creating your Button
+                            <p class="pref">Please do follow the below given instructions while creating your Footer
                                 component.</p>
                             <div class="detail-content">
                                 <ul>
@@ -278,9 +284,9 @@
             </div>
         </div>
         <!--  -->
-        <div class="modal fade details" id="exampleModal17" tabindex="-1" aria-labelledby="exampleModalLabel1"
+        <div class="modal fade details" id="exampleModal16" tabindex="-1" aria-labelledby="exampleModalLabel1"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Tooltip</h4>
@@ -291,8 +297,8 @@
                     </div>
                     <div class="modal-body">
                         <div class="details-container ">
-                            <h3> Details for the Footer section are below.</h3>
-                            <p class="pref">Please do follow the below given instructions while creating your Button
+                            <h3> Details for the Tooltip section are below.</h3>
+                            <p class="pref">Please do follow the below given instructions while creating your Tooltip
                                 component.</p>
                             <div class="detail-content">
                                 <ul>
@@ -314,9 +320,10 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade details" id="exampleModal18" tabindex="-1" aria-labelledby="exampleModalLabel1"
+
+        <div class="modal fade details" id="exampleModal17" tabindex="-1" aria-labelledby="exampleModalLabel1"
         aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modaldialog-width">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4>Alert</h4>
@@ -347,9 +354,45 @@
         </div>
         </div>
 
+
+        <div class="modal fade details" id="exampleModal18" tabindex="-1" aria-labelledby="exampleModalLabel1"
+        aria-hidden="true">
+        <div class="modal-dialog modaldialog-width">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Alert</h4>
+                    <button class="clearbtn" aria-label="Footer Detail modal close" #myModalClose
+                        data-bs-dismiss="modal">
+                        <img [src]="closeicon">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="details-container ">
+                        <h3> Details for the Alert section are below.</h3>
+                        <p class="pref">Please do follow the below given instructions while creating your Alert
+                            component.</p>
+                        <div class="detail-content">
+                            <ul>
+                            <li>User Can select the toaster type.</li>
+                             <li  class="points">The Toaster title should only contain 20 characters.</li>
+                
+                             <li  class="points">User can add a message of 100 words.</li>
+                
+                             <li  class="points">User can select the Button text on click of which the toaster appears.</li>
+                
+                             <li  class="points">User Can select the Toaster direction top/bottom</li>
+                
+                             <li  class="points">User Can select the Toaster theme</li></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
         <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modaldialog-width">
                 <div class="modal-content header-modal">
                     <div class="modal-header">
                         <h4>Header</h4>
@@ -369,7 +412,7 @@
 
         <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Button</h4>
@@ -384,7 +427,7 @@
         <!--  -->
         <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel3"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Navbar</h4>
@@ -397,9 +440,9 @@
             </div>
         </div>
 
-        <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel3"
+        <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel3"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Footer</h4>
@@ -412,9 +455,9 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel3"
+        <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel3"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Tooltip</h4>
@@ -425,16 +468,34 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel3"
+
+        <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel3"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Alert</h4>
                         <button class="clearbtn" aria-label="Button Create modal close icon" #myModalClose6
                             data-bs-dismiss="modal"><img [src]="closeicon"></button>
                     </div>
-                    <app-alertform (onclose)="close()"></app-alertform>
+                     
+                    <app-alertform (onclose)="close()"></app-alertform> 
+                </div>
+            </div>
+        </div>
+        <!--  -->
+
+        
+        <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel3"
+            aria-hidden="true">
+            <div class="modal-dialog modaldialog-width">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Toaster</h4>
+                        <button class="clearbtn" aria-label="Button Create modal close icon" #myModalClose7
+                            data-bs-dismiss="modal"><img [src]="closeicon"></button>
+                    </div>
+                    <app-toasterform (onclose)="close()"></app-toasterform>
                     <!-- <app-tooltipform (onclose)="close()"></app-tooltipform> -->
                 </div>
             </div>

@@ -7,7 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./buttons.component.scss']
 })
 export class ButtonsComponent  implements OnInit {
-
+  htmlcontent="active";
+  csscontent:any;
+  Copy="Copy";
+  CSS:any;
+  
   @ViewChild('myModalClose2') modalClose1:any;
   @ViewChild("buttons") elRef: ElementRef;
 
@@ -24,7 +28,14 @@ export class ButtonsComponent  implements OnInit {
     var data1:any =  localStorage.getItem("button");
     this.buttondesign = JSON.parse(data1);
   console.log(">>>>>>>>>>>>>>>>>get data",this.buttondesign);
-
+  this.CSS=`Button dynamic CSS
+  background:${this.buttondesign.bgcolor},
+  color:${this.buttondesign.color}, 
+  width:${this.buttondesign.btnwitdth}, 
+  border-radius:${this.buttondesign.buttondesign.borderradius}px, 
+  border-width:${this.buttondesign.buttondesign.borderwidth}px, 
+  padding:${this.buttondesign.btnpadding},
+  box-shadow:${this.buttondesign.boxshadow}`;
   }
 }
 close(){
@@ -52,6 +63,23 @@ getHtmlContent() {
   // console.log(formattedCode);
   return formattedCode;
 }
+openhtml(){
+  this.htmlcontent = "active";
+  this.csscontent = "noactive";
+}
+
+opencss(){
+  this.csscontent = "active";
+  this.htmlcontent = "noactive";
+}
+
+copy(){
+  this.Copy="copied!!";
+  setTimeout(()=>{
+      this.Copy="Copy";
+  }, 2000);
+}
+
 
 
 

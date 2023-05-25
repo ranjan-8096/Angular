@@ -19,6 +19,9 @@ export class CommonService {
     private footerstatus = new BehaviorSubject<any>([]);
     footerstatusdata = this.footerstatus.asObservable();
 
+    private toasterstatus = new BehaviorSubject<any>([]);
+    toasterstatusdata = this.toasterstatus.asObservable();
+
 
 
     footercompletedata(data:any) {
@@ -26,7 +29,12 @@ export class CommonService {
     }
 
      dashboardmatchjob(data:any){
-        this.tooltipstatus.next(data);
+        this.tooltipstatus.next(data);4
+      }
+
+
+      toastercompletedata(data:any) {
+        this.toasterstatus.next(data);
       }
 
 

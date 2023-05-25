@@ -1,12 +1,12 @@
 <div class="modal-body">
-    <p><b>Please fill the mandotary fields according your preference to design header</b> </p>
+    <p><b>Please fill the mandotary fields according your preference to design tooltip</b> </p>
 
     <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="form-group pt-3">
         <label>Button Name:</label><span class="star">*</span>
-        <input type="text" maxlength="20" class="form-control inputbox" aria-describedby="title-err-text" aria-required="true" placeholder="Please enter title" name="title" formControlName="title" [ngClass]="{ 'is-invalid': submitted && f.title.errors }" autofocus/>
+        <input type="text" maxlength="20" class="form-control inputbox" aria-describedby="title-err-text" aria-required="true" placeholder="Please enter button name" name="title" formControlName="title" [ngClass]="{ 'is-invalid': submitted && f.title.errors }" autofocus/>
         <div *ngIf="(f.title.touched || submitted) && f.title.errors" class="invalid-feedback">
-            <div class="error" role="alert" aria-atomic="true"  *ngIf="f.title.errors.required">Title is required</div>
+            <div class="error" role="alert" aria-atomic="true"  *ngIf="f.title.errors.required">Button name is required</div>
             <div class="error" role="alert" aria-atomic="true"   *ngIf="f.title.errors.minlength">Minimum 3 word required for title</div>
             <div class="error" role="alert" aria-atomic="true" *ngIf="f.title.errors.maxlength">maxlength 20 for title</div>
           </div>
@@ -15,9 +15,9 @@
 
     <div class="form-group">
         <label>Tooltip Name:</label><span class="star">*</span>
-        <input type="text" class="form-control inputbox" aria-describedby="profile-err-text" placeholder="Profile Name" name="tooltipname" formControlName="tooltipname" [ngClass]="{ 'is-invalid': submitted && f.tooltipname.errors }" autofocus/>
+        <input type="text" class="form-control inputbox" aria-describedby="profile-err-text" placeholder="Please enter tooltip Name" name="tooltipname" formControlName="tooltipname" [ngClass]="{ 'is-invalid': submitted && f.tooltipname.errors }" autofocus/>
         <div *ngIf="(f.tooltipname.touched || submitted) && f.tooltipname.errors" class="invalid-feedback">
-            <div class="error" role="alert" id="profile-err-text" *ngIf="f.tooltipname.errors.required">Profile name is required</div>
+            <div class="error" role="alert" id="profile-err-text" *ngIf="f.tooltipname.errors.required">Tooltip name is required</div>
             <div class="error" role="alert" id="profile-err-text" *ngIf="f.tooltipname.errors.maxlength">maxlength 20</div>
           </div>  
           </div>
