@@ -1,0 +1,90 @@
+button.toaster_btn {
+    // color: #fff;
+    padding: 10px 40px;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+
+.htmlelement{
+    background-color: var(--color-white);;
+    overflow-y: scroll;
+    width:90%;
+    height:350px;
+    margin: auto;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+.copybutton{
+    text-align: end;
+        margin-right: 40px;
+        button{
+            border: 1.5px solid black;
+            background: transparent;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+        .copyicon{
+            margin-right: 5px;
+        }
+}
+
+.error{
+    color: var(--color-red);
+}
+// .top-header{
+//     h4{
+//         // color: var(--color-wbh-blue);
+//         span{
+//             color:var(--bs-black);
+//         }
+//     }
+// }
+.backbutton{
+    border-radius: 8px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--color-white) !important;
+    background-color: var(--color-wbh-blue) !important;
+}
+.tabs{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    label{
+        margin-right: 10px;
+    }
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    li:first-child{
+        margin-right: 10px;
+    }
+    li{
+        cursor: pointer;
+        button{
+            border: none;
+            background: transparent;
+            padding: 0px;
+        }
+    }
+}
+
+.active{
+    border-bottom: 1px solid black !important;
+    padding-bottom: 5px !important;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .modaldialog-width {
+      margin-top: 60px;
+      max-width: 100% !important;
+  }
+}  
