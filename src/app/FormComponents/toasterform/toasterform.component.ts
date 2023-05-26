@@ -31,7 +31,7 @@ export class ToasterformComponent  implements OnInit {
       message:['',[Validators.required]],
       buttontext:['',[Validators.required]],
       direction:['toast-top-right',[Validators.required]],
-      theme:['dark',[Validators.required]],
+      // theme:['dark',[Validators.required]],
     });
 
     
@@ -43,7 +43,7 @@ export class ToasterformComponent  implements OnInit {
       this.registerForm.get("message")?.setValue(toasterdata?.message);
       this.registerForm.get("buttontext")?.setValue(toasterdata?.buttontext);
       this.registerForm.get("direction")?.setValue(toasterdata?.direction);
-      this.registerForm.get("theme")?.setValue(toasterdata?.theme);
+      // this.registerForm.get("theme")?.setValue(toasterdata?.theme);
   }
   }
 
@@ -61,22 +61,22 @@ export class ToasterformComponent  implements OnInit {
       return true;
     } else {
 
-      if(this.registerForm.value.theme == "light"){
-        this.registerForm.value.color = "#F1F4F8";
-      } else if(this.registerForm.value.theme == "dark"){
-        this.registerForm.value.color = "black"
-      } else if(this.registerForm.value.theme == "blue"){
-        this.registerForm.value.color = "#0070ad"
-      } else if(this.registerForm.value.theme == "purple"){
-        this.registerForm.value.color = "#2b0a3d"
-      }
+      // if(this.registerForm.value.theme == "light"){
+      //   this.registerForm.value.color = "#F1F4F8";
+      // } else if(this.registerForm.value.theme == "dark"){
+      //   this.registerForm.value.color = "black"
+      // } else if(this.registerForm.value.theme == "blue"){
+      //   this.registerForm.value.color = "#0070ad"
+      // } else if(this.registerForm.value.theme == "purple"){
+      //   this.registerForm.value.color = "#2b0a3d"
+      // }
       const data = {
         "selectedtitle":this.registerForm.value.selectedtitle,
         "title":this.registerForm.value.title,
         "message":this.registerForm.value.message,
         "buttontext":this.registerForm.value.buttontext,
         "direction":this.registerForm.value.direction,
-        "theme":this.registerForm.value.theme,
+        // "theme":this.registerForm.value.theme,
         "color":this.registerForm.value.color
       };
       

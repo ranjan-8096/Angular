@@ -81,7 +81,17 @@ button.toaster_btn {
     padding-bottom: 5px !important;
 }
 
-
+button.toaster_button {
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 3px;
+    border: none;
+    transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+    background: white;
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.231372549);
+}
 
 @media only screen and (max-width: 767px) {
     .modaldialog-width {
