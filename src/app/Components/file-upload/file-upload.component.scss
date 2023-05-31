@@ -1,0 +1,81 @@
+.top-header{
+    h4{
+        color: var(--color-wbh-blue);
+        span{
+            color:var(--color-black);
+        }
+    }
+}
+.backbutton{
+    border-radius: 8px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--color-white) !important;
+    background-color: var(--color-wbh-blue) !important;
+}
+.fileupload{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    margin-top: 70px;
+    #myfile{
+        border:2px solid black;
+        padding: 10px;
+    }
+    #myfile:focus{
+        -webkit-box-shadow: 0 0 10px 2px rgb(140, 119, 119);
+    -moz-box-shadow: 0 0 10px 2px rgb(140, 119, 119);
+    box-shadow: 0 0 10px 2px rgb(140, 119, 119);
+    }
+}
+.filelabel{
+    text-align: start;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.copybutton{
+    text-align: end;
+        margin-right: 40px;
+        margin-top: 30px;
+        button{
+            border: 1.5px solid black;
+            background: transparent;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+        .copyicon{
+            margin-right: 5px;
+        }
+}
+.htmlelement {
+    background-color: var(--color-white);
+    overflow-y: scroll;
+    width: 90%;
+    height: 400px;
+    margin: auto;
+    margin-top: 30px;
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    li:first-child{
+        margin-right: 10px;
+    }
+    li{
+        cursor: pointer;
+        button{
+            border: none;
+            background: transparent;
+            padding: 0px;
+        }
+    }
+}
+
+.active{
+    border-bottom: 1px solid black !important;
+    padding-bottom: 5px !important;
+}

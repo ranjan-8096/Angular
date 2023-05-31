@@ -1,0 +1,57 @@
+<div class="main">
+    <div class="top-header">
+      <div class="insideheader">
+        <h4 class="subheader">FileUpload <span>Component</span></h4>
+      </div>
+      <div class="button-sec">
+        <button class=" backbutton" (click)="backwindow()">Back</button>
+        <button class=" backbutton" data-bs-toggle="modal" data-bs-target="#fileuploadform">Edit</button>
+      </div> 
+    </div>
+    <div #fileupload>
+      <div class="fileupload">
+        <div *ngIf="filedata.choosefile == 'single'">
+          <label class="filelabel" [ngStyle]="{'width':filedata.width}">{{filedata.title}}</label><br/>
+          <input type="file" id="myfile" name="myfile" [ngStyle]="{'border-color':color, 'width':filedata.width}">
+        </div>
+        <div *ngIf="filedata.choosefile == 'multiple'">
+          <label class="filelabel" [ngStyle]="{'width':filedata.width}">{{filedata.title}}</label><br/>
+          <input type="file" id="myfile" name="myfile" multiple="multiple" [ngStyle]="{'border-color':color, 'width':filedata.width}">
+        </div>
+      </div>
+    </div>
+    <ul class="list-inline">
+      <li (click)="openhtml()"><button [class]="htmlcontent">HTML</button></li>
+      <li (click)="opencss()"><button [class]="csscontent">CSS</button></li>
+    </ul>
+    <div class="htmlelement" *ngIf="htmlcontent == 'active'">
+      <div class="copybutton">
+        <button ngxClipboard [cbContent]="getHtmlContent()" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
+      </div>
+      <pre><code [highlight]="getHtmlContent()">{{getHtmlContent()}}</code></pre>
+    </div>
+    <div class="htmlelement" *ngIf="csscontent == 'active'">
+      <div class="copybutton">
+        <button ngxClipboard [cbContent]="CSS" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
+      </div>
+      <pre><code [highlight]="CSS">{{CSS}}</code></pre>
+    </div>
+</div>
+
+
+<div class="modal fade" id="fileuploadform" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modaldialog-width">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>FileUpload</h4>
+                <button class="clearbtn"  aria-label="Header Update modal close"  #myModalCloseform1 data-bs-dismiss="modal">
+                    <img [src]="closeicon" class="closeicon">  
+                </button>
+            </div>
+            <app-editfileupload (onclose)="close()"></app-editfileupload>
+  
+        </div>
+    </div>
+  </div>
+
+

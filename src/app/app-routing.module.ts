@@ -11,6 +11,12 @@ import { AlertsComponent } from './Components/alerts/alerts.component';
 import { ToasterComponent } from './Components/toaster/toaster.component';
 import { FormsComponent } from './Components/forms/forms.component';
 import { CheckboxComponent } from './Components/checkbox/checkbox.component';
+import { InputComponent } from './Components/input/input.component';
+import { SwitchctlComponent } from './Components/switchctl/switchctl.component';
+import { FileUploadComponent } from './Components/file-upload/file-upload.component';
+import { ProgressComponent } from './Components/progress/progress.component';
+import { RangesliderComponent } from './Components/rangeslider/rangeslider.component';
+import { SelectComponent } from './Components/select/select.component';
 
 
 const routes: Routes = [
@@ -26,7 +32,15 @@ const routes: Routes = [
   {path: "component/alerts", component:AlertsComponent}, 
   {path : "component/toaster", component:ToasterComponent},
   {path : "component/forms", component:FormsComponent},
+  {path : "component/input", component:InputComponent},
   {path : "component/checkbox", component:CheckboxComponent},
+  {path : "component/switchcontrol", component:SwitchctlComponent},
+
+  {path: "component/file-upload", component:FileUploadComponent}, 
+  {path : "component/range", component:RangesliderComponent},
+  {path : "component/selector", component:SelectComponent},
+  {path : "component/progress", component:ProgressComponent},
+
 
 ];
 

@@ -33,6 +33,24 @@ import { ClipboardModule } from 'ngx-clipboard';
 import { FormsComponent } from './Components/forms/forms.component';
 import { CheckboxComponent } from './Components/checkbox/checkbox.component';
 import { CheckboxformComponent } from './FormComponents/checkboxform/checkboxform.component';
+import { InputComponent } from './Components/input/input.component';
+import { InputformComponent } from './FormComponents/inputform/inputform.component';
+import { EditinputComponent } from './FormComponents/editinput/editinput.component';
+import { EditcheckboxComponent } from './FormComponents/editcheckbox/editcheckbox.component'; 
+import { SwitchctlComponent } from './Components/switchctl/switchctl.component';
+import { EditswitchcontrolComponent } from './FormComponents/editswitchcontrol/editswitchcontrol.component';
+import { SwitchcontrolComponent } from './FormComponents/switchcontrolform/switchcontrolform.component';
+import { FileUploadComponent } from './Components/file-upload/file-upload.component';
+import { ProgressComponent } from './Components/progress/progress.component';
+import { RangesliderComponent } from './Components/rangeslider/rangeslider.component';
+import { SelectComponent } from './Components/select/select.component';
+import { EditfileuploadComponent } from './FormComponents/FileUpload/editfileupload/editfileupload.component';
+import { FileuploadformComponent } from './FormComponents/FileUpload/fileuploadform/fileuploadform.component';
+import { ProgressformComponent } from './FormComponents/progressform/progressform.component';
+import { RangesliderformComponent } from './FormComponents/rangesliderform/rangesliderform.component';
+import { SelectformComponent } from './FormComponents/selectform/selectform.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 
 
@@ -64,6 +82,25 @@ import { CheckboxformComponent } from './FormComponents/checkboxform/checkboxfor
     FormsComponent,
     CheckboxComponent,
     CheckboxformComponent,
+    InputComponent,
+    InputformComponent,
+    EditinputComponent,
+    EditcheckboxComponent, 
+    SwitchctlComponent,
+    SwitchcontrolComponent,
+    EditswitchcontrolComponent,
+
+    FileuploadformComponent,
+    FileUploadComponent,
+    EditfileuploadComponent,
+    
+
+    RangesliderComponent,
+    RangesliderformComponent,
+    SelectComponent,
+    SelectformComponent,
+    ProgressComponent,
+    ProgressformComponent
    
   ],
   imports: [
@@ -75,6 +112,8 @@ import { CheckboxformComponent } from './FormComponents/checkboxform/checkboxfor
     HighlightModule,
     BrowserAnimationsModule,
     ClipboardModule,
+    NgxSliderModule,
+    NgMultiSelectDropDownModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 5000,
       preventDuplicates: true

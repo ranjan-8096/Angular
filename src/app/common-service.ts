@@ -23,6 +23,18 @@ export class CommonService {
     toasterstatusdata = this.toasterstatus.asObservable();
 
 
+    private rangesliderstatus = new BehaviorSubject<any>([]);
+    rangesliderstatusdata = this.rangesliderstatus.asObservable();
+
+    
+    private selectorstatus = new BehaviorSubject<any>([]);
+    selectorstatusdata = this.selectorstatus.asObservable();
+
+    
+    private progressstatus = new BehaviorSubject<any>([]);
+    progressstatusdata = this.progressstatus.asObservable();
+
+
 
     footercompletedata(data:any) {
         this.footerstatus.next(data);
@@ -35,6 +47,18 @@ export class CommonService {
 
       toastercompletedata(data:any) {
         this.toasterstatus.next(data);
+      }
+
+      rangeslidercompletedata(data:any) {
+        this.rangesliderstatus.next(data);
+      }
+
+      progresscompletedata(data:any) {
+        this.progressstatus.next(data);
+      }
+
+      selectorcompletedata(data:any) {
+        this.selectorstatus.next(data);
       }
 
 
