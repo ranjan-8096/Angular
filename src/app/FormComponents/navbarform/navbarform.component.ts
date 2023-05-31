@@ -125,7 +125,8 @@ export class NavbarformComponent implements OnInit{
       this.registerForm.get("firstsubmenu2")?.setValidators([Validators.required]);
       this.registerForm.get("firstsubmenu3")?.setValidators([Validators.required]);
       this.registerForm.get("firstsubmenu4")?.setValidators([Validators.required]);
-    }  
+    }    
+    
      else if(result == 2) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
       this.registerForm.get("text2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
