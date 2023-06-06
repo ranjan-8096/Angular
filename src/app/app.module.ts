@@ -52,7 +52,9 @@ import { SelectformComponent } from './FormComponents/selectform/selectform.comp
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { CalendarComponent } from './Components/calendar/calendar.component';
-import { CalendarformComponent } from './FormComponents/calendarform/calendarform/calendarform.component';
+import { CalendarformComponent } from './FormComponents/calendarform/calendarform.component';
+import { LoaderformComponent } from './FormComponents/loaderform/loaderform.component';
+import { LoaderComponent } from './Components/loader/loader.component'; 
 import { TableformcomponentComponent } from './FormComponents/tableformcomponent/tableformcomponent.component';
 import { TablecomponentComponent } from './Components/tablecomponent/tablecomponent.component';
 import { EdittableformcomponentComponent } from './FormComponents/edittableformcomponent/edittableformcomponent.component';
@@ -106,6 +108,8 @@ import { EdittableformcomponentComponent } from './FormComponents/edittableformc
     SelectformComponent,
     ProgressComponent,
     ProgressformComponent,
+    LoaderformComponent,
+    LoaderComponent,
     TableformcomponentComponent,
     TablecomponentComponent,
     EdittableformcomponentComponent

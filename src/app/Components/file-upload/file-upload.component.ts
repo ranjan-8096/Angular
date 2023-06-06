@@ -69,7 +69,7 @@ export class FileUploadComponent {
       this.filedata = JSON.parse(data1);
     console.log(">>>>>>>>>>>>>>>>>headerdata",this.filedata);
     if(this.filedata.color == "light"){
-      this.color="white";
+      this.color="#ddd";
       this.textcolor="black";
     } else if(this.filedata.color == "dark"){
       this.color="black";

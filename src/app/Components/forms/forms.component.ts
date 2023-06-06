@@ -21,6 +21,7 @@ export class FormsComponent {
 @ViewChild("myModalClose6") ModalClose6:any
 @ViewChild("myModalClose7") ModalClose7:any
 @ViewChild("myModalClose8") ModalClose8:any
+@ViewChild("myModalClose9") ModalClose9:any
 
  
   formscomponentarray = [
@@ -32,6 +33,7 @@ export class FormsComponent {
     {id:6,name:"Progressbar"},
     {id:7,name:"Range"},
     {id:8,name:"File Upload"}, 
+    // {id:9,name:"Loader"}, 
 
 ];
  
@@ -49,6 +51,7 @@ close(){
   this.ModalClose6.nativeElement.click();
   this.ModalClose7.nativeElement.click();
   this.ModalClose8.nativeElement.click(); 
+  this.ModalClose9.nativeElement.click(); 
 
   console.log(">>>>> >>>>vishnu>>>>>>>");
 }

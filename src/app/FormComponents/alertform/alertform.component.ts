@@ -36,7 +36,7 @@ export class AlertformComponent implements OnInit {
       selectedtitle: ['', [Validators.required,Validators.maxLength(20)]],
       // theme: ['', [Validators.required]],
       color: ['', [Validators.required]], 
-      alertdetails: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]]
+      alertdetails: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(200)]]
     });
 
   }

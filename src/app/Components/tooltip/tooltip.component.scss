@@ -41,6 +41,7 @@
     padding: 5px 20px;
     position: absolute;
     z-index: 1;
+    word-break: break-all;
     border: 1px solid #ccc;
   }
 
@@ -205,6 +206,18 @@ span.tooltiptext.left {
 
 
 @media only screen and (max-width: 767px) {
+  span.tooltiptext.bottomright {
+    left: 55% !important;
+    bottom: -76px;
+    margin-left: -60px;
+}
+
+span.tooltiptext.bottomleft {
+  left: 9% !important;
+  top: 61px ;
+  margin: 0 90px 0px 0;
+  height: 100%;
+}
   .modaldialog-width {
     margin-top: 60px;
     max-width: 100% !important;

@@ -18,6 +18,7 @@ import { ProgressComponent } from './Components/progress/progress.component';
 import { RangesliderComponent } from './Components/rangeslider/rangeslider.component';
 import { SelectComponent } from './Components/select/select.component';
 import { CalendarComponent } from './Components/calendar/calendar.component';
+import { LoaderComponent } from './Components/loader/loader.component';
 import { TablecomponentComponent } from './Components/tablecomponent/tablecomponent.component';
 
 
@@ -42,6 +43,7 @@ const routes: Routes = [
   {path : "component/selector", component:SelectComponent},
   {path : "component/progress", component:ProgressComponent},
   {path : "component/calendar", component:CalendarComponent},
+  {path : "component/loader", component:LoaderComponent},
   {path : "component/table", component:TablecomponentComponent}
 ];
 

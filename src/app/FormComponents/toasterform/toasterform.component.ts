@@ -28,7 +28,7 @@ export class ToasterformComponent  implements OnInit {
 
     this.registerForm = this.formBuilder.group({
       selectedtitle:['success',[Validators.required]],
-      title:['',[Validators.required,,Validators.maxLength(20)]],
+      title:['',[Validators.required,Validators.maxLength(20)]],
       message:['',[Validators.required,Validators.maxLength(100)]],
       buttontext:['',[Validators.required]],
       direction:['toast-top-right',[Validators.required]],

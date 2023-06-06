@@ -17,13 +17,13 @@
         
 
         <div class="pt-3">
-            <label class="accessbility">Select Calendar:</label><span class="star">*</span>
+            <label class="accessbility">Select Date & Time:</label><span class="star">*</span>
             <div class="form-group d-flex align-items-center shadow-sec background">
                 <select class="bgcolor" name="calendaroption" aria-label="select theme color" aria-describedby="theme-err-txt"
                     formControlName="calendaroption">
-                    <option value="calendar">Calendar</option>
+                    <option value="calendar">Date</option>
                     <option value="time">Time</option>
-                    <option value="calendartime">Calendar & Time</option>
+                    <option value="calendartime">Date & Time</option>
                 </select>
             </div>
             <div *ngIf="(f.theme.touched || submitted) && f.theme.errors" class="invalid-feedback">
@@ -34,7 +34,7 @@
 
         
         <div class="pt-3">
-            <label class="accessbility">Card width</label><span class="star">*</span>
+            <label class="accessbility">Date & Time width</label><span class="star">*</span>
             <div class="form-group d-flex align-items-center shadow-sec background">
                 <select class="bgcolor" name="rangewidth" aria-label="select rangewidth" aria-describedby="width-err-txt" formControlName="rangewidth">
                     <option>100%</option>
@@ -53,7 +53,7 @@
 
 
         <div class="pt-3">
-            <label class="accessbility">Card Theme Color:</label><span class="star">*</span>
+            <label class="accessbility">Date & Time Theme Color:</label><span class="star">*</span>
             <div class="form-group d-flex align-items-center shadow-sec background">
                 <select class="bgcolor" name="theme" aria-label="select theme color" aria-describedby="theme-err-txt"
                     formControlName="theme">
@@ -71,8 +71,8 @@
 
 
 
-        <div class="footerbutton">
-            <button class="submitbutton" *ngIf="!calendardatadatashow">
+        <div class="footerbutton" *ngIf="!calendardatadatashow">
+            <button class="submitbutton" >
                 Create
             </button>
         </div>

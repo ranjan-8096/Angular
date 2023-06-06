@@ -29,7 +29,7 @@ export class ProgressformComponent {
       selectedtitle:['success',[Validators.required]],
       title:['',[Validators.required,Validators.maxLength(20)]],
       progressvalue:['',[Validators.required]],
-      rangewidth:['',[Validators.required]],
+      rangewidth:['50%',[Validators.required]],
       theme:['dark',[Validators.required]],
     });
 

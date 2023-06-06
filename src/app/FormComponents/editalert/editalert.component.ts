@@ -48,7 +48,7 @@ export class EditalertComponent implements OnInit {
         "cardwidth": ['', [Validators.required]],
         "selectedtitle": ['', [Validators.required]], 
         "color": ['', [Validators.required]],
-        "alertdetails": ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]]
+        "alertdetails": ['', [Validators.required, Validators.minLength(3), Validators.maxLength(200)]]
       });
     }
    

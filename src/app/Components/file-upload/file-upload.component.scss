@@ -17,24 +17,33 @@
     color: var(--color-white) !important;
     background-color: var(--color-wbh-blue) !important;
 }
+
 .clear{
     border: none;
     padding: 0px !important;
     background: transparent;
     margin-left: -30px;
+    position: absolute;
+    right: 10px;
+    top: 13px;
     .closesize{
         width: 15px;
     }
 }
+input[type=file]{ 
+    color:transparent; 
+}
 .dataalign{
     margin: auto;
+    padding: 0;
 }
 .fileupload{
     width: 95%;
     margin: auto;
     // text-align: center;
-    margin-top: 70px;
+    margin-top: 20px;
     #myfile{
+        width: 100%;
         border:2px solid black;
         padding: 10px;
         padding-right: 27px;
@@ -54,8 +63,9 @@ input[type=file]{
 //     padding: 15px;
 // }
 .commonfile{
-    text-align: center;
+    text-align: left;
     // border:2px solid;
+    position: relative;
     padding: 15px;
 }
 .filelabel{
@@ -158,7 +168,9 @@ button.closefilebutton {
         max-width: 100% !important;
     }
 }
-
+.mainupload{
+    position: relative;
+}
 @media screen and (min-width:320px) and (max-width:730px) {
     .commonfile{
         width:100% !important;
