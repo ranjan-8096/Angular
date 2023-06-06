@@ -28,15 +28,15 @@
         </ul>  -->
 
 
-        <div *ngIf="filedata.choosefile == 'multiple'" class="commonfile" [ngStyle]="{'border-color':color,'width':filedata.width}">
-          <!-- <label class="filelabel" [ngStyle]="{'width':filedata.width}">{{filedata.title}}</label><br/> -->
-          <!-- <input #fileinput type="file" id="myfile" name="myfile" multiple="multiple" [ngStyle]="{'border-color':color, 'width':filedata.width}" (change)="handlechange($event)">
+        <div *ngIf="filedata.choosefile == 'multiple'" class="commonfile" >
+          <label class="filelabel" [ngStyle]="{'width':filedata.width}">{{filedata.title}}</label><br/>
+          <input #fileinput type="file" id="myfile" name="myfile" multiple="multiple" [ngStyle]="{'width':filedata.width}" (change)="handlechange($event)">
             <button class="clear"  aria-label="close icon" *ngIf="file" (click)="closefile(fileinput)" (keypress)="closefile(fileinput)">
               <img [src]="closeicon" class="closefile closesize">  
-            </button> -->
+            </button>
             <!-- <div class="fileborder"> -->
-              <button class="choosebtn" (click)="fileinput.click()" [ngStyle]="{'background-color':color, 'color':textcolor}">{{filedata.title}}</button>Drop files here to upload
-              <input style="display: none"  #attachments type="file" (change)="handlechange($event)" #fileinput multiple="true">
+              <!-- <button class="choosebtn" (click)="fileinput.click()" [ngStyle]="{'background-color':color, 'color':textcolor}">{{filedata.title}}</button>Drop files here to upload
+              <input style="display: none"  #attachments type="file" (change)="handlechange($event)" #fileinput multiple="true"> -->
               <ul *ngIf="filedata.choosefile == 'multiple'"class="dataalign">
                 <li class="fileli" *ngFor="let file of fileselectedvalue, let index = index"><div class="filetitle">{{truncate(file)}}</div> <button class="closefilebutton" (click)="removeSelectedFile(index)"><i class="fa fa-trash" aria-hidden="true"></i></button></li>
               </ul>
