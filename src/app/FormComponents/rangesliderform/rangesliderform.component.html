@@ -1,5 +1,5 @@
 <div class="modal-body">
-    <p><b>Please fill the mandotary fields according your preference to design of the Alert</b> </p>
+    <p><b>Please fill the mandotary fields according your preference to design of the Range</b> </p>
 
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
@@ -8,7 +8,7 @@
         <div *ngIf="(f.title.touched || submitted) && f.title.errors" class="invalid-feedback">
             <div class="error" role="alert" aria-atomic="true" *ngIf="f.title.errors.required">Title is
                 required</div>
-            <div class="error" role="alert" aria-atomic="true" *ngIf="f.title.errors.maxlength">maxlength 200
+            <div class="error" role="alert" aria-atomic="true" *ngIf="f.title.errors.maxlength">maxlength 20
             </div>
         </div>
         </div>

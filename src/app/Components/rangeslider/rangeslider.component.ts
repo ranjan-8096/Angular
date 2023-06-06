@@ -45,8 +45,8 @@ export class RangesliderComponent implements OnInit {
 }`;
 
 
-  @ViewChild('submyModalClose7') submodalClose7:any;
-  @ViewChild("rangeslidervalue") elRef: ElementRef;
+  @ViewChild('myModalClose7') ModalClose7:any;
+  @ViewChild("range") elRef: ElementRef;
 
   options: Options = {
     floor:0,
@@ -106,11 +106,11 @@ export class RangesliderComponent implements OnInit {
   }
 
   close(){
-    this.submodalClose7.nativeElement.click();
+    this.ModalClose7.nativeElement.click();
   }
   backwindow(){
-    this.router.navigate(['/component/forms']);
     localStorage.removeItem("rangesliderdata");
+    this.router.navigate(['/component/forms']);
 
 
   }

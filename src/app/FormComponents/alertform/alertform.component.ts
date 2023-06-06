@@ -33,7 +33,7 @@ export class AlertformComponent implements OnInit {
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
       cardwidth: ['', [Validators.required]],
-      selectedtitle: ['', [Validators.required]],
+      selectedtitle: ['', [Validators.required,Validators.maxLength(20)]],
       // theme: ['', [Validators.required]],
       color: ['', [Validators.required]], 
       alertdetails: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]]

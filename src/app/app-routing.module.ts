@@ -17,6 +17,8 @@ import { FileUploadComponent } from './Components/file-upload/file-upload.compon
 import { ProgressComponent } from './Components/progress/progress.component';
 import { RangesliderComponent } from './Components/rangeslider/rangeslider.component';
 import { SelectComponent } from './Components/select/select.component';
+import { CalendarComponent } from './Components/calendar/calendar.component';
+import { TablecomponentComponent } from './Components/tablecomponent/tablecomponent.component';
 
 
 const routes: Routes = [
@@ -35,13 +37,12 @@ const routes: Routes = [
   {path : "component/input", component:InputComponent},
   {path : "component/checkbox", component:CheckboxComponent},
   {path : "component/switchcontrol", component:SwitchctlComponent},
-
   {path: "component/file-upload", component:FileUploadComponent}, 
   {path : "component/range", component:RangesliderComponent},
   {path : "component/selector", component:SelectComponent},
   {path : "component/progress", component:ProgressComponent},
-
-
+  {path : "component/calendar", component:CalendarComponent},
+  {path : "component/table", component:TablecomponentComponent}
 ];
 
 @NgModule({

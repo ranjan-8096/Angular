@@ -2,7 +2,7 @@
 <div class="main">
     <div class="top-header">
       <div class="insideheader">
-        <h4 class="subheader">range Slider <span>Component</span></h4>
+        <h4 class="subheader">range Slider <span class="sideheader">Component</span></h4>
       </div>
       <div class="button-sec">
         <button class=" backbutton" (click)="backwindow()">Back</button>
@@ -13,13 +13,13 @@
 
 
 
-    <div class="container mt-5 width100" #rangeslidervalue>
+    <div class="container mt-5 width100" #range>
         <div class="rangeslider" [ngStyle]="{'width':rangesliderdata?.rangewidth}" [ngClass]="rangesliderdata?.theme">
              <ngx-slider  *ngIf="updatedropdown" [(value)]="minValue" [(highValue)]="Valuenumber"  [options]="options"></ngx-slider>
         </div>
     </div>
 
-    <!-- <ul class="list-inline">
+    <ul class="list-inline">
         <li (click)="openhtml()"><button [class]="htmlcontent">HTML</button></li>
         <li (click)="opencss()"><button [class]="csscontent">CSS</button></li>
       </ul>
@@ -35,7 +35,7 @@
           <button ngxClipboard [cbContent]="CSS" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
         </div>
         <pre><code [highlight]="CSS">{{CSS}}</code></pre>
-      </div> -->
+      </div>
 
 </div>
 
@@ -46,7 +46,7 @@
         <div class="modal-content header-modal">
             <div class="modal-header">
                 <h4>Range Slider</h4>
-                <button class="clearbtn" #submyModalClose7 data-bs-dismiss="modal">
+                <button class="clearbtn" #myModalClose7 data-bs-dismiss="modal">
                     <img [src]="closeicon">
 
                 </button>

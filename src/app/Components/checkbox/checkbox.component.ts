@@ -242,7 +242,7 @@ export class CheckboxComponent implements OnInit {
     }
   }`
 
-  @ViewChild ("myModalClose1") modalClose1:any;
+  @ViewChild ("myModalClose2") modalClose2:any;
   ngOnInit(){
     if(localStorage.getItem("checkboxdata")) {
       var data1:any =  localStorage.getItem("checkboxdata");
@@ -284,9 +284,11 @@ export class CheckboxComponent implements OnInit {
         this.Copy="Copy";
     }, 2000);
   }
+
   close(){
-    this.modalClose1.nativeElement.click();
+    this.modalClose2.nativeElement.click();
   }
+  
   backwindow(){
     this.router.navigate(['/component/forms']);
   } 

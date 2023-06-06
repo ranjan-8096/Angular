@@ -55,7 +55,7 @@ close(){
 
 
   backwindow(){
-    this.router.navigate(['/component/forms']);
+    this.router.navigate(['/modal']);
   } 
 
   turncate=(str:any)=>{

@@ -70,7 +70,13 @@
                             <div class="button-sec" *ngIf="item?.id == 9">
                                 <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal18">Details</button>
-                                <button aria-label="Button Create" class="btn btn-primary" (click)="routetocomp()">Create</button>
+                                <button aria-label="Button Create" class="btn btn-primary" (click)="routetocomp()">Components</button>
+                            </div>
+                            <div class="button-sec" *ngIf="item?.id == 10">
+                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal19">Details</button>
+                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal9">Create</button>
                             </div>
                         </div>
                     </div>
@@ -365,7 +371,7 @@
         <div class="modal-dialog modaldialog-width">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4>Alert</h4>
+                    <h4>Component</h4>
                     <button class="clearbtn" aria-label="Footer Detail modal close" #myModalClose
                         data-bs-dismiss="modal">
                         <img [src]="closeicon">
@@ -393,6 +399,41 @@
                 </div>
             </div>
         </div>
+        </div>
+
+        <div class="modal fade details" id="exampleModal19" tabindex="-1" aria-labelledby="exampleModalLabel1"
+            aria-hidden="true">
+            <div class="modal-dialog modaldialog-width">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Table</h4>
+                        <button class="clearbtn" aria-label="table detail close" #myModalClose data-bs-dismiss="modal">
+                            <img [src]="closeicon">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="details-container ">
+                            <h3> Details for the Cards section are below.</h3>
+                            <p class="pref">Please do follow the below given instructions while creating your Table
+                                component.</p>
+                            <div class="detail-content">
+                                <ul>
+                                    <li class="points">Table caption should be less then 15 characters</li>
+
+                                    <li class="points">You can choose table pagination from the given options. </li>
+
+                                    <li class="points">You can choose searchbox is needed or not from given options.</li>
+
+                                    <li class="points">You can choose strip from the given options</li>
+
+                                    <li class="points">You can select the theme of tooltip</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
@@ -506,6 +547,20 @@
             </div>
         </div>
         <!--  -->
+
+        <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel3"
+            aria-hidden="true">
+            <div class="modal-dialog modaldialog-width">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Table</h4>
+                        <button class="clearbtn" aria-label="table modal close" #myModalClose8 data-bs-dismiss="modal"><img [src]="closeicon"></button>
+                    </div>
+                    <app-tableformcomponent (onclose)="close()"></app-tableformcomponent>
+                    <!-- <app-form (onclose)="close()"></app-form> -->
+                </div>
+            </div>
+        </div>
 
     </div>
 </section>

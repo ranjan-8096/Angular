@@ -27,7 +27,7 @@ export class ProgressformComponent {
 
     this.registerForm = this.formBuilder.group({
       selectedtitle:['success',[Validators.required]],
-      title:['',[Validators.required]],
+      title:['',[Validators.required,Validators.maxLength(20)]],
       progressvalue:['',[Validators.required]],
       rangewidth:['',[Validators.required]],
       theme:['dark',[Validators.required]],
@@ -37,6 +37,7 @@ export class ProgressformComponent {
     if(localStorage.getItem("progressdata")){
       var data1:any =  localStorage.getItem("progressdata");
       this.progressdata = JSON.parse(data1);
+      console.log(">>>>>>",this.progressdata);
       this.registerForm.get("title")?.setValue(this.progressdata?.title);
       this.registerForm.get("progressvalue")?.setValue(this.progressdata?.progressvalue);
       this.registerForm.get("theme")?.setValue(this.progressdata?.theme);

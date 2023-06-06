@@ -55,5 +55,24 @@
     padding-bottom: 5px !important;
 }
 
+@media only screen and (max-width: 767px) {
+    .width100{
+        width: 100% !important;
+    }
+    .top-header div:first-child {
+        width: 50%;
+    }
+    h4.subheader {
+        margin: 0px;
+        font-size: 1.2rem;
+    }
+    section.main header {
+        padding: 1rem .85rem;
+    }
+    .modaldialog-width { 
+        max-width: 100% !important;
+    }
+}
+
 
 

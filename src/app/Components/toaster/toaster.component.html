@@ -12,12 +12,13 @@
 
 
 
-  <div>
+  <div class="container">
     <div #toster class="text-center main-page mt-5">
       <button class="toaster_button toaster_btn" (click)="showmessage(toasterdata?.selectedtitle)"
         [ngStyle]="{'background-Color':toasterdata?.color,'color':color}">{{toasterdata?.buttontext}}</button>
     </div>
   </div>
+
   <ul class="list-inline">
     <li (click)="openhtml()"><button [class]="htmlcontent">HTML</button></li>
     <li (click)="opencss()"><button [class]="csscontent">CSS</button></li>

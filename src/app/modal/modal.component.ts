@@ -19,7 +19,7 @@ constructor(private router: Router){}
   @ViewChild('myModalClose6') modalClose6:any;
   @ViewChild('myModalClose7') modalClose7:any;
   @ViewChild('myModalClose8') modalClose8:any;
-
+  // @ViewChild('myModalClose9') modalClose9:any;
   
 
   array = [
@@ -31,7 +31,8 @@ constructor(private router: Router){}
     {id:6,name:"Tooltip"},
     {id:7,name:"Alert"},
     {id:8,name:"Toaster"},
-    {id:9,name:"Forms"} 
+    {id:9,name:"Forms"},
+    {id:10,name:"Table"} 
 ];
 
 subheading = "This components help to create and customize the";
@@ -50,7 +51,7 @@ close(){
   this.modalClose6.nativeElement.click();
   this.modalClose7.nativeElement.click();
   this.modalClose8.nativeElement.click();
-
+  // this.modalClose9.nativeElement.click();
 
   console.log(">>>>>>>>>>>>>>>>");
 }

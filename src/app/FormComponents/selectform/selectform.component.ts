@@ -28,7 +28,7 @@ export class SelectformComponent {
   ngOnInit() {
 
     this.registerForm = this.formBuilder.group({
-      title:['',[Validators.required]],
+      title:['',[Validators.required,Validators.maxLength(20)]],
       selector:['select',[Validators.required]],
       optionvalue:['',[Validators.required]],
       helpertext1:[''],
@@ -36,7 +36,7 @@ export class SelectformComponent {
       helpertext3:[''],
       helpertext4:[''],
       helpertext5:[''],
-      selectwidth:[''],
+      selectwidth:['50%',[Validators.required]],
       theme:['dark',[Validators.required]],
     });
 
@@ -86,6 +86,7 @@ export class SelectformComponent {
     if(localStorage.getItem("selectdata")){
       var data1:any =  localStorage.getItem("selectdata");
       this.selectdata = JSON.parse(data1);
+      console.log(">>>>>",this.selectdata);
       this.registerForm.get("title")?.setValue(this.selectdata?.title);
       this.registerForm.get("theme")?.setValue(this.selectdata?.theme);
       this.registerForm.get("optionvalue")?.setValue(this.selectdata?.optionvalue);

@@ -101,6 +101,34 @@ img.closeicon {
     max-width: 100%;
     min-height: 350px;
 }
+.error{
+    color: red;
+    font-size: .875em;
+}
+.subheader{
+    color: var(--color-wbh-blue);
+}
+.modal-body{
+    max-height: 350px;
+    overflow-y: scroll;
+}
+.sideheader{
+    color: var(--color-black) ;
+}
+.star{
+    color: red;
+    font-weight: bold;
+  }
+  .form-group{
+    label{
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+  .accessbility{
+    font-weight: 500;
+      font-size: 15px;
+  }
 
 .modal-header {
     background-color: #0070ad;

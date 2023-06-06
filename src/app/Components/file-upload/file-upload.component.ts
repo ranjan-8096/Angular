@@ -13,17 +13,41 @@ export class FileUploadComponent {
   color:any;
   htmlcontent="active";
   csscontent:any;
+  inputkey:any;
+  file=false;
+  fileselectedvalue:any[]=[];
   Copy="Copy";
-  CSS=`
+  textcolor:any;
+  CSS=`.clear{
+    border: none;
+    padding: 0px !important;
+    background: transparent;
+    margin-left: -30px;
+    .closesize{
+        width: 15px;
+    }
+}
+.dataalign{
+    margin: auto;
+}
 .fileupload{
     width: 95%;
     margin: auto;
-    text-align: center;
+    // text-align: center;
     margin-top: 70px;
     #myfile{
         border:2px solid black;
         padding: 10px;
+        padding-right: 27px;
     }
+    #myfile:focus{
+        -webkit-box-shadow: 0 0 10px 2px rgb(140, 119, 119);
+    -moz-box-shadow: 0 0 10px 2px rgb(140, 119, 119);
+    box-shadow: 0 0 10px 2px rgb(140, 119, 119);
+    }
+}
+.commonfile{
+    text-align: center;
 }
 .filelabel{
     text-align: start;
@@ -31,11 +55,12 @@ export class FileUploadComponent {
     margin-bottom: 5px;
 }`;
 
-  @ViewChild("myModalCloseform1") ModalClose:any;
-
+  @ViewChild("myModalClose8") ModalClose8:any;
+  @ViewChild("fileinput") fileinput:any;
   @ViewChild("fileupload") elRef: ElementRef;
   constructor(private router: Router, elRef: ElementRef) {
     this.elRef = elRef;
+    console.log(">>",this.file);
   }
 
   ngOnInit(){
@@ -45,12 +70,16 @@ export class FileUploadComponent {
     console.log(">>>>>>>>>>>>>>>>>headerdata",this.filedata);
     if(this.filedata.color == "light"){
       this.color="white";
+      this.textcolor="black";
     } else if(this.filedata.color == "dark"){
       this.color="black";
+      this.textcolor="white";
     } else if(this.filedata.color == "purple"){
       this.color="#2b0a3d";
+      this.textcolor="white";
     } else if(this.filedata.color == "blue"){
       this.color="#0070ad";
+      this.textcolor="white";
     }
 
     }
@@ -60,8 +89,43 @@ export class FileUploadComponent {
     this.router.navigate(['/component/forms']);
   }
 
+  truncate(str:any){
+      return str.length > 30 ? str.substring(0, 24) + "..." : str;
+  }
+
+  handlechange(event:any){
+    this.fileselectedvalue = [];
+    var input = this.fileinput.nativeElement.files;
+    for (var i = 0; i < input.length; ++i) {
+        this.fileselectedvalue.push(input.item(i).name);
+    }
+    if(event.target.value){
+      this.file= true;
+    }
+  }
+
+  removeSelectedFile(index:any){
+      this.fileselectedvalue.splice(index,1);
+  }
+
+  handlekeydown(e:any){
+    console.log(">>>>>",e);
+    if(e.keyCode == 13){
+      this.closefile(this.fileinput);
+    }
+  }
+  closefile(element:any){
+    console.log(">hgcuyajkas");
+    element.value = "";
+    this.fileselectedvalue = [];
+    this.file = false;
+    // const array = new Uint32Array(10);
+		// let randomString = window.crypto.getRandomValues(array);
+		// 	this.inputkey = randomString;
+  }
+
   close(){
-    this.ModalClose.nativeElement.click();
+    this.ModalClose8.nativeElement.click();
   }
 
   getHtmlContent() {
