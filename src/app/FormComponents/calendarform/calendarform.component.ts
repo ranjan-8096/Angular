@@ -12,7 +12,7 @@ export class CalendarformComponent {
 
   
 
-  calendardatadata:any;
+  calendardatadatashow:any;
   registerForm: FormGroup;
   submitted = false;
   @Output() onclose = new EventEmitter<any>;
@@ -32,15 +32,19 @@ export class CalendarformComponent {
       title:['',[Validators.required,Validators.maxLength(20)]],
       calendaroption:['calendar',[Validators.required]],
       theme:['dark',[Validators.required]],
+      rangewidth:['',[Validators.required]],
     });
 
     
     if(localStorage.getItem("calendardata")){
       var data1:any =  localStorage.getItem("calendardata");
       var calendardatadata = JSON.parse(data1);
+      this.calendardatadatashow =  JSON.parse(data1);
       this.registerForm.get("title")?.setValue(calendardatadata?.title);
       this.registerForm.get("theme")?.setValue(calendardatadata?.theme);
       this.registerForm.get("calendaroption")?.setValue(calendardatadata?.calendaroption);
+      this.registerForm.get("rangewidth")?.setValue(calendardatadata?.rangewidth);
+
   }
   
   }
@@ -73,6 +77,7 @@ export class CalendarformComponent {
         "calendaroption":this.registerForm.value.calendaroption,
         "theme":this.registerForm.value.theme,
         "color":this.registerForm.value.color,
+        "rangewidth":this.registerForm.value.rangewidth
       };
       
       console.log(">>>>>",this.registerForm.value);

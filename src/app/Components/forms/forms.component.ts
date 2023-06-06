@@ -33,7 +33,7 @@ export class FormsComponent {
     {id:6,name:"Progressbar"},
     {id:7,name:"Range"},
     {id:8,name:"File Upload"}, 
-    {id:9,name:"Loader"}, 
+    // {id:9,name:"Loader"}, 
 
 ];
  

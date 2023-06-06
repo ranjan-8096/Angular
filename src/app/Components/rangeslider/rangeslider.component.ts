@@ -46,7 +46,7 @@ export class RangesliderComponent implements OnInit {
 
 
   @ViewChild('myModalClose7') ModalClose7:any;
-  @ViewChild("rangeslidervalue") elRef: ElementRef;
+  @ViewChild("range") elRef: ElementRef;
 
   options: Options = {
     floor:0,

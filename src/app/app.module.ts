@@ -54,7 +54,10 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { CalendarComponent } from './Components/calendar/calendar.component';
 import { CalendarformComponent } from './FormComponents/calendarform/calendarform.component';
 import { LoaderformComponent } from './FormComponents/loaderform/loaderform.component';
-import { LoaderComponent } from './Components/loader/loader.component';
+import { LoaderComponent } from './Components/loader/loader.component'; 
+import { TableformcomponentComponent } from './FormComponents/tableformcomponent/tableformcomponent.component';
+import { TablecomponentComponent } from './Components/tablecomponent/tablecomponent.component';
+import { EdittableformcomponentComponent } from './FormComponents/edittableformcomponent/edittableformcomponent.component';
 
 
 
@@ -106,7 +109,10 @@ import { LoaderComponent } from './Components/loader/loader.component';
     ProgressComponent,
     ProgressformComponent,
     LoaderformComponent,
-    LoaderComponent
+    LoaderComponent,
+    TableformcomponentComponent,
+    TablecomponentComponent,
+    EdittableformcomponentComponent
    
   ],
   imports: [

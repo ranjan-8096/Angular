@@ -29,7 +29,7 @@ export class ProgressformComponent {
       selectedtitle:['success',[Validators.required]],
       title:['',[Validators.required,Validators.maxLength(20)]],
       progressvalue:['',[Validators.required]],
-      rangewidth:['',[Validators.required]],
+      rangewidth:['50%',[Validators.required]],
       theme:['dark',[Validators.required]],
     });
 
@@ -43,6 +43,20 @@ export class ProgressformComponent {
       this.registerForm.get("theme")?.setValue(this.progressdata?.theme);
       this.registerForm.get("rangewidth")?.setValue(this.progressdata?.rangewidth);
   }
+  }
+
+  numeric(e:any) {
+    var k = e.which;
+    var ok = (k >= 48 && k <= 57) ||  // 0-9
+      k == 8 ||  // Backspaces
+      k == 9 ||  //H Tab
+      k == 11 ||  //V Tab
+      k == 0 ||  // Tab for Firefox
+      k == 46 ||  // for use dot
+      k == 127;   //Delete
+    if (!ok) {
+      e.preventDefault();
+    }
   }
 
 

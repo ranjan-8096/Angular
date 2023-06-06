@@ -51,22 +51,22 @@ export class CheckboxformComponent implements OnInit{
       console.log("vishnu",result);
 
       if(result == 1) {
-        this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
+        this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
       } 
        else if(result == 2) {
-        this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
-        this.registerForm.get("text2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
+        this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
+        this.registerForm.get("text2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
       } 
       else if(result == 3) {
-        this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
-        this.registerForm.get("text2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
-        this.registerForm.get("text3")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
+        this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
+        this.registerForm.get("text2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
+        this.registerForm.get("text3")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
       } 
       else if(result == 4) {
-        this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
-        this.registerForm.get("text2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
-        this.registerForm.get("text3")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
-        this.registerForm.get("text4")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
+        this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
+        this.registerForm.get("text2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
+        this.registerForm.get("text3")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
+        this.registerForm.get("text4")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
       } 
       else {
         this.registerForm.get("text1")?.clearValidators();

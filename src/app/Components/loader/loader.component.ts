@@ -99,7 +99,7 @@ export class LoaderComponent implements OnInit {
   }
   
   backwindow(){
-    this.router.navigate(['/component/forms']);
+    this.router.navigate(['/modal']);
   } 
 
 }

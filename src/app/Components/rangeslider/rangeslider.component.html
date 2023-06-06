@@ -13,8 +13,8 @@
 
 
 
-    <div class="container mt-5 width100">
-        <div class="rangeslider" [ngStyle]="{'width':rangesliderdata?.rangewidth}" [ngClass]="rangesliderdata?.theme">
+    <div class="container mt-5 width100" #range>
+        <div class="rangeslider width100" [ngStyle]="{'width':rangesliderdata?.rangewidth}" [ngClass]="rangesliderdata?.theme">
              <ngx-slider  *ngIf="updatedropdown" [(value)]="minValue" [(highValue)]="Valuenumber"  [options]="options"></ngx-slider>
         </div>
     </div>

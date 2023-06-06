@@ -1,4 +1,4 @@
-import { Component ,OnInit, ViewChild} from '@angular/core';
+import { Component ,ElementRef,OnInit, ViewChild} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 import { Router } from '@angular/router';
@@ -30,11 +30,39 @@ export class CalendarComponent implements OnInit {
   updatedropdown:boolean = true;
   calendardata:any;
   closeicon="../assets/images/close.png";
+  htmlcontent="active";
+  csscontent:any;
+  Copy="Copy";
+  CSS=`.date_time_pciker input {
+    border: 0px;
+    background: no-repeat;
+}
+
+.date_time_picker label {
+    padding: 10px 0px;
+}
+.date_time_pciker {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 0px 10px;
+    background-color: #fff;
+}
+
+.date_time_pciker input {
+    vertical-align: top;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.date_time_picker, .date_picker{
+    width: 30%;
+    margin: auto;
+}`;
   @ViewChild('myModalClose5') modalClose5:any;
+  @ViewChild('calendar') elRef: ElementRef;
 
-  constructor(private router: Router, private commonservice:CommonService) {
-
-
+  constructor(private router: Router, private commonservice:CommonService, elRef: ElementRef) {
+    this.elRef = elRef;
   }
 
 
@@ -45,11 +73,11 @@ export class CalendarComponent implements OnInit {
     if(localStorage.getItem("calendardata")) {
       var calendardata:any =  localStorage.getItem("calendardata");
       this.calendardata = JSON.parse(calendardata);
-      if(this.calendardata.theme == "dark" || this.calendardata.theme == "blue" || this.calendardata.theme == "purple"){
-        this.color = "#fff";
-      } else if(this.calendardata.theme == "light"){
-        this.color = "#000";
-      }
+      // if(this.calendardata.theme == "dark" || this.calendardata.theme == "blue" || this.calendardata.theme == "purple"){
+      //   this.color = "#fff";
+      // } else if(this.calendardata.theme == "light"){
+      //   this.color = "#000";
+      // }
     
     }
 
@@ -59,11 +87,11 @@ export class CalendarComponent implements OnInit {
       if(responsive.length != 0) {
       this.updatedropdown = false;
          this.calendardata = responsive;
-         if(this.calendardata.theme == "dark" || this.calendardata.theme == "blue" || this.calendardata.theme == "purple"){
-          this.color = "#fff";
-        } else if(this.calendardata.theme == "light"){
-          this.color = "#000";
-        }
+        //  if(this.calendardata.theme == "dark" || this.calendardata.theme == "blue" || this.calendardata.theme == "purple"){
+        //   this.color = "#fff";
+        // } else if(this.calendardata.theme == "light"){
+        //   this.color = "#000";
+        // }
         
       setTimeout(() => {
         this.updatedropdown = true;
@@ -85,6 +113,42 @@ export class CalendarComponent implements OnInit {
 
   dateUpdated(){
 
+  }
+
+  getHtmlContent() {
+    //This will return '<p> Text </p>' as a string
+    const html = this.elRef.nativeElement.innerHTML;
+    const lines = html.split('>');
+    var indentSize = 2;
+    for (let i = 0; i < lines.length - 1; i++) {
+      if (i >= 1 && i < lines.length - 2) {
+        // indentSize++;
+        // lines[i] = ' '.startsWith('</')
+        lines[i] = ' '.repeat(indentSize) + lines[i].trim() + '>';
+      } else {
+        lines[i] = lines[i].trim() + '>';
+      }
+    }
+    const formattedCode = lines.join('\n');
+    // console.log(formattedCode);
+    return formattedCode;
+  }
+  
+  openhtml(){
+    this.htmlcontent = "active";
+    this.csscontent = "noactive";
+  }
+
+  opencss(){
+    this.csscontent = "active";
+    this.htmlcontent = "noactive";
+  }
+
+  copy(){
+    this.Copy="copied!!";
+    setTimeout(()=>{
+        this.Copy="Copy";
+    }, 2000);
   }
   
 

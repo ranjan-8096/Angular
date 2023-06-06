@@ -71,12 +71,12 @@
                             <button aria-label="File Upload Create" class="btn btn-primary" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal8">Create</button>
                         </div>
-                        <div class="button-sec" *ngIf="item?.id == 9">
+                        <!-- <div class="button-sec" *ngIf="item?.id == 9">
                             <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal19">Details</button>
                             <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal9">Create</button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -195,7 +195,7 @@
                                 <li class="points">User can select two options Multiselect and Single select.</li>
                                 <li class="points">User can select width of select from the given options.</li>
                                 <li class="points">User can select the select theme.</li>
-                                 
+
                             </ul>
                         </div>
                     </div>
@@ -263,6 +263,65 @@
         </div>
     </div>
 
+    <div class="modal fade details" id="exampleModal15" tabindex="-1" aria-labelledby="exampleModalLabel1"
+        aria-hidden="true">
+
+        <div class="modal-dialog modaldialog-width">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h4>Date & Time Picker</h4>
+
+                    <button class="clearbtn" aria-label="close detail" #myModalClose data-bs-dismiss="modal">
+
+                        <img [src]="closeicon">
+
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="details-container ">
+
+                        <h3> Details for the Date & Time Picker section are below.</h3>
+
+                        <p class="pref">Please do follow the below given instructions while creating your Date & Time Picker
+
+                            component.</p>
+
+                        <div class="detail-content">
+
+                            <ul>
+
+                                <li class="points">Text for Label of date picker should not be more than 15 characters
+                                </li>
+
+                                <li class="points">User can select the Date picker types as - Date, Time & Date-Time
+                                </li>
+
+                                <li class="points">User can select width of the input from the dropdown</li>
+
+                                <li class="points">User can select the theme of the date picker from the dropdown</li>
+
+
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
         <div class="modal-dialog modaldialog-width">
             <div class="modal-content">
@@ -293,7 +352,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="details-container ">
-                        <h3> Details for the Range section are below.</h3>
+                        <h3> Details for the Progress section are below.</h3>
                         <p class="pref">Please do follow the below given instructions while creating your Progress
                             component.</p>
                         <div class="detail-content">
@@ -391,7 +450,7 @@
                             <ul>
                                 <li>Form label should be less than 15 characters.</li>
                                 <li>You can select single/multiple file upload from the given options.</li>
-                                <li>User Can select the File Upload theme. </li>
+                                <li>User can select the File Upload theme. </li>
                                 <li>User can select size option for file Upload. </li>
                             </ul>
                         </div>
@@ -415,51 +474,6 @@
         </div>
     </div>
 
-    <div class="modal fade details" id="exampleModal19" tabindex="-1" aria-labelledby="exampleModalLabel1"
-        aria-hidden="true">
-        <div class="modal-dialog modaldialog-width">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4>Loader</h4>
-                    <button class="clearbtn" aria-label="close detail" #myModalClose data-bs-dismiss="modal">
-                        <img [src]="closeicon">
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="details-container ">
-                        <h3> Details for the loader section are below.</h3>
-                        <p class="pref">Please do follow the below given instructions while creating your loader
-                            component.</p>
-                        <div class="detail-content">
-                            <ul>
-                                <li>Form label should be less than 15 characters.</li>
-                                <li>You can select single/multiple file upload from the given options.</li>
-                                <li>User Can select the File Upload theme. </li>
-                                <li>User can select size option for file Upload. </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
-        <div class="modal-dialog modaldialog-width">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4>Loader</h4>
-                    <button class="clearbtn" aria-label="close modal" #myModalClose9 data-bs-dismiss="modal">
-                        <img [src]="closeicon">
-                    </button>
-                </div>
-                <!-- <app-form (onclose)="close()"></app-form> -->
-                <app-loaderform (onclose)="close()"></app-loaderform>
-            </div>
-        </div>
-    </div>
-
-
-
-
+    
 
 </section>

@@ -9,32 +9,63 @@
       </div> 
     </div>
     <div class="container" #fileupload>
-      <div class="fileupload">
+      <div class="fileupload width100"  [ngStyle]="{'width':filedata.width}">
 
-        <div *ngIf="filedata.choosefile == 'single'" class="commonfile">
+        <!-- <div *ngIf="filedata.choosefile == 'single'" class="commonfile" [ngStyle]="{'border-color':color,'width':filedata.width}">
           <label class="filelabel" [ngStyle]="{'width':filedata.width}">{{filedata.title}}</label><br/>
           <input #fileinput type="file" id="myfile" name="myfile" [ngStyle]="{'border-color':color, 'width':filedata.width}" (change)="handlechange($event)">
             <button class="clear"  aria-label="close icon" *ngIf="file" (click)="closefile(fileinput)" (keypress)="closefile(fileinput)">
               <img [src]="closeicon" class="closefile">  
             </button>
-        </div>
-        <ul *ngIf="filedata.choosefile == 'single'" [ngStyle]="{'width':filedata.width}" class="dataalign">
+            <button class="choosebtn" (click)="fileinput.click()" [ngStyle]="{'background-color':color, 'color':textcolor}">{{filedata.title}}</button>Drop files here to upload
+              <input style="display: none"  #attachments type="file" (change)="handlechange($event)" #fileinput>
+              <ul *ngIf="filedata.choosefile == 'single'" class="dataalign">
+                <li class="fileli" *ngFor="let file of fileselectedvalue, let index = index"><div class="filetitle">{{truncate(file)}}</div> <button class="closefilebutton" (click)="removeSelectedFile(index)"><i class="fa fa-trash" aria-hidden="true"></i></button></li>
+              </ul>
+        </div> -->
+      <!-- <ul *ngIf="filedata.choosefile == 'single'" [ngStyle]="{'width':filedata.width}" class="dataalign">
           <li *ngFor="let file of fileselectedvalue">{{file}}</li>
-        </ul>
+        </ul>  -->
 
-
-        <div *ngIf="filedata.choosefile == 'multiple'" class="commonfile">
-          <label class="filelabel" [ngStyle]="{'width':filedata.width}">{{filedata.title}}</label><br/>
-          <input #fileinput type="file" id="myfile" name="myfile" multiple="multiple" [ngStyle]="{'border-color':color, 'width':filedata.width}" (change)="handlechange($event)">
-            <button class="clear"  aria-label="close icon" *ngIf="file" (click)="closefile(fileinput)" (keypress)="closefile(fileinput)">
-              <img [src]="closeicon" class="closefile closesize">  
-            </button>
+        <div *ngIf="filedata.choosefile == 'single'" class="commonfile" >
+          <label class="filelabel"  >{{filedata.title}}</label><br/>
+         <div class="mainupload">
+          <input #fileinput type="file" id="myfile" name="myfile" [ngStyle]="{'border':'2px solid ' + color}"  (change)="handlechange($event)">
+          <button class="clear"  aria-label="close icon" *ngIf="file" (click)="closefile(fileinput)" (keypress)="closefile(fileinput)">
+            <img [src]="closeicon" class="closefile closesize">  
+          </button>
+         </div>
+            <!-- <div class="fileborder"> -->
+              <!-- <button class="choosebtn" (click)="fileinput.click()" [ngStyle]="{'background-color':color, 'color':textcolor}">{{filedata.title}}</button>Drop files here to upload
+              <input style="display: none"  #attachments type="file" (change)="handlechange($event)" #fileinput multiple="true"> -->
+              <ul *ngIf="filedata.choosefile == 'single'"class="dataalign">
+                <li class="fileli" *ngFor="let file of fileselectedvalue, let index = index"><div class="filetitle">{{truncate(file)}}</div> <button class="closefilebutton" (click)="removeSelectedFile(index)"><i class="fa fa-trash" aria-hidden="true"></i></button></li>
+              </ul>
+            <!-- </div> -->
         </div>
-        <ul *ngIf="filedata.choosefile == 'multiple'" [ngStyle]="{'width':filedata.width}" class="dataalign">
+        <div *ngIf="filedata.choosefile == 'multiple'" class="commonfile" >
+          <label class="filelabel"  >{{filedata.title}}</label><br/>
+         <div class="mainupload">
+          <input #fileinput type="file" id="myfile" [ngStyle]="{'border':'2px solid ' + color}" name="myfile" multiple="multiple" (change)="handlechange($event)">
+          <button class="clear"  aria-label="close icon" *ngIf="file" (click)="closefile(fileinput)" (keypress)="closefile(fileinput)">
+            <img [src]="closeicon" class="closefile closesize">  
+          </button>
+         </div>
+            <!-- <div class="fileborder"> -->
+              <!-- <button class="choosebtn" (click)="fileinput.click()" [ngStyle]="{'background-color':color, 'color':textcolor}">{{filedata.title}}</button>Drop files here to upload
+              <input style="display: none"  #attachments type="file" (change)="handlechange($event)" #fileinput multiple="true"> -->
+              <ul *ngIf="filedata.choosefile == 'multiple'"class="dataalign">
+                <li class="fileli" *ngFor="let file of fileselectedvalue, let index = index"><div class="filetitle">{{truncate(file)}}</div> <button class="closefilebutton" (click)="removeSelectedFile(index)"><i class="fa fa-trash" aria-hidden="true"></i></button></li>
+              </ul>
+            <!-- </div> -->
+        </div>
+        <!-- <ul *ngIf="filedata.choosefile == 'multiple'" [ngStyle]="{'width':filedata.width}" class="dataalign">
           <li *ngFor="let file of fileselectedvalue">{{file}}</li>
-        </ul>
+        </ul> -->
       </div>
     </div>
+
+
     <ul class="list-inline">
       <li (click)="openhtml()"><button [class]="htmlcontent">HTML</button></li>
       <li (click)="opencss()"><button [class]="csscontent">CSS</button></li>

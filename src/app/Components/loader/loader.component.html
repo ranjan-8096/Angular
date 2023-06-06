@@ -2,7 +2,7 @@
 <div class="main">
     <div class="top-header">
       <div>
-        <h4 class="subheader">Checkbox <span class="sideheader">Component</span></h4>
+        <h4 class="subheader">Loader <span class="sideheader">Component</span></h4>
       </div>
       <div class="button-sec">
         <button class="backbutton" (click)="backwindow()">Back</button>
@@ -11,12 +11,12 @@
     </div>
     <div #loader class="loadersection">
       
-      <div   class="loaderdiv" [ngStyle]="{'width':loaderdata.cardwidth}">
+      <div  *ngIf="loaderdata?.typefields == 'Horizontal Loader'" class="loaderdiv" [ngStyle]="{'width':loaderdata.cardwidth}">
         <label>{{loaderdata.title}}</label>
       <span class="loader" [ngClass]="[loaderdata.themecolor, loaderdata.timeoutvalue]"></span>
       </div>
 
-      <div [ngClass]="[loaderdata.themecolor, loaderdata.timeoutvalue]">
+      <div *ngIf="loaderdata?.typefields == 'Circular Loader'" [ngClass]="[loaderdata.themecolor, loaderdata.timeoutvalue]">
         <div id="circle-loader-wrap" >
           <div class="left-wrap">
             <div class="loader"></div>	
@@ -100,8 +100,7 @@
                   <img [src]="closeicon" class="closeicon">  
                 </button> 
             </div>
-            <app-editcheckbox (onclose)="close()"></app-editcheckbox>
-            <!-- <app-editcard (onclose)="close()"></app-editcard> -->
+            <app-editcheckbox (onclose)="close()"></app-editcheckbox> 
   
         </div>
     </div>

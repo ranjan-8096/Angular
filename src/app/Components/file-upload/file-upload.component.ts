@@ -17,6 +17,7 @@ export class FileUploadComponent {
   file=false;
   fileselectedvalue:any[]=[];
   Copy="Copy";
+  textcolor:any;
   CSS=`.clear{
     border: none;
     padding: 0px !important;
@@ -68,13 +69,17 @@ export class FileUploadComponent {
       this.filedata = JSON.parse(data1);
     console.log(">>>>>>>>>>>>>>>>>headerdata",this.filedata);
     if(this.filedata.color == "light"){
-      this.color="white";
+      this.color="#ddd";
+      this.textcolor="black";
     } else if(this.filedata.color == "dark"){
       this.color="black";
+      this.textcolor="white";
     } else if(this.filedata.color == "purple"){
       this.color="#2b0a3d";
+      this.textcolor="white";
     } else if(this.filedata.color == "blue"){
       this.color="#0070ad";
+      this.textcolor="white";
     }
 
     }
@@ -84,7 +89,12 @@ export class FileUploadComponent {
     this.router.navigate(['/component/forms']);
   }
 
+  truncate(str:any){
+      return str.length > 30 ? str.substring(0, 24) + "..." : str;
+  }
+
   handlechange(event:any){
+    this.fileselectedvalue = [];
     var input = this.fileinput.nativeElement.files;
     for (var i = 0; i < input.length; ++i) {
         this.fileselectedvalue.push(input.item(i).name);
@@ -92,6 +102,10 @@ export class FileUploadComponent {
     if(event.target.value){
       this.file= true;
     }
+  }
+
+  removeSelectedFile(index:any){
+      this.fileselectedvalue.splice(index,1);
   }
 
   handlekeydown(e:any){

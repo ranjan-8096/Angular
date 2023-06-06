@@ -95,6 +95,9 @@ button.toaster_button {
 }
 
 @media only screen and (max-width: 767px) {
+    button.toaster_button.toaster_btn {
+        width: 100% !important;
+    }
     .modaldialog-width {
       margin-top: 60px;
       max-width: 100% !important;

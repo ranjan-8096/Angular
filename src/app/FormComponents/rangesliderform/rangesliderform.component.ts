@@ -1,3 +1,4 @@
+
 import { Component, OnInit , EventEmitter , Output} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -32,7 +33,7 @@ export class RangesliderformComponent {
       title:['',[Validators.required,Validators.maxLength(20)]],
       minvalue:['',[Validators.required]],
       maxvalue:['',[Validators.required]],
-      rangewidth:['',[Validators.required]],
+      rangewidth:['50%',[Validators.required]],
       theme:['dark',[Validators.required]],
     });
 
@@ -53,6 +54,20 @@ export class RangesliderformComponent {
 
   get f(){
     return this.registerForm.controls;
+  }
+
+  numeric(e:any) {
+    var k = e.which;
+    var ok = (k >= 48 && k <= 57) ||  // 0-9
+      k == 8 ||  // Backspaces
+      k == 9 ||  //H Tab
+      k == 11 ||  //V Tab
+      k == 0 ||  // Tab for Firefox
+      k == 46 ||  // for use dot
+      k == 127;   //Delete
+    if (!ok) {
+      e.preventDefault();
+    }
   }
 
   

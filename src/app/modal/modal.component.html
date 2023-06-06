@@ -17,19 +17,19 @@
 
                         <div class="card-body">
                             <!-- <h5 class="card-title">Special title treatment</h5> -->
-                            <p class="card-text" [title]='subheading'>{{truncate(subheading)}}  {{item?.name}}.</p>
+                            <p class="card-text" [title]='subheading'>{{truncate(subheading)}} {{item?.name}}.</p>
 
                             <div class="button-sec" *ngIf="item?.id == 1">
                                 <button aria-label="Header Detail Button" class="btn btn-primary me-2"
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal12">Details</button>
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal11">Details</button>
                                 <button aria-label="Header Create Button" class="btn btn-primary me-2"
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal2">Create</button>
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal1">Create</button>
                             </div>
                             <div class="button-sec" *ngIf="item?.id == 2">
                                 <button aria-label="Card Detail Button" class="btn btn-primary me-2"
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal11">Details</button>
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal12">Details</button>
                                 <button aria-label="Card Create Button" class="btn btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal1">Create </button>
+                                    data-bs-target="#exampleModal2">Create </button>
                             </div>
                             <div class="button-sec" *ngIf="item?.id == 3">
                                 <button aria-label="Button Detail Button" class="btn btn-primary me-2"
@@ -69,8 +69,27 @@
                             </div>
                             <div class="button-sec" *ngIf="item?.id == 9">
                                 <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal18">Details</button>
-                                <button aria-label="Button Create" class="btn btn-primary" (click)="routetocomp()">Components</button>
+                                    data-bs-target="#exampleModal19">Details</button>
+                                <button aria-label="Button Create" class="btn btn-primary"
+                                    (click)="routetocomp()">Components</button>
+                            </div>
+                            <div class="button-sec" *ngIf="item?.id == 10">
+                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal110">Details</button>
+                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal10">Create</button>
+                            </div>
+                            <div class="button-sec" *ngIf="item?.id == 11">
+                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal0111">Details</button>
+                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal011">Create</button>
+                            </div>
+                            <div class="button-sec" *ngIf="item?.id == 12">
+                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal0112">Details</button>
+                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal012">Create</button>
                             </div>
                         </div>
                     </div>
@@ -79,7 +98,7 @@
         </div>
 
 
-        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel1"
             aria-hidden="true">
             <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
@@ -93,7 +112,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade details" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel1"
+        <div class="modal fade details" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel1"
             aria-hidden="true">
             <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
@@ -138,7 +157,7 @@
             </div>
         </div>
 
-        <div class="modal fade details" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel1"
+        <div class="modal fade details" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel1"
             aria-hidden="true">
             <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
@@ -327,75 +346,144 @@
         </div>
 
         <div class="modal fade details" id="exampleModal17" tabindex="-1" aria-labelledby="exampleModalLabel1"
-        aria-hidden="true">
-        <div class="modal-dialog modaldialog-width">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4>Alert</h4>
-                    <button class="clearbtn" aria-label="Footer Detail modal close" #myModalClose
-                        data-bs-dismiss="modal">
-                        <img [src]="closeicon">
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="details-container ">
-                        <h3> Details for the Alert section are below.</h3>
-                        <p class="pref">Please do follow the below given instructions while creating your Alert
-                            component.</p>
-                        <div class="detail-content">
-                            <ul>
-                                <li class="points">Alert Text should be less then 50 characters.</li>
- 
-                                <li class="points">Alert text is a mandatory field.</li>
- 
-                                <li class="points">You can select width of Alert from the given options.</li>
+            aria-hidden="true">
+            <div class="modal-dialog modaldialog-width">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Alert</h4>
+                        <button class="clearbtn" aria-label="Footer Detail modal close" #myModalClose
+                            data-bs-dismiss="modal">
+                            <img [src]="closeicon">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="details-container ">
+                            <h3> Details for the Alert section are below.</h3>
+                            <p class="pref">Please do follow the below given instructions while creating your Alert
+                                component.</p>
+                            <div class="detail-content">
+                                <ul>
+                                    <li class="points">Alert Text should be less then 50 characters.</li>
 
-                                <li class="points">You can select the theme of Alert from the given options.</li>
-                            </ul>
+                                    <li class="points">Alert text is a mandatory field.</li>
+
+                                    <li class="points">You can select width of Alert from the given options.</li>
+
+                                    <li class="points">You can select the theme of Alert from the given options.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 
 
         <div class="modal fade details" id="exampleModal18" tabindex="-1" aria-labelledby="exampleModalLabel1"
-        aria-hidden="true">
-        <div class="modal-dialog modaldialog-width">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4>Component</h4>
-                    <button class="clearbtn" aria-label="Footer Detail modal close" #myModalClose
-                        data-bs-dismiss="modal">
-                        <img [src]="closeicon">
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="details-container ">
-                        <h3> Details for the Alert section are below.</h3>
-                        <p class="pref">Please do follow the below given instructions while creating your Alert
-                            component.</p>
-                        <div class="detail-content">
-                            <ul>
-                            <li>User Can select the toaster type.</li>
-                             <li  class="points">The Toaster title should only contain 20 characters.</li>
-                
-                             <li  class="points">User can add a message of 100 words.</li>
-                
-                             <li  class="points">User can select the Button text on click of which the toaster appears.</li>
-                
-                             <li  class="points">User Can select the Toaster direction top/bottom</li>
-                
-                             <li  class="points">User Can select the Toaster theme</li></ul>
+            aria-hidden="true">
+            <div class="modal-dialog modaldialog-width">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Toaster</h4>
+                        <button class="clearbtn" aria-label="Footer Detail modal close" #myModalClose
+                            data-bs-dismiss="modal">
+                            <img [src]="closeicon">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="details-container ">
+                            <h3> Details for the Toaster section are below.</h3>
+                            <p class="pref">Please do follow the below given instructions while creating your Toaster
+                                component.</p>
+                            <div class="detail-content">
+                                <ul>
+                                    <li>User Can select the toaster type.</li>
+                                    <li class="points">The Toaster title should only contain 20 characters.</li>
+
+                                    <li class="points">User can add a message of 100 words.</li>
+
+                                    <li class="points">User can select the Button text on click of which the toaster
+                                        appears.</li>
+
+                                    <li class="points">User Can select the Toaster direction top/bottom</li>
+
+                                    <li class="points">User Can select the Toaster theme</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="modal fade details" id="exampleModal19" tabindex="-1" aria-labelledby="exampleModalLabel1"
+            aria-hidden="true">
+            <div class="modal-dialog modaldialog-width">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Form</h4>
+                        <button class="clearbtn" aria-label="table detail close" #myModalClose data-bs-dismiss="modal">
+                            <img [src]="closeicon">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="details-container ">
+                            <h3> Details for the Form section are below.</h3>
+                            <p class="pref">Please do follow the below given instructions while creating your Form
+                                component.</p>
+                            <div class="detail-content">
+                                <ul>
+                                    <li class="points">User can create various form components in this section</li>
+
+                                    <li class="points">Components you can create are as follows: InputField, Text Area,
+                                        Radio Button, Checkbox button, Range, Progressbar, Switch control, File Input,
+                                        Date picker, Select dropdown</li> 
+                                    <li class="points">Instructions to created components are provided for every
+                                        component.</li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade details" id="exampleModal110" tabindex="-1" aria-labelledby="exampleModalLabel1"
+            aria-hidden="true">
+            <div class="modal-dialog modaldialog-width">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Table</h4>
+                        <button class="clearbtn" aria-label="table detail close" #myModalClose data-bs-dismiss="modal">
+                            <img [src]="closeicon">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="details-container ">
+                            <h3> Details for the Cards section are below.</h3>
+                            <p class="pref">Please do follow the below given instructions while creating your Table
+                                component.</p>
+                            <div class="detail-content">
+                                <ul>
+                                    <li class="points">Table caption should be less then 15 characters</li>
+
+                                    <li class="points">You can choose table pagination from the given options. </li>
+
+                                    <li class="points">You can choose searchbox is needed or not from given options.
+                                    </li>
+
+                                    <li class="points">You can choose strip from the given options</li>
+
+                                    <li class="points">You can select the theme of tooltip</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel2"
             aria-hidden="true">
             <div class="modal-dialog modaldialog-width">
                 <div class="modal-content header-modal">
@@ -483,14 +571,14 @@
                         <button class="clearbtn" aria-label="Button Create modal close icon" #myModalClose6
                             data-bs-dismiss="modal"><img [src]="closeicon"></button>
                     </div>
-                     
-                    <app-alertform (onclose)="close()"></app-alertform> 
+
+                    <app-alertform (onclose)="close()"></app-alertform>
                 </div>
             </div>
         </div>
         <!--  -->
 
-        
+
         <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel3"
             aria-hidden="true">
             <div class="modal-dialog modaldialog-width">
@@ -506,6 +594,63 @@
             </div>
         </div>
         <!--  -->
+
+        <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel3"
+            aria-hidden="true">
+            <div class="modal-dialog modaldialog-width">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Table</h4>
+                        <button class="clearbtn" aria-label="table modal close" #myModalClose8
+                            data-bs-dismiss="modal"><img [src]="closeicon"></button>
+                    </div>
+                    <app-tableformcomponent (onclose)="close()"></app-tableformcomponent>
+                    <!-- <app-form (onclose)="close()"></app-form> -->
+                </div>
+            </div>
+        </div>
+        <div class="modal fade details" id="exampleModal0111" tabindex="-1" aria-labelledby="exampleModalLabel1"
+        aria-hidden="true">
+        <div class="modal-dialog modaldialog-width">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Loader</h4>
+                    <button class="clearbtn" aria-label="close detail" #myModalClose data-bs-dismiss="modal">
+                        <img [src]="closeicon">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="details-container ">
+                        <h3> Details for the loader section are below.</h3>
+                        <p class="pref">Please do follow the below given instructions while creating your loader
+                            component.</p>
+                        <div class="detail-content">
+                            <ul>
+                                <li>Form label should be less than 15 characters.</li>
+                                <li>You can select single/multiple file upload from the given options.</li>
+                                <li>User Can select the File Upload theme. </li>
+                                <li>User can select size option for file Upload. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal011" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modaldialog-width">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Loader</h4>
+                    <button class="clearbtn" aria-label="close modal" #myModalClose9 data-bs-dismiss="modal">
+                        <img [src]="closeicon">
+                    </button>
+                </div>
+                <!-- <app-form (onclose)="close()"></app-form> -->
+                <app-loaderform (onclose)="close()"></app-loaderform>
+            </div>
+        </div>
+    </div>
 
     </div>
 </section>
