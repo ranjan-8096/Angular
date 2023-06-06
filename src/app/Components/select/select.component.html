@@ -4,7 +4,7 @@
 <div class="main">
     <div class="top-header">
       <div class="insideheader">
-        <h4 class="subheader">Select <span>Component</span></h4>
+        <h4 class="subheader">Select <span class="sideheader">Component</span></h4>
       </div>
       <div class="button-sec">
         <button class=" backbutton" (click)="backwindow()">Back</button>
@@ -16,7 +16,7 @@
 
 
         
-  <div #selector>
+  <div class="container" #selector>
     <div class="container mt-3 width100 select_container" [ngStyle]="{'width':selectdata.selectwidth}" [style.border]="'1px solid ' +  selectdata?.color">
         <label>{{selectdata?.title}}</label>
         <div class="select"> 

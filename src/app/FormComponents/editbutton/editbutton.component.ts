@@ -70,7 +70,7 @@ export class EditbuttonComponent implements OnInit {
       // fontsize: ['', [Validators.required]],
       borderradius: ['', [Validators.required]],
       borderwidth: ['', [Validators.required]], 
-      textvalue: ['', [Validators.required]],
+      textvalue: ['', [Validators.required,Validators.maxLength(20)]],
       color: ['light', [Validators.required]],
       btnwitdth: ['25%', [Validators.required]],
       btnpadding: ['5px padding', [Validators.required]],

@@ -34,6 +34,8 @@ export class CommonService {
     private progressstatus = new BehaviorSubject<any>([]);
     progressstatusdata = this.progressstatus.asObservable();
 
+    private calendarstatus = new BehaviorSubject<any>([]);
+    calendarstatusdata = this.calendarstatus.asObservable();
 
 
     footercompletedata(data:any) {
@@ -60,6 +62,12 @@ export class CommonService {
       selectorcompletedata(data:any) {
         this.selectorstatus.next(data);
       }
+
+      calendarcompletedata(data:any) {
+        this.calendarstatus.next(data);
+      }
+
+
 
 
 };

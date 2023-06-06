@@ -13,6 +13,7 @@ export class ToasterformComponent  implements OnInit {
 
   registerForm: FormGroup;
   submitted = false;
+  showtoasterdata:any;
   @Output() onclose = new EventEmitter<any>;
 
 
@@ -27,8 +28,8 @@ export class ToasterformComponent  implements OnInit {
 
     this.registerForm = this.formBuilder.group({
       selectedtitle:['success',[Validators.required]],
-      title:['',[Validators.required]],
-      message:['',[Validators.required]],
+      title:['',[Validators.required,,Validators.maxLength(20)]],
+      message:['',[Validators.required,Validators.maxLength(100)]],
       buttontext:['',[Validators.required]],
       direction:['toast-top-right',[Validators.required]],
       // theme:['dark',[Validators.required]],
@@ -38,6 +39,7 @@ export class ToasterformComponent  implements OnInit {
     if(localStorage.getItem("toasterdata")){
       var data1:any =  localStorage.getItem("toasterdata");
       var toasterdata = JSON.parse(data1);
+      this.showtoasterdata = JSON.parse(data1);
       this.registerForm.get("selectedtitle")?.setValue(toasterdata?.selectedtitle);
       this.registerForm.get("title")?.setValue(toasterdata?.title);
       this.registerForm.get("message")?.setValue(toasterdata?.message);

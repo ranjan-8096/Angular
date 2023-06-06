@@ -1,0 +1,67 @@
+
+
+
+
+<div class="main">
+    <div class="top-header">
+      <div class="insideheader">
+        <h4 class="subheader">Calendar <span>Component</span></h4>
+      </div>
+      <div class="button-sec">
+        <button class=" backbutton" (click)="backwindow()">Back</button>
+        <button class=" backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal5">Edit</button>
+      </div> 
+    </div>
+	
+	
+	
+	
+	<div class="container">
+
+		<div class="date_section" *ngIf="updatedropdown">
+
+		<div class="date_time_picker" [ngStyle]="{'background-Color':calendardata?.color}" *ngIf="calendardata?.calendaroption == 'calendartime'">
+			<label>{{calendardata?.title}}</label>
+			<div class="date_time_pciker">
+			<input type="datetime-local" id="birthdaytime" name="birthdaytime">
+			</div>
+		</div>
+
+			<div class="date_time_picker" *ngIf="calendardata?.calendaroption == 'calendar'">
+				<label>{{calendardata?.title}}</label>
+				<div class="date_time_pciker">
+					<input type="date" name="date"/>
+
+				</div>
+			</div>
+
+			<div class="date_time_picker" *ngIf="calendardata?.calendaroption == 'time'">
+				<label>{{calendardata?.title}}</label>
+				<div class="date_time_picker">
+					<input type="time" name="time"/>
+				</div>
+			</div>
+
+
+
+
+					</div>
+	</div>
+
+</div>
+
+
+<div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+	<div class="modal-dialog modaldialog-width">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4>Calendar</h4>
+				<button class="clearbtn" #myModalClose5 data-bs-dismiss="modal">
+					<img [src]="closeicon">
+				</button>
+			</div>
+			<!-- <app-checkboxform (onclose)="close()"></app-checkboxform> -->
+			<app-calendarform (onclose)="close()"></app-calendarform>
+		</div>
+	</div>
+</div>

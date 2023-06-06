@@ -51,6 +51,10 @@ import { RangesliderformComponent } from './FormComponents/rangesliderform/range
 import { SelectformComponent } from './FormComponents/selectform/selectform.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { CalendarComponent } from './Components/calendar/calendar.component';
+import { CalendarformComponent } from './FormComponents/calendarform/calendarform.component';
+import { LoaderformComponent } from './FormComponents/loaderform/loaderform.component';
+import { LoaderComponent } from './Components/loader/loader.component';
 
 
 
@@ -93,14 +97,16 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     FileuploadformComponent,
     FileUploadComponent,
     EditfileuploadComponent,
-    
-
+    CalendarformComponent,
+    CalendarComponent,
     RangesliderComponent,
     RangesliderformComponent,
     SelectComponent,
     SelectformComponent,
     ProgressComponent,
-    ProgressformComponent
+    ProgressformComponent,
+    LoaderformComponent,
+    LoaderComponent
    
   ],
   imports: [

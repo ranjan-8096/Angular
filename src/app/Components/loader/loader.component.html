@@ -1,3 +1,4 @@
+
 <div class="main">
     <div class="top-header">
       <div>
@@ -8,8 +9,27 @@
         <button class="backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal2">Edit</button>
       </div>
     </div>
-    <!-- [ngStyle]="{'backgroundColor':backgroundbtn, 'color':btncolor}" -->
-    <div #checkbox class="new" [ngClass]="checkboxdata.themecolor">
+    <div #loader class="loadersection">
+      
+      <div   class="loaderdiv" [ngStyle]="{'width':loaderdata.cardwidth}">
+        <label>{{loaderdata.title}}</label>
+      <span class="loader" [ngClass]="[loaderdata.themecolor, loaderdata.timeoutvalue]"></span>
+      </div>
+
+      <div [ngClass]="[loaderdata.themecolor, loaderdata.timeoutvalue]">
+        <div id="circle-loader-wrap" >
+          <div class="left-wrap">
+            <div class="loader"></div>	
+          </div>
+          <div class="right-wrap">
+            <div class="loader"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+   
+    <!-- <div #checkbox class="new" [ngClass]="checkboxdata.themecolor">
 
         <form class="checkbox-box width100" *ngIf="checkboxdata.typefields=='Checkbox'" [ngStyle]="{'width':checkboxdata.cardwidth, 'display':checkboxdata.alignverticle, 'border':'1px solid' + checkboxdata.bgcolor}"> 
           <label class="type-checkbox"><span>*</span> {{checkboxdata.title}}</label>
@@ -50,7 +70,7 @@
             <label for="value4">{{checkboxdata.text4}}<span></span></label>
           </div>  
         </form>
-      </div>
+      </div> -->
      
       <ul class="list-inline">
       <li (click)="openhtml()"><button [class]="htmlcontent">HTML</button></li>
@@ -86,3 +106,4 @@
         </div>
     </div>
   </div>
+  

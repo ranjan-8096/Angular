@@ -146,8 +146,8 @@ export class SelectComponent implements OnInit {
   }
 
   backwindow(){
-    this.router.navigate(['/component/forms']);
     localStorage.removeItem("selectdata");
+    this.router.navigate(['/component/forms']);
 
   }
 

@@ -3,14 +3,14 @@
 <div class="main">
     <div class="top-header">
       <div>
-        <h4 class="subheader">Checkbox <span class="sideheader">Component</span></h4>
+        <h4 class="subheader">Switch Control <span class="sideheader">Component</span></h4>
       </div>
       <div class="button-sec">
         <button class="backbutton" (click)="backwindow()">Back</button>
         <button class="backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal2">Edit</button>
       </div>
     </div> 
-    <div #switchctl class="new">
+    <div class="container" #switchctl class="new">
         <div class="switch_box box_1">  
             <h4>{{switchdatas.title}}</h4>
 			<input type="checkbox" [ngClass]="[switchdatas.switchsize, switchdatas.themecolor]" class="switch_1">
@@ -40,7 +40,7 @@
     <div class="modal-dialog modaldialog-width">
         <div class="modal-content">
             <div class="modal-header">
-                <h4>Checkbox</h4>
+                <h4>Switch Control</h4>
                 <button class="clearbtn"  aria-label="Card Update modal close"  #myModalClose1 data-bs-dismiss="modal">
                   <img [src]="closeicon" class="closeicon">  
                 </button> 

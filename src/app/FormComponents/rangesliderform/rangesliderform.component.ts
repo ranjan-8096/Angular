@@ -29,7 +29,7 @@ export class RangesliderformComponent {
 
     this.registerForm = this.formBuilder.group({
       selectedtitle:['success',[Validators.required]],
-      title:['',[Validators.required]],
+      title:['',[Validators.required,Validators.maxLength(20)]],
       minvalue:['',[Validators.required]],
       maxvalue:['',[Validators.required]],
       rangewidth:['',[Validators.required]],
@@ -40,6 +40,7 @@ export class RangesliderformComponent {
     if(localStorage.getItem("rangesliderdata")){
       var data1:any =  localStorage.getItem("rangesliderdata");
       this.rangesliderdata = JSON.parse(data1);
+      console.log(">>>>",this.rangesliderdata);
       this.registerForm.get("title")?.setValue(this.rangesliderdata?.title);
       this.registerForm.get("minvalue")?.setValue(this.rangesliderdata?.minvalue);
       this.registerForm.get("maxvalue")?.setValue(this.rangesliderdata?.maxvalue);

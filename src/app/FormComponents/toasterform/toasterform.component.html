@@ -1,5 +1,5 @@
 <div class="modal-body">
-    <p><b>Please fill the mandotary fields according your preference to design of the Alert</b> </p>
+    <p><b>Please fill the mandotary fields according your preference to design of the Toaster</b> </p>
 
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="pt-3">
@@ -49,12 +49,12 @@
         <div class="form-group">
             <label>Message:</label><span class="star">*</span>
             <textarea class="form-control inputbox" placeholder="description" aria-describedby="description-err-text"
-                name="message" formControlName="message" [ngClass]="{ 'is-invalid': submitted && f.message.errors }"
+                name="message" formControlName="message" maxlength="100" [ngClass]="{ 'is-invalid': submitted && f.message.errors }"
                 autofocus></textarea>
             <div *ngIf="(f.message.touched || submitted) && f.message.errors" class="invalid-feedback">
                 <div class="error" role="alert" aria-atomic="true" *ngIf="f.message.errors.required">Description is
                     required</div>
-                <div class="error" role="alert" aria-atomic="true" *ngIf="f.message.errors.maxlength">maxlength 200
+                <div class="error" role="alert" aria-atomic="true" *ngIf="f.message.errors.maxlength">maxlength 100 word
                 </div>
             </div>
         </div>
@@ -96,11 +96,18 @@
 
 
 
-        <div class="footerbutton">
+        <div class="footerbutton" *ngIf="!showtoasterdata">
             <button class="submitbutton">
                 Create
             </button>
         </div>
+
+        <div class="footerbutton" *ngIf="showtoasterdata">
+            <button class="submitbutton">
+                Update
+            </button>
+        </div>
+
     </form>
 
 </div>

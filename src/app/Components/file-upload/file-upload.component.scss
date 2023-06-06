@@ -6,6 +6,9 @@
         }
     }
 }
+.closefile{
+    filter: invert(1);
+}
 .backbutton{
     border-radius: 8px;
     padding: 5px;
@@ -14,20 +17,36 @@
     color: var(--color-white) !important;
     background-color: var(--color-wbh-blue) !important;
 }
+.clear{
+    border: none;
+    padding: 0px !important;
+    background: transparent;
+    margin-left: -30px;
+    .closesize{
+        width: 15px;
+    }
+}
+.dataalign{
+    margin: auto;
+}
 .fileupload{
     width: 95%;
     margin: auto;
-    text-align: center;
+    // text-align: center;
     margin-top: 70px;
     #myfile{
         border:2px solid black;
         padding: 10px;
+        padding-right: 27px;
     }
     #myfile:focus{
         -webkit-box-shadow: 0 0 10px 2px rgb(140, 119, 119);
     -moz-box-shadow: 0 0 10px 2px rgb(140, 119, 119);
     box-shadow: 0 0 10px 2px rgb(140, 119, 119);
     }
+}
+.commonfile{
+    text-align: center;
 }
 .filelabel{
     text-align: start;
@@ -78,4 +97,23 @@
 .active{
     border-bottom: 1px solid black !important;
     padding-bottom: 5px !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .width100{
+        width: 100% !important;
+    }
+    .top-header div:first-child {
+        width: 50%;
+    }
+    h4.subheader {
+        margin: 0px;
+        font-size: 1.2rem;
+    }
+    section.main header {
+        padding: 1rem .85rem;
+    }
+    .modaldialog-width { 
+        max-width: 100% !important;
+    }
 }

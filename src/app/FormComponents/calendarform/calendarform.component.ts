@@ -4,13 +4,15 @@ import { Router } from '@angular/router';
 import { CommonService } from 'src/app/common-service';
 
 @Component({
-  selector: 'app-progressform',
-  templateUrl: './progressform.component.html',
-  styleUrls: ['./progressform.component.scss']
+  selector: 'app-calendarform',
+  templateUrl: './calendarform.component.html',
+  styleUrls: ['./calendarform.component.scss']
 })
-export class ProgressformComponent {
+export class CalendarformComponent {
 
-  progressdata:any;
+  
+
+  calendardatadata:any;
   registerForm: FormGroup;
   submitted = false;
   @Output() onclose = new EventEmitter<any>;
@@ -28,21 +30,19 @@ export class ProgressformComponent {
     this.registerForm = this.formBuilder.group({
       selectedtitle:['success',[Validators.required]],
       title:['',[Validators.required,Validators.maxLength(20)]],
-      progressvalue:['',[Validators.required]],
-      rangewidth:['',[Validators.required]],
+      calendaroption:['calendar',[Validators.required]],
       theme:['dark',[Validators.required]],
     });
 
     
-    if(localStorage.getItem("progressdata")){
-      var data1:any =  localStorage.getItem("progressdata");
-      this.progressdata = JSON.parse(data1);
-      console.log(">>>>>>",this.progressdata);
-      this.registerForm.get("title")?.setValue(this.progressdata?.title);
-      this.registerForm.get("progressvalue")?.setValue(this.progressdata?.progressvalue);
-      this.registerForm.get("theme")?.setValue(this.progressdata?.theme);
-      this.registerForm.get("rangewidth")?.setValue(this.progressdata?.rangewidth);
+    if(localStorage.getItem("calendardata")){
+      var data1:any =  localStorage.getItem("calendardata");
+      var calendardatadata = JSON.parse(data1);
+      this.registerForm.get("title")?.setValue(calendardatadata?.title);
+      this.registerForm.get("theme")?.setValue(calendardatadata?.theme);
+      this.registerForm.get("calendaroption")?.setValue(calendardatadata?.calendaroption);
   }
+  
   }
 
 
@@ -70,21 +70,19 @@ export class ProgressformComponent {
       }
       const data = {
         "title":this.registerForm.value.title,
-        "progressvalue":this.registerForm.value.progressvalue,
-        "rangewidth":this.registerForm.value.rangewidth,
+        "calendaroption":this.registerForm.value.calendaroption,
         "theme":this.registerForm.value.theme,
-        "color":this.registerForm.value.color
+        "color":this.registerForm.value.color,
       };
       
       console.log(">>>>>",this.registerForm.value);
       this.onclose.emit();
-      this.commonservice.progresscompletedata(data);
-      localStorage.setItem("progressdata",JSON.stringify(data));
-      this.router.navigate(['/component/progress']);
+      this.commonservice.calendarcompletedata(data);
+      localStorage.setItem("calendardata",JSON.stringify(data));
+      this.router.navigate(['/component/calendar']);
     }
   }
 
 
 
 }
-
