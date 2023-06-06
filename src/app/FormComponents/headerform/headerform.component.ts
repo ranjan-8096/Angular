@@ -48,6 +48,16 @@ export class HeaderformComponent implements OnInit {
     }
     else {
       console.log(">>>",this.registerForm.value);
+      // if(this.registerForm.value['image1']== "Yes"){
+      //   this.registerForm.value['image1']="block";
+      // } else {
+      //   this.registerForm.value['image1']="none";
+      // }
+      // if(this.registerForm.value['image2']== "Yes"){
+      //   this.registerForm.value['image2']="block";
+      // } else {
+      //   this.registerForm.value['image2']="none";
+      // }
       if(this.registerForm.value['color'] == "blue"){
         this.bgcolor="#0070ad";
         this.color="white";

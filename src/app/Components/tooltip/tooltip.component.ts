@@ -10,6 +10,7 @@ import { CommonService } from 'src/app/common-service';
 })
 export class TooltipComponent {
 
+  
   closeicon = "../assets/images/close.png";
   htmlcontent="active";
   csscontent:any;
@@ -169,49 +170,48 @@ export class TooltipComponent {
     'placement': 'bottom',
     'showDelay': 500
   }
-
-
   @ViewChild('myModalClose1') modalClose1: any;
-  @ViewChild("tooltiphtml") elRef: ElementRef;
 
-  constructor(private router: Router, 
-    private commonservice:CommonService, elRef: ElementRef) {
-      this.elRef = elRef;
-      // this.value = header.getHtmlContent();
+  constructor(private router: Router,
+    private commonservice: CommonService, elRef: ElementRef) {
+    this.elRef = elRef;
+    // this.value = header.getHtmlContent();
 
   }
 
+  @ViewChild("tooltiphtml") elRef: ElementRef;
 
-  
-  ngOnInit() {  
+
+
+  ngOnInit() {
     if (localStorage.getItem("tooltip")) {
       var data1: any = localStorage.getItem("tooltip");
       this.tooltipdata = JSON.parse(data1);
       this.tooltipcolorvalue();
-      console.log(">>>>>>>>>>>>>>>>>headerdata",this.tooltipdata);
+      console.log(">>>>>>>>>>>>>>>>>headerdata", this.tooltipdata);
 
     }
 
-      this.commonservice.tooltipstatusdata.subscribe((responsive)=>{
+    this.commonservice.tooltipstatusdata.subscribe((responsive) => {
 
-        if(responsive.length != 0) {
-           this.tooltipdata = responsive;
-           this.tooltipcolorvalue();
-        }
-      })
+      if (responsive.length != 0) {
+        this.tooltipdata = responsive;
+        this.tooltipcolorvalue();
+      }
+    })
   }
 
   tooltipcolorvalue() {
-    if(this.tooltipdata?.color == 'dark') {
+    if (this.tooltipdata?.color == 'dark') {
       this.tooltipdata.class = "ngdark"
-    } 
-    if(this.tooltipdata?.color == 'light') {
+    }
+    if (this.tooltipdata?.color == 'light') {
       this.tooltipdata.class = "nglight"
     }
-    if(this.tooltipdata?.color == 'blue') {
+    if (this.tooltipdata?.color == 'blue') {
       this.tooltipdata.class = "ngblue"
     }
-    if(this.tooltipdata?.color == 'purple') {
+    if (this.tooltipdata?.color == 'purple') {
       this.tooltipdata.class = "ngpurple"
     }
 
@@ -245,6 +245,7 @@ export class TooltipComponent {
     return formattedCode;
   }
 
+
   openhtml(){
     this.htmlcontent = "active";
     this.csscontent = "noactive";
@@ -261,6 +262,5 @@ export class TooltipComponent {
         this.Copy="Copy";
     }, 2000);
   }
-
 
 }

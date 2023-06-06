@@ -14,8 +14,7 @@ export class NavbarComponent implements OnInit  {
   img4="../assets/images/Capgemini white logo.png";
   whitewbh="../assets/images/WBH logo-on dark surface.png";
   closeicon="../assets/images/close.png";
-  color:any;
-  htmlcontent="active";
+  htmlcontent="inactive";
   csscontent:any;
   Copy="Copy";
   CSS=`.navbarclass {
@@ -240,7 +239,6 @@ header a.dropdown-item:hover {
         display: inline-block;
     }
 }`;
-
   navbardata:any;
   @ViewChild('myModalClose1') modalClose1:any;
 
@@ -256,6 +254,7 @@ header a.dropdown-item:hover {
       var data1:any =  localStorage.getItem("navbar");
       this.navbardata = JSON.parse(data1);
       console.log("vishnu Data",this.navbardata);
+
     }
   }
 
@@ -268,43 +267,52 @@ header a.dropdown-item:hover {
     this.router.navigate(['/modal']);
   }
 
-  isdropdownMenuOpen:boolean=false;
+  // isdropdownMenuOpen:boolean=false;
 
-  dropdownMenu():void{
-    this.isdropdownMenuOpen=!this.isdropdownMenuOpen; 
-    this.isdropdownMenuOpen2=false;
-    this.isdropdownMenuOpen3=false;
-    this.isdropdownMenuOpen4=false; 
+  // dropdownMenu():void{
+  //   this.isdropdownMenuOpen=!this.isdropdownMenuOpen; 
+    
+  // }
+
+
+  // isdropdownMenuOpen2:boolean=false;
+
+  // dropdownMenu2():void{ 
+  //   this.isdropdownMenuOpen2=!this.isdropdownMenuOpen2;
+  //   this.isdropdownMenuOpen=false; 
+  //   this.isdropdownMenuOpen3=false;
+  //   this.isdropdownMenuOpen4=false;
+  // }
+
+
+  // isdropdownMenuOpen3:boolean=false;
+
+  // dropdownMenu3():void{
+  //   this.isdropdownMenuOpen3=!this.isdropdownMenuOpen3;
+  //   this.isdropdownMenuOpen=false; 
+  //   this.isdropdownMenuOpen2=false;  
+  //   this.isdropdownMenuOpen4=false; 
+  // }
+  // isdropdownMenuOpen4:boolean=false;
+
+  // dropdownMenu4():void{
+  //   this.isdropdownMenuOpen4=!this.isdropdownMenuOpen4;
+  //   this.isdropdownMenuOpen=false; 
+  //   this.isdropdownMenuOpen2=false;
+  //   this.isdropdownMenuOpen3=false;
+  // }
+
+  isToggleMenuopen:boolean=false;
+
+  ToggleMenuopen():void{
+    this.isToggleMenuopen=!this.isToggleMenuopen;
   }
-
-
-  isdropdownMenuOpen2:boolean=false;
-
-  dropdownMenu2():void{ 
-    this.isdropdownMenuOpen2=!this.isdropdownMenuOpen2;
-    this.isdropdownMenuOpen=false; 
-    this.isdropdownMenuOpen3=false;
-    this.isdropdownMenuOpen4=false;
-  }
-
-
-  isdropdownMenuOpen3:boolean=false;
-
-  dropdownMenu3():void{
-    this.isdropdownMenuOpen3=!this.isdropdownMenuOpen3;
-    this.isdropdownMenuOpen=false; 
-    this.isdropdownMenuOpen2=false;  
-    this.isdropdownMenuOpen4=false; 
-  }
-  isdropdownMenuOpen4:boolean=false;
-
-  dropdownMenu4():void{
-    this.isdropdownMenuOpen4=!this.isdropdownMenuOpen4;
-    this.isdropdownMenuOpen=false; 
-    this.isdropdownMenuOpen2=false;
-    this.isdropdownMenuOpen3=false;
-  }
-
+  // clickOutside() :void{
+  //   // this.opened = !this.opened;
+  //   this.isToggleMenuopen=false;
+  //   console.log("clicked outside");
+  // }
+  
   getHtmlContent() {
     //This will return '<p> Text </p>' as a string
     const html = this.elRef.nativeElement.innerHTML;
@@ -325,13 +333,13 @@ header a.dropdown-item:hover {
   }
 
   openhtml(){
-    this.htmlcontent = "active";
-    this.csscontent = "noactive";
+    this.htmlcontent = "inactive";
+    this.csscontent = "noinactive";
   }
   
   opencss(){
-    this.csscontent = "active";
-    this.htmlcontent = "noactive";
+    this.csscontent = "inactive";
+    this.htmlcontent = "noinactive";
   }
   
   copy(){
@@ -340,6 +348,4 @@ header a.dropdown-item:hover {
         this.Copy="Copy";
     }, 2000);
   }
-  
-
 }

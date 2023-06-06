@@ -1,8 +1,8 @@
 .subheader{
-    color: var(--color-wbh-blue);
+    color: #0070ad;
 }
 .btncmp{
-    color: var(--color-black);
+    color: black;
 }
 
 .backbutton{
@@ -10,14 +10,15 @@
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    color: var(--color-white) !important;
-    background-color:var(--color-wbh-blue) !important;
+    color: white !important;
+    background-color: #0070ad !important;
 }
 .htmlelement{
-    background-color: var(--color-white) ;
+    background-color: white;
     overflow-y: scroll;
     width:90%;
-    height:200px;
+    min-height:105px;
+    max-height: 350px;
     margin: auto;
     margin-top: 30px;
 }
@@ -61,11 +62,21 @@
     border-bottom: 1px solid black !important;
     padding-bottom: 5px !important;
 }
-@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+@media only screen and (max-width: 767px) {
     section.main header {
         padding: 1rem .85rem;
     }
-    .modal-dialog {
+    h4.subheader {
+        margin: 0px;
+        font-size: 1.2rem;
+    }
+    .text-center.main-page {
+        line-break: anywhere;
+    }
+    .top-header button { 
+        margin-left: 8px;
+    }
+    .modaldialog-width {
         margin-top: 60px;
         max-width: 100% !important;
     }

@@ -71,6 +71,7 @@ CSS=`.container{
   }
 }`
 
+
 @ViewChild('myModalClose1') modalClose1:any;
 
 @ViewChild("cards") elRef: ElementRef;
@@ -156,9 +157,7 @@ constructor(private router : Router, private sanitizer: DomSanitizer,elRef: Elem
     const formattedCode = lines.join('\n');
     // console.log(formattedCode);
     return formattedCode;
-  }
-
-  openhtml(){
+  }openhtml(){
     this.htmlcontent = "active";
     this.csscontent = "noactive";
   }

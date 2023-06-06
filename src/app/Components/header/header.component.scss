@@ -1,6 +1,19 @@
 .modal{
     margin-top: 65px;
 }
+.header
+{ 
+    height:75px ; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+}
+.div1{ 
+    display: flex;
+    align-items: center;
+}
+ 
 .htmlelement{
     background-color: var(--color-white);;
     overflow-y: scroll;
@@ -74,27 +87,8 @@
     border-bottom: 1px solid black !important;
     padding-bottom: 5px !important;
 }
-.closeicon{
-    cursor: pointer;
-}
-button.clearbtn {
-    border: none;
-    background: transparent;
-    filter: grayscale(1);
-    cursor: pointer;
-}
-.header
-{ 
-    height:75px ; 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%; 
-}
-.div1{ 
-    display: flex;
-    align-items: center;
-}
+
+
 .sub-div{
     padding-right: 0.85rem;
     display: flex;
@@ -108,7 +102,7 @@ button.clearbtn {
 
 .label1
 {
-    color: var(--color-wbh-blue); 
+    color: #0070ad; 
     margin-left: 13px;  
     font-size:24px;  
     font-family:Ubuntu;
@@ -121,7 +115,7 @@ button.clearbtn {
 
 .label2
 {
-    color: var(--color-wbh-blue); 
+    color: #0070ad; 
     margin-left: 8px;
     font-size: 20px;
     font-family: Ubuntu;
@@ -131,6 +125,25 @@ button.clearbtn {
     height:35px;  
     margin-left:23px;
 }
+.error{
+    color: red;
+}
+.top-header{
+    h4{
+        color: #0070ad;
+        span{
+            color: black;
+        }
+    }
+}
+.backbutton{
+    border-radius: 8px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white !important;
+    background-color: #0070ad !important;
+}
 
 h4.subheader {
     margin-left: 8px;
@@ -139,7 +152,16 @@ h4.subheader {
     display: flex;
     align-items: center;
 }
-@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+.closeicon{
+    cursor: pointer;
+}
+button.clearbtn {
+    border: none;
+    background: transparent;
+    filter: grayscale(1);
+    cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
     .top-header{
         display: block;
         box-shadow: none;
@@ -195,21 +217,21 @@ h4.subheader {
             }
         }
         .label1{
-            color: var(--color-wbh-blue);
+            color: #0070ad;
             margin-left: 6px;
-            font-size: 20px;
+            font-size: 16px;
             font-family: Ubuntu;
         }
     }
     section.main header {
         padding: 1rem .85rem;
     }
-    .modal-dialog { 
+    .modaldialog-width { 
         max-width: 100% !important;
     }
 }
 
-@media screen and (min-device-width: 320px) and (max-device-width: 350px) {
+@media only screen and (max-width: 767px) {
     .username {
         display: inline-block;
     }

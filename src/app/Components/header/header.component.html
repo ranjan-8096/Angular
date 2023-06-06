@@ -8,7 +8,7 @@
       <button class=" backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal2">Edit</button>
     </div> 
   </div>
-    <header #myheader>
+    <header class="" #myheader>
         <div class="header" [ngStyle]="{'background-color':headerdata?.bgcolor}">
             <div class="div1">
               <div class="subdiv">
@@ -33,32 +33,27 @@
             </div>
         </div>
         </header>
-        <!-- <div class="tabs">
-          <label >HTML</label>
-          <label>CSS</label>
-        </div> -->
-        
-          <ul class="list-inline">
-            <li (click)="openhtml()"><button [class]="htmlcontent">HTML</button></li>
-            <li (click)="opencss()"><button [class]="csscontent">CSS</button></li>
-          </ul>
-        
-        <div class="htmlelement" *ngIf="htmlcontent == 'active'">
-          <div class="copybutton">
-            <button ngxClipboard [cbContent]="getHtmlContent()" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
-          </div>
-          <pre><code [highlight]="getHtmlContent()">{{getHtmlContent()}}</code></pre>
+        <ul class="list-inline">
+          <li (click)="openhtml()"><button [class]="htmlcontent">HTML</button></li>
+          <li (click)="opencss()"><button [class]="csscontent">CSS</button></li>
+        </ul>
+      
+      <div class="htmlelement" *ngIf="htmlcontent == 'active'">
+        <div class="copybutton">
+          <button ngxClipboard [cbContent]="getHtmlContent()" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
         </div>
-        <div class="htmlelement" *ngIf="csscontent == 'active'">
-          <div class="copybutton">
-            <button ngxClipboard [cbContent]="CSS" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
-          </div>
-          <pre><code [highlight]="CSS">{{CSS}}</code></pre>
+        <pre><code [highlight]="getHtmlContent()">{{getHtmlContent()}}</code></pre>
+      </div>
+      <div class="htmlelement" *ngIf="csscontent == 'active'">
+        <div class="copybutton">
+          <button ngxClipboard [cbContent]="CSS" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
         </div>
+        <pre><code [highlight]="CSS">{{CSS}}</code></pre>
+      </div>
 </div>
 
 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modaldialog-width">
       <div class="modal-content">
           <div class="modal-header">
               <h4>Header</h4>

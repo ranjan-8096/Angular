@@ -46,86 +46,86 @@ export class EditheaderComponent implements OnInit {
         this.themecolor = "light";
       }
 
-     const image1value = () => {
-      if(this.headerdata.bgcolor == "#0070ad"){
-        if(this.headerdata.image1  == "Yes" && this.headerdata.whitewbh  == "Yes"){
-          return "Yes";
-        } else if(this.headerdata.image1  == "No" && this.headerdata.whitewbh  == "Yes") {
+      const image1value = () => {
+        if(this.headerdata.bgcolor == "#0070ad"){
+          if(this.headerdata.image1  == "Yes" && this.headerdata.whitewbh  == "Yes"){
+            return "Yes";
+          } else if(this.headerdata.image1  == "No" && this.headerdata.whitewbh  == "Yes") {
+            return "Yes";
+          } else {
+            return "No";
+          }
+        } else if(this.headerdata.bgcolor == "black"){
+          if(this.headerdata.image1  == "Yes"){
+            return "Yes";
+          } else {
+            return "No";
+          }
+        } else if(this.headerdata.bgcolor == "#2b0a3d"){
+          if(this.headerdata.image1  == "Yes"){
+            return "Yes";
+          } else {
+            return "No";
+          }
+        } else if(this.headerdata.bgcolor == "#F1F4F8"){
+          if(this.headerdata.image1  == "Yes"){
+            return "Yes";
+          } else {
+            return "No";
+          }
+        } 
+       }
+  
+       const image2value = () => {
+        if(this.headerdata.image2  == "Yes"){
           return "Yes";
         } else {
           return "No";
         }
-      } else if(this.headerdata.bgcolor == "black"){
-        if(this.headerdata.image1  == "Yes"){
-          return "Yes";
-        } else {
-          return "No";
+       }
+  
+       const image3value = () => {
+        if(this.headerdata.bgcolor == "#0070ad"){
+          if(this.headerdata.image3  == "Yes" && this.headerdata.image4  == "Yes"){
+            return "Yes";
+          } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "No"){
+            return "No";
+          } else {
+            return "No";
+          }
+        } else if(this.headerdata.bgcolor == "#2b0a3d") {
+          if(this.headerdata.image3  == "Yes"){
+            return "Yes";
+          } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "Yes") {
+            return "Yes";
+          } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "No"){
+            return "No";
+          } else {
+            return "";
+          }
+        } else if(this.headerdata.bgcolor == "black") {
+          if(this.headerdata.image3  == "Yes" && this.headerdata.image4  == "Yes"){
+            return "Yes";
+          } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "No"){
+            return "No";
+          } else {
+            return "";
+          }
+        } else if(this.headerdata.bgcolor == "#F1F4F8") {
+          if(this.headerdata.image3  == "Yes"){
+            return "Yes";
+          } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "Yes") {
+            return "Yes";
+          } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "No"){
+            return "No";
+          } else {
+            return "";
+          }
+        }  else {
+          return "";
         }
-      } else if(this.headerdata.bgcolor == "#2b0a3d"){
-        if(this.headerdata.image1  == "Yes"){
-          return "Yes";
-        } else {
-          return "No";
-        }
-      } else if(this.headerdata.bgcolor == "#F1F4F8"){
-        if(this.headerdata.image1  == "Yes"){
-          return "Yes";
-        } else {
-          return "No";
-        }
-      } 
-     }
-
-     const image2value = () => {
-      if(this.headerdata.image2  == "Yes"){
-        return "Yes";
-      } else {
-        return "No";
+      
       }
-     }
-
-     const image3value = () => {
-      if(this.headerdata.bgcolor == "#0070ad"){
-        if(this.headerdata.image3  == "Yes" && this.headerdata.image4  == "Yes"){
-          return "Yes";
-        } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "No"){
-          return "No";
-        } else {
-          return "No";
-        }
-      } else if(this.headerdata.bgcolor == "#2b0a3d") {
-        if(this.headerdata.image3  == "Yes"){
-          return "Yes";
-        } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "Yes") {
-          return "Yes";
-        } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "No"){
-          return "No";
-        } else {
-          return "";
-        }
-      } else if(this.headerdata.bgcolor == "black") {
-        if(this.headerdata.image3  == "Yes" && this.headerdata.image4  == "Yes"){
-          return "Yes";
-        } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "No"){
-          return "No";
-        } else {
-          return "";
-        }
-      } else if(this.headerdata.bgcolor == "#F1F4F8") {
-        if(this.headerdata.image3  == "Yes"){
-          return "Yes";
-        } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "Yes") {
-          return "Yes";
-        } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "No"){
-          return "No";
-        } else {
-          return "";
-        }
-      }  else {
-        return "";
-      }
-    
-    }
   this.registerForm = this.formBuilder.group({
     image1:[image1value(), [Validators.required]],
     image2: [image2value(), [Validators.required]],
@@ -179,7 +179,16 @@ reloadComponent(self:boolean,urlToNavigateTo ?:string){
       return true;
     }
     else {
-      
+      // if(this.registerForm.value['image1']== "Yes"){
+      //   this.registerForm.value['image1']="block";
+      // } else {
+      //   this.registerForm.value['image1']="none";
+      // }
+      // if(this.registerForm.value['image2']== "Yes"){
+      //   this.registerForm.value['image2']="block";
+      // } else {
+      //   this.registerForm.value['image2']="none";
+      // }
       if(this.registerForm.value['color'] == "blue"){
         this.bgcolor="#0070ad";
         this.color="white";

@@ -12,15 +12,17 @@
 
 
 
-  <div class="main-page">
+  <div class="main-page container">
       <div class="tooltip_sec">
 
-        <div class="tooltip_sec" #tooltiphtml>
+        <div class="tooltip_sec"  #tooltiphtml>
           <div class="tooltipbtn"><button class="btn btn-secondary tooltipbtn " aria-label="tooltipdata?.title">{{tooltipdata?.title}}</button>
             <span class="tooltiptext" [ngClass]="[tooltipdata.class,tooltipdata.direction]">{{tooltipdata?.tooltipname}}</span>
-          </div>        
-        </div>
-      </div>
+          </div>
+          
+          
+    </div>
+
   </div>
   <ul class="list-inline">
     <li (click)="openhtml()"><button [class]="htmlcontent">HTML</button></li>
@@ -51,7 +53,7 @@
       <!--  -->
       <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel3"
       aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modaldialog-width">
           <div class="modal-content">
               <div class="modal-header">
                   <h4>Tooltip</h4>

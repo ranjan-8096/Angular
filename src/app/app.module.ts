@@ -20,10 +20,42 @@ import { FooterformComponent } from './FormComponents/footerform/footerform.comp
 import { FooterComponent } from './Components/footer/footer.component';
 import { TooltipformComponent } from './FormComponents/tooltipform/tooltipform.component';
 import { TooltipComponent } from './Components/tooltip/tooltip.component';
-import { TooltipModule } from 'ng2-tooltip-directive';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { EditheaderComponent } from './FormComponents/editheader/editheader.component';
+import { AlertformComponent } from './FormComponents/alertform/alertform.component';
+import { AlertsComponent } from './Components/alerts/alerts.component';
+import { ToasterComponent } from './Components/toaster/toaster.component';
+import { ToasterformComponent } from './FormComponents/toasterform/toasterform.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditalertComponent } from './FormComponents/editalert/editalert.component';
 import { ClipboardModule } from 'ngx-clipboard';
+import { FormsComponent } from './Components/forms/forms.component';
+import { CheckboxComponent } from './Components/checkbox/checkbox.component';
+import { CheckboxformComponent } from './FormComponents/checkboxform/checkboxform.component';
+import { InputComponent } from './Components/input/input.component';
+import { InputformComponent } from './FormComponents/inputform/inputform.component';
+import { EditinputComponent } from './FormComponents/editinput/editinput.component';
+import { EditcheckboxComponent } from './FormComponents/editcheckbox/editcheckbox.component'; 
+import { SwitchctlComponent } from './Components/switchctl/switchctl.component';
+import { EditswitchcontrolComponent } from './FormComponents/editswitchcontrol/editswitchcontrol.component';
+import { SwitchcontrolComponent } from './FormComponents/switchcontrolform/switchcontrolform.component';
+import { FileUploadComponent } from './Components/file-upload/file-upload.component';
+import { ProgressComponent } from './Components/progress/progress.component';
+import { RangesliderComponent } from './Components/rangeslider/rangeslider.component';
+import { SelectComponent } from './Components/select/select.component';
+import { EditfileuploadComponent } from './FormComponents/FileUpload/editfileupload/editfileupload.component';
+import { FileuploadformComponent } from './FormComponents/FileUpload/fileuploadform/fileuploadform.component';
+import { ProgressformComponent } from './FormComponents/progressform/progressform.component';
+import { RangesliderformComponent } from './FormComponents/rangesliderform/rangesliderform.component';
+import { SelectformComponent } from './FormComponents/selectform/selectform.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { CalendarComponent } from './Components/calendar/calendar.component';
+import { CalendarformComponent } from './FormComponents/calendarform/calendarform/calendarform.component';
+import { TableformcomponentComponent } from './FormComponents/tableformcomponent/tableformcomponent.component';
+import { TablecomponentComponent } from './Components/tablecomponent/tablecomponent.component';
+import { EdittableformcomponentComponent } from './FormComponents/edittableformcomponent/edittableformcomponent.component';
 
 
 
@@ -47,6 +79,36 @@ import { ClipboardModule } from 'ngx-clipboard';
     FooterComponent,
     TooltipComponent,
     TooltipformComponent,
+    AlertformComponent,
+    EditalertComponent,
+    AlertsComponent,
+    ToasterComponent,
+    ToasterformComponent,
+    FormsComponent,
+    CheckboxComponent,
+    CheckboxformComponent,
+    InputComponent,
+    InputformComponent,
+    EditinputComponent,
+    EditcheckboxComponent, 
+    SwitchctlComponent,
+    SwitchcontrolComponent,
+    EditswitchcontrolComponent,
+
+    FileuploadformComponent,
+    FileUploadComponent,
+    EditfileuploadComponent,
+    CalendarformComponent,
+    CalendarComponent,
+    RangesliderComponent,
+    RangesliderformComponent,
+    SelectComponent,
+    SelectformComponent,
+    ProgressComponent,
+    ProgressformComponent,
+    TableformcomponentComponent,
+    TablecomponentComponent,
+    EdittableformcomponentComponent
    
   ],
   imports: [
@@ -56,7 +118,14 @@ import { ClipboardModule } from 'ngx-clipboard';
     CommonModule,
     ReactiveFormsModule,
     HighlightModule,
-    ClipboardModule
+    BrowserAnimationsModule,
+    ClipboardModule,
+    NgxSliderModule,
+    NgMultiSelectDropDownModule.forRoot(),
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      preventDuplicates: true
+    }), // ToastrModule added
   ],
   providers: [
     {

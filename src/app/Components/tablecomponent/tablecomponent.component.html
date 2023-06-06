@@ -1,0 +1,123 @@
+<div class="main">
+  <div class="top-header">
+    <div class="insideheader">
+      <h4 class="subheader">Table <span class="sideheader">Component</span></h4>
+    </div>
+    <div class="button-sec"> 
+      <button class=" backbutton" (click)="backwindow()">Back</button>
+      <button class=" backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal2">Edit</button>
+    </div> 
+  </div>
+      <div class="tabledata" *ngIf="tabledata.tablestrip == 'Yes'">
+
+        <h4>{{tabledata.title}} :</h4>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Cell Heading</th>
+                <th scope="col">Cell Heading</th>
+                <th scope="col">Cell Heading</th>
+                <th scope="col">Cell Heading</th>
+                <th scope="col">Cell Heading</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+              </tr>
+              <tr>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+              </tr>
+              <tr>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Text Data 1</td>
+                <td>Text Data</td>
+                <td>Text Data</td>
+                <td>Text Data</td>
+                <td>Text Data</td>
+              </tr>
+            </tfoot>
+          </table>
+      </div>
+
+      <div class="tabledata" *ngIf="tabledata.tablestrip == 'No'">
+
+        <h4>{{tabledata.title}} :</h4>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Cell Heading</th>
+                <th scope="col">Cell Heading</th>
+                <th scope="col">Cell Heading</th>
+                <th scope="col">Cell Heading</th>
+                <th scope="col">Cell Heading</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+              </tr>
+              <tr>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+              </tr>
+              <tr>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+                <td>Cell Content</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Text Data 1</td>
+                <td>Text Data</td>
+                <td>Text Data</td>
+                <td>Text Data</td>
+                <td>Text Data</td>
+              </tr>
+            </tfoot>
+          </table>
+      </div>
+  
+
+</div>
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modaldialog-width">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4>Table</h4>
+              <button class="clearbtn"  aria-label="Table Update modal close"  #myModalClose8 data-bs-dismiss="modal">
+                  <img [src]="closeicon" class="closeicon">  
+              </button>
+          </div>
+          <app-edittableformcomponent (onclose)="close()"></app-edittableformcomponent>
+
+      </div>
+  </div>
+</div>

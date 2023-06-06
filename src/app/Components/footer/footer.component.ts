@@ -17,6 +17,8 @@ export class FooterComponent {
   youtube="../assets/images/YouTube.webp";
   glassdoor="../assets/images/Glassdoor.webp";
   closeicon = "../assets/images/close.png";
+
+
   htmlcontent="active";
   csscontent:any;
   Copy="Copy";
@@ -117,9 +119,10 @@ export class FooterComponent {
     }
 }`;
 
-  @ViewChild('myModalClose1') modalClose3:any;
-  @ViewChild("footer") elRef: ElementRef;
 
+  @ViewChild('myModalClose1') modalClose3:any;
+
+  @ViewChild("footer") elRef: ElementRef;
 
   constructor(private router: Router,private commonservice:CommonService, elRef: ElementRef) {
     this.elRef = elRef;
@@ -181,6 +184,7 @@ export class FooterComponent {
     // console.log(formattedCode);
     return formattedCode;
   }
+
   openhtml(){
     this.htmlcontent = "active";
     this.csscontent = "noactive";

@@ -27,10 +27,10 @@ export class NavbarformComponent implements OnInit{
   this.registerForm = this.formBuilder.group({
     menus:['', [Validators.required]],
     
-    optionsv:['1'],
-    optionsv2:['1'],
-    optionsv3:['1'],
-    optionsv4:['1'],
+    optionsv:['--select option--'],
+    optionsv2:['--select option--'],
+    optionsv3:['--select option--'],
+    optionsv4:['--select option--'],
      
     imagedrp:[''],
     imagedrp2:[''],
@@ -125,7 +125,8 @@ export class NavbarformComponent implements OnInit{
       this.registerForm.get("firstsubmenu2")?.setValidators([Validators.required]);
       this.registerForm.get("firstsubmenu3")?.setValidators([Validators.required]);
       this.registerForm.get("firstsubmenu4")?.setValidators([Validators.required]);
-    }  
+    }    
+    
      else if(result == 2) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
       this.registerForm.get("text2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -415,7 +416,7 @@ export class NavbarformComponent implements OnInit{
         this.bgcolor="f5fbff";
         this.bgcolordropdown="light";
         this.headerclass="headerclass";
-        this.color="#f5fbff";  
+        this.color="#000";  
       }
 
 

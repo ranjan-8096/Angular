@@ -15,6 +15,8 @@ export class HeaderComponent {
   img4="../assets/images/Capgemini white logo.png";
   whitewbh="../assets/images/WBH logo-on dark surface.png";
   closeicon="../assets/images/close.png";
+
+  headerdata:any;
   htmlcontent="active";
   csscontent:any;
   Copy="Copy";
@@ -150,7 +152,6 @@ export class HeaderComponent {
       }
   }`
 
-  headerdata:any;
   @ViewChild('myModalClose1') modalClose1:any;
   @ViewChild("myheader") elRef: ElementRef;
 
@@ -165,23 +166,6 @@ export class HeaderComponent {
     // console.log(">>>>>>>>>>>>>>>>>headerdata",this.headerdata);
 
     }
-  }
-
-  openhtml(){
-    this.htmlcontent = "active";
-    this.csscontent = "noactive";
-  }
-
-  opencss(){
-    this.csscontent = "active";
-    this.htmlcontent = "noactive";
-  }
-
-  copy(){
-    this.Copy="copied!!";
-    setTimeout(()=>{
-        this.Copy="Copy";
-    }, 2000);
   }
 
   close(){
@@ -210,6 +194,22 @@ export class HeaderComponent {
     const formattedCode = lines.join('\n');
     // console.log(formattedCode);
     return formattedCode;
+  }openhtml(){
+    this.htmlcontent = "active";
+    this.csscontent = "noactive";
   }
+
+  opencss(){
+    this.csscontent = "active";
+    this.htmlcontent = "noactive";
+  }
+
+  copy(){
+    this.Copy="copied!!";
+    setTimeout(()=>{
+        this.Copy="Copy";
+    }, 2000);
+  }
+
 }
 

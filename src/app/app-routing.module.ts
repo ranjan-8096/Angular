@@ -7,8 +7,22 @@ import { HeaderComponent } from './Components/header/header.component';
 import { ModalComponent } from './modal/modal.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';  
 import { TooltipComponent } from './Components/tooltip/tooltip.component';
-const routes: Routes = [
+import { AlertsComponent } from './Components/alerts/alerts.component';
+import { ToasterComponent } from './Components/toaster/toaster.component';
+import { FormsComponent } from './Components/forms/forms.component';
+import { CheckboxComponent } from './Components/checkbox/checkbox.component';
+import { InputComponent } from './Components/input/input.component';
+import { SwitchctlComponent } from './Components/switchctl/switchctl.component';
+import { FileUploadComponent } from './Components/file-upload/file-upload.component';
+import { ProgressComponent } from './Components/progress/progress.component';
+import { RangesliderComponent } from './Components/rangeslider/rangeslider.component';
+import { SelectComponent } from './Components/select/select.component';
+import { CalendarComponent } from './Components/calendar/calendar.component';
+import { TablecomponentComponent } from './Components/tablecomponent/tablecomponent.component';
 
+
+const routes: Routes = [
+ 
   {path: '', pathMatch:'full', redirectTo:'/modal'},
   {path: "modal", component:ModalComponent},
   {path: "component/header", component:HeaderComponent},
@@ -16,8 +30,19 @@ const routes: Routes = [
   {path: "component/button", component:ButtonsComponent},
   {path: "component/navbar", component:NavbarComponent},
   {path: "component/footer", component:FooterComponent},
-  {path: "component/tooltip", component:TooltipComponent} 
-
+  {path: "component/tooltip", component:TooltipComponent},
+  {path: "component/alerts", component:AlertsComponent}, 
+  {path : "component/toaster", component:ToasterComponent},
+  {path : "component/forms", component:FormsComponent},
+  {path : "component/input", component:InputComponent},
+  {path : "component/checkbox", component:CheckboxComponent},
+  {path : "component/switchcontrol", component:SwitchctlComponent},
+  {path: "component/file-upload", component:FileUploadComponent}, 
+  {path : "component/range", component:RangesliderComponent},
+  {path : "component/selector", component:SelectComponent},
+  {path : "component/progress", component:ProgressComponent},
+  {path : "component/calendar", component:CalendarComponent},
+  {path : "component/table", component:TablecomponentComponent}
 ];
 
 @NgModule({

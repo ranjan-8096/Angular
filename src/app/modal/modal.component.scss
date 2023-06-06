@@ -80,8 +80,18 @@ button.clearbtn {
     filter: grayscale(1);
     cursor: pointer;
 }
+.skip-link-container {position: relative;}
+.skip-link{background: #0070ad;color: white;text-decoration: underline; padding:
+0.5em;}
+.skip-link:hover{color: white;}
+.skip-link:not(:focus) {border: 0;clip: rect(0 0 0 0);clip-path: inset(50%);height: 1px;left:
+0;margin: -1px;
+overflow: hidden;padding: 0;position: absolute;top: 0;white-space: nowrap;width: 1px;}
+*:target {transition: background 0.2s;animation: target-highlight 1.2s
+ease-in-out;}
+@keyframes target-highlight {50% {background: #999999;}100% {background: none;}}
 
-@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+@media only screen and (max-width: 767px) {
     section.main header {
         padding: 1rem .85rem;
     }

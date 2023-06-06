@@ -11,12 +11,13 @@
 
     <div #footer>
       <footer class="footer" role="contentinfo" aria-label="Footer" [ngStyle]="{'background-Color':footerdata?.color, 'color':color}">
-        <div class="d-lg-flex flex-md-row-reverse align-items-center justify-content-between footerwidth">
+        <div class="d-sm-flex d-block align-items-center justify-content-between footerwidth">
+          <div class="copyright" [ngStyle]="{'color':color}">{{footerdata.text}}</div>
           <div class="socialmedia-list">
             <ul class="nav social-default">
               <li *ngIf="footerdata?.linkedln == 'Yes'">
                   <button class="social-icon">
-                      <a><img [src]="linkedln" alt="linkedln" class="social-iconimage"></a>
+                      <img [src]="linkedln" alt="linkedln" class="social-iconimage">
                   </button>
                 <span class="social-tooltip">LinkedIn</span>
               </li>
@@ -52,7 +53,7 @@
               </li>
             </ul>
           </div>
-          <div class="copyright" [ngStyle]="{'color':color}">{{footerdata.text}}</div>
+          
         </div>
       </footer>
     </div>
@@ -79,7 +80,7 @@
         <!--  -->
         <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel3"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modaldialog-width">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4>Footer</h4>

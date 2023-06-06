@@ -3,7 +3,9 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import '~highlight.js/styles/github.css';
 @import "./app/Components/theme/colors";
+
 @import "./app/Components/theme/breakpoints";
+
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -11,17 +13,13 @@ body {
     margin: 0px;
 }
 
+img.closeicon {
+    cursor: pointer;
+}
+
 .text-center.main-page.mt-5 {
     margin-left: 20px;
     margin-right: 20px;
-}
-
-.main-page button:focus-visible {
-
-    outline: 0;
-
-    box-shadow: 0 0 1px 3px #7b7b7b;
-
 }
 
 .img-responsive {
@@ -89,7 +87,7 @@ body {
     color: #fff;
 }
 
-.modal-dialog {
+.modaldialog-width {
     max-width: 50% !important;
     background-color: #fff;
     // position: absolute !important;
@@ -103,6 +101,34 @@ body {
     max-width: 100%;
     min-height: 350px;
 }
+.error{
+    color: red;
+    font-size: .875em;
+}
+.subheader{
+    color: var(--color-wbh-blue);
+}
+.modal-body{
+    max-height: 350px;
+    overflow-y: scroll;
+}
+.sideheader{
+    color: var(--color-black) ;
+}
+.star{
+    color: red;
+    font-weight: bold;
+  }
+  .form-group{
+    label{
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+  .accessbility{
+    font-weight: 500;
+      font-size: 15px;
+  }
 
 .modal-header {
     background-color: #0070ad;
@@ -123,7 +149,7 @@ body {
     background: #038ecd;
     border: none;
     border-radius: 3px;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .top-header {
@@ -219,7 +245,18 @@ button.clearbtn {
     border: none;
 }
 
-@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+.copybutton button:focus-visible {
+    border: 2px solid gray;
+    outline: none;
+    box-shadow: 1px 1px 3px 2px #80808078;
+}
+
+button.closediv {
+    border: none;
+    background: transparent;
+}
+
+@media only screen and (max-width: 767px) {
     .main-page {
         padding: 1rem .85rem;
     }
@@ -232,4 +269,84 @@ button.clearbtn {
     .form-group.paddingleftspace {
         padding-left: 0 !important;
     }
+}
+
+.rangeslider.blue .ngx-slider.animate .ngx-slider-pointer,
+.rangeslider.blue .ngx-slider .ngx-slider-selection {
+
+    border-radius: 0px !important;
+
+    background-color: #0070ad !important;
+
+}
+
+
+
+.rangeslider.blue .ngx-slider .ngx-slider-tick.ngx-slider-selected {
+
+    background-color: #0070ad !important;
+
+}
+
+
+
+
+
+.rangeslider.dark .ngx-slider.animate .ngx-slider-pointer,
+.rangeslider.blue .ngx-slider .ngx-slider-selection {
+
+    border-radius: 0px !important;
+
+    background-color: #000 !important;
+
+}
+
+
+
+.rangeslider.dark .ngx-slider .ngx-slider-tick.ngx-slider-selected {
+
+    background-color: #000 !important;
+
+}
+
+
+
+
+
+.rangeslider.purple .ngx-slider.animate .ngx-slider-pointer,
+.rangeslider.blue .ngx-slider .ngx-slider-selection {
+
+    border-radius: 0px !important;
+
+    background-color: #2b0a3d !important;
+
+}
+
+
+
+.rangeslider.purple .ngx-slider .ngx-slider-tick.ngx-slider-selected {
+
+    background-color: #2b0a3d !important;
+
+}
+
+
+
+
+
+.rangeslider.light .ngx-slider.animate .ngx-slider-pointer,
+.rangeslider.blue .ngx-slider .ngx-slider-selection {
+
+    border-radius: 0px !important;
+
+    background-color: #F1F4F8 !important;
+
+}
+
+
+
+.rangeslider.light .ngx-slider .ngx-slider-tick.ngx-slider-selected {
+
+    background-color: #F1F4F8 !important;
+
 }
