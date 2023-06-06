@@ -11,7 +11,16 @@ export class TablecomponentComponent {
   tabledata:any;
   closeicon="../assets/images/close.png";
 
-  @ViewChild('myModalClose1') modalClose8:any;
+
+  array = [
+    {id:1,th:"Cell Heading",td0:"Cell Content",td1:"Cell Content",td2:"Cell Content",td3:"Cell Content",td4:"Cell Content"},
+    {id:2,th:"Cell Heading",td0:"Cell Content",td1:"Cell Content",td2:"Cell Content",td3:"Cell Content",td4:"Cell Content"},
+    {id:3,th:"Cell Heading",td0:"Cell Content",td1:"Cell Content",td2:"Cell Content",td3:"Cell Content",td4:"Cell Content"},
+    {id:4,th:"Cell Heading",td0:"Cell Content",td1:"Cell Content",td2:"Cell Content",td3:"Cell Content",td4:"Cell Content"},
+    {id:5,th:"Cell Heading",td0:"Cell Content",td1:"Cell Content",td2:"Cell Content",td3:"Cell Content",td4:"Cell Content"}
+  ];
+
+  @ViewChild('myModalClose') modalClose8:any;
   @ViewChild("myheader") elRef: ElementRef;
 
   constructor(private router: Router, elRef: ElementRef) {
@@ -34,6 +43,10 @@ export class TablecomponentComponent {
 
   backwindow(){
     this.router.navigate(['/modal']);
+  }
+
+  search(){
+    // console.log("hvczhxgcjy",e);
   }
 
 }

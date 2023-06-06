@@ -1,12 +1,32 @@
 .table{
-    // width:95%;
     margin: auto;
-    // margin-top: 40px;
     border: 1px solid black;
+    margin-bottom: 50px;
 }
 
 .tabledata{
     width:95%;
     margin: auto;
     margin-top: 40px;
+}
+.headerpart{
+    max-width: 100%;
+    padding-bottom: 50px;
+    .title{
+        float: left;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .search-container{
+        float: right;
+        .search{
+            border: 1px solid black;
+            border-right: none;
+        }
+        .search_button{
+            border: 1px solid black;
+            background: #fff;
+            border-left: none;
+        }
+    }
 }

@@ -12,6 +12,7 @@ export class EdittableformcomponentComponent {
   registerForm:any;
   submitted = false;
   tabledata:any;
+  color:any;
 
   @Output() onclose = new EventEmitter<any>;
 
@@ -25,15 +26,42 @@ export class EdittableformcomponentComponent {
     if(localStorage.getItem("data")) {
       var data1:any =  localStorage.getItem("data");
       this.tabledata = JSON.parse(data1);
+      console.log(">>>>>",this.tabledata);
     // console.log(">>>>>>>>>>>>>>>>>headerdata",this.headerdata);
-
+      if(this.tabledata.theme == "light"){
+        console.log(">>>>>jbdisuf");
+        this.color = "light";
+      } else if(this.tabledata.theme == "dark"){
+        this.color = "dark";
+      } else if(this.tabledata.theme == "blue"){
+        this.color = "blue";
+      } else if(this.tabledata.theme== "purple"){
+        this.color = "purple";
+      }
     }
+
+   const  tablestrip = () => {
+      if(this.tabledata.tablestrip == "Yes"){
+        return "Yes";
+        } else {
+          return "No";
+        }
+    }
+
+    const  pagination = () => {
+      if(this.tabledata.pagination == "Yes"){
+        return "Yes";
+        } else {
+          return "No";
+        }
+    }
+
 
   this.registerForm = this.formBuilder.group({
     title: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],
-    color:['light', [Validators.required]],
-    tablestrip:['',[Validators.required]],
-    pagination:['',Validators.required]
+    color:['', [Validators.required]],
+    tablestrip:[tablestrip(),[Validators.required]],
+    pagination:[pagination(),Validators.required]
   });
 
 };
@@ -67,7 +95,7 @@ export class EdittableformcomponentComponent {
       const data = {
         "title":this.registerForm.value.title,
         "pagination":this.registerForm.value.pagination,
-        "theme":this.registerForm.value.theme,
+        "theme":this.registerForm.value.color,
         "tablestrip":this.registerForm.value.tablestrip
       }
       console.log(">>",data);

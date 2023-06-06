@@ -31,9 +31,9 @@
         <div *ngIf="filedata.choosefile == 'multiple'" class="commonfile" >
           <label class="filelabel" [ngStyle]="{'width':filedata.width}">{{filedata.title}}</label><br/>
           <input #fileinput type="file" id="myfile" name="myfile" multiple="multiple" [ngStyle]="{'width':filedata.width}" (change)="handlechange($event)">
-            <button class="clear"  aria-label="close icon" *ngIf="file" (click)="closefile(fileinput)" (keypress)="closefile(fileinput)">
+            <!-- <button class="clear"  aria-label="close icon" *ngIf="file" (click)="closefile(fileinput)" (keypress)="closefile(fileinput)">
               <img [src]="closeicon" class="closefile closesize">  
-            </button>
+            </button> -->
             <!-- <div class="fileborder"> -->
               <!-- <button class="choosebtn" (click)="fileinput.click()" [ngStyle]="{'background-color':color, 'color':textcolor}">{{filedata.title}}</button>Drop files here to upload
               <input style="display: none"  #attachments type="file" (change)="handlechange($event)" #fileinput multiple="true"> -->

@@ -9,100 +9,134 @@
     </div> 
   </div>
       <div class="tabledata" *ngIf="tabledata.tablestrip == 'Yes'">
+        <div class="headerpart">
+          <label class="title">{{tabledata.title}} :</label>
+          <div class="search-container">
+            <form >
+              <input type="text" #search placeholder="Search.." name="search" class="search">
+              <button class="search_button" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </div>
 
-        <h4>{{tabledata.title}} :</h4>
           <table class="table table-striped">
             <thead>
               <tr>
-                <th scope="col">Cell Heading</th>
-                <th scope="col">Cell Heading</th>
-                <th scope="col">Cell Heading</th>
-                <th scope="col">Cell Heading</th>
-                <th scope="col">Cell Heading</th>
+                <th scope="col" *ngFor="let item of array">{{item.th}}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
+                <td *ngFor="let item of array">{{item.td0}}</td>
               </tr>
               <tr>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
+                <td *ngFor="let item of array">{{item.td1}}</td>
               </tr>
               <tr>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
+                <td *ngFor="let item of array">{{item.td2}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td0}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td1}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td2}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td0}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td1}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td2}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td0}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td1}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td2}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td3}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td3}}</td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
-                <td>Text Data 1</td>
-                <td>Text Data</td>
-                <td>Text Data</td>
-                <td>Text Data</td>
-                <td>Text Data</td>
+                <td *ngFor="let item of array">{{item.td3}}</td>
               </tr>
             </tfoot>
           </table>
       </div>
 
-      <!-- <div class="tabledata" *ngIf="tabledata.tablestrip == 'No'">
+      <div class="tabledata" *ngIf="tabledata.tablestrip == 'No'">
 
         <h4>{{tabledata.title}} :</h4>
           <table class="table">
             <thead>
               <tr>
-                <th scope="col">Cell Heading</th>
-                <th scope="col">Cell Heading</th>
-                <th scope="col">Cell Heading</th>
-                <th scope="col">Cell Heading</th>
-                <th scope="col">Cell Heading</th>
+                <th scope="col" *ngFor="let item of array">{{item.th}}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
+                <td *ngFor="let item of array">{{item.td0}}</td>
               </tr>
               <tr>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
+                <td *ngFor="let item of array">{{item.td1}}</td>
               </tr>
               <tr>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
-                <td>Cell Content</td>
+                <td *ngFor="let item of array">{{item.td2}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td0}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td1}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td2}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td0}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td1}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td2}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td0}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td1}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td2}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td3}}</td>
+              </tr>
+              <tr>
+                <td *ngFor="let item of array">{{item.td3}}</td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
-                <td>Text Data 1</td>
-                <td>Text Data</td>
-                <td>Text Data</td>
-                <td>Text Data</td>
-                <td>Text Data</td>
+                <td *ngFor="let item of array">{{item.td3}}</td>
               </tr>
             </tfoot>
           </table>
-      </div> -->
+      </div>
   
 
 </div>
@@ -112,7 +146,7 @@
       <div class="modal-content">
           <div class="modal-header">
               <h4>Table</h4>
-              <button class="clearbtn"  aria-label="Table Update modal close"  #myModalClose8 data-bs-dismiss="modal">
+              <button class="clearbtn"  aria-label="Table Update modal close"  #myModalClose data-bs-dismiss="modal">
                   <img [src]="closeicon" class="closeicon">  
               </button>
           </div>
