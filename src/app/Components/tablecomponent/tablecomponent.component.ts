@@ -19,219 +19,324 @@ import { Router } from '@angular/router';
 
 export class TablecomponentComponent {
 
-  tabledata:any;
-  closeicon="../assets/images/close.png";
+  tabledata: any;
+  closeicon = "../assets/images/close.png";
 
-  heading = [
-    {id:1,th:"Cell Heading"},
-    {id:2,th:"Cell Heading"},
-    {id:3,th:"Cell Heading"},
-    {id:4,th:"Cell Heading"},
-    {id:5,th:"Cell Heading"}
-  ];
+heading = [
+    {
+        name: 'GGID'
+    },
+    {
+        name: 'Employee Name'
+    },
+    {
+        name: 'Employee Mail id'
+    },
+    {
+        name: 'Designation'
+    },
+    {
+        name: 'Grade'
+    },
+    {
+        name: 'Location'
+    },
+
+];
 
   array = [
-    {id:1,th:"Cell Heading",td0:"Cell Content",td1:"Tanya",td2:"Sharath",td3:"Cell Content",td4:"Ranjan"},
-    {id:2,th:"Cell Heading",td0:"Cell Phone",td1:"Anand",td2:"Cell Content",td3:"Ranjan",td4:"Cell Content"},
-    {id:3,th:"Cell Heading",td0:"Lalith",td1:"Gaurav",td2:"Cell Content",td3:"Cell Content",td4:"Cell Content"},
-    {id:4,th:"Cell Heading",td0:"Vishnu",td1:"Kumar",td2:"Sharath",td3:"Cell Content",td4:"Cell Content"},
-    {id:5,th:"Cell Heading",td0:"Ranjan",td1:"Muskan",td2:"Cell Content",td3:"Sharath",td4:"Cell Content"}
+    {
+      id:1,
+      Employee_Id: 46092137,
+      Name: "Vaishali Tyagi",
+      email: "vaishali.tyagi@capgemini.com",
+      designation: "Sr Analyst / Software Engineer",
+      grade: "A",
+      location: "Gurgaon",
+    },
+    {
+      id:2,
+      Employee_Id: 46267043,
+      Name: "Sharath Sashi Kumar",
+      email: "sharath.sashi-kumar@capgemini.com",
+      designation: "Sr Analyst / Software Engineer",
+      grade: "A",
+      location: "Mumbai",
+    },
+    {
+      id:3,
+      Employee_Id: 46273399,
+      Name: "Anand Manohar Udare",
+      email: "anand.udare@capgemini.com",
+      designation: "Sr Analyst / Software Engineer",
+      grade: "A",
+      location: "Mumbai",
+    },
+    {
+      id:4,
+      Employee_Id: 46273491,
+      Name: "Tanya",
+      email: "tanya.a.tanya@capgemini.com",
+      designation: "Sr Analyst / Software Engineer",
+      grade: "A",
+      location: "Mumbai",
+    },
+    {
+      id:5,
+      Employee_Id: 46263383,
+      Name: "Muskan Tyagi",
+      email: "muskan.tyagi@capgemini.com",
+      designation: "Sr Analyst / Software Engineer",
+      grade: "A",
+      location: "Gurgaon",
+    },
+    {
+      id:6,
+      Employee_Id: 46205868,
+      Name: "Chithira P Nair",
+      email: "chithira.p-nair@capgemini.com",
+      designation: "Analyst / Software Engineer",
+      grade: "A",
+      location: "Banglore",
+    },
+    {
+      id:7,
+      Employee_Id: 46165402,
+      Name: "Chetan Ramesh Ningoo",
+      email: "chetan.ningoo@capgemini.com",
+      designation: "Senior Manager",
+      grade: "D",
+      location: "Mumbai",
+    },
+    {
+      id:8,
+      Employee_Id: 46083526,
+      Name: "Kanika Singla",
+      email: "kanika.singla@capgemini.com",
+      designation: "Associate Consultant",
+      grade: "B",
+      location: "Gurgaon",
+    },
+    {
+      id:9,
+      Employee_Id: 46020611,
+      Name: "Lalith Rawal",
+      email: "lalith.rawal@capgemini.com",
+      designation: "Senior Consultant",
+      grade: "C",
+      location: "Mumbai",
+    },
+    {
+      id:10,
+      Employee_Id: 46205869,
+      Name: "Sowmya Ranjan Rana",
+      email: "sowmya.ranjan-rana@capgemini.com",
+      designation: "Analyst / Software Engineer",
+      grade: "A",
+      location: "Mumbai",
+    },
+    {
+      id:11,
+      Employee_Id: 46264260,
+      Name: "Saurav Nitin Trivedi",
+      email: "saurav-nitin.trivedi@capgemini.com",
+      designation: "Sr Analyst / Software Engineer",
+      grade: "A",
+      location: "Bangalore",
+    },
+    {
+      id:12,
+      Employee_Id: 46184203,
+      Name: "Gaurav Kumar Srivastav",
+      email: "gaurav-kumar.a.shrivastav@capgemini.com",
+      designation: "Associate Consultant",
+      grade: "B",
+      location: "Gurgaon",
+    },
+    {
+      id:13,
+      Employee_Id: 75022762,
+      Name: "Vishnu Kumar Nishad",
+      email: "vishnu-kumar.nishad@capgemini.com",
+      designation: "Associate Consultant",
+      grade: "B",
+      location: "Gurgaon",
+    },
   ];
 
-  copyarray= this.array;
+  copyarray: any[] = [];
+  resetarray = this.array;
+  themecolor:any;
+  color:any;
+  p:any;
+  pageno="5";
+  errorvalue:any;
+  htmlcontent="active";
+  csscontent:any;
+  Copy="Copy";
+  CSS=`.table{
+    margin: auto;
+    border: 1px solid black;
+    // margin-bottom: 50px;
+}
 
-  @ViewChild('myModalClose') modalClose8:any;
-  @ViewChild("myheader") elRef: ElementRef;
-  @ViewChild('search') search:any;
+.tabledata{
+    width:95%;
+    margin: auto;
+    margin-top: 40px;
+}
+.headerpart{
+    max-width: 100%;
+    padding-bottom: 50px;
+    .title{
+        float: left;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .search-container{
+        float: right;
+        .search{
+            border: 1px solid black;
+            border-right: none;
+        }
+        .search_button{
+            border: 1px solid black;
+            background: #fff;
+            border-left: none;
+        }
+    }
+}
+
+pagination-controls {
+    width: 100%;
+}
+.rows{
+    width:170px;
+}
+.pagination{
+    float: right;
+    padding: 20px;
+}
+.pageno {
+    width: 70px;
+    height: 30px;
+}
+.nodata{
+    text-align: center;
+    padding: 20px;
+}`;
+
+  @ViewChild('myModalClose') modalClose8: any;
+  @ViewChild("table") elRef: ElementRef;
+  @ViewChild('search') search: any;
 
   constructor(private router: Router, elRef: ElementRef) {
     this.elRef = elRef;
   }
 
   ngOnInit() {
-    if(localStorage.getItem("data")) {
-      var data1:any =  localStorage.getItem("data");
+    if (localStorage.getItem("data")) {
+      var data1: any = localStorage.getItem("data");
       this.tabledata = JSON.parse(data1);
-    // console.log(">>>>>>>>>>>>>>>>>headerdata",this.headerdata);
+
+      if(this.tabledata.theme == "dark"){
+        this.themecolor = "black";
+        this.color = "white";
+      } else if(this.tabledata.theme == "blue"){
+        this.themecolor = "#0070ad";
+        this.color = "white";
+      } else if(this.tabledata.theme == "purple"){
+        this.themecolor = "#2b0a3d";
+        this.color = "white";
+      } else if(this.tabledata.theme == "light"){
+        this.themecolor = "#fff";
+        this.color = "black";
+      }
+
+      if(this.tabledata.pagination == "No"){
+        this.pageno="15";
+      }
+      // console.log(">>>>>>>>>>>>>>>>>headerdata",this.headerdata);
 
     }
   }
 
-  close(){
+  close() {
     this.modalClose8.nativeElement.click();
   }
 
 
-  backwindow(){
+  backwindow() {
     this.router.navigate(['/modal']);
   }
 
-  Search(){
-    console.log("??????????",this.search.nativeElement.value);
-    if(this.search.nativeElement.value){
-      this.copyarray =[];
-      this.array.filter((x:any, i)=>{
+  Search() {
+    console.log("??????????", this.search.nativeElement.value);
+    if (this.search.nativeElement.value) {
+      this.copyarray = [];
+      this.array.filter((x: any, i) => {
         const keys = Object.keys(x);
-        keys.map((y:any,j)=>{
-            const result:any = {};
-            
-            for (const key in x) {
+        keys.map((y: any, j) => {
+          const result: any = {};
+
+          for (const key in x) {
             const value = x[key];
-              if (!Object.values(result).includes(value)) {
+            if (!Object.values(result).includes(value)) {
               result[key] = value;
-              }
             }
-          // console.log(">>>>>",result);
-          if(this.search.nativeElement.value == result[y]){
-            // console.log(">>>>>",this.copyarray);
-            this.copyarray.push(x);
           }
+          var searchvalue = (this.search.nativeElement.value).toLowerCase()
+          var datavalue = result[y].toString().toLowerCase();
+          // console.log(">>>>",searchvalue,datavalue);
+          if (searchvalue == datavalue) {
+            this.copyarray.push(x);
+          } 
         });
       });
       this.array = this.copyarray;
-      console.log("???vvvv",this.array);
+      console.log(">>>",this.array);
     } else {
-      this.array = [
-        {id:1,th:"Cell Heading",td0:"Cell Content",td1:"Tanya",td2:"Sharath",td3:"Cell Content",td4:"Ranjan"},
-        {id:2,th:"Cell Heading",td0:"Cell Phone",td1:"Anand",td2:"Cell Content",td3:"Ranjan",td4:"Cell Content"},
-        {id:3,th:"Cell Heading",td0:"Lalith",td1:"Gaurav",td2:"Cell Content",td3:"Cell Content",td4:"Cell Content"},
-        {id:4,th:"Cell Heading",td0:"Vishnu",td1:"Kumar",td2:"Sharath",td3:"Cell Content",td4:"Cell Content"},
-        {id:5,th:"Cell Heading",td0:"Ranjan",td1:"Muskan",td2:"Cell Content",td3:"Sharath",td4:"Cell Content"}
-      ];
+      this.array = this.resetarray;
     }
   }
 
+  handlechnage(){
+    console.log(">>>>>",this.pageno);
+  }
 
-  // @ViewChild('table') table!: MdbTableDirective<Person>;
+  getHtmlContent() {
+    //This will return '<p> Text </p>' as a string
+    const html = this.elRef.nativeElement.innerHTML;
+    const lines = html.split('>');
+    var indentSize = 2;
+    for (let i = 0; i < lines.length - 1; i++) {
+      if (i >= 1 && i < lines.length - 2) {
+        // indentSize++;
+        // lines[i] = ' '.startsWith('</')
+        lines[i] = ' '.repeat(indentSize) + lines[i].trim() + '>';
+      } else {
+        lines[i] = lines[i].trim() + '>';
+      }
+    }
+    const formattedCode = lines.join('\n');
+    // console.log(formattedCode);
+    return formattedCode;
+  }
+  openhtml(){
+    this.htmlcontent = "active";
+    this.csscontent = "noactive";
+  }
 
-  headers = ['Name', 'Position', 'Office', 'Age', 'Start Date', 'Salary'];
+  opencss(){
+    this.csscontent = "active";
+    this.htmlcontent = "noactive";
+  }
 
-  // dataSource: Person[] = [
-  //   {
-  //     name: 'Tiger Nixon',
-  //     position: 'System Architect',
-  //     office: 'Edinburgh',
-  //     age: 61,
-  //     startDate: '2011/04/25',
-  //     salary: '$320,800',
-  //   },
-  //   {
-  //     name: 'Sonya Frost',
-  //     position: 'Software Engineer',
-  //     office: 'Edinburgh',
-  //     age: 23,
-  //     startDate: '2008/12/13',
-  //     salary: '$103,600',
-  //   },
-  //   {
-  //     name: 'Jena Gaines',
-  //     position: 'Office Manager',
-  //     office: 'London',
-  //     age: 30,
-  //     startDate: '2008/12/19',
-  //     salary: '$90,560',
-  //   },
-  //   {
-  //     name: 'Quinn Flynn',
-  //     position: 'Support Lead',
-  //     office: 'Edinburgh',
-  //     age: 22,
-  //     startDate: '2013/03/03',
-  //     salary: '$342,000',
-  //   },
-  //   {
-  //     name: 'Charde Marshall',
-  //     position: 'Regional Director',
-  //     office: 'San Francisco',
-  //     age: 36,
-  //     startDate: '2008/10/16',
-  //     salary: '$470,600',
-  //   },
-  //   {
-  //     name: 'Haley Kennedy',
-  //     position: 'Senior Marketing Designer',
-  //     office: 'London',
-  //     age: 43,
-  //     startDate: '2012/12/18',
-  //     salary: '$313,500',
-  //   },
-  //   {
-  //     name: 'Tatyana Fitzpatrick',
-  //     position: 'Regional Director',
-  //     office: 'London',
-  //     age: 19,
-  //     startDate: '2010/03/17',
-  //     salary: '$385,750',
-  //   },
-  //   {
-  //     name: 'Michael Silva',
-  //     position: 'Marketing Designer',
-  //     office: 'London',
-  //     age: 66,
-  //     startDate: '2012/11/27',
-  //     salary: '$198,500',
-  //   },
-  //   {
-  //     name: 'Paul Byrd',
-  //     position: 'Chief Financial Officer (CFO)',
-  //     office: 'New York',
-  //     age: 64,
-  //     startDate: '2010/06/09',
-  //     salary: '$725,000',
-  //   },
-  //   {
-  //     name: 'Gloria Little',
-  //     position: 'Systems Administrator',
-  //     office: 'New York',
-  //     age: 59,
-  //     startDate: '2009/04/10',
-  //     salary: '$237,500',
-  //   },
-  //   {
-  //     name: 'Garrett Winters',
-  //     position: 'Accountant',
-  //     office: 'Tokyo',
-  //     age: 63,
-  //     startDate: '2011/07/25',
-  //     salary: '$170,750',
-  //   },
-  //   {
-  //     name: 'Ashton Cox',
-  //     position: 'Junior Technical Author',
-  //     office: 'San Francisco',
-  //     age: 66,
-  //     startDate: '2009/01/12',
-  //     salary: '$86,000',
-  //   },
-  //   {
-  //     name: 'Cedric Kelly',
-  //     position: 'Senior Javascript Developer',
-  //     office: 'Edinburgh',
-  //     age: 22,
-  //     startDate: '2012/03/29',
-  //     salary: '$433,060',
-  //   },
-  //   {
-  //     name: 'Airi Satou',
-  //     position: 'Accountant',
-  //     office: 'Tokyo',
-  //     age: 33,
-  //     startDate: '2008/11/28',
-  //     salary: '$162,700',
-  //   },
-  //   {
-  //     name: 'Brielle Williamson',
-  //     position: 'Integration Specialist',
-  //     office: 'New York',
-  //     age: 61,
-  //     startDate: '2012/12/02',
-  //     salary: '$372,000',
-  //   },
-  // ];
-
-  // search(event: Event): void {
-    // const searchTerm = (event.target as HTMLInputElement).value;
-    // this.table.search(searchTerm);
-  // }
+  copy(){
+    this.Copy="copied!!";
+    setTimeout(()=>{
+        this.Copy="Copy";
+    }, 2000);
+  }
 
 }

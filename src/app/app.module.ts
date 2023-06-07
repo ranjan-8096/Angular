@@ -58,6 +58,7 @@ import { LoaderComponent } from './Components/loader/loader.component';
 import { TableformcomponentComponent } from './FormComponents/tableformcomponent/tableformcomponent.component';
 import { TablecomponentComponent } from './Components/tablecomponent/tablecomponent.component';
 import { EdittableformcomponentComponent } from './FormComponents/edittableformcomponent/edittableformcomponent.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -125,6 +126,7 @@ import { EdittableformcomponentComponent } from './FormComponents/edittableformc
     BrowserAnimationsModule,
     ClipboardModule,
     NgxSliderModule,
+    NgxPaginationModule,
     NgMultiSelectDropDownModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 5000,

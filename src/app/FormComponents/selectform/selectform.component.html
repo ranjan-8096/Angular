@@ -45,7 +45,7 @@
 
                 </select>
             </div>
-            <div *ngIf="(f.optionvalue.touched || submitted) && f.optionvalue.errors" class="invalid-feedback">
+            <div *ngIf="(f.optionvalue.touched || submitted) && f.optionvalue.errors">
                 <div class="error" role="alert" id="optionvalue-err-txt" *ngIf="f.optionvalue.errors.required">Please select an
                     option</div>
             </div>

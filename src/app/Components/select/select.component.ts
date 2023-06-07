@@ -58,7 +58,8 @@ export class SelectComponent implements OnInit {
     selectAllText: 'Select All',
     unSelectAllText: 'UnSelect All',
     itemsShowLimit: 10,
-    allowSearchFilter: true
+    allowSearchFilter: true,
+    defaultOpen:false
   };
 
 
@@ -78,6 +79,7 @@ export class SelectComponent implements OnInit {
       this.dropdownSettings.singleSelection = this.selectdata.selector == "multiselect" ? false : true;
       // var uniqueSet = new Set();
       this.dropdownList = this.selectdata.selectordata;
+      // console.log(">>>>>",this.dropdownList);
     // console.log(">>>>>>>>>>>>>>>>>headerdata",this.carddata.uploadimage);
     if(this.selectdata.theme == "dark" || this.selectdata.theme == "blue" || this.selectdata.theme == "purple"){
       this.color = "#fff";
@@ -149,6 +151,16 @@ export class SelectComponent implements OnInit {
     localStorage.removeItem("selectdata");
     this.router.navigate(['/component/forms']);
 
+  }
+
+  saveFunction(event:any) {
+    console.log(">>>>>>>>",event);
+    if(event.keyCode == 13){
+      this.dropdownSettings.defaultOpen = true;
+    }
+    console.log(">>>>>",this.dropdownSettings);
+    // if(!this.dropdownList) return;
+    //   this.dropdownList = false;
   }
 
 

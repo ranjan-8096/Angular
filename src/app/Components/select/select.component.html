@@ -27,6 +27,7 @@
             [(ngModel)]="selectedItems"
             (onSelect)="onItemSelect($event)"
             (onSelectAll)="onSelectAll($event)"
+            (keydown)="saveFunction($event)"
           >
           </ng-multiselect-dropdown>
         </div>
