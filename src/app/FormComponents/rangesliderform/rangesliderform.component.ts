@@ -33,7 +33,7 @@ export class RangesliderformComponent {
       title:['',[Validators.required,Validators.maxLength(20)]],
       minvalue:['',[Validators.required]],
       maxvalue:['',[Validators.required]],
-      rangewidth:['50%',[Validators.required]],
+      rangewidth:['',[Validators.required]],
       theme:['dark',[Validators.required]],
     });
 

@@ -379,6 +379,43 @@
         </div>
 
 
+
+        <div class="modal fade details" id="exampleModal0112" tabindex="-1" aria-labelledby="exampleModalLabel1"
+        aria-hidden="true">
+        <div class="modal-dialog modaldialog-width">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Dynamic Tabs</h4>
+                    <button class="clearbtn" aria-label="Footer Detail modal close" #myModalClose
+                        data-bs-dismiss="modal">
+                        <img [src]="closeicon">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="details-container ">
+                        <h3> Details for the Alert section are below.</h3>
+                        <p class="pref">Please do follow the below given instructions while creating your Alert
+                            component.</p>
+                        <div class="detail-content">
+                            <ul>
+                                <li class="points">Alert Text should be less then 50 characters.</li>
+
+                                <li class="points">Alert text is a mandatory field.</li>
+
+                                <li class="points">You can select width of Alert from the given options.</li>
+
+                                <li class="points">You can select the theme of Alert from the given options.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
         <div class="modal fade details" id="exampleModal18" tabindex="-1" aria-labelledby="exampleModalLabel1"
             aria-hidden="true">
             <div class="modal-dialog modaldialog-width">
@@ -482,6 +519,40 @@
                 </div>
             </div>
         </div>
+
+
+        
+        <div class="modal fade details" id="exampleModal0111" tabindex="-1" aria-labelledby="exampleModalLabel1"
+        aria-hidden="true">
+        <div class="modal-dialog modaldialog-width">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Loader</h4>
+                    <button class="clearbtn" aria-label="close detail" #myModalClose data-bs-dismiss="modal">
+                        <img [src]="closeicon">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="details-container ">
+                        <h3> Details for the loader section are below.</h3>
+                        <p class="pref">Please do follow the below given instructions while creating your loader
+                            component.</p>
+                        <div class="detail-content">
+                            <ul>
+                                <li>Form label should be less than 15 characters.</li>
+                                <li>You can select single/multiple file upload from the given options.</li>
+                                <li>User Can select the File Upload theme. </li>
+                                <li>User can select size option for file Upload. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
         <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel2"
             aria-hidden="true">
@@ -609,34 +680,9 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade details" id="exampleModal0111" tabindex="-1" aria-labelledby="exampleModalLabel1"
-        aria-hidden="true">
-        <div class="modal-dialog modaldialog-width">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4>Loader</h4>
-                    <button class="clearbtn" aria-label="close detail" #myModalClose data-bs-dismiss="modal">
-                        <img [src]="closeicon">
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="details-container ">
-                        <h3> Details for the loader section are below.</h3>
-                        <p class="pref">Please do follow the below given instructions while creating your loader
-                            component.</p>
-                        <div class="detail-content">
-                            <ul>
-                                <li>Form label should be less than 15 characters.</li>
-                                <li>You can select single/multiple file upload from the given options.</li>
-                                <li>User Can select the File Upload theme. </li>
-                                <li>User can select size option for file Upload. </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+
     <div class="modal fade" id="exampleModal011" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
         <div class="modal-dialog modaldialog-width">
             <div class="modal-content">
@@ -651,6 +697,23 @@
             </div>
         </div>
     </div>
+
+
+    <div class="modal fade" id="exampleModal012" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modaldialog-width">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Dynamic Tab</h4>
+                    <button class="clearbtn" aria-label="close modal" #myModalClose10 data-bs-dismiss="modal">
+                        <img [src]="closeicon">
+                    </button>
+                </div>
+                <!-- <app-form (onclose)="close()"></app-form> -->
+                <app-dynamictabsform (onclose)="close()"></app-dynamictabsform>
+            </div>
+        </div>
+    </div>
+
 
     </div>
 </section>

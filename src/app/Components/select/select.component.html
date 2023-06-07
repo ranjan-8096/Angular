@@ -22,11 +22,13 @@
         <div class="select"> 
           <ng-multiselect-dropdown *ngIf="updatedropdown"
             [placeholder]="'Select value'"
+            (onDropDownClose)="close()"
             [settings]="dropdownSettings"
             [data]="dropdownList"
             [(ngModel)]="selectedItems"
             (onSelect)="onItemSelect($event)"
             (onSelectAll)="onSelectAll($event)"
+
           >
           </ng-multiselect-dropdown>
         </div>

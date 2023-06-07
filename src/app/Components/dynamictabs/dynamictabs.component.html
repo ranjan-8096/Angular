@@ -1,0 +1,53 @@
+<div class="main">
+    <div class="top-header">
+      <div>
+        <h4 class="subheader">Card <span class="sideheader">Component</span></h4>
+      </div>
+      <div class="button-sec">
+        <button class="backbutton" (click)="backwindow()">Back</button>
+        <button class="backbutton" data-bs-toggle="modal" data-bs-target="#exampleModall12">Edit</button>
+      </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="dynamics_tab" *ngIf="updatedropdown">
+        <h3>{{dynamictabsdata?.title}}</h3>
+      
+        <ul class="nav nav-tabs">
+          <li *ngFor="let data of tabdata" [ngClass]="[data?.class, dynamictabsdata.theme]" (click)="onClick(data?.id)" (onkey)="onClick(data?.id)"><span>{{data?.label}}</span></li>
+        </ul>
+       
+        <div class="tab-content">
+            <div *ngFor="let data of tabdata">
+          <div id="home" class="tab-pane" *ngIf="data?.Isvisible">
+            <p>{{data?.description}}</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+
+
+
+    
+        
+    <div class="modal fade" id="exampleModall12" tabindex="-1" aria-labelledby="exampleModalLabel3"
+    aria-hidden="true">
+    <div class="modal-dialog modaldialog-width">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Toaster</h4>
+                <button class="clearbtn" aria-label="Button Create modal close icon" #myModalClose7
+                    data-bs-dismiss="modal"><img [src]="closeicon"></button>
+            </div>
+            <app-dynamictabsform (onclose)="close()"></app-dynamictabsform>
+            <!-- <app-tooltipform (onclose)="close()"></app-tooltipform> -->
+        </div>
+    </div>
+</div>
+<!--  -->

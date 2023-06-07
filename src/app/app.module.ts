@@ -58,6 +58,8 @@ import { LoaderComponent } from './Components/loader/loader.component';
 import { TableformcomponentComponent } from './FormComponents/tableformcomponent/tableformcomponent.component';
 import { TablecomponentComponent } from './Components/tablecomponent/tablecomponent.component';
 import { EdittableformcomponentComponent } from './FormComponents/edittableformcomponent/edittableformcomponent.component';
+import { DynamictabsComponent } from './Components/dynamictabs/dynamictabs.component';
+import { DynamictabsformComponent } from './FormComponents/dynamictabsform/dynamictabsform.component';
 
 
 
@@ -112,7 +114,9 @@ import { EdittableformcomponentComponent } from './FormComponents/edittableformc
     LoaderComponent,
     TableformcomponentComponent,
     TablecomponentComponent,
-    EdittableformcomponentComponent
+    EdittableformcomponentComponent,
+    DynamictabsComponent,
+    DynamictabsformComponent
    
   ],
   imports: [

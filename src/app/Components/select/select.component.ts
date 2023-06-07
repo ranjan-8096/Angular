@@ -15,6 +15,7 @@ export class SelectComponent implements OnInit {
   selectdata:any;
   dropdownList:any = []; 
   selectedItems:any = [];
+  dynamicdata:any  = [];
   updatedropdown:boolean = true;
   htmlcontent="active";
   csscontent:any;
@@ -77,6 +78,7 @@ export class SelectComponent implements OnInit {
       this.selectdata = JSON.parse(data1);
       this.dropdownSettings.singleSelection = this.selectdata.selector == "multiselect" ? false : true;
       // var uniqueSet = new Set();
+      // this.selectloaddata();
       this.dropdownList = this.selectdata.selectordata;
     // console.log(">>>>>>>>>>>>>>>>>headerdata",this.carddata.uploadimage);
     if(this.selectdata.theme == "dark" || this.selectdata.theme == "blue" || this.selectdata.theme == "purple"){
@@ -91,12 +93,12 @@ export class SelectComponent implements OnInit {
        this.updatedropdown = false;
         console.log("selectdata",responsive);
          this.selectdata = responsive;
-         this.dropdownList = responsive.selectordata
+          this.dropdownList =  this.selectdata.selectordata;
+
          setTimeout(() => {
           this.dropdownSettings.singleSelection = responsive.selector == "multiselect" ? false : true;
         }, 0);
-
-
+        // this.selectloaddata();
          if(this.selectdata.theme == "dark" || this.selectdata.theme == "blue" || this.selectdata.theme == "purple"){
           this.color = "#fff";
         } else if(this.selectdata.theme == "light"){
@@ -113,33 +115,29 @@ export class SelectComponent implements OnInit {
       }
     })
 
-
-    // this.dropdownList = [
-    //   { item_id: 1, item_text: 'Mumbai' },
-    //   { item_id: 2, item_text: 'Bangaluru' },
-    //   { item_id: 3, item_text: 'Pune' },
-    //   { item_id: 4, item_text: 'Navsari' },
-    //   { item_id: 5, item_text: 'New Delhi' }
-    // ];
-
-    // this.selectedItems = [
-    //   { item_id: 3, item_text: 'Pune' },
-    //   { item_id: 4, item_text: 'Navsari' }
-    // ];
-
   }
 
-  changesetting(){
-    // if(this.selectedItems && this.selectedItems.length > 0) {
-    //   console.log(">>>>>>>>>>",this.selectedItems);
-    //   // this.selectedItems = [[0]];
-    // }
-    // this.dropdownSettings.singleSelection = true;
+  
+  // selectloaddata(){
+  //   if(this.selectdata.helpertext1) {
+  //     this.dynamicdata.push({id:1,Isvisible:false,class:"Inactive","label":this.selectdata.helpertext1,"description":this.selectdata.description1})
+  //   } 
+  //   if(this.selectdata.helpertext2) {
+  //     this.dynamicdata.push({id:2,Isvisible:false,class:"Inactive","label":this.selectdata.helpertext2,"description":this.selectdata.description2})
+  //   }
+  //   if(this.selectdata.helpertext3) {
+  //     this.dynamicdata.push({id:3,Isvisible:false,class:"Inactive","label":this.selectdata.helpertext3,"description":this.selectdata.description3})
+  //   }
+  //   if(this.selectdata.helpertext4) {
+  //     this.dynamicdata.push({id:4,Isvisible:false,class:"Inactive","label":this.selectdata.helpertext4,"description":this.selectdata.description4})
+  //   }
 
-    // setTimeout(() => {
-    // }, 0);
 
-  }
+  //   const unique = [...new Map(this.dynamicdata.map((m:any) => [m.id, m])).values()];
+
+  //   this.dropdownList = unique;
+  // }
+
 
   close(){
     this.modalClose3.nativeElement.click();

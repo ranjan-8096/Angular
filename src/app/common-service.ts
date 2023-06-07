@@ -37,6 +37,10 @@ export class CommonService {
     private calendarstatus = new BehaviorSubject<any>([]);
     calendarstatusdata = this.calendarstatus.asObservable();
 
+    
+    private tabstatus = new BehaviorSubject<any>([]);
+    tabsstatusdata = this.tabstatus.asObservable();
+
 
     footercompletedata(data:any) {
         this.footerstatus.next(data);
@@ -65,6 +69,11 @@ export class CommonService {
 
       calendarcompletedata(data:any) {
         this.calendarstatus.next(data);
+      }
+
+
+      tabscompletedata(data:any) {
+        this.tabstatus.next(data);
       }
 
 
