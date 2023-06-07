@@ -59,6 +59,8 @@ import { TableformcomponentComponent } from './FormComponents/tableformcomponent
 import { TablecomponentComponent } from './Components/tablecomponent/tablecomponent.component';
 import { EdittableformcomponentComponent } from './FormComponents/edittableformcomponent/edittableformcomponent.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { DynamictabsComponent } from './Components/dynamictabs/dynamictabs.component';
+import { DynamictabsformComponent } from './FormComponents/dynamictabsform/dynamictabsform.component';
 
 
 
@@ -113,7 +115,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     LoaderComponent,
     TableformcomponentComponent,
     TablecomponentComponent,
-    EdittableformcomponentComponent
+    EdittableformcomponentComponent,
+    DynamictabsComponent,
+    DynamictabsformComponent
    
   ],
   imports: [

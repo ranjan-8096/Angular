@@ -20,6 +20,8 @@ constructor(private router: Router){}
   @ViewChild('myModalClose7') modalClose7:any;
   @ViewChild('myModalClose8') modalClose8:any;
   @ViewChild('myModalClose9') modalClose9:any;
+  @ViewChild('myModalClose10') modalClose10:any;
+
   
 
   array = [
@@ -54,6 +56,7 @@ close(){
   this.modalClose7.nativeElement.click();
   this.modalClose8.nativeElement.click();
   this.modalClose9.nativeElement.click();
+  this.modalClose10.nativeElement.click();
 
   console.log(">>>>>>>>>>>>>>>>");
 }

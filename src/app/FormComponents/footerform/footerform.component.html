@@ -6,11 +6,11 @@
             <div class="subheading">
                 <label>Footer Text:<span class="star">*</span></label>
             </div>
-            <input type="text" maxlength="50" class="form-control inputbox" aria-describedby="title-err-text" aria-required="true" placeholder="Please enter text" name="text" formControlName="text" [ngClass]="{ 'is-invalid': submitted && f.text.errors }" autofocus/>
+            <input type="text" maxlength="30" class="form-control inputbox" aria-describedby="title-err-text" aria-required="true" placeholder="Please enter text" name="text" formControlName="text" [ngClass]="{ 'is-invalid': submitted && f.text.errors }" autofocus/>
             <div *ngIf="(f.text.touched || submitted) && f.text.errors" class="invalid-feedback">
                 <div class="error" role="alert" aria-atomic="true"  *ngIf="f.text.errors.required">footer text is required</div>
                 <div class="error" role="alert" aria-atomic="true"   *ngIf="f.text.errors.minlength">Minimum 3 word required for text</div>
-                <div class="error" role="alert" aria-atomic="true" *ngIf="f.text.errors.maxlength">maxlength 20 for text</div>
+                <div class="error" role="alert" aria-atomic="true" *ngIf="f.text.errors.maxlength">maxlength 30 for text</div>
             </div>
         </div>
         <div class="pt-3">

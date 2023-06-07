@@ -20,6 +20,7 @@ import { SelectComponent } from './Components/select/select.component';
 import { CalendarComponent } from './Components/calendar/calendar.component';
 import { LoaderComponent } from './Components/loader/loader.component';
 import { TablecomponentComponent } from './Components/tablecomponent/tablecomponent.component';
+import { DynamictabsComponent } from './Components/dynamictabs/dynamictabs.component';
 
 
 const routes: Routes = [
@@ -44,7 +45,9 @@ const routes: Routes = [
   {path : "component/progress", component:ProgressComponent},
   {path : "component/calendar", component:CalendarComponent},
   {path : "component/loader", component:LoaderComponent},
-  {path : "component/table", component:TablecomponentComponent}
+  {path : "component/table", component:TablecomponentComponent},
+  {path : "component/dynamics", component:DynamictabsComponent},
+
 ];
 
 @NgModule({

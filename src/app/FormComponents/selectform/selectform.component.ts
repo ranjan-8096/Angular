@@ -36,7 +36,7 @@ export class SelectformComponent {
       helpertext3:[''],
       helpertext4:[''],
       helpertext5:[''],
-      selectwidth:['50%',[Validators.required]],
+      selectwidth:['',[Validators.required]],
       theme:['dark',[Validators.required]],
     });
 
@@ -46,10 +46,23 @@ export class SelectformComponent {
 
       if(result == 1) {
         this.registerForm.get("helpertext1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
+        this.registerForm.get("helpertext2")?.clearValidators();
+        this.registerForm.get("helpertext3")?.clearValidators();
+        this.registerForm.get("helpertext4")?.clearValidators();
+        this.registerForm.get("helpertext2")?.setValue("");
+        this.registerForm.get("helpertext3")?.setValue("");
+        this.registerForm.get("helpertext4")?.setValue("");
+        this.registerForm.get("helpertext5")?.setValue("");
       } 
        else if(result == 2) {
         this.registerForm.get("helpertext1")?.setValidators([Validators.required]);
         this.registerForm.get("helpertext2")?.setValidators([Validators.required]);
+
+        this.registerForm.get("helpertext3")?.clearValidators();
+        this.registerForm.get("helpertext4")?.clearValidators();
+        this.registerForm.get("helpertext3")?.setValue("");
+        this.registerForm.get("helpertext4")?.setValue("");
+        this.registerForm.get("helpertext5")?.setValue("");
         // this.selectordata = 1,this.registerForm.value.helpertext1)
       } 
       else if(result == 3) {
@@ -57,12 +70,19 @@ export class SelectformComponent {
         this.registerForm.get("helpertext2")?.setValidators([Validators.required]);
         this.registerForm.get("helpertext3")?.setValidators([Validators.required]);
 
+        this.registerForm.get("helpertext4")?.clearValidators();
+        this.registerForm.get("helpertext4")?.setValue("");
+        this.registerForm.get("helpertext5")?.setValue("");
+
       } 
       else if(result == 4) {
         this.registerForm.get("helpertext1")?.setValidators([Validators.required]);
         this.registerForm.get("helpertext2")?.setValidators([Validators.required]);
         this.registerForm.get("helpertext3")?.setValidators([Validators.required]);
         this.registerForm.get("helpertext4")?.setValidators([Validators.required]);
+
+        this.registerForm.get("helpertext5")?.clearValidators();
+        this.registerForm.get("helpertext5")?.setValue("");
 
       } 
       else if(result == 5) {
@@ -125,6 +145,7 @@ export class SelectformComponent {
         this.registerForm.value.color = "#2b0a3d"
       }
 
+      this.selectordata = [];
       if(this.registerForm.value.helpertext1) {
         this.selectordata.push({id:1,"helpertext":this.registerForm.value.helpertext1})
       } 

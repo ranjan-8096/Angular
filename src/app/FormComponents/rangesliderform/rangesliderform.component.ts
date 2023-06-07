@@ -33,7 +33,7 @@ export class RangesliderformComponent {
       title:['',[Validators.required,Validators.maxLength(20)]],
       minvalue:['',[Validators.required]],
       maxvalue:['',[Validators.required]],
-      rangewidth:['50%',[Validators.required]],
+      rangewidth:['',[Validators.required]],
       theme:['dark',[Validators.required]],
     });
 
@@ -75,12 +75,14 @@ export class RangesliderformComponent {
     console.log(">>>>",this.registerForm);
     console.log(">>>>",this.f.minvalue);
     this.submitted = true;
+    console.log(">>>>>>>>>",this.registerForm.value.minvalue > this.registerForm.value.maxvalue);
     if(this.registerForm.value.minvalue > this.registerForm.value.maxvalue) {
       this.lengthvalidation = true;
-      return true;
     } else {
       this.lengthvalidation = false;
     }
+
+    // console.log(">>>>>>>>>",this.lengthvalidation);
 
     if(this.registerForm.invalid && !this.lengthvalidation) {
       return true;
