@@ -12,72 +12,29 @@
         <div class="headerpart">
           <label class="title">{{tabledata.title}} :</label>
           <div class="search-container">
-            <form >
               <input type="text" #search placeholder="Search.." name="search" class="search">
-              <button class="search_button" type="submit"><i class="fa fa-search"></i></button>
-            </form>
+              <button class="search_button" (click)="Search()"><i class="fa fa-search"></i></button>
           </div>
         </div>
 
           <table class="table table-striped">
             <thead>
               <tr>
-                <th scope="col" *ngFor="let item of array">{{item.th}}</th>
+                <th scope="col" *ngFor="let item of heading">{{item.th}}</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td *ngFor="let item of array">{{item.td0}}</td>
+              <tr *ngFor="let item of array">
+                <td>{{item.td0}}</td>
+                <td >{{item.td1}}</td>
+                <td >{{item.td2}}</td>
+                <td >{{item.td3}}</td>
+                <td >{{item.td4}}</td>
               </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td1}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td2}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td0}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td1}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td2}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td0}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td1}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td2}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td0}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td1}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td2}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td3}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td3}}</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td *ngFor="let item of array">{{item.td3}}</td>
-              </tr>
-            </tfoot>
           </table>
-      </div>
+      </div> 
 
-      <div class="tabledata" *ngIf="tabledata.tablestrip == 'No'">
+      <!-- <div class="tabledata" *ngIf="tabledata.tablestrip == 'No'">
 
         <h4>{{tabledata.title}} :</h4>
           <table class="table">
@@ -136,9 +93,63 @@
               </tr>
             </tfoot>
           </table>
-      </div>
+      </div> -->
   
 
+      <!-- <mdb-form-control>
+        <input
+          mdbInput
+          type="text"
+          class="form-control"
+          id="search-input"
+          (keyup)="search($event)"
+        />
+        <label mdbLabel class="form-label" for="search-input">Search</label>
+      </mdb-form-control> -->
+
+      <!-- <div class="datatable mt-4">
+        <table
+          class="table datatable-table"
+          mdbTable
+          mdbTableSort
+          #table="mdbTable"
+          #sortSearch="mdbTableSort"
+          [dataSource]="dataSource"
+          [sort]="sortSearch"
+          [pagination]="paginationSearch"
+        >
+          <thead class="datatable-header">
+            <tr>
+              <th *ngFor="let header of headers" [mdbTableSortHeader]="header" scope="col">
+                {{ header | titlecase }}
+              </th>
+            </tr>
+          </thead>
+          <tbody class="datatable-body">
+            <tr *ngFor="let data of table.data" scope="row">
+              <td>
+                {{ data.name }}
+              </td>
+              <td>
+                {{ data.position }}
+              </td>
+              <td>
+                {{ data.office }}
+              </td>
+              <td>
+                {{ data.age }}
+              </td>
+              <td>
+                {{ data.startDate }}
+              </td>
+              <td>
+                {{ data.salary }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <mdb-table-pagination #paginationSearch></mdb-table-pagination>
+      </div> -->
 </div>
 
 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
