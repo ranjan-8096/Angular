@@ -17,11 +17,12 @@
 
             <div class="form-group pt-3">
                 <label>Value:</label><span class="star">*</span>
-                <input type="text" (keypress)="numeric($event)" maxlength="20" class="form-control inputbox" aria-describedby="progressvalue-err-text" aria-required="true" placeholder="Please enter progressvalue" name="progressvalue" formControlName="progressvalue" [ngClass]="{ 'is-invalid': submitted && f.progressvalue.errors }" autofocus/>
+                <input type="text" (keypress)="numeric($event)" maxlength="3" max="100" class="form-control inputbox" aria-describedby="progressvalue-err-text" aria-required="true" placeholder="Please enter progressvalue" name="progressvalue" formControlName="progressvalue" [ngClass]="{ 'is-invalid': submitted && f.progressvalue.errors }" autofocus/>
                 <div *ngIf="(f.progressvalue.touched || submitted) && f.progressvalue.errors" class="invalid-feedback">
                     <div class="error" role="alert" aria-atomic="true"  *ngIf="f.progressvalue.errors.required">Value is required</div>
-                    <div class="error" role="alert" aria-atomic="true"   *ngIf="f.progressvalue.errors.minlength">Minimum 3 word required for title</div>
                     <div class="error" role="alert" aria-atomic="true" *ngIf="f.progressvalue.errors.maxlength">maxlength 20 for title</div>
+                    <div class="error" role="alert" aria-atomic="true" *ngIf="f.progressvalue.errors.max">progress cannot more than 100 value</div>
+
                   </div>
                 </div>
 

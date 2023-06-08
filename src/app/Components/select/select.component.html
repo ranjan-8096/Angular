@@ -8,7 +8,7 @@
       </div>
       <div class="button-sec">
         <button class=" backbutton" (click)="backwindow()">Back</button>
-        <button class=" backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal4">Edit</button>
+        <button class=" backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal3">Edit</button>
       </div> 
     </div>
 
@@ -28,7 +28,6 @@
             [(ngModel)]="selectedItems"
             (onSelect)="onItemSelect($event)"
             (onSelectAll)="onSelectAll($event)"
-
           >
           </ng-multiselect-dropdown>
         </div>
@@ -55,19 +54,19 @@
 </div>
 
 
-<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel2"
-    aria-hidden="true">
-    <div class="modal-dialog modaldialog-width">
-        <div class="modal-content header-modal">
-            <div class="modal-header">
-                <h4>Select</h4>
-                <button class="clearbtn" #myModalClose3 data-bs-dismiss="modal">
-                    <img [src]="closeicon">
-                </button>
-            </div>
-            <app-selectform (onclose)="close()"></app-selectform>
-        </div>
-    </div>
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modaldialog-width">
+      <div class="modal-content header-modal">
+          <div class="modal-header">
+              <h4>Select</h4>
+              <button class="clearbtn" aria-label="close modal" #myModalClose3 data-bs-dismiss="modal">
+                  <img [src]="closeicon">
+              </button>
+          </div>
+          <app-selectform (onclose)="close()"></app-selectform>
+      </div>
+  </div>
 </div>
 
 

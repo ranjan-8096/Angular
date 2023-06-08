@@ -13,6 +13,7 @@ export class ProgressformComponent {
   progressdata:any;
   registerForm: FormGroup;
   submitted = false;
+  lengthvalidation:boolean =  false;
   @Output() onclose = new EventEmitter<any>;
 
 
@@ -27,8 +28,8 @@ export class ProgressformComponent {
 
     this.registerForm = this.formBuilder.group({
       selectedtitle:['success',[Validators.required]],
-      title:['',[Validators.required,Validators.maxLength(20)]],
-      progressvalue:['',[Validators.required]],
+      title:['',[Validators.required,Validators.maxLength(3)]],
+      progressvalue:['',[Validators.required,Validators.max(100)]],
       rangewidth:['',[Validators.required]],
       theme:['dark',[Validators.required]],
     });
@@ -69,7 +70,17 @@ export class ProgressformComponent {
   onSubmit(){
     console.log(">>>>",this.registerForm);
     this.submitted = true;
-    if(this.registerForm.invalid) {
+    if(this.registerForm.value.progressvalue.length > 100) {
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+      this.lengthvalidation = true;
+      return true;
+    } else {
+      this.lengthvalidation = false;
+    }
+
+
+    if(this.registerForm.invalid && !this.lengthvalidation) {
       return true;
     } else {
 

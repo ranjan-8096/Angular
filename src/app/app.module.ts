@@ -60,6 +60,8 @@ import { TablecomponentComponent } from './Components/tablecomponent/tablecompon
 import { EdittableformcomponentComponent } from './FormComponents/edittableformcomponent/edittableformcomponent.component';
 import { DynamictabsComponent } from './Components/dynamictabs/dynamictabs.component';
 import { DynamictabsformComponent } from './FormComponents/dynamictabsform/dynamictabsform.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ImagesliderComponent } from './Components/imageslider/imageslider.component';
 
 
 
@@ -116,7 +118,8 @@ import { DynamictabsformComponent } from './FormComponents/dynamictabsform/dynam
     TablecomponentComponent,
     EdittableformcomponentComponent,
     DynamictabsComponent,
-    DynamictabsformComponent
+    DynamictabsformComponent,
+    ImagesliderComponent
    
   ],
   imports: [
@@ -129,6 +132,7 @@ import { DynamictabsformComponent } from './FormComponents/dynamictabsform/dynam
     BrowserAnimationsModule,
     ClipboardModule,
     NgxSliderModule,
+    SlickCarouselModule,
     NgMultiSelectDropDownModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 5000,
