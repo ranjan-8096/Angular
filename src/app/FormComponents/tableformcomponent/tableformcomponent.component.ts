@@ -23,7 +23,7 @@ export class TableformcomponentComponent {
 
   this.registerForm = this.formBuilder.group({
     title: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],
-    color:['light', [Validators.required]],
+    theme:['light', [Validators.required]],
     tablestrip:['',[Validators.required]],
     pagination:['',Validators.required]
   });

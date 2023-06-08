@@ -32,7 +32,7 @@ export class CalendarformComponent {
       title:['',[Validators.required,Validators.maxLength(20)]],
       calendaroption:['calendar',[Validators.required]],
       theme:['dark',[Validators.required]],
-      rangewidth:['',[Validators.required]],
+      rangewidth:['25%',[Validators.required]],
     });
 
     

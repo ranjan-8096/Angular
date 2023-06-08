@@ -1,7 +1,7 @@
 .table{
     margin: auto;
     border: 1px solid black;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
 }
 
 .tabledata{
@@ -29,4 +29,106 @@
             border-left: none;
         }
     }
+}
+
+pagination-controls {
+    width: 100%;
+}
+.rows{
+    width:120px;
+}
+.pagination{
+    float: right;
+    padding: 20px;
+}
+.pageno {
+    width: 70px;
+    height: 30px;
+}
+.nodata{
+    text-align: center;
+    padding: 20px;
+}
+.divtable{
+    padding-top: 5px;
+    padding-bottom: 100px;
+    margin: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.page-row{
+    display: flex;
+}
+
+.pagination ::ng-deep .ngx-pagination .current {
+    background: #0070ad;
+}
+
+@media screen and (min-width:320px) and (max-width:565px) {
+    .pagination {
+        display: block;
+        text-align: center;
+        float: none !important;
+    }
+    .page-row {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:675px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+
+
+
+.htmlelement{
+    background-color: var(--color-white);;
+    overflow-y: scroll;
+    width:90%;
+    height:350px;
+    margin: auto;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+.copybutton{
+    text-align: end;
+        margin-right: 40px;
+        button{
+            border: 1.5px solid black;
+            background: transparent;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+        .copyicon{
+            margin-right: 5px;
+        }
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    li:first-child{
+        margin-right: 10px;
+    }
+    li{
+        cursor: pointer;
+        button{
+            border: none;
+            background: transparent;
+            padding: 0px;
+        }
+    }
+}
+
+.active{
+    border-bottom: 1px solid black !important;
+    padding-bottom: 5px !important;
 }

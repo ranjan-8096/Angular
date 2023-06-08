@@ -1,14 +1,13 @@
-import { Component, OnInit , EventEmitter , Output} from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-
 @Component({
-  selector: 'app-loaderform',
-  templateUrl: './loaderform.component.html',
-  styleUrls: ['./loaderform.component.scss']
+  selector: 'app-editloader',
+  templateUrl: './editloader.component.html',
+  styleUrls: ['./editloader.component.scss']
 })
-export class LoaderformComponent implements OnInit{
+export class EditloaderComponent {
   submitted = false;
   registerForm: FormGroup;
   bgcolor: any;
@@ -21,6 +20,11 @@ export class LoaderformComponent implements OnInit{
   nodefaultimage:any;
   storage:any;
   imageform:any; 
+  loaderdata:any;
+  type:any;
+  loaderwidth:any;
+  loadercolor:any;
+  loadertimeout:any;
 
   constructor(private router: Router,
     private formBuilder: FormBuilder) {
@@ -31,11 +35,21 @@ export class LoaderformComponent implements OnInit{
   
   ngOnInit() {
 
+    if(localStorage.getItem("loaderdata")) {
+      var data1:any =  localStorage.getItem("loaderdata");
+      this.loaderdata = JSON.parse(data1);
+
+      console.log(">>>>>>>>>>this.loaderdata",this.loaderdata);
+
+      // console.log(">>>",this.loaderdata);
+      this.type = this.loaderdata.typefields;
+      this.loaderwidth = this.loaderdata.cardwidth;
+      this.loadercolor = this.loaderdata.theme;
+      this.loadertimeout =this.loaderdata.timeout;
+    }
 
     this.registerForm = this.formBuilder.group({
-     
       uploadimage:[''],
-      // buttons:['',[Validators.required]],
       timeoutvalue:[''],
       typefields:['',[Validators.required]],
       cardwidth:['',[Validators.required]], 
@@ -43,14 +57,25 @@ export class LoaderformComponent implements OnInit{
       color: ['', [Validators.required]], 
       title: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]], 
     });
+    this.registerForm.get("typefields")?.valueChanges.subscribe((result)=>{
+      console.log("typefields",result);
+    })
   }
 
   get f(){
     return this.registerForm.controls;
   }
- 
-  
 
+  reloadComponent(self:boolean,urlToNavigateTo ?:string){
+    //skipLocationChange:true means dont update the url to / when navigating
+   const url=self ? this.router.url : "component/loader";
+   this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
+     this.router.navigate([`/${url}`]).then(()=>{
+      //  console.log(`After navigation I am on:${this.router.url}`)
+     })
+   })
+  }
+ 
   onSubmit(){ 
     this.submitted = true;
     console.log("Checkbox registerForm",this.f);
@@ -62,10 +87,10 @@ export class LoaderformComponent implements OnInit{
       if (this.registerForm.value['timeout'] == "1000ms") {
         this.timeoutvalue = "onemilisecond"; 
       }
-      if (this.registerForm.value['timeout'] == "10000ms") {
+      if (this.registerForm.value['timeout'] == "2000ms") {
         this.timeoutvalue = "twomilisecond"; 
       }
-      if (this.registerForm.value['timeout'] == "20000ms") {
+      if (this.registerForm.value['timeout'] == "5000ms") {
         this.timeoutvalue = "fivemilisecond"; 
       }
 
@@ -95,20 +120,13 @@ export class LoaderformComponent implements OnInit{
         this.themecolor = "lightcolor";
       }
       const data = {
-        // "text1":this.registerForm.value.text1,
-        // "text2":this.registerForm.value.text2,
-        // "text3":this.registerForm.value.text3,
-        // "text4":this.registerForm.value.text4,
         "bgcolor":this.bgcolor,  
         "color":this.color, 
-        // "alignverticle":this.alignverticle, 
         "timeoutvalue":this.timeoutvalue, 
         "themecolor":this.themecolor, 
         "theme":this.theme, 
         "typefields":this.registerForm.value.typefields,
-        // "buttons":this.registerForm.value.buttons,
         "title":this.registerForm.value['title'], 
-        // "addbutton":this.registerForm.value.addbutton,
         "cardwidth":this.registerForm.value.cardwidth, 
         "timeout":this.registerForm.value.timeout, 
       }
@@ -117,7 +135,7 @@ export class LoaderformComponent implements OnInit{
       this.onclose.emit();
       localStorage.setItem("loaderdata",JSON.stringify(data));
       this.router.navigate(['/component/loader']);
+      this.reloadComponent(true);
     }
   }
-
 }

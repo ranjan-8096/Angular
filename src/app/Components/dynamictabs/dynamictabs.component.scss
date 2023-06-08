@@ -1,18 +1,23 @@
 .nav.nav-tabs li {
-    padding: 10px 5px;
+    padding: 14px 5px;
     cursor: pointer;
-    width: 12%;
+    width: 25%;
     text-align: center;
+    border-right:1px solid #a29d9d;
 }
 
 .tab-content {
-    padding: 20px 0px;
+    padding: 20px 20px;
+    border: 1px solid #ccc;
+    min-height: 174px;
+    background-color: #f6f6f6;
 }
 
 .dynamics_tab{
     padding: 20px 20px;
     background-color: #fff;
     margin: 30px 0px;
+    box-shadow:2px 2px 5px 3px #ccc;
 }
 .dynamics_tab h3 {
     text-decoration: underline;
@@ -51,10 +56,69 @@
     background-color: #ccc;
 
 }
+.tabbutton{
+    background: transparent;
+    border: none;
+}
 
 
 @media only screen and (max-width: 767px) {
     .nav.nav-tabs li {
         width: 100%;
     }
+}
+
+
+
+
+
+
+
+
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    li:first-child{
+        margin-right: 10px;
+    }
+    li{
+        cursor: pointer;
+        button{
+            border: none;
+            background: transparent;
+            padding: 0px;
+        }
+    }
+}
+
+.active{
+    border-bottom: 1px solid black !important;
+    padding-bottom: 5px !important;
+}
+
+.htmlelement{
+    background-color: var(--color-white);;
+    overflow-y: scroll;
+    width:90%;
+    height:350px;
+    margin: auto;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+.copybutton{
+    text-align: end;
+        margin-right: 40px;
+        button{
+            border: 1.5px solid black;
+            background: transparent;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+        .copyicon{
+            margin-right: 5px;
+        }
 }

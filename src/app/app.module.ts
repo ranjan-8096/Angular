@@ -58,10 +58,12 @@ import { LoaderComponent } from './Components/loader/loader.component';
 import { TableformcomponentComponent } from './FormComponents/tableformcomponent/tableformcomponent.component';
 import { TablecomponentComponent } from './Components/tablecomponent/tablecomponent.component';
 import { EdittableformcomponentComponent } from './FormComponents/edittableformcomponent/edittableformcomponent.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { DynamictabsComponent } from './Components/dynamictabs/dynamictabs.component';
 import { DynamictabsformComponent } from './FormComponents/dynamictabsform/dynamictabsform.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ImagesliderComponent } from './Components/imageslider/imageslider.component';
+import { EditloaderComponent } from './FormComponents/editloader/editloader.component';
 
 
 
@@ -87,6 +89,7 @@ import { ImagesliderComponent } from './Components/imageslider/imageslider.compo
     TooltipformComponent,
     AlertformComponent,
     EditalertComponent,
+    EditloaderComponent,
     AlertsComponent,
     ToasterComponent,
     ToasterformComponent,
@@ -133,6 +136,7 @@ import { ImagesliderComponent } from './Components/imageslider/imageslider.compo
     ClipboardModule,
     NgxSliderModule,
     SlickCarouselModule,
+    NgxPaginationModule,
     NgMultiSelectDropDownModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 5000,

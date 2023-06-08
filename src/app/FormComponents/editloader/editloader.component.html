@@ -1,11 +1,11 @@
- <div class="modal-body">
+<div class="modal-body">
     <p><b>Please fill the mandotary fields according your preference to design of the Loader.</b> </p>
 
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="form-group pt-2">
             <label>Title:</label><span class="star">*</span>
             <div class="form-group d-flex align-items-center shadow-sec background">
-                <input type="text" maxlength="15" class="form-control inputbox" aria-describedby="title-err-text"
+                <input type="text" maxlength="15" class="form-control inputbox" [(ngModel)]="loaderdata.title" aria-describedby="title-err-text"
                     placeholder="Please enter title" name="title" formControlName="title"
                     [ngClass]="{ 'is-invalid': submitted && f.title.errors }" autofocus />
             </div>
@@ -20,7 +20,7 @@
         <div class="pt-2" >
             <label class="accessbility">Loader type</label><span class="star">*</span>
             <div class="form-group">
-                <select class="bgcolor" name="typefields" aria-label="select no of butons"
+                <select class="bgcolor" name="typefields" aria-label="select no of butons" [(ngModel)]="type"
                     aria-describedby="noofbtn-err-text" formControlName="typefields">
                     <option>Horizontal Loader</option>
                     <option>Circular Loader</option> 
@@ -36,11 +36,11 @@
         <div class="pt-2">
             <label class="accessbility">Timeout Time</label><span class="star">*</span>
             <div class="form-group d-flex align-items-center shadow-sec background">
-                <select class="bgcolor" name="cardwidth" aria-label="select cardwidth" aria-describedby="width-err-txt"
+                <select class="bgcolor" name="cardwidth" aria-label="select cardwidth" [(ngModel)]="loadertimeout" aria-describedby="width-err-txt"
                     formControlName="timeout">
-                    <option>1000ms</option>
-                    <option>10000ms</option>
-                    <option>20000ms</option> 
+                    <option value="1000ms">1000ms</option>
+                    <option value="2000ms">2000ms</option>
+                    <option value="5000ms">5000ms</option> 
                 </select>
             </div>
             <div *ngIf="(f.cardwidth.touched || submitted) && f.cardwidth.errors" class="invalid-feedback">
@@ -52,7 +52,7 @@
         <div class="pt-2">
             <label class="accessbility">Loader width</label><span class="star">*</span>
             <div class="form-group d-flex align-items-center shadow-sec background">
-                <select class="bgcolor" name="cardwidth" aria-label="select cardwidth" aria-describedby="width-err-txt"
+                <select class="bgcolor" name="cardwidth" aria-label="select cardwidth" [(ngModel)]="loaderwidth" aria-describedby="width-err-txt"
                     formControlName="cardwidth">
                     <option>100%</option>
                     <option>75%</option>
@@ -69,7 +69,7 @@
         <div class="pt-2">
             <label class="accessbility">Loader Theme Color:</label><span class="star">*</span>
             <div class="form-group d-flex align-items-center shadow-sec background">
-                <select class="bgcolor" name="theme" aria-label="select theme color" aria-describedby="theme-err-txt"
+                <select class="bgcolor" name="theme" aria-label="select theme color" [(ngModel)]="loadercolor" aria-describedby="theme-err-txt"
                     formControlName="color">
                     <option>dark</option>
                     <option>blue</option>
@@ -84,7 +84,7 @@
         </div>
         <div class="footerbutton">
             <button class="submitbutton">
-                Create
+                Update
             </button>
         </div>
     </form>

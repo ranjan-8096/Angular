@@ -3,15 +3,17 @@
 {
     margin:0px auto;
     display: block;
-    padding: 10px 30px;
+    padding: 10px 5px;
     font-size: 20px;
     background-color: #0070ad;
+    width: 100%;
 }
 
 .tooltipbtn {
     position: relative;
     display: inline-block;
     margin: 50px auto;
+    width: 26%;
     display: block;
   }
 
@@ -33,7 +35,7 @@
   
 .tooltipbtn .tooltiptext {
     visibility: hidden;
-    width: auto;
+    width: 70%;
     background-color: black;
     color: #fff;
     text-align: center;
@@ -41,43 +43,49 @@
     padding: 5px 20px;
     position: absolute;
     z-index: 1;
-    word-break: break-all;
     border: 1px solid #ccc;
+    inset: 0px auto auto;
   }
 
-  .tooltipbtn .topright {
-    bottom: 130%;
-    left: 55%;
-    margin-left: -60px;
-  }
+ 
+.tooltipbtn .topright {
+  top: inherit !important;
+  right: 0;
+  margin-left: -60px;
+  bottom: 65px !important;
+}
+  .tooltip_sec {
+    word-wrap: break-word;
+}
 
-span.tooltiptext.topleft {
-    left: 40%;
-    bottom: 130%;
-    margin-left: -60px;
+span.tooltiptext.topleft  {
+  left: 0 !important;
+  top: inherit !important;
+  margin-left: 0;
+  bottom: 65px !important;
 }
 
 span.tooltiptext.bottomright {
-    left: 55% !important;
-    bottom: -84%;
-    margin-left: -60px;
+  right: 0 !important;
+  top: 70px !important;
+  margin-left: -60px;
 }
 
 span.tooltiptext.bottomleft {
-    left: 40% !important;
-    bottom: -84%;
-    margin-left: -60px;
+  left: 0 !important;
+  top: 70px !important;
+  margin-left: 0;
 }
 span.tooltiptext.right {
     left: 68%;
     bottom:13%;
-    margin-left: -60px;
+    margin-left:310px;
 }
 
 span.tooltiptext.left {
-    left: 35% !important;
+    left: -226% !important;
     bottom: 23%;
-    margin-left: -60px;
+    margin-left:430px;
 }
 
   
@@ -206,17 +214,36 @@ span.tooltiptext.left {
 
 
 @media only screen and (max-width: 767px) {
-  span.tooltiptext.bottomright {
-    left: 55% !important;
-    bottom: -76px;
-    margin-left: -60px;
+
+  .tooltipbtn  {
+    width: 65%;
 }
 
+.tooltipbtn .topright {
+    top: inherit;
+    right: -38px;
+    margin-left: 0;
+    bottom: 65px;
+    width: 100%;
+}
+span.tooltiptext.topleft  {
+  left: 0 !important;
+  top: initial !important;
+  margin-left: -40px;
+  bottom: 65px !important;
+  width: 100% !important;
+}
+
+span.tooltiptext.bottomright {
+  right: -45px !important;
+  bottom: inherit !important;
+  top: 71px !important;
+  width: 100% !important;
+}
 span.tooltiptext.bottomleft {
-  left: 9% !important;
-  top: 61px ;
-  margin: 0 90px 0px 0;
-  height: 100%;
+  left: -45px !important;
+  top: 72px !important;
+  width: 100% !important;
 }
   .modaldialog-width {
     margin-top: 60px;

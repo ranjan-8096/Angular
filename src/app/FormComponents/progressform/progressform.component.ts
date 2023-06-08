@@ -28,7 +28,7 @@ export class ProgressformComponent {
 
     this.registerForm = this.formBuilder.group({
       selectedtitle:['success',[Validators.required]],
-      title:['',[Validators.required,Validators.maxLength(3)]],
+      title:['',[Validators.required,Validators.maxLength(20)]],
       progressvalue:['',[Validators.required,Validators.max(100)]],
       rangewidth:['',[Validators.required]],
       theme:['dark',[Validators.required]],

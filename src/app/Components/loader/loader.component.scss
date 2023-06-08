@@ -15,6 +15,8 @@
     border-radius: 20px;
 }
 
+
+
 .loader::after {
     content: '';
     box-sizing: border-box;
@@ -25,17 +27,18 @@
     left: 0;
     // animation: animFw 2s linear infinite;
 }
+
 .onemilisecond::after {
     content: ''; 
     animation: animFw 1s linear infinite;
 }
 .twomilisecond::after {
     content: ''; 
-    animation: animFw 2s linear infinite;
+    animation: animFw 10s linear infinite;
 }
 .fivemilisecond::after {
     content: ''; 
-    animation: animFw 5s linear infinite;
+    animation: animFw 20s linear infinite;
 }
 .loadersection label {
     display: block;
@@ -73,10 +76,16 @@
         width: 100%;
     }
 }
-
+.circulardiv{
+  display: inline-block;
+  .circularlabel{
+    margin-bottom: 20px;
+  }
+}
 
  
  #circle-loader-wrap {
+    margin: auto;
     overflow: hidden;
     position: relative;
     margin-top: -10px;
@@ -159,8 +168,8 @@
     border-bottom-left-radius: 0;
     transform-origin: 0 50% 0;
     -webkit-transform-origin: 0 50% 0;
-    animation: loading-left 4s infinite linear;
-    -webkit-animation: loading-left 4s infinite linear;
+    animation: loading-left 20s infinite linear;
+    -webkit-animation: loading-left 20s infinite linear;
   }
   
   .twomilisecond #circle-loader-wrap .right-wrap .loader {
@@ -169,8 +178,8 @@
     border-top-right-radius: 0;
     transform-origin: 100% 50% 0;
     -webkit-transform-origin: 100% 50% 0;
-    animation: loading-right 4s infinite linear;
-    -webkit-animation: loading-right 4s infinite linear;
+    animation: loading-right 20s infinite linear;
+    -webkit-animation: loading-right 20s infinite linear;
   }
 
   .fivemilisecond #circle-loader-wrap .left-wrap .loader {
@@ -178,8 +187,8 @@
     border-bottom-left-radius: 0;
     transform-origin: 0 50% 0;
     -webkit-transform-origin: 0 50% 0;
-    animation: loading-left 10s infinite linear;
-    -webkit-animation: loading-left 10s infinite linear;
+    animation: loading-left 40s infinite linear;
+    -webkit-animation: loading-left 40s infinite linear;
   }
   
   .fivemilisecond #circle-loader-wrap .right-wrap .loader {
@@ -188,8 +197,8 @@
     border-top-right-radius: 0;
     transform-origin: 100% 50% 0;
     -webkit-transform-origin: 100% 50% 0;
-    animation: loading-right 10s infinite linear;
-    -webkit-animation: loading-right 10s infinite linear;
+    animation: loading-right 40s infinite linear;
+    -webkit-animation: loading-right 40s infinite linear;
   }
   @keyframes loading-left {
     0% {
@@ -259,6 +268,12 @@
       -webkit-transform: rotate(180deg);
     }
   }
+
+.modal-dialog.modaldialog-width {
+    margin-top: 100px;
+}
+
+
   
 
 

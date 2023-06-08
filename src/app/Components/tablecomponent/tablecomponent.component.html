@@ -1,155 +1,117 @@
 <div class="main">
   <div class="top-header">
     <div class="insideheader">  
-      <h4 class="subheader">Table <span class="sideheader">Component</span></h4>
+      <h4 class="subheader">Table <span class="sideheader"></span></h4>
     </div> 
     <div class="button-sec"> 
       <button class=" backbutton" (click)="backwindow()">Back</button>
       <button class=" backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal2">Edit</button>
     </div> 
   </div>
-      <div class="tabledata" *ngIf="tabledata.tablestrip == 'Yes'">
-        <div class="headerpart">
-          <label class="title">{{tabledata.title}} :</label>
-          <div class="search-container">
-              <input type="text" #search placeholder="Search.." name="search" class="search">
-              <button class="search_button" (click)="Search()"><i class="fa fa-search"></i></button>
+      <div class="divtable" #table>
+
+
+        <div class="tabledata" *ngIf="tabledata.tablestrip == 'Yes'">
+          <div class="headerpart">
+            <label class="title">{{tabledata.title}} :</label>
+            <div class="search-container">
+                <input type="text" #search placeholder="Search.." name="search" class="search">
+                <button class="search_button" (click)="Search()"><i class="fa fa-search"></i></button>
+            </div>
           </div>
+
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr [ngStyle]="{'background-color':themecolor,'color':color}">
+                  <th scope="col" *ngFor="let item of heading">{{item.name}}</th>
+                </tr>
+              </thead>
+              <tbody *ngIf="array.length > 0">
+                <tr *ngFor="let item of array | paginate: { itemsPerPage: pageno, currentPage: p }">
+                  <td>{{item.Employee_Id}}</td>
+                  <td >{{item.Name}}</td>
+                  <td >{{item.email}}</td>
+                  <td >{{item.designation}}</td>
+                  <td >{{item.grade}}</td>
+                  <td>{{item.location}}</td>
+                </tr>
+            </table>
+            <div class="pagination" *ngIf="tabledata.pagination == 'Yes' && array.length > 0">
+              <div class="page-row">
+                <label class="rows">Rows per Page</label>
+                <select [(ngModel)]="pageno" (change)="handlechnage()" class="pageno">
+                  <option>5</option>
+                  <option>10</option>
+                  <option>15</option>
+                </select>
+              </div>
+              <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+            <h5 class="nodata" *ngIf="array.length == 0">No Data Available</h5>
+        </div> 
+
+
+
+
+        <div class="tabledata" *ngIf="tabledata.tablestrip == 'No'">
+
+          <div class="headerpart">
+            <label class="title">{{tabledata.title}} :</label>
+            <div class="search-container">
+                <input type="text" #search placeholder="Search.." name="search" class="search">
+                <button class="search_button" (click)="Search()"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+            <table class="table table-hover">
+              <thead>
+                <tr [ngStyle]="{'background-color':themecolor,'color':color}">
+                  <th scope="col" *ngFor="let item of heading">{{item.name}}</th>
+                </tr>
+              </thead>
+              <tbody *ngIf="array.length > 0">
+                <tr *ngFor="let item of array | paginate: { itemsPerPage: pageno, currentPage: p }">
+                  <td>{{item.Employee_Id}}</td>
+                  <td >{{item.Name}}</td>
+                  <td >{{item.email}}</td>
+                  <td >{{item.designation}}</td>
+                  <td >{{item.grade}}</td>
+                  <td>{{item.location}}</td>
+                </tr>
+            </table>
+              <div class="pagination" *ngIf="tabledata.pagination == 'Yes' && array.length > 0">
+                <label class="rows">Rows per Page</label>
+                <select [(ngModel)]="pageno" (change)="handlechnage()" class="pageno">
+                  <option>5</option>
+                  <option>10</option>
+                  <option>15</option>
+                </select>
+              <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+            <h5 class="nodata" *ngIf="array.length == 0">No Data Available</h5>
         </div>
+      </div>
 
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col" *ngFor="let item of heading">{{item.th}}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let item of array">
-                <td>{{item.td0}}</td>
-                <td >{{item.td1}}</td>
-                <td >{{item.td2}}</td>
-                <td >{{item.td3}}</td>
-                <td >{{item.td4}}</td>
-              </tr>
-          </table>
-      </div> 
 
-      <!-- <div class="tabledata" *ngIf="tabledata.tablestrip == 'No'">
 
-        <h4>{{tabledata.title}} :</h4>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col" *ngFor="let item of array">{{item.th}}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td *ngFor="let item of array">{{item.td0}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td1}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td2}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td0}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td1}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td2}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td0}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td1}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td2}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td0}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td1}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td2}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td3}}</td>
-              </tr>
-              <tr>
-                <td *ngFor="let item of array">{{item.td3}}</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td *ngFor="let item of array">{{item.td3}}</td>
-              </tr>
-            </tfoot>
-          </table>
-      </div> -->
-  
 
-      <!-- <mdb-form-control>
-        <input
-          mdbInput
-          type="text"
-          class="form-control"
-          id="search-input"
-          (keyup)="search($event)"
-        />
-        <label mdbLabel class="form-label" for="search-input">Search</label>
-      </mdb-form-control> -->
+      <ul class="list-inline">
+        <li (click)="openhtml()"><button [class]="htmlcontent">HTML</button></li>
+        <li (click)="opencss()"><button [class]="csscontent">CSS</button></li>
+      </ul>
+    
+      <div class="htmlelement" *ngIf="htmlcontent == 'active'">
+        <div class="copybutton">
+          <button ngxClipboard [cbContent]="getHtmlContent()" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
+        </div>
+        <pre><code [highlight]="getHtmlContent()">{{getHtmlContent()}}</code></pre>
+      </div>
+      <div class="htmlelement" *ngIf="csscontent == 'active'">
+        <div class="copybutton">
+          <button ngxClipboard [cbContent]="CSS" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
+        </div>
+        <pre><code [highlight]="CSS">{{CSS}}</code></pre>
+      </div>
 
-      <!-- <div class="datatable mt-4">
-        <table
-          class="table datatable-table"
-          mdbTable
-          mdbTableSort
-          #table="mdbTable"
-          #sortSearch="mdbTableSort"
-          [dataSource]="dataSource"
-          [sort]="sortSearch"
-          [pagination]="paginationSearch"
-        >
-          <thead class="datatable-header">
-            <tr>
-              <th *ngFor="let header of headers" [mdbTableSortHeader]="header" scope="col">
-                {{ header | titlecase }}
-              </th>
-            </tr>
-          </thead>
-          <tbody class="datatable-body">
-            <tr *ngFor="let data of table.data" scope="row">
-              <td>
-                {{ data.name }}
-              </td>
-              <td>
-                {{ data.position }}
-              </td>
-              <td>
-                {{ data.office }}
-              </td>
-              <td>
-                {{ data.age }}
-              </td>
-              <td>
-                {{ data.startDate }}
-              </td>
-              <td>
-                {{ data.salary }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <mdb-table-pagination #paginationSearch></mdb-table-pagination>
-      </div> -->
 </div>
 
 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">

@@ -23,7 +23,7 @@ export class FooterformComponent {
    ngOnInit() {
 
     this.registerForm = this.formBuilder.group({
-      text: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
+      text: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]],
       linkedln: ['', [Validators.required]],
       twitter:['', [Validators.required]],
       insta:['',[Validators.required]],
