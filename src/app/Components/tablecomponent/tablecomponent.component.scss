@@ -37,13 +37,20 @@ pagination-controls {
 .rows{
     width:120px;
 }
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+}
 .pagination{
     float: right;
     padding: 20px;
 }
 .pageno {
-    width: 70px;
+    width: 32px;
     height: 30px;
+    border: none;
+    background: transparent;
+    margin-top:-2px;
 }
 .nodata{
     text-align: center;
@@ -81,6 +88,9 @@ pagination-controls {
         display: block;
         overflow-x: auto;
         white-space: nowrap;
+    }
+    input.search{
+        width:60%;
     }
 }
 

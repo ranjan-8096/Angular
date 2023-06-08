@@ -39,8 +39,6 @@ export class EditloaderComponent {
       var data1:any =  localStorage.getItem("loaderdata");
       this.loaderdata = JSON.parse(data1);
 
-      console.log(">>>>>>>>>>this.loaderdata",this.loaderdata);
-
       // console.log(">>>",this.loaderdata);
       this.type = this.loaderdata.typefields;
       this.loaderwidth = this.loaderdata.cardwidth;

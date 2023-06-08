@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -64,6 +64,7 @@ import { DynamictabsformComponent } from './FormComponents/dynamictabsform/dynam
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ImagesliderComponent } from './Components/imageslider/imageslider.component';
 import { EditloaderComponent } from './FormComponents/editloader/editloader.component';
+// import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 
@@ -137,11 +138,13 @@ import { EditloaderComponent } from './FormComponents/editloader/editloader.comp
     NgxSliderModule,
     SlickCarouselModule,
     NgxPaginationModule,
+    // NgxSpinnerModule,
     NgMultiSelectDropDownModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 5000,
       preventDuplicates: true
     }), // ToastrModule added
+    // NgxSpinnerModule.forRoot({ type: 'ball-clip-rotate' })
   ],
   providers: [
     {
@@ -151,6 +154,7 @@ import { EditloaderComponent } from './FormComponents/editloader/editloader.comp
       }
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }

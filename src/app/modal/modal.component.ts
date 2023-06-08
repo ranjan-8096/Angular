@@ -36,7 +36,7 @@ constructor(private router: Router){}
     {id:9,name:"Forms"},
     {id:10,name:"Table"},
     {id:11,name:"Loader"},
-    {id:12,name:"Dynamic Tabs"} 
+    {id:12,name:"Tabs"} 
 ];
 
 subheading = "This components help to create and customize the";

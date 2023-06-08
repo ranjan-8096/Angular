@@ -103,12 +103,12 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4>Loader</h4>
-                <button class="clearbtn" aria-label="close modal" #myModalClose9 data-bs-dismiss="modal">
-                    <img [src]="closeicon">
-                </button>
+                <button class="clearbtn"  aria-label="Card Update modal close"  #myModalClose2 data-bs-dismiss="modal">
+                  <img [src]="closeicon" class="closeicon">  
+                </button> 
             </div>
-            <!-- <app-form (onclose)="close()"></app-form> -->
-            <app-loaderform (onclose)="close()"></app-loaderform>
+            <app-editloader (onclose)="close()"></app-editloader> 
+  
         </div>
     </div>
 </div>
