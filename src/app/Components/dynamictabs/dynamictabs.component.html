@@ -1,7 +1,7 @@
 <div class="main">
     <div class="top-header">
       <div>
-        <h4 class="subheader">Dynamic Tabs <span class="sideheader">Component</span></h4>
+        <h4 class="subheader">Tabs <span class="sideheader"></span></h4>
       </div>
       <div class="button-sec">
         <button class="backbutton" (click)="backwindow()">Back</button>
@@ -16,7 +16,7 @@
         <h3>{{dynamictabsdata?.title}}</h3>
       
         <ul class="nav nav-tabs">
-          <li *ngFor="let data of tabdata" [ngClass]="[data?.class, dynamictabsdata.theme]" (click)="onClick(data?.id)" (onkey)="onClick(data?.id)"><span>{{data?.label}}</span></li>
+          <li *ngFor="let data of tabdata" (click)="onClick(data?.id)" (onkey)="onClick(data?.id)"><button [ngClass]="[data?.class, dynamictabsdata.theme]"><span>{{data?.label}}</span></button></li>
         </ul>
        
         <div class="tab-content">
@@ -56,7 +56,7 @@
         
     <div class="modal fade" id="exampleModall12" tabindex="-1" aria-labelledby="exampleModalLabel3"
     aria-hidden="true">
-    <div class="modal-dialog modaldialog-width">
+    <div class="modal-dialog ">
         <div class="modal-content">
             <div class="modal-header">
                 <h4>Toaster</h4>

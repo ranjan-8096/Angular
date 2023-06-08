@@ -79,12 +79,14 @@
                 </tr>
             </table>
               <div class="pagination" *ngIf="tabledata.pagination == 'Yes' && array.length > 0">
-                <label class="rows">Rows per Page</label>
-                <select [(ngModel)]="pageno" (change)="handlechnage()" class="pageno">
-                  <option>5</option>
-                  <option>10</option>
-                  <option>15</option>
-                </select>
+                <div class="page-row">
+                  <label class="rows">Rows per Page</label>
+                  <select [(ngModel)]="pageno" (change)="handlechnage()" class="pageno">
+                    <option>5</option>
+                    <option>10</option>
+                    <option>15</option>
+                  </select>
+                </div>
               <pagination-controls (pageChange)="p = $event"></pagination-controls>
             </div>
             <h5 class="nodata" *ngIf="array.length == 0">No Data Available</h5>

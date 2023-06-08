@@ -36,7 +36,7 @@
         <div *ngIf="f.optionvalue.value == '1' || f.optionvalue.value == '2'  || f.optionvalue.value == '3' || f.optionvalue.value == '4'">
         <div class="form-group">
             <label>Label 1:</label><span class="star">*</span>
-        <input type="text" maxlength="20" class="form-control inputbox" aria-describedby="helpertext-err-text" aria-required="true" placeholder="Please enter select option" name="helpertext1" formControlName="helpertext1" [ngClass]="{ 'is-invalid': submitted && f.helpertext1.errors }" autofocus/>
+        <input type="text" maxlength="15" class="form-control inputbox" aria-describedby="helpertext-err-text" aria-required="true" placeholder="Please enter select option" name="helpertext1" formControlName="helpertext1" [ngClass]="{ 'is-invalid': submitted && f.helpertext1.errors }" autofocus/>
         <div  *ngIf="f.helpertext1.errors"  class="invalid-feedback">
             <div class="error" role="alert" aria-atomic="true" *ngIf="f.helpertext1.errors.required">option is required</div>
         </div>
@@ -57,7 +57,7 @@
         <div *ngIf="f.optionvalue.value == '2'  || f.optionvalue.value == '3' || f.optionvalue.value == '4'">
         <div class="form-group">
             <label>Label 2:</label><span class="star">*</span>
-        <input type="text" maxlength="20" class="form-control inputbox" aria-describedby="helpertext-err-text" aria-required="true" placeholder="Please enter select option" name="helpertext2" formControlName="helpertext2" [ngClass]="{ 'is-invalid': submitted && f.helpertext2.errors }" autofocus/>
+        <input type="text" maxlength="15" class="form-control inputbox" aria-describedby="helpertext-err-text" aria-required="true" placeholder="Please enter select option" name="helpertext2" formControlName="helpertext2" [ngClass]="{ 'is-invalid': submitted && f.helpertext2.errors }" autofocus/>
         <div *ngIf="f.helpertext2.errors"  class="invalid-feedback">
             <div class="error" role="alert" aria-atomic="true" *ngIf="f.helpertext2.errors.required">option is required</div>
         </div>
@@ -77,7 +77,7 @@
         <div *ngIf="f.optionvalue.value == '3' || f.optionvalue.value == '4'">
         <div class="form-group">
             <label>Label 3:</label><span class="star">*</span>
-            <input type="text" maxlength="20" class="form-control inputbox" aria-describedby="helpertext-err-text" aria-required="true" placeholder="Please enter select option" name="helpertext3" formControlName="helpertext3" [ngClass]="{ 'is-invalid': submitted && f.helpertext3.errors }" autofocus/>
+            <input type="text" maxlength="15" class="form-control inputbox" aria-describedby="helpertext-err-text" aria-required="true" placeholder="Please enter select option" name="helpertext3" formControlName="helpertext3" [ngClass]="{ 'is-invalid': submitted && f.helpertext3.errors }" autofocus/>
             <div *ngIf="f.helpertext3.errors" class="invalid-feedback">
                 <div class="error" role="alert" aria-atomic="true" *ngIf="f.helpertext3.errors.required">option is required</div>
             </div>
@@ -97,7 +97,7 @@
     <div *ngIf="f.optionvalue.value == '4'">
         <div class="form-group">
             <label>Label 4:</label><span class="star">*</span>
-        <input type="text" maxlength="20" class="form-control inputbox" aria-describedby="helpertext-err-text" aria-required="true" placeholder="Please enter select option" name="helpertext4" formControlName="helpertext4" [ngClass]="{ 'is-invalid': submitted && f.helpertext4.errors }" autofocus/>
+        <input type="text" maxlength="15" class="form-control inputbox" aria-describedby="helpertext-err-text" aria-required="true" placeholder="Please enter select option" name="helpertext4" formControlName="helpertext4" [ngClass]="{ 'is-invalid': submitted && f.helpertext4.errors }" autofocus/>
         <div *ngIf="f.helpertext4.errors" class="invalid-feedback">
             <div class="error" role="alert" aria-atomic="true" *ngIf="f.helpertext4.errors.required">option is required</div>
         </div>

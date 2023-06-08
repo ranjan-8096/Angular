@@ -1,6 +1,7 @@
 import { Component ,ElementRef,OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+// import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-loader',
@@ -11,7 +12,9 @@ export class LoaderComponent implements OnInit {
 
   @ViewChild("loader") elRef: ElementRef;
 
-  constructor(private router: Router, elRef: ElementRef) {
+  constructor(private router: Router, elRef: ElementRef
+    // ,private spinner: NgxSpinnerService
+    ) {
     this.elRef = elRef;
   } 
 
@@ -56,7 +59,12 @@ export class LoaderComponent implements OnInit {
     if(localStorage.getItem("loaderdata")) {
       var data1:any =  localStorage.getItem("loaderdata");
       this.loaderdata = JSON.parse(data1);
-     
+    //   this.spinner.show();
+
+    // setTimeout(() => {
+    //   /** spinner ends after 5 seconds */
+    //   this.spinner.hide();
+    // }, 5000);
     }
   }
   getHtmlContent() {

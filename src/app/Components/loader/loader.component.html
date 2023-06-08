@@ -16,8 +16,15 @@
       <span class="loader" [ngClass]="[loaderdata.themecolor, loaderdata.timeoutvalue]"></span>
       </div>
 
-      <div *ngIf="loaderdata?.typefields == 'Circular Loader'" [ngClass]="[loaderdata.themecolor, loaderdata.timeoutvalue]">
-        <div id="circle-loader-wrap" >
+      <div class="circulardiv" *ngIf="loaderdata?.typefields == 'Circular Loader'" [ngClass]="[loaderdata.themecolor, loaderdata.timeoutvalue]" [ngStyle]="{'width':loaderdata.cardwidth}">
+        <label class="circularlabel">{{loaderdata.title}}</label>
+        <!-- <ngx-spinner bdColor = `rgba(0, 0, 0, 0.8)` size = "medium" color = "#fff" type = "ball-clip-rotate" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner> -->
+        <!-- <div class="text-center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div> -->
+        <div id="circle-loader-wrap">
           <div class="left-wrap">
             <div class="loader"></div>	
           </div>
@@ -95,12 +102,12 @@
     <div class="modal-dialog modaldialog-width">
         <div class="modal-content">
             <div class="modal-header">
-                <h4>Checkbox</h4>
+                <h4>Loader</h4>
                 <button class="clearbtn"  aria-label="Card Update modal close"  #myModalClose2 data-bs-dismiss="modal">
                   <img [src]="closeicon" class="closeicon">  
                 </button> 
             </div>
-            <app-editcheckbox (onclose)="close()"></app-editcheckbox> 
+            <app-editloader (onclose)="close()"></app-editloader> 
   
         </div>
     </div>

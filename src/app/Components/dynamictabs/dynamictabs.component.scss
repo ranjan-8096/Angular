@@ -1,8 +1,27 @@
 .nav.nav-tabs li {
-    padding: 10px 5px;
+    // padding: 10px 5px;
     cursor: pointer;
-    width: 12%;
     text-align: center;
+    margin-right: 0.2px;
+}
+.modal-dialog {
+    margin-top: 90px;
+}
+.nav.nav-tabs{
+    // background-color: rgb(231, 226, 226);
+}
+.nav.nav-tabs{
+    button{
+        padding: 8px 15px;
+        border: none;
+        // background: transparent;
+        width:100%;
+    }
+    button:focus{
+        -webkit-box-shadow: 0 0 10px 2px rgb(140, 119, 119);
+    -moz-box-shadow: 0 0 10px 2px rgb(140, 119, 119);
+    box-shadow: 0 0 10px 2px rgb(140, 119, 119);
+    }
 }
 
 .tab-content {

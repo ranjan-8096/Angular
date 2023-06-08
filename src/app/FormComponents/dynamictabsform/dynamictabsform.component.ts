@@ -46,7 +46,7 @@ export class DynamictabsformComponent {
     this.registerForm.get("optionvalue")?.valueChanges.subscribe((result)=>{
 
       if(result == 1) {
-        this.registerForm.get("helpertext1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
+        this.registerForm.get("helpertext1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
         this.registerForm.get("description1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
         this.registerForm.get("helpertext2")?.clearValidators();
         this.registerForm.get("description2")?.clearValidators();
@@ -60,8 +60,8 @@ export class DynamictabsformComponent {
         this.registerForm.get("description4")?.setValue("");
 
       }  else if(result == 2) { 
-        this.registerForm.get("helpertext1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
-        this.registerForm.get("helpertext2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
+        this.registerForm.get("helpertext1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
+        this.registerForm.get("helpertext2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
         this.registerForm.get("description1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
         this.registerForm.get("description2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
         this.registerForm.get("helpertext3")?.clearValidators();
@@ -73,9 +73,9 @@ export class DynamictabsformComponent {
 
         // this.selectordata = 1,this.registerForm.value.helpertext1)
       } else if(result == 3) {
-        this.registerForm.get("helpertext1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
-        this.registerForm.get("helpertext2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
-        this.registerForm.get("helpertext3")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
+        this.registerForm.get("helpertext1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
+        this.registerForm.get("helpertext2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
+        this.registerForm.get("helpertext3")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
         this.registerForm.get("description1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
         this.registerForm.get("description2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
         this.registerForm.get("description3")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
@@ -85,10 +85,10 @@ export class DynamictabsformComponent {
         this.registerForm.get("description4")?.setValue("");
 
       } else if(result == 4) {
-        this.registerForm.get("helpertext1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
-        this.registerForm.get("helpertext2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
-        this.registerForm.get("helpertext3")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
-        this.registerForm.get("helpertext4")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
+        this.registerForm.get("helpertext1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
+        this.registerForm.get("helpertext2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
+        this.registerForm.get("helpertext3")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
+        this.registerForm.get("helpertext4")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
         this.registerForm.get("description1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
         this.registerForm.get("description2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
         this.registerForm.get("description3")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);

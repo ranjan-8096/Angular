@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -61,6 +61,8 @@ import { EdittableformcomponentComponent } from './FormComponents/edittableformc
 import { NgxPaginationModule } from 'ngx-pagination';
 import { DynamictabsComponent } from './Components/dynamictabs/dynamictabs.component';
 import { DynamictabsformComponent } from './FormComponents/dynamictabsform/dynamictabsform.component';
+import { EditloaderComponent } from './FormComponents/editloader/editloader.component';
+// import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 
@@ -117,7 +119,8 @@ import { DynamictabsformComponent } from './FormComponents/dynamictabsform/dynam
     TablecomponentComponent,
     EdittableformcomponentComponent,
     DynamictabsComponent,
-    DynamictabsformComponent
+    DynamictabsformComponent,
+    EditloaderComponent
    
   ],
   imports: [
@@ -131,11 +134,13 @@ import { DynamictabsformComponent } from './FormComponents/dynamictabsform/dynam
     ClipboardModule,
     NgxSliderModule,
     NgxPaginationModule,
+    // NgxSpinnerModule,
     NgMultiSelectDropDownModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 5000,
       preventDuplicates: true
     }), // ToastrModule added
+    // NgxSpinnerModule.forRoot({ type: 'ball-clip-rotate' })
   ],
   providers: [
     {
@@ -145,6 +150,7 @@ import { DynamictabsformComponent } from './FormComponents/dynamictabsform/dynam
       }
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
