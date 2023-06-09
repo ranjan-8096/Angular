@@ -54,7 +54,7 @@
   top: inherit !important;
   right: 0;
   margin-left: -60px;
-  bottom: 65px !important;
+  bottom: 65px ;
 }
   .tooltip_sec {
     word-wrap: break-word;
@@ -224,6 +224,7 @@ span.tooltiptext.left {
   
   .tooltipbtn  {
     width: 65%;
+    font-size: 14px !important;
 
 }
 
@@ -272,6 +273,74 @@ span.tooltiptext.right  {
 h4.subheader {
   margin: 0px;
   font-size: 1.2rem;
+}
+}
+
+// @media screen and (min-width: 767px) and (max-width:1200px) {
+//   .tooltipbtn {
+//       max-width: 100%;
+//   }
+// }
+
+@media screen and (min-width: 992px) and (max-width:1200px) {
+  span.tooltiptext.right{
+    margin-left: 260px;
+}
+span.tooltiptext.left{
+  margin-left: 360px;
+}
+}
+
+@media screen and (min-width: 767px) and (max-width:992px) {
+  span.tooltiptext.right{
+    margin-left: 195px;
+    margin-top: 10px;
+}
+span.tooltiptext.left{
+  margin-left: 265px;
+  margin-top: 10px;
+}
+span.tooltiptext.topright{
+  bottom: 90px !important;
+}
+span.tooltiptext.topleft{
+  bottom: 90px !important;
+}
+span.tooltiptext.bottomright {
+  top: 100px !important;
+}
+span.tooltiptext.bottomleft{
+  top: 100px !important;
+}
+}
+
+@media screen and (min-width: 506px) and (max-width:767px) {
+  span.tooltiptext.right{
+    margin-left: 291px;
+    width:40% !important;
+}
+span.tooltiptext.left{
+  margin-left: -130px;
+  width:40% !important;
+}
+}
+
+@media screen and (min-width: 400px) and (max-width:767px) {
+span.tooltiptext.left{
+  margin-left: -130px;
+  width:40% !important;
+}
+}
+
+@media screen and (min-width: 320px) and (max-width:400px) {
+  span.tooltiptext.left {
+    margin-left: -65px;
+    width: 35% !important;
+}
+span.tooltiptext.right {
+  margin-left: 195px;
+  width: 35% !important;
+  margin-top: -30px;
 }
 }
 
