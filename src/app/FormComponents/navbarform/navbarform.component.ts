@@ -413,7 +413,7 @@ export class NavbarformComponent implements OnInit{
          
       }
       if(this.registerForm.value['color'] == "light"){
-        this.bgcolor="f5fbff";
+        this.bgcolor="white";
         this.bgcolordropdown="light";
         this.headerclass="headerclass";
         this.color="#000";  

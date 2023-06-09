@@ -23,7 +23,9 @@
 .component{
   color: black;
 }
-
+.modal-dialog{
+  margin-top: 90px;
+}
 .backbutton{
   border-radius: 8px;
   background: #0070ad !important;
@@ -215,8 +217,14 @@ span.tooltiptext.left {
 
 @media only screen and (max-width: 767px) {
 
+  .tooltip_sec button.btn-secondary {
+    width: 65%;
+
+  }
+  
   .tooltipbtn  {
     width: 65%;
+
 }
 
 .tooltipbtn .topright {
@@ -258,7 +266,8 @@ span.tooltiptext.left{
 span.tooltiptext.right  {
   left: 82%;
   bottom: 13%;
-  margin-left: -60px;
+  margin-left:165px;
+  top: 13px !important;
 }
 h4.subheader {
   margin: 0px;

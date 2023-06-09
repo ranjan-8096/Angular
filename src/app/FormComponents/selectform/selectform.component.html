@@ -111,7 +111,7 @@
                 <option>25%</option>
             </select>
         </div>
-        <div *ngIf="(f.selectwidth.touched || submitted) && f.selectwidth.errors" class="invalid-feedback">
+        <div *ngIf="(f.selectwidth.touched || submitted) && f.selectwidth.errors" >
             <div class="error" role="alert" id="width-err-txt" *ngIf="f.selectwidth.errors.required">Please select an option</div>
         </div> 
     </div>

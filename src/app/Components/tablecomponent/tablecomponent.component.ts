@@ -165,6 +165,7 @@ heading = [
   ];
 
   copyarray: any[] = [];
+  searcharray:any[]=[];
   resetarray = this.array;
   themecolor:any;
   color:any;
@@ -339,6 +340,42 @@ pagination-controls {
     setTimeout(()=>{
         this.Copy="Copy";
     }, 2000);
+  }
+
+  handlechange(e:any){
+    var check:any[] = [];
+
+    // console.log(">>>>>",e.target.value);
+    // var stringvalue = (e.target.value).toString();   
+    // this.array.filter(x=>Object.values(x).filter(value=>{
+      // check.push(value.toString());
+      // for(let i = 0;value.toString().length;i++){
+      //   var mycheck = value.toString().charAt(i).includes(e.target.value);
+      //   console.log(">>>>",mycheck);
+      //   if(mycheck){
+
+      //   }
+      // }
+      // if(value.toString().includes(e.target.value)){
+      //   // console.log('>>>>>',x);
+      //   // this.searcharray.push(x);
+      // }
+    // }))
+    console.log(">>>>>>>",check[2].charAt(0).includes(e.target.value));
+
+    // check.map((x)=>{
+      // var j = 0;
+      for(let i = 0;i<check.length;i++){
+          var mycheck = check[i].charAt(i).includes(e.target.value);
+          console.log(">>>>",mycheck);
+          if(mycheck){
+            // console.log(">>>>",x);
+          }
+        }
+    // })
+    // console.log(">>>>>>>",this.searcharray);
+    // this.array = this.searcharray;
+    // console.log(">>>>>>>",this.array);
   }
 
 }

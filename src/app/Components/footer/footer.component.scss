@@ -6,6 +6,9 @@
 .side {
     color: var(--color-black);
 }
+.modal-dialog {
+    margin-top: 90px;
+}
 
 .backbutton {
     border-radius: 8px;
@@ -71,6 +74,7 @@
 }
 
 .footer {
+    margin-top:2px;
     .footerwidth {
         padding-left: 30px;
         padding-right: 30px;
@@ -82,7 +86,7 @@
             .social-default {
                 li {
                     .social-icon {
-                        background-color: var(--color-white);
+                        background-color: rgb(238, 242, 248);
                         // border: 1px solid black;
                         border-radius: 50%;
                         width: 40px;
@@ -209,7 +213,20 @@
 
 
 @media only screen and (max-width: 767px) {
-.modaldialog-width {
-    max-width: 100% !important; 
+    .modaldialog-width {
+        max-width: 100% !important; 
+    }
+    ul.nav.social-default {
+        li{
+            padding-top: 10px;
+        }
+    }
 }
+
+
+@media screen and (min-width:320px) and (max-width:335px) {
+    .subheader{
+        font-size: 17px !important;
+    }
+    
 }

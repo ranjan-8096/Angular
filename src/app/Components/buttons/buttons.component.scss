@@ -4,7 +4,11 @@
 .btncmp{
     color: black;
 }
-
+.btncomp:focus{
+    -webkit-box-shadow: 0 0 10px 2px rgb(140, 119, 119);
+    -moz-box-shadow: 0 0 10px 2px rgb(140, 119, 119);
+    box-shadow: 0 0 10px 2px rgb(140, 119, 119);
+}
 .backbutton{
     border-radius: 8px;
     padding: 5px;
@@ -18,7 +22,7 @@
     overflow-y: scroll;
     width:90%;
     min-height:105px;
-    max-height: 350px;
+    max-height: 320px;
     margin: auto;
     margin-top: 30px;
 }

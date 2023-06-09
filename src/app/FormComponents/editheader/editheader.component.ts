@@ -42,7 +42,7 @@ export class EditheaderComponent implements OnInit {
         this.themecolor = "purple";
       } else if(this.headerdata.bgcolor == "black"){
         this.themecolor = "dark";
-      } else if(this.headerdata.bgcolor == "#F1F4F8"){
+      } else if(this.headerdata.bgcolor == "white"){
         this.themecolor = "light";
       }
 
@@ -67,7 +67,7 @@ export class EditheaderComponent implements OnInit {
           } else {
             return "No";
           }
-        } else if(this.headerdata.bgcolor == "#F1F4F8"){
+        } else if(this.headerdata.bgcolor == "white"){
           if(this.headerdata.image1  == "Yes"){
             return "Yes";
           } else {
@@ -111,7 +111,7 @@ export class EditheaderComponent implements OnInit {
           } else {
             return "";
           }
-        } else if(this.headerdata.bgcolor == "#F1F4F8") {
+        } else if(this.headerdata.bgcolor == "white") {
           if(this.headerdata.image3  == "Yes"){
             return "Yes";
           } else if(this.headerdata.image3  == "No" && this.headerdata.image4  == "Yes") {
@@ -232,7 +232,7 @@ reloadComponent(self:boolean,urlToNavigateTo ?:string){
         }
       }
       if(this.registerForm.value['color'] == "light"){
-        this.bgcolor="#F1F4F8";
+        this.bgcolor="white";
         this.color="#0070ad";
         if(this.registerForm.value['image1']== "Yes"){
           this.registerForm.value['whitewbh']="No";

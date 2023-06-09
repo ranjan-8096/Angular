@@ -101,7 +101,7 @@ export class EditnavbarComponent implements OnInit {
         this.themecolor = "purple";
       } else if(this.navbardata.bgcolor == "black"){
         this.themecolor = "dark";
-      } else if(this.navbardata.bgcolor == "#F1F4F8"){
+      } else if(this.navbardata.bgcolor == "white"){
         this.themecolor = "light";
       } 
 
@@ -660,7 +660,7 @@ reloadComponent(self:boolean,urlToNavigateTo ?:string){
          
       }
       if(this.registerForm.value['color'] == "light"){
-        this.bgcolor="f5fbff";
+        this.bgcolor="white";
         this.bgcolordropdown="light";
         this.headerclass="headerclass";
         this.color="#000";  
