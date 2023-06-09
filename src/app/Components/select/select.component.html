@@ -17,7 +17,7 @@
 
         
   <div class="container" #selector>
-    <div class="container mt-3 width100 select_container" [ngStyle]="{'width':selectdata.selectwidth}" [style.border]="'1px solid ' +  selectdata?.color">
+    <div class="container mt-3 width100 select_container" [ngStyle]="{'width':selectdata.selectwidth}" [style.border]="'2px solid ' +  selectdata?.color">
         <label>{{selectdata?.title}}</label>
         <div class="select"> 
           <ng-multiselect-dropdown *ngIf="updatedropdown"
