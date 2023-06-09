@@ -79,39 +79,38 @@ export class RangesliderformComponent {
     if(this.registerForm.value.minvalue > this.registerForm.value.maxvalue) {
       this.lengthvalidation = true;
     } else {
-      this.lengthvalidation = false;
-    }
+      if(this.registerForm.invalid) {
+        return true;
+      } else {
+  
+        if(this.registerForm.value.theme == "light"){
+          this.registerForm.value.color = "#F1F4F8";
+        } else if(this.registerForm.value.theme == "dark"){
+          this.registerForm.value.color = "black"
+        } else if(this.registerForm.value.theme == "blue"){
+          this.registerForm.value.color = "#0070ad"
+        } else if(this.registerForm.value.theme == "purple"){
+          this.registerForm.value.color = "#2b0a3d"
+        }
+        const data = {
+          "title":this.registerForm.value.title,
+          "minvalue":this.registerForm.value.minvalue,
+          "maxvalue":this.registerForm.value.maxvalue,
+          "rangewidth":this.registerForm.value.rangewidth,
+          "theme":this.registerForm.value.theme,
+          "color":this.registerForm.value.color
+        };
+        
+        console.log(">>>>>",this.registerForm.value);
+        this.onclose.emit();
+        this.commonservice.rangeslidercompletedata(data);
+        localStorage.setItem("rangesliderdata",JSON.stringify(data));
+        this.router.navigate(['/component/range']);
+      }    }
 
     // console.log(">>>>>>>>>",this.lengthvalidation);
 
-    if(this.registerForm.invalid && !this.lengthvalidation) {
-      return true;
-    } else {
-
-      if(this.registerForm.value.theme == "light"){
-        this.registerForm.value.color = "#F1F4F8";
-      } else if(this.registerForm.value.theme == "dark"){
-        this.registerForm.value.color = "black"
-      } else if(this.registerForm.value.theme == "blue"){
-        this.registerForm.value.color = "#0070ad"
-      } else if(this.registerForm.value.theme == "purple"){
-        this.registerForm.value.color = "#2b0a3d"
-      }
-      const data = {
-        "title":this.registerForm.value.title,
-        "minvalue":this.registerForm.value.minvalue,
-        "maxvalue":this.registerForm.value.maxvalue,
-        "rangewidth":this.registerForm.value.rangewidth,
-        "theme":this.registerForm.value.theme,
-        "color":this.registerForm.value.color
-      };
-      
-      console.log(">>>>>",this.registerForm.value);
-      this.onclose.emit();
-      this.commonservice.rangeslidercompletedata(data);
-      localStorage.setItem("rangesliderdata",JSON.stringify(data));
-      this.router.navigate(['/component/range']);
-    }
+   
   }
 
 

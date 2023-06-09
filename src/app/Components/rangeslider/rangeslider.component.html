@@ -17,7 +17,7 @@
       
      
          <div class="rangeslider width100" >
-          <div class="marginauto" [ngStyle]="{'width':rangesliderdata?.rangewidth}">
+          <div class="marginauto" [ngClass]="rangesliderdata?.theme" [ngStyle]="{'width':rangesliderdata?.rangewidth}">
           <div class="minmax">
             <p>Min: <span [ngClass]="rangesliderdata?.theme">{{ minValue }}</span></p>
             <p>Max: <span [ngClass]="rangesliderdata?.theme">{{ maxValue }}</span></p>
