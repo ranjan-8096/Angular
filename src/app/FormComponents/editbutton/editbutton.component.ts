@@ -62,7 +62,7 @@ export class EditbuttonComponent implements OnInit {
         this.themecolor = "purple";
       } else if(this.buttondata.bgcolor == "black"){
         this.themecolor = "dark";
-      } else if(this.buttondata.bgcolor == "#F1F4F8"){
+      } else if(this.buttondata.bgcolor == "white"){
         this.themecolor = "light";
       }
 
@@ -136,7 +136,7 @@ export class EditbuttonComponent implements OnInit {
         this.color="white"; 
       }
       if(this.registerForm.value['color'] == "light"){
-        this.bgcolor="#F1F4F8";
+        this.bgcolor="white";
         this.color="#000"; 
       }
       if(this.registerForm.value['imagev']== "Yes"){

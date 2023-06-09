@@ -75,7 +75,7 @@ export class ButtonformComponent implements OnInit  {
         this.color="white"; 
       }
       if(this.registerForm.value['color'] == "light"){
-        this.bgcolor="#F1F4F8";
+        this.bgcolor="white";
         this.color="#000"; 
       }
        

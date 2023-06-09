@@ -75,6 +75,9 @@ input[type="checkbox"].switch_1{
     padding: 50px; 
   }
   
+  .modal-dialog{
+    margin-top:90px;
+  }
  
  
   .htmlelement {
@@ -156,4 +159,11 @@ input[type="checkbox"].switch_1{
     .modaldialog-width {
       max-width: 100% !important;
     }
+  }
+
+
+  @media screen and (min-width:320px) and (max-width:390px) {
+    input[type="checkbox"].switch_1.extralarge{
+      font-size: 75px; 
+      }
   }

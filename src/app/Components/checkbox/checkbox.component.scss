@@ -104,11 +104,11 @@
    border-width: 0 2px 2px 0; 
 }
  .lightcolor .checkbox-box .form-group label:before {
-  border: 2px solid #fff;
+  border: 2px solid #D3D3D3;
  }
  .lightcolor .checkbox-box .form-group input:checked+label:after { 
   content: '';
-   border: solid #fff;  
+   border: solid #D3D3D3;  
    border-width: 0 2px 2px 0; 
 }
 
@@ -165,7 +165,7 @@
  }
  .lightcolor .radioclass .form-group label span,
  .checkbox label span{ 
-  border: 2px solid #fff; 
+  border: 2px solid #D3D3D3; 
  }
  
 
@@ -184,7 +184,7 @@
  }
  .lightcolor .radioclass .form-group :checked~label span::before,
  .checkbox :checked~label span::before {
-   background-color: #fff;
+   background-color: #D3D3D3;
  }
  
 
@@ -241,6 +241,10 @@
    border-bottom: 1px solid black !important;
    padding-bottom: 5px !important;
  }
+
+ .modal-dialog { 
+  margin-top:90px
+}
 
 
  @media only screen and (max-width: 767px) {

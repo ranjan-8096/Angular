@@ -122,7 +122,7 @@ export class CheckboxformComponent implements OnInit{
         this.themecolor = "darkcolor";
       }
       if (this.registerForm.value['color'] == "light") {
-        this.bgcolor = "#fff";
+        this.bgcolor = "#D3D3D3"
         this.color = "#000";
         this.theme="light";
         this.themecolor = "lightcolor";

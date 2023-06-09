@@ -39,8 +39,8 @@
                 <select class="bgcolor" name="cardwidth" aria-label="select cardwidth" [(ngModel)]="loadertimeout" aria-describedby="width-err-txt"
                     formControlName="timeout">
                     <option>1000ms</option>
-                    <option>2000ms</option>
-                    <option>5000ms</option> 
+                    <option>20000ms</option>
+                    <option>50000ms</option> 
                 </select>
             </div>
             <div *ngIf="(f.cardwidth.touched || submitted) && f.cardwidth.errors" class="invalid-feedback">

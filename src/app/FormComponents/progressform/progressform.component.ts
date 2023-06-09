@@ -85,7 +85,7 @@ export class ProgressformComponent {
     } else {
 
       if(this.registerForm.value.theme == "light"){
-        this.registerForm.value.color = "#F1F4F8";
+        this.registerForm.value.color = "white";
       } else if(this.registerForm.value.theme == "dark"){
         this.registerForm.value.color = "black"
       } else if(this.registerForm.value.theme == "blue"){

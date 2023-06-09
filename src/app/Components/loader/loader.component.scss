@@ -343,3 +343,23 @@
     margin: auto;
     margin-top: 30px;
 }
+
+
+@media screen and (min-width:320px) and (max-width:765px) {
+  .loaderdiv {
+    width: 100% !important;
+}
+.circulardiv {
+  width: 100% !important;
+}
+.modaldialog-width{
+  max-width:100% !important
+}
+}
+
+@media screen and (min-width:320px) and (max-width:356px) {
+  .subheader{
+      font-size: 17px !important;
+  }
+  
+}

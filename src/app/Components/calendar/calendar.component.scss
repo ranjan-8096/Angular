@@ -42,6 +42,9 @@
         }
     }
 }
+.modal-dialog{
+    margin-top:90px;
+}
 
 .active{
     border-bottom: 1px solid black !important;
@@ -89,4 +92,14 @@
     text-align: right;
 }
 
+}
+
+@media screen and (min-width:320px) and (max-width:335px) {
+    .insideheader{
+        width:60%
+    }
+    .subheader{
+        font-size: 17px !important;
+    }
+    
 }

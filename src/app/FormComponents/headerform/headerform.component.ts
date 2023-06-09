@@ -101,7 +101,7 @@ export class HeaderformComponent implements OnInit {
         }
       }
       if(this.registerForm.value['color'] == "light"){
-        this.bgcolor="#F1F4F8";
+        this.bgcolor="white";
         this.color="#0070ad";
         if(this.registerForm.value['image1']== "Yes"){
           this.registerForm.value['whitewbh']="No";

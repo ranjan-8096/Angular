@@ -85,10 +85,10 @@ export class EditloaderComponent {
       if (this.registerForm.value['timeout'] == "1000ms") {
         this.timeoutvalue = "onemilisecond"; 
       }
-      if (this.registerForm.value['timeout'] == "2000ms") {
+      if (this.registerForm.value['timeout'] == "10000ms") {
         this.timeoutvalue = "twomilisecond"; 
       }
-      if (this.registerForm.value['timeout'] == "5000ms") {
+      if (this.registerForm.value['timeout'] == "20000ms") {
         this.timeoutvalue = "fivemilisecond"; 
       }
 

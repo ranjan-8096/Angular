@@ -46,7 +46,7 @@ export class FooterformComponent {
       this.registerForm.get("glassdoor")?.setValue(this.footerdata?.glassdoor);
       this.registerForm.get("color")?.setValue(this.footerdata?.color);
 
-      if(this.footerdata?.color == "#F1F4F8" ){
+      if(this.footerdata?.color == "white" ){
       this.registerForm.get("color")?.setValue("light");
       } else if(this.footerdata.color == "black"){
       this.registerForm.get("color")?.setValue("dark");
@@ -72,7 +72,7 @@ export class FooterformComponent {
       
     } else {
       if(this.registerForm.value.color == "light"){
-        this.registerForm.value.color = "#F1F4F8";
+        this.registerForm.value.color = "white";
       } else if(this.registerForm.value.color == "dark"){
         this.registerForm.value.color = "black"
       } else if(this.registerForm.value.color == "blue"){

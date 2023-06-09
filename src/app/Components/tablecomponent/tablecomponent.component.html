@@ -10,12 +10,11 @@
   </div>
       <div class="divtable" #table>
 
-
         <div class="tabledata" *ngIf="tabledata.tablestrip == 'Yes'">
           <div class="headerpart">
             <label class="title">{{tabledata.title}} :</label>
             <div class="search-container">
-                <input type="text" #search placeholder="Search.." name="search" class="search">
+                <input type="text" #search placeholder="Search.." name="search" class="search" (keyup)="handlechange($event)">
                 <button class="search_button" (click)="Search()"><i class="fa fa-search"></i></button>
             </div>
           </div>
@@ -101,7 +100,7 @@
         <li (click)="opencss()"><button [class]="csscontent">CSS</button></li>
       </ul>
     
-      <div class="htmlelement" *ngIf="htmlcontent == 'active'">
+      <!-- <div class="htmlelement" *ngIf="htmlcontent == 'active'">
         <div class="copybutton">
           <button ngxClipboard [cbContent]="getHtmlContent()" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
         </div>
@@ -112,7 +111,7 @@
           <button ngxClipboard [cbContent]="CSS" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
         </div>
         <pre><code [highlight]="CSS">{{CSS}}</code></pre>
-      </div>
+      </div> -->
 
 </div>
 
