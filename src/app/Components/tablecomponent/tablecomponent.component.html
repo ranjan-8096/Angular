@@ -15,8 +15,7 @@
           <div class="headerpart">
             <label class="title">{{tabledata.title}} :</label>
             <div class="search-container">
-                <input type="text" #search placeholder="Search.." name="search" class="search">
-                <button class="search_button" (click)="Search()"><i class="fa fa-search"></i></button>
+                <input type="text"  [(ngModel)]="userFilter.Name" placeholder="Search.." name="search" class="search">
             </div>
           </div>
 
@@ -27,7 +26,7 @@
                 </tr>
               </thead>
               <tbody *ngIf="array.length > 0">
-                <tr *ngFor="let item of array | paginate: { itemsPerPage: pageno, currentPage: p }">
+                <tr *ngFor="let item of array  | filterBy: userFilter |  paginate: { itemsPerPage: pageno, currentPage: p  }">
                   <td>{{item.Employee_Id}}</td>
                   <td >{{item.Name}}</td>
                   <td >{{item.email}}</td>

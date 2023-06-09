@@ -44,7 +44,7 @@ heading = [
 
 ];
 
-  array = [
+  array:any[] = [
     {
       id:1,
       Employee_Id: 46092137,
@@ -229,6 +229,8 @@ pagination-controls {
   @ViewChild('myModalClose') modalClose8: any;
   @ViewChild("table") elRef: ElementRef;
   @ViewChild('search') search: any;
+
+  userFilter: any = { Name: '' };
 
   constructor(private router: Router, elRef: ElementRef) {
     this.elRef = elRef;

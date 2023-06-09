@@ -65,6 +65,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ImagesliderComponent } from './Components/imageslider/imageslider.component';
 import { EditloaderComponent } from './FormComponents/editloader/editloader.component';
 // import { NgxSpinnerModule } from 'ngx-spinner';
+import { FilterPipeModule } from 'ngx-filter-pipe'; // <-- Import
 
 
 
@@ -138,6 +139,7 @@ import { EditloaderComponent } from './FormComponents/editloader/editloader.comp
     NgxSliderModule,
     SlickCarouselModule,
     NgxPaginationModule,
+    FilterPipeModule,
     // NgxSpinnerModule,
     NgMultiSelectDropDownModule.forRoot(),
     ToastrModule.forRoot({

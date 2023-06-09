@@ -31,8 +31,8 @@ export class RangesliderformComponent {
     this.registerForm = this.formBuilder.group({
       selectedtitle:['success',[Validators.required]],
       title:['',[Validators.required,Validators.maxLength(20)]],
-      minvalue:['',[Validators.required]],
-      maxvalue:['',[Validators.required]],
+      minvalue:['',[Validators.required,Validators.min(1)]],
+      maxvalue:['',[Validators.required,Validators.min(1)]],
       rangewidth:['',[Validators.required]],
       theme:['dark',[Validators.required]],
     });

@@ -115,6 +115,13 @@ export class RangesliderComponent implements OnInit {
 
   }
 
+  changeFn(e:any){
+    this.Valuenumber = e.target.value;
+
+    console.log(">>>>>",e.target.value)
+
+  }
+
   getHtmlContent() {
     //This will return '<p> Text </p>' as a string
     const html = this.elRef.nativeElement.innerHTML;

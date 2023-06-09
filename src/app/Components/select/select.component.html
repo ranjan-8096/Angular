@@ -22,7 +22,6 @@
         <div class="select"> 
           <ng-multiselect-dropdown *ngIf="updatedropdown"
             [placeholder]="'Select value'"
-            (onDropDownClose)="close()"
             [settings]="dropdownSettings"
             [data]="dropdownList"
             [(ngModel)]="selectedItems"

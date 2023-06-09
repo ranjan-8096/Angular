@@ -22,6 +22,8 @@
                     <div class="error" role="alert" aria-atomic="true"  *ngIf="f.progressvalue.errors.required">Value is required</div>
                     <div class="error" role="alert" aria-atomic="true" *ngIf="f.progressvalue.errors.maxlength">maxlength 20 for title</div>
                     <div class="error" role="alert" aria-atomic="true" *ngIf="f.progressvalue.errors.max">progress cannot more than 100 value</div>
+                    <div class="error" role="alert" aria-atomic="true" *ngIf="f.progressvalue.errors.min">progress more than 1 value</div>
+
 
                   </div>
                 </div>
