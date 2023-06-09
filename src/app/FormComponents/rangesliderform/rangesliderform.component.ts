@@ -79,6 +79,7 @@ export class RangesliderformComponent {
     if(this.registerForm.value.minvalue > this.registerForm.value.maxvalue) {
       this.lengthvalidation = true;
     } else {
+      this.lengthvalidation = false;
       if(this.registerForm.invalid) {
         return true;
       } else {
