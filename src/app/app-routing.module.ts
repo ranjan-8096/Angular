@@ -22,6 +22,7 @@ import { LoaderComponent } from './Components/loader/loader.component';
 import { TablecomponentComponent } from './Components/tablecomponent/tablecomponent.component';
 import { DynamictabsComponent } from './Components/dynamictabs/dynamictabs.component';
 import { ImagesliderComponent } from './Components/imageslider/imageslider.component';
+import { LoginComponent } from './Components/login/login.component';
 
 
 const routes: Routes = [
@@ -48,7 +49,8 @@ const routes: Routes = [
   {path : "component/loader", component:LoaderComponent},
   {path : "component/table", component:TablecomponentComponent},
   {path : "component/dynamics", component:DynamictabsComponent},
-  {path : "component/imageslider", component:ImagesliderComponent}
+  {path : "component/imageslider", component:ImagesliderComponent},
+  {path : "component/login&signup", component:LoginComponent}
 
 ];
 

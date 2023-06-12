@@ -63,14 +63,14 @@ import { DynamictabsComponent } from './Components/dynamictabs/dynamictabs.compo
 import { DynamictabsformComponent } from './FormComponents/dynamictabsform/dynamictabsform.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ImagesliderComponent } from './Components/imageslider/imageslider.component';
-import { EditloaderComponent } from './FormComponents/editloader/editloader.component';
-// import { NgxSpinnerModule } from 'ngx-spinner';
-import { FilterPipeModule } from 'ngx-filter-pipe'; // <-- Import
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
+import { EditloaderComponent } from './FormComponents/editloader/editloader.component'; 
+import { FilterPipeModule } from 'ngx-filter-pipe';  
+import { Ng2SearchPipeModule } from 'ng2-search-filter'; 
 import { ImagesliderformComponent } from './FormComponents/imagesliderform/imagesliderform.component';
 import { BreakpointlayoutformComponent } from './FormComponents/breakpointlayoutform/breakpointlayoutform.component';
-import { BreakpointlayoutComponent } from './Components/breakpointlayout/breakpointlayout.component'; // <-- Import
+import { BreakpointlayoutComponent } from './Components/breakpointlayout/breakpointlayout.component';
+import { LoginformComponent } from './FormComponents/loginform/loginform.component';
+import { LoginComponent } from './Components/login/login.component';  
 
 
 @NgModule({
@@ -131,7 +131,9 @@ import { BreakpointlayoutComponent } from './Components/breakpointlayout/breakpo
     ImagesliderComponent,
     ImagesliderformComponent,
     BreakpointlayoutformComponent,
-    BreakpointlayoutComponent
+    BreakpointlayoutComponent,
+    LoginformComponent,
+    LoginComponent
    
   ],
   imports: [
