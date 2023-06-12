@@ -14,40 +14,32 @@
         <form class="checkbox-box width100" *ngIf="checkboxdata.typefields=='Checkbox'" [ngStyle]="{'width':checkboxdata.cardwidth, 'display':checkboxdata.alignverticle, 'border':'1px solid' + checkboxdata.bgcolor}"> 
           <label class="type-checkbox"><span>*</span> {{checkboxdata.title}}</label>
           <div [ngStyle]="{'display':checkboxdata.alignverticle}" class="form-group" *ngIf="checkboxdata.text1">
-            <input type="checkbox" id="value1" >
-            <label for="value1">{{checkboxdata.text1}}</label>
+              <label for="value1"><span><input type="checkbox" id="value1"><span class="checkmark" [ngClass]="checkboxdata.themecolor"></span></span>{{checkboxdata.text1}}</label>
           </div>
           <div class="form-group" [ngStyle]="{'display':checkboxdata.alignverticle}" *ngIf="checkboxdata.text2">
-            <input type="checkbox" id="value2" >
-            <label for="value2">{{checkboxdata.text2}}</label>
+            <label for="value2"><span><input type="checkbox" id="value2"><span class="checkmark" [ngClass]="checkboxdata.themecolor"></span></span>{{checkboxdata.text2}}</label>
           </div>
           <div  [ngStyle]="{'display':checkboxdata.alignverticle}"class="form-group" *ngIf="checkboxdata.text3">
-            <input type="checkbox" id="value3">
-            <label for="value3">{{checkboxdata.text3}}</label>
+            <label for="value3"><span><input type="checkbox" id="value3" ><span class="checkmark" [ngClass]="checkboxdata.themecolor"></span></span>{{checkboxdata.text3}}</label>
           </div>
           <div  [ngStyle]="{'display':checkboxdata.alignverticle}" class="form-group" *ngIf="checkboxdata.text4">
-            <input type="checkbox" id="value4">
-            <label for="value4">{{checkboxdata.text4}}</label>
+            <label for="value4"><span><input type="checkbox" id="value4"><span class="checkmark" [ngClass]="checkboxdata.themecolor"></span></span>{{checkboxdata.text4}}</label>
           </div>  
         </form>
 
         <form *ngIf="checkboxdata.typefields=='Radio'" class="radioclass" [ngStyle]="{'width':checkboxdata.cardwidth, 'display':checkboxdata.alignverticle, 'border':'1px solid' + checkboxdata.bgcolor}"> 
           <label class="type-checkbox"><span>*</span> {{checkboxdata.title}}</label>
           <div  [ngStyle]="{'display':checkboxdata.alignverticle}" class="form-group" *ngIf="checkboxdata.text1">
-            <input name="radio" type="radio" id="value1" >
-            <label for="value1"> {{checkboxdata.text1}} <span></span></label>
+            <label for="value1"><span><input name="radio" type="radio" id="value1" ><span class="checkradio" [ngClass]="checkboxdata.themecolor"></span></span> {{checkboxdata.text1}} <span></span></label>
           </div>
           <div [ngStyle]="{'display':checkboxdata.alignverticle}" class="form-group" *ngIf="checkboxdata.text2">
-            <input name="radio" type="radio" id="value2" >
-            <label for="value2"> {{checkboxdata.text2}} <span></span></label>
+            <label for="value2"><span><input name="radio" type="radio" id="value2" ><span class="checkradio" [ngClass]="checkboxdata.themecolor"></span></span> {{checkboxdata.text2}} <span></span></label>
           </div>
           <div [ngStyle]="{'display':checkboxdata.alignverticle}" class="form-group" *ngIf="checkboxdata.text3">
-            <input name="radio" type="radio" id="value3">
-            <label for="value3">{{checkboxdata.text3}}<span></span></label>
+            <label for="value3"><span><input name="radio" type="radio" id="value3" ><span class="checkradio" [ngClass]="checkboxdata.themecolor"></span></span>{{checkboxdata.text3}}<span></span></label>
           </div>
           <div [ngStyle]="{'display':checkboxdata.alignverticle}" class="form-group" *ngIf="checkboxdata.text4">
-            <input name="radio" type="radio" id="value4">
-            <label for="value4">{{checkboxdata.text4}}<span></span></label>
+            <label for="value4"><span><input name="radio" type="radio" id="value4" ><span class="checkradio" [ngClass]="checkboxdata.themecolor"></span></span>{{checkboxdata.text4}}<span></span></label>
           </div>  
         </form>
       </div>

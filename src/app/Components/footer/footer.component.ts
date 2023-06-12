@@ -133,11 +133,11 @@ export class FooterComponent {
       var data1:any =  localStorage.getItem("footerdata");
       this.footerdata = JSON.parse(data1);
       console.log(">>>>>",this.footerdata);
-      if(this.footerdata.color == "#2b0a3d" || this.footerdata.color == "#0070ad" || this.footerdata.color == "black"){
-        this.color = "white";
-      } else if(this.footerdata.color == "#F1F4F8"){
-        this.color = "black";
-      }
+      // if(this.footerdata.color == "#2b0a3d" || this.footerdata.color == "#0070ad" || this.footerdata.color == "black"){
+      //   this.color = "white";
+      // } else if(this.footerdata.color == "white"){
+      //   this.color = "black";
+      // }
     }
 
     

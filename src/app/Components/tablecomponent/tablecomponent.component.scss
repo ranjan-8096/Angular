@@ -46,9 +46,10 @@ pagination-controls {
     padding: 20px;
 }
 .pageno {
-    width: 40px;
+    width: 48px;
     height: 30px;
-    border: none;
+    border-radius: 5px;
+    // border: none;
     background: transparent;
     margin-top:-2px;
 }
@@ -62,6 +63,8 @@ pagination-controls {
     margin: 20px;
     border-radius: 5px;
     background-color: #fff;
+    border: 1px solid black;
+    // box-shadow: 0 0 10px 2px rgb(140, 119, 119);
 }
 .page-row{
     display: flex;
@@ -70,6 +73,46 @@ pagination-controls {
 .pagination ::ng-deep .ngx-pagination .current {
     background: #0070ad;
 }
+
+.pagination ::ng-deep .ngx-pagination{
+    li{
+        border: 1px solid black;
+        margin-right: 0px;
+        border-radius: 4px;
+    }
+}
+// .pagination ::ng-deep .ngx-pagination{
+//     .pagination-previous{
+//         span{
+//             display: none;
+//         }
+//     }
+// }
+
+// .pagination ::ng-deep .ngx-pagination{
+//     .pagination-next{
+//         span{
+//             display: none;
+//         }
+//     }
+// }
+
+// .pagination ::ng-deep .pagination-next {
+//     a{
+//         visibility: hidden;
+//     }
+// }
+// .pagination ::ng-deep .pagination-next {
+//     a::after{
+//         content: "/bb";
+//         display: table;
+//     }
+// }
+// .pagination ::ng-deep .pagination-next::after{
+//     a{
+//         content: "/bb";
+//     }
+// }
 
 .modal-dialog{
     margin-top:90px;

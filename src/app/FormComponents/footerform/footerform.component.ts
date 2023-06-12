@@ -73,12 +73,16 @@ export class FooterformComponent {
     } else {
       if(this.registerForm.value.color == "light"){
         this.registerForm.value.color = "white";
+        this.registerForm.value.textcolr="black";
       } else if(this.registerForm.value.color == "dark"){
         this.registerForm.value.color = "black"
+        this.registerForm.value.textcolr="white";
       } else if(this.registerForm.value.color == "blue"){
         this.registerForm.value.color = "#0070ad"
+        this.registerForm.value.textcolr="white";
       } else if(this.registerForm.value.color == "purple"){
         this.registerForm.value.color = "#2b0a3d"
+        this.registerForm.value.textcolr="white";
       }
       this.onclose.emit();
       const data = {
@@ -89,7 +93,8 @@ export class FooterformComponent {
         "facebook":this.registerForm.value.facebook,
         "youtube":this.registerForm.value.youtube,
         "glassdoor":this.registerForm.value.glassdoor,
-        "color":this.registerForm.value.color
+        "color":this.registerForm.value.color,
+        "textcolor":this.registerForm.value.textcolr
       }
       console.log(">>",data);
 

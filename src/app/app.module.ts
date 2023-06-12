@@ -66,6 +66,7 @@ import { ImagesliderComponent } from './Components/imageslider/imageslider.compo
 import { EditloaderComponent } from './FormComponents/editloader/editloader.component';
 // import { NgxSpinnerModule } from 'ngx-spinner';
 import { FilterPipeModule } from 'ngx-filter-pipe'; // <-- Import
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 
@@ -140,6 +141,7 @@ import { FilterPipeModule } from 'ngx-filter-pipe'; // <-- Import
     SlickCarouselModule,
     NgxPaginationModule,
     FilterPipeModule,
+    Ng2SearchPipeModule,
     // NgxSpinnerModule,
     NgMultiSelectDropDownModule.forRoot(),
     ToastrModule.forRoot({

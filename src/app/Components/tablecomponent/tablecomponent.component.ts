@@ -170,6 +170,7 @@ heading = [
   themecolor:any;
   color:any;
   p:any;
+  searchText:any;
   pageno="5";
   errorvalue:any;
   htmlcontent="active";
@@ -252,7 +253,7 @@ pagination-controls {
         this.themecolor = "#2b0a3d";
         this.color = "white";
       } else if(this.tabledata.theme == "light"){
-        this.themecolor = "#fff";
+        this.themecolor = "#B7C9E2";
         this.color = "black";
       }
 
@@ -262,6 +263,10 @@ pagination-controls {
       // console.log(">>>>>>>>>>>>>>>>>headerdata",this.headerdata);
 
     }
+  }
+
+  pageChange(e:any){
+    
   }
 
   close() {
@@ -343,8 +348,9 @@ pagination-controls {
   }
 
   handlechange(e:any){
-    var check:any[] = [];
-
+    if(e.target.value){
+      console.log(">>>>>",this.array);
+    }
     // console.log(">>>>>",e.target.value);
     // var stringvalue = (e.target.value).toString();   
     // this.array.filter(x=>Object.values(x).filter(value=>{
@@ -361,17 +367,17 @@ pagination-controls {
       //   // this.searcharray.push(x);
       // }
     // }))
-    console.log(">>>>>>>",check[2].charAt(0).includes(e.target.value));
+    // console.log(">>>>>>>",check[2].charAt(0).includes(e.target.value));
 
-    // check.map((x)=>{
-      // var j = 0;
-      for(let i = 0;i<check.length;i++){
-          var mycheck = check[i].charAt(i).includes(e.target.value);
-          console.log(">>>>",mycheck);
-          if(mycheck){
-            // console.log(">>>>",x);
-          }
-        }
+    // // check.map((x)=>{
+    //   // var j = 0;
+    //   for(let i = 0;i<check.length;i++){
+    //       var mycheck = check[i].charAt(i).includes(e.target.value);
+    //       console.log(">>>>",mycheck);
+    //       if(mycheck){
+    //         // console.log(">>>>",x);
+    //       }
+    //     }
     // })
     // console.log(">>>>>>>",this.searcharray);
     // this.array = this.searcharray;
