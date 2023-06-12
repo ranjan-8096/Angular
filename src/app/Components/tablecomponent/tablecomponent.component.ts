@@ -21,6 +21,7 @@ export class TablecomponentComponent {
 
   tabledata: any;
   closeicon = "../assets/images/close.png";
+  arrowicon = "../assets/images/icon-more-small-dark.cab060bd.svg";
 
 heading = [
     {
@@ -170,6 +171,7 @@ heading = [
   themecolor:any;
   color:any;
   p:any;
+  v:any;
   searchText:any;
   pageno="5";
   errorvalue:any;
