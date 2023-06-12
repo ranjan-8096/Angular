@@ -65,8 +65,10 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ImagesliderComponent } from './Components/imageslider/imageslider.component';
 import { EditloaderComponent } from './FormComponents/editloader/editloader.component';
 // import { NgxSpinnerModule } from 'ngx-spinner';
-import { FilterPipeModule } from 'ngx-filter-pipe'; // <-- Import
-
+import { FilterPipeModule } from 'ngx-filter-pipe';
+import { ImagesliderformComponent } from './FormComponents/imagesliderform/imagesliderform.component';
+import { BreakpointlayoutformComponent } from './FormComponents/breakpointlayoutform/breakpointlayoutform.component';
+import { BreakpointlayoutComponent } from './Components/breakpointlayout/breakpointlayout.component'; // <-- Import
 
 
 @NgModule({
@@ -124,7 +126,10 @@ import { FilterPipeModule } from 'ngx-filter-pipe'; // <-- Import
     EdittableformcomponentComponent,
     DynamictabsComponent,
     DynamictabsformComponent,
-    ImagesliderComponent
+    ImagesliderComponent,
+    ImagesliderformComponent,
+    BreakpointlayoutformComponent,
+    BreakpointlayoutComponent
    
   ],
   imports: [

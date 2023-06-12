@@ -21,6 +21,7 @@ import { CalendarComponent } from './Components/calendar/calendar.component';
 import { LoaderComponent } from './Components/loader/loader.component';
 import { TablecomponentComponent } from './Components/tablecomponent/tablecomponent.component';
 import { DynamictabsComponent } from './Components/dynamictabs/dynamictabs.component';
+import { ImagesliderComponent } from './Components/imageslider/imageslider.component';
 
 
 const routes: Routes = [
@@ -47,6 +48,7 @@ const routes: Routes = [
   {path : "component/loader", component:LoaderComponent},
   {path : "component/table", component:TablecomponentComponent},
   {path : "component/dynamics", component:DynamictabsComponent},
+  {path : "component/imageslider", component:ImagesliderComponent}
 
 ];
 

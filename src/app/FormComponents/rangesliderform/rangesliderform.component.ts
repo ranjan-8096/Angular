@@ -48,6 +48,7 @@ export class RangesliderformComponent {
       this.registerForm.get("theme")?.setValue(this.rangesliderdata?.theme);
       this.registerForm.get("rangewidth")?.setValue(this.rangesliderdata?.rangewidth);
   }
+  
   }
 
 
@@ -79,6 +80,8 @@ export class RangesliderformComponent {
     if(this.registerForm.value.minvalue > this.registerForm.value.maxvalue) {
       this.lengthvalidation = true;
     } else {
+      this.lengthvalidation = false;
+
       if(this.registerForm.invalid) {
         return true;
       } else {

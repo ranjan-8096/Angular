@@ -21,6 +21,9 @@ constructor(private router: Router){}
   @ViewChild('myModalClose8') modalClose8:any;
   @ViewChild('myModalClose9') modalClose9:any;
   @ViewChild('myModalClose10') modalClose10:any;
+  @ViewChild('myModalClose11') modalClose11:any;
+  @ViewChild('myModalClose12') modalClose12:any;
+
 
   
 
@@ -36,7 +39,10 @@ constructor(private router: Router){}
     {id:9,name:"Forms"},
     {id:10,name:"Table"},
     {id:11,name:"Loader"},
-    {id:12,name:"Tabs"} 
+    {id:12,name:"Tabs"},
+    {id:13,name:"Tabs"},
+    {id:14,name:"Image Slider"},
+    {id:15,name:"BreakPoint"}
 ];
 
 subheading = "This components help to create and customize the";
@@ -57,6 +63,9 @@ close(){
   this.modalClose8.nativeElement.click();
   this.modalClose9.nativeElement.click();
   this.modalClose10.nativeElement.click();
+  this.modalClose11.nativeElement.click();
+  this.modalClose12.nativeElement.click();
+
 
   console.log(">>>>>>>>>>>>>>>>");
 }
