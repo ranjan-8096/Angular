@@ -68,6 +68,9 @@ import { EditloaderComponent } from './FormComponents/editloader/editloader.comp
 import { FilterPipeModule } from 'ngx-filter-pipe'; // <-- Import
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
+import { ImagesliderformComponent } from './FormComponents/imagesliderform/imagesliderform.component';
+import { BreakpointlayoutformComponent } from './FormComponents/breakpointlayoutform/breakpointlayoutform.component';
+import { BreakpointlayoutComponent } from './Components/breakpointlayout/breakpointlayout.component'; // <-- Import
 
 
 @NgModule({
@@ -125,7 +128,10 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     EdittableformcomponentComponent,
     DynamictabsComponent,
     DynamictabsformComponent,
-    ImagesliderComponent
+    ImagesliderComponent,
+    ImagesliderformComponent,
+    BreakpointlayoutformComponent,
+    BreakpointlayoutComponent
    
   ],
   imports: [

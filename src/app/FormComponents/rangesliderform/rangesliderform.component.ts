@@ -48,6 +48,7 @@ export class RangesliderformComponent {
       this.registerForm.get("theme")?.setValue(this.rangesliderdata?.theme);
       this.registerForm.get("rangewidth")?.setValue(this.rangesliderdata?.rangewidth);
   }
+
   }
 
 

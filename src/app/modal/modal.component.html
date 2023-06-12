@@ -91,6 +91,24 @@
                                 <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal012">Create</button>
                             </div>
+                            <div class="button-sec" *ngIf="item?.id == 13">
+                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal0113">Details</button>
+                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal013">Create</button>
+                            </div>
+                            <div class="button-sec" *ngIf="item?.id == 14">
+                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal0114">Details</button>
+                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal014">Create</button>
+                            </div>
+                            <div class="button-sec" *ngIf="item?.id == 15">
+                                <button aria-label="Button Detail" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal0115">Details</button>
+                                <button aria-label="Button Create" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal015">Create</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -706,6 +724,54 @@
                 </div>
                 <!-- <app-form (onclose)="close()"></app-form> -->
                 <app-dynamictabsform (onclose)="close()"></app-dynamictabsform>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="exampleModal013" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modaldialog-width">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Login/SignUp</h4>
+                    <button class="clearbtn" aria-label="close modal" #myModalClose10 data-bs-dismiss="modal">
+                        <img [src]="closeicon">
+                    </button>
+                </div>
+                <!-- <app-form (onclose)="close()"></app-form> -->
+                <app-dynamictabsform (onclose)="close()"></app-dynamictabsform>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="exampleModal014" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modaldialog-width">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Image Slider</h4>
+                    <button class="clearbtn" aria-label="close modal" #myModalClose10 data-bs-dismiss="modal">
+                        <img [src]="closeicon">
+                    </button>
+                </div>
+                <!-- <app-form (onclose)="close()"></app-form> -->
+                <app-imagesliderform (onclose)="close()"></app-imagesliderform>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="exampleModal015" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modaldialog-width">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Breakpoint Layout</h4>
+                    <button class="clearbtn" aria-label="close modal" #myModalClose10 data-bs-dismiss="modal">
+                        <img [src]="closeicon">
+                    </button>
+                </div>
+                <!-- <app-form (onclose)="close()"></app-form> -->
+                <app-breakpointlayoutform (onclose)="close()"></app-breakpointlayoutform>
             </div>
         </div>
     </div>

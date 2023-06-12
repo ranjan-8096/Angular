@@ -41,6 +41,13 @@ export class CommonService {
     private tabstatus = new BehaviorSubject<any>([]);
     tabsstatusdata = this.tabstatus.asObservable();
 
+       
+    private imagesliderstatus = new BehaviorSubject<any>([]);
+    imagesliderstatusdata = this.imagesliderstatus.asObservable();
+
+
+    
+
 
     footercompletedata(data:any) {
         this.footerstatus.next(data);
@@ -74,6 +81,10 @@ export class CommonService {
 
       tabscompletedata(data:any) {
         this.tabstatus.next(data);
+      }
+
+      imageslidercompletedata(data:any) {
+        this.imagesliderstatus.next(data);
       }
 
 
