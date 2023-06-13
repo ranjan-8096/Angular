@@ -78,20 +78,40 @@ span.tooltiptext.bottomleft {
   top: 70px !important;
   margin-left: 0;
 }
+// span.tooltiptext.right {
+//     left: 68%;
+//     bottom:13%;
+//     margin-left: 360px;
+//     margin-top: 5px;
+// }
+
+
+// span.tooltiptext.left {
+//     left: -226% !important;
+//     bottom: 23%;
+//     margin-left: 510px;
+//     margin-top: 5px;
+// }
+
 span.tooltiptext.right {
-    left: 68%;
-    bottom:13%;
-    margin-left: 360px;
-    margin-top: 5px;
-}
 
-span.tooltiptext.left {
-    left: -226% !important;
-    bottom: 23%;
-    margin-left: 510px;
-    margin-top: 5px;
-}
-
+  left: 68%;
+  bottom: 13%;
+  margin-left:300px;
+  margin-top:5px;
+ 
+ }
+ 
+  
+ 
+ span.tooltiptext.left {
+ 
+  left: -226% !important;
+  bottom: 23%;
+  margin-left:440px;
+  margin-top:5px;
+ 
+ }
   
 .tooltipbtn:hover .tooltiptext {
     visibility: visible;

@@ -38,9 +38,27 @@ export class LoginformComponent implements OnInit{
       color: ['', [Validators.required]], 
       // title: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]], 
       username: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]], 
+      email: [''], 
       password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]], 
     });
+
+    this.registerForm.get("email")?.valueChanges.subscribe((result)=>{
+
+      console.log("result",result);
+  
+      if(result == "Sign Up") {
+        this.registerForm.get("email")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]); 
+      } 
+       
+      else {
+        this.registerForm.get("text1")?.clearValidators();
+         
+      }
+    })
+
   }
+
+
 
   get f(){
     return this.registerForm.controls;
@@ -96,6 +114,7 @@ export class LoginformComponent implements OnInit{
         // "buttons":this.registerForm.value.buttons,
         // "title":this.registerForm.value['title'], 
         "username":this.registerForm.value['username'], 
+        "email":this.registerForm.value['email'], 
         "password":this.registerForm.value['password'], 
         // "addbutton":this.registerForm.value.addbutton,
         "cardwidth":this.registerForm.value.cardwidth,  

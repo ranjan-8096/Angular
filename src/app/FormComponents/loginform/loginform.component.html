@@ -52,6 +52,23 @@
                 </div>
             </div>
         </div>
+        <div class="form-group pt-2" *ngIf="f.typefields.value === 'Sign Up'">
+            <label>Email:</label><span class="star">*</span>
+            <div class="form-group d-flex align-items-center shadow-sec background">
+                <input type="text" maxlength="15" class="form-control inputbox" aria-describedby="title-err-text"
+                    placeholder="Please enter email" name="email" formControlName="email"
+                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }" autofocus />
+            </div>
+            <div *ngIf="(f.email.touched || submitted) && f.email.errors" class="invalid-feedback">
+                <div class="error" role="alert" aria-atomic="true" *ngIf="f.email.errors.required">Email is
+                    required
+                </div>
+                <div class="error" role="alert" aria-atomic="true" *ngIf="f.email.errors.minlength">Minimum 3 word
+                    required</div>
+                <div class="error" role="alert" aria-atomic="true" *ngIf="f.email.errors.maxlength">maxlength 15
+                </div>
+            </div>
+        </div>
         <div class="form-group pt-2">
             <label>Password :</label><span class="star">*</span>
             <div class="form-group d-flex align-items-center shadow-sec background">

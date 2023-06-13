@@ -81,6 +81,78 @@ pagination-controls {
         border-radius: 4px;
     }
 }
+
+
+.pagination_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  
+  .page__number {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+
+  .arrow-first{
+    rotate: -180deg;
+  }
+  .first{
+    margin-left: 5px;
+  }
+
+  .pagination-previous.disabled {
+    pointer-events: none;
+    opacity: 0.3;
+    cursor: no-drop;
+}
+.pagination-previous{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.number{
+    border: none;
+    padding: 0px;
+    background:transparent;
+}
+
+.pagination-next{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.pagination-next.disabled{
+    // border: none;
+    pointer-events: none;
+    opacity: 0.3;
+    cursor: no-drop;
+}
+.current {
+    border: 1px solid ;
+    border-radius: 5px;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+.notactive{
+    background-color: white !important;
+}
+
 // .pagination ::ng-deep .ngx-pagination{
 //     .pagination-previous{
 //         span{

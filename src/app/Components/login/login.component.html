@@ -17,20 +17,24 @@
                 <p *ngIf="loginsignupdata.typefields=='Log In'">Welcome John!</p>
                 <p *ngIf="loginsignupdata.typefields=='Sign Up'">Enter your personal info</p>
             </div>
-            <div class="input-group">
+            <div class="input-group" >
+                <label>{{loginsignupdata.username}}</label>
                 <input type="username" placeholder="username" [ngStyle]="{'border':'1px solid' + loginsignupdata.color}">
                 <!-- <i class="fa-solid fa-user"></i> -->
             </div>
             <div class="input-group" *ngIf="loginsignupdata.typefields=='Sign Up'">
+                <label>{{loginsignupdata.email}}</label>
                 <input type="email" placeholder="Email" [ngStyle]="{'border':'1px solid' + loginsignupdata.color}">
                 <!-- <i class="fa-solid fa-user"></i> -->
             </div>
             <div class="input-group">
+                <label>{{loginsignupdata.password}}</label>
                 <input type="password" placeholder="Password"
                     [ngStyle]="{'border':'1px solid' + loginsignupdata.color}">
                 <!-- <i class="fa-solid fa-lock"></i> -->
             </div>
             <div class="input-group" *ngIf="loginsignupdata.typefields=='Sign Up'">
+                <label>Confirm {{loginsignupdata.password}}</label>
                 <input type="password" placeholder="Confirm Password"
                     [ngStyle]="{'border':'1px solid' + loginsignupdata.color}">
                 <!-- <i class="fa-solid fa-lock"></i> -->
@@ -41,10 +45,10 @@
             </button>
             <a [ngStyle]="{'color':loginsignupdata.color}" *ngIf="loginsignupdata.typefields=='Log In'" >Forgot your credentials?</a>
             <div class="button-text" *ngIf="loginsignupdata.typefields=='Log In'">
-                <p>Don't have an account? <b>Sign up here</b></p>
+                <p [ngStyle]="{'color':loginsignupdata.color}">Don't have an account? <b>Sign up here</b></p>
             </div>
             <div class="button-text" *ngIf="loginsignupdata.typefields=='Sign Up'">
-                <p>Already have an account?  <b>Sign in here</b></p>
+                <p [ngStyle]="{'color':loginsignupdata.color}">Already have an account?  <b>Sign in here</b></p>
             </div>
         </div>
 
