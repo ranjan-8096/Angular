@@ -3,12 +3,12 @@
 
     <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="form-group pt-3">
-        <label>Title:</label><span class="star">*</span>
+        <label>Table Caption:</label><span class="star">*</span>
         <input type="text" maxlength="15" class="form-control inputbox" [(ngModel)]="tabledata.title" aria-describedby="title-err-text" aria-required="true" placeholder="Please enter title" name="title" formControlName="title" [ngClass]="{ 'is-invalid': submitted && f.title.errors }" autofocus/>
         <div *ngIf="(f.title.touched || submitted) && f.title.errors">
-            <div class="error" role="alert" aria-atomic="true"  *ngIf="f.title.errors.required">Title is required</div>
-            <div class="error" role="alert" aria-atomic="true"   *ngIf="f.title.errors.minlength">Minimum 3 word required for title</div>
-            <div class="error" role="alert" aria-atomic="true" *ngIf="f.title.errors.maxlength">maxlength 15 for title</div>
+            <div class="error" role="alert" aria-atomic="true"  *ngIf="f.title.errors.required">Table Caption is required</div>
+            <div class="error" role="alert" aria-atomic="true"   *ngIf="f.title.errors.minlength">Minimum 3 word required for caption</div>
+            <div class="error" role="alert" aria-atomic="true" *ngIf="f.title.errors.maxlength">maxlength 15 word required for caption</div>
         </div>
     </div>
 

@@ -39,7 +39,6 @@ export class DynamictabsformComponent {
       description3:[''],
       helpertext4:[''],
       description4:[''],
-      tabwidth:['',[Validators.required]],
       theme:['dark',[Validators.required]],
     });
 
@@ -114,7 +113,6 @@ export class DynamictabsformComponent {
       this.registerForm.get("title")?.setValue(this.dynamictabsdata?.title);
       this.registerForm.get("theme")?.setValue(this.dynamictabsdata?.theme);
       this.registerForm.get("optionvalue")?.setValue(this.dynamictabsdata?.optionvalue);
-      this.registerForm.get("tabwidth")?.setValue(this.dynamictabsdata?.tabwidth);
       this.registerForm.get("helpertext1")?.setValue(this.dynamictabsdata.helpertext1);
       this.registerForm.get("helpertext2")?.setValue( this.dynamictabsdata.helpertext2);
       this.registerForm.get("helpertext3")?.setValue( this.dynamictabsdata.helpertext3);
@@ -154,7 +152,6 @@ export class DynamictabsformComponent {
       const data = {
         "title":this.registerForm.value.title,
         "optionvalue":this.registerForm.value.optionvalue,
-        "tabwidth":this.registerForm.value.tabwidth,
         "helpertext1":this.registerForm.value.helpertext1,
         "description1":this.registerForm.value.description1,
         "helpertext2":this.registerForm.value.helpertext2,

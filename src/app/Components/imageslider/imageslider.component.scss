@@ -23,10 +23,15 @@
     display: block;
 }
 
-// .blue button.active, .blue .carousel-control-prev-icon, .blue .carousel-control-next-icon {
+.blue button.active, .blue .carousel-control-prev-icon, .blue .carousel-control-next-icon {
 
-// background-color: #0070ad;
-// }
+background-color: #0070ad;
+}
+
+.purple button.active, .purple .carousel-control-prev-icon, .purple .carousel-control-next-icon {
+
+    background-color: #2b0a3d;
+    }
 
 // .carousel-inner.blue h5, .carousel-inner.blue p {
 //     color: #0070ad;
