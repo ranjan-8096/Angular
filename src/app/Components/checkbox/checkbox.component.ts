@@ -247,7 +247,7 @@ export class CheckboxComponent implements OnInit {
     if(localStorage.getItem("checkboxdata")) {
       var data1:any =  localStorage.getItem("checkboxdata");
       this.checkboxdata = JSON.parse(data1);
-     
+      console.log(">>>>>>",this.checkboxdata);
     }
   }
   getHtmlContent() {

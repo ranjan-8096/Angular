@@ -65,7 +65,9 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ImagesliderComponent } from './Components/imageslider/imageslider.component';
 import { EditloaderComponent } from './FormComponents/editloader/editloader.component';
 // import { NgxSpinnerModule } from 'ngx-spinner';
-import { FilterPipeModule } from 'ngx-filter-pipe';
+import { FilterPipeModule } from 'ngx-filter-pipe'; // <-- Import
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 import { ImagesliderformComponent } from './FormComponents/imagesliderform/imagesliderform.component';
 import { BreakpointlayoutformComponent } from './FormComponents/breakpointlayoutform/breakpointlayoutform.component';
 import { BreakpointlayoutComponent } from './Components/breakpointlayout/breakpointlayout.component'; // <-- Import
@@ -145,6 +147,7 @@ import { BreakpointlayoutComponent } from './Components/breakpointlayout/breakpo
     SlickCarouselModule,
     NgxPaginationModule,
     FilterPipeModule,
+    Ng2SearchPipeModule,
     // NgxSpinnerModule,
     NgMultiSelectDropDownModule.forRoot(),
     ToastrModule.forRoot({

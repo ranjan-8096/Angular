@@ -40,7 +40,7 @@ constructor(private router: Router){}
     {id:10,name:"Table"},
     {id:11,name:"Loader"},
     {id:12,name:"Tabs"},
-    {id:13,name:"Tabs"},
+    {id:13,name:"Login/SignUp"},
     {id:14,name:"Image Slider"},
     {id:15,name:"BreakPoint"}
 ];

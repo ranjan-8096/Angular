@@ -10,9 +10,9 @@
     </div>
 
     <div #footer>
-      <footer class="footer" role="contentinfo" aria-label="Footer" [ngStyle]="{'background-Color':footerdata?.color, 'color':color}">
+      <footer class="footer" role="contentinfo" aria-label="Footer" [ngStyle]="{'background-Color':footerdata?.color}">
         <div class="d-sm-flex d-block align-items-center justify-content-between footerwidth">
-          <div class="copyright" [ngStyle]="{'color':color}">{{footerdata.text}}</div>
+          <div class="copyright" [ngStyle]="{'color':footerdata?.textcolor}">{{footerdata.text}}</div>
           <div class="socialmedia-list">
             <ul class="nav social-default">
               <li *ngIf="footerdata?.linkedln == 'Yes'">
