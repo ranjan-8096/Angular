@@ -14,7 +14,7 @@
           <div class="headerpart">
             <label class="title">{{tabledata.title}} :</label>
             <div class="search-container">
-                <input type="text" [(ngModel)]="searchText"  placeholder="Search.." name="search" class="search">
+                <input type="search" [(ngModel)]="searchText"  placeholder="Search.." name="search" class="search">
             </div>
           </div>
 
@@ -110,7 +110,7 @@
           <div class="headerpart">
             <label class="title">{{tabledata.title}} :</label>
             <div class="search-container">
-                <input type="text" #search placeholder="Search.." [(ngModel)]="searchText" name="search" class="search" >
+                <input type="search" #search placeholder="Search.." [(ngModel)]="searchText" name="search" class="search" >
                 <!-- <button class="search_button" (click)="Search()"><i class="fa fa-search"></i></button> -->
             </div>
           </div>

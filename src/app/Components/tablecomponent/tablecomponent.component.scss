@@ -152,6 +152,9 @@ pagination-controls {
 .notactive{
     background-color: white !important;
 }
+input[type = search]:focus{
+    outline: none;
+}
 
 // .pagination ::ng-deep .ngx-pagination{
 //     .pagination-previous{
