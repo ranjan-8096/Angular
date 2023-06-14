@@ -6,7 +6,12 @@
 }
 .column{
     border: 1px solid black;
+    background-color: #fff;
     // padding: 10px;
+}
+.box_flex {
+    display: flex;
+    margin: 15px 0px;
 }
 .desc{
    padding: 10px;
@@ -65,10 +70,13 @@
 }
 
 
-@media screen and  (min-width: 768px){
-        .col-md-4 {
+@media only screen and (max-width: 767px) {
+    .col-md-4 {
             flex: 0 0 auto;
             width: 33.33333333%;
             padding-left: 0px;
+        }
+        .box_flex {
+            display: block;
         }
 }
