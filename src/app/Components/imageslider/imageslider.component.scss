@@ -4,6 +4,13 @@
     height: 350px;
 }
 
+.carousel-caption {
+    background-color:#00000091;
+    width:100%;
+    left:0%;
+    bottom:0%;
+}
+
 .dark .carousel-item {
     background-color: #000;
     height: 350px;
@@ -31,6 +38,12 @@ background-color: #0070ad;
 .purple button.active, .purple .carousel-control-prev-icon, .purple .carousel-control-next-icon {
 
     background-color: #2b0a3d;
+    }
+
+    
+.light button.active, .light .carousel-control-prev-icon, .light .carousel-control-next-icon {
+
+    background-color: #ccc;
     }
 
 // .carousel-inner.blue h5, .carousel-inner.blue p {
