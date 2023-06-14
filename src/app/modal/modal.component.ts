@@ -23,7 +23,7 @@ constructor(private router: Router){}
   @ViewChild('myModalClose10') modalClose10:any;
   @ViewChild('myModalClose11') modalClose11:any;
   @ViewChild('myModalClose12') modalClose12:any;
-
+  @ViewChild('myModalClose13') modalClose13:any;
 
   
 
@@ -65,6 +65,7 @@ close(){
   this.modalClose10.nativeElement.click();
   this.modalClose11.nativeElement.click();
   this.modalClose12.nativeElement.click();
+  this.modalClose13.nativeElement.click();
 
 
   console.log(">>>>>>>>>>>>>>>>");
