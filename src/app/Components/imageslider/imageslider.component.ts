@@ -66,7 +66,7 @@ export class ImagesliderComponent {
   @ViewChild('imagesliders') elRef: ElementRef;
 
   constructor(private router: Router, elRef: ElementRef, private commonservice:CommonService) {
-    
+    this.elRef = elRef;
   }
 
 
