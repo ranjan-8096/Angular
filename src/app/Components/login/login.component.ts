@@ -2,6 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; 
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
 // import { ConfirmPasswordValidator } from "./confirm-password.validator";
 @Component({
   selector: 'app-login',
@@ -14,7 +16,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router, elRef: ElementRef,
     // ,private spinner: NgxSpinnerService
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private toastr:ToastrService
   ) {
     this.elRef = elRef;
   }
@@ -403,7 +406,8 @@ export class LoginComponent implements OnInit {
       // alert("Error");
       return true;
     } else {
-      alert("Successfully");
+      this.toastr.success("Save Successfully");
+      // alert("Successfully");
 
     }
   }

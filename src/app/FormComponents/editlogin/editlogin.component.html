@@ -11,8 +11,8 @@
                 <select class="bgcolor" name="typefields" aria-label="select no of butons"
                     aria-describedby="noofbtn-err-text" formControlName="typefields"
                     [(ngModel)]="loginsignupdata.typefields">
-                    <option>Log In</option>
                     <option>Sign Up</option>
+                    <option>Log In</option>
                     <!-- <option>Horizontal Loader</option>
                     <option>Circular Loader</option>  -->
                 </select>
@@ -78,7 +78,7 @@
         <div class="form-group pt-2">
             <label>Minimum value:</label><span class="star">*</span>
             <div class="form-group d-flex align-items-center shadow-sec background">
-                <input type="number" maxlength="15" class="form-control inputbox" aria-describedby="title-err-text"
+                <input type="text" (keypress)="numeric($event)" maxlength="3" class="form-control inputbox" aria-describedby="title-err-text"
                     placeholder="Please enter min value" name="minvalue" formControlName="minvalue"
                     [(ngModel)]="loginsignupdata.minvalue" [ngClass]="{ 'is-invalid': submitted && f.minvalue.errors }" autofocus />
             </div>
@@ -95,7 +95,7 @@
         <div class="form-group pt-2">
             <label>Maximum value:</label><span class="star">*</span>
             <div class="form-group d-flex align-items-center shadow-sec background">
-                <input type="number" maxlength="15" class="form-control inputbox" aria-describedby="title-err-text"
+                <input type="text" (keypress)="numeric($event)" maxlength="3" class="form-control inputbox" aria-describedby="title-err-text"
                     placeholder="Please enter max value" name="maxvalue" formControlName="maxvalue"
                     [(ngModel)]="loginsignupdata.maxvalue" [ngClass]="{ 'is-invalid': submitted && f.maxvalue.errors }" autofocus />
             </div>

@@ -13,10 +13,10 @@
       
       <div  *ngIf="loaderdata?.typefields == 'Horizontal Loader'" class="loaderdiv" [ngStyle]="{'width':loaderdata.cardwidth}">
         <label>{{loaderdata.title}}</label>
-      <span class="loader" [ngClass]="[loaderdata.themecolor, loaderdata.timeoutvalue]"></span>
+      <span class="loader" [ngClass]="[loaderdata?.themecolor, loaderdata?.timeoutvalue]"></span>
       </div>
 
-      <div class="circulardiv" *ngIf="loaderdata?.typefields == 'Circular Loader'" [ngClass]="[loaderdata.themecolor, loaderdata.timeoutvalue]" [ngStyle]="{'width':loaderdata.cardwidth}">
+      <div class="circulardiv" *ngIf="loaderdata?.typefields == 'Circular Loader'" [ngClass]="[loaderdata.themecolor, loaderdata?.timeoutvalue]" [ngStyle]="{'width':loaderdata.cardwidth}">
         <label class="circularlabel">{{loaderdata.title}}</label>
         <!-- <ngx-spinner bdColor = `rgba(0, 0, 0, 0.8)` size = "medium" color = "#fff" type = "ball-clip-rotate" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner> -->
         <!-- <div class="text-center">
@@ -103,7 +103,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4>Loader</h4>
-                <button class="clearbtn"  aria-label="Card Update modal close"  #myModalClose2 data-bs-dismiss="modal">
+                <button class="clearbtn"  aria-label="Card Update modal close"  #myModalClose9 data-bs-dismiss="modal">
                   <img [src]="closeicon" class="closeicon">  
                 </button> 
             </div>

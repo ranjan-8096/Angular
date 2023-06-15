@@ -65,6 +65,20 @@ export class LoginformComponent implements OnInit{
  
   
 
+  numeric(e:any) {
+    var k = e.which;
+    var ok = (k >= 48 && k <= 57) ||  // 0-9
+      k == 8 ||  // Backspaces
+      k == 9 ||  //H Tab
+      k == 11 ||  //V Tab
+      k == 0 ||  // Tab for Firefox
+      k == 46 ||  // for use dot
+      k == 127;   //Delete
+    if (!ok) {
+      e.preventDefault();
+    }
+  }
+
   onSubmit(){ 
     this.submitted = true;
     console.log("Checkbox registerForm",this.f);
@@ -93,7 +107,7 @@ export class LoginformComponent implements OnInit{
         this.themecolor = "#2e2b2b";
       }
       if (this.registerForm.value['color'] == "light") {
-        this.bgcolor = "#fff";
+        this.bgcolor = "#eee";
         this.color = "#000";
         this.theme="light";
         this.themecolor = "lightcolor";
@@ -113,7 +127,6 @@ export class LoginformComponent implements OnInit{
         "maxvalue":this.registerForm.value['maxvalue'],  
         "cardwidth":this.registerForm.value.cardwidth,  
       }
-        
       console.log(">>>>>",this.registerForm.value);
       this.onclose.emit();
       localStorage.setItem("loginsignupdata",JSON.stringify(data));

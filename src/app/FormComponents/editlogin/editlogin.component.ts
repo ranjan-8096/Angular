@@ -90,6 +90,20 @@ export class EditloginComponent {
     console.log(event.target.value,"Vishn")
   }
   
+  numeric(e:any) {
+    var k = e.which;
+    var ok = (k >= 48 && k <= 57) ||  // 0-9
+      k == 8 ||  // Backspaces
+      k == 9 ||  //H Tab
+      k == 11 ||  //V Tab
+      k == 0 ||  // Tab for Firefox
+      k == 46 ||  // for use dot
+      k == 127;   //Delete
+    if (!ok) {
+      e.preventDefault();
+    }
+  }
+  
   boxshadowValue1(){
     if(this.loginsignupdata.validateforms2=="Yes"){
       this.boxshadowchecked="checked";
@@ -150,7 +164,7 @@ export class EditloginComponent {
         this.themecolor = "#2e2b2b";
       }
       if (this.registerForm.value['color'] == "light") {
-        this.bgcolor = "#fff";
+        this.bgcolor = "#eee";
         this.color = "#000";
         this.theme="light";
         this.themecolor = "lightcolor";
