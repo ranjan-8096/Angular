@@ -247,5 +247,28 @@
 
 
 @media screen and (min-width:320px) and (max-width:765px) {
-  
+    .login-form {
+        width: 100% !important;
+        padding: 1rem !important;
+    }
+    .form-floating.form-floating-filled {
+        max-width: 100% !important;
+    }     
+    .width100{
+        width: 100% !important;
+    }
+    .top-header div:first-child {
+        width: 50%;
+    }
+    h4.subheader {
+        margin: 0px;
+        font-size: 1.2rem;
+    }
+    section.main header {
+        padding: 1rem .85rem;
+    }
+    .modaldialog-width { 
+        max-width: 100% !important;
+    }
+    
 }

@@ -72,6 +72,7 @@ import { LoginformComponent } from './FormComponents/loginform/loginform.compone
 import { LoginComponent } from './Components/login/login.component';
 import { BreakpointComponent } from './Components/breakpoint/breakpoint.component';
 import { EditbreakpointComponent } from './FormComponents/editbreakpoint/editbreakpoint.component';
+import { EditloginComponent } from './FormComponents/editlogin/editlogin.component';
 
 
 @NgModule({
@@ -135,7 +136,8 @@ import { EditbreakpointComponent } from './FormComponents/editbreakpoint/editbre
     LoginformComponent,
     LoginComponent,
     BreakpointComponent,
-    EditbreakpointComponent
+    EditbreakpointComponent,
+    EditloginComponent
    
   ],
   imports: [
