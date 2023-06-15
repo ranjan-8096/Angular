@@ -70,7 +70,8 @@ import { ImagesliderformComponent } from './FormComponents/imagesliderform/image
 import { BreakpointlayoutformComponent } from './FormComponents/breakpointlayoutform/breakpointlayoutform.component';
 import { BreakpointlayoutComponent } from './Components/breakpointlayout/breakpointlayout.component';
 import { LoginformComponent } from './FormComponents/loginform/loginform.component';
-import { LoginComponent } from './Components/login/login.component';  
+import { LoginComponent } from './Components/login/login.component';
+import { EditloginComponent } from './FormComponents/editlogin/editlogin.component';  
 
 
 @NgModule({
@@ -133,7 +134,8 @@ import { LoginComponent } from './Components/login/login.component';
     BreakpointlayoutformComponent,
     BreakpointlayoutComponent,
     LoginformComponent,
-    LoginComponent
+    LoginComponent,
+    EditloginComponent
    
   ],
   imports: [

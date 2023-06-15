@@ -1,25 +1,32 @@
-import { Component, OnInit , EventEmitter , Output} from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-loginform',
-  templateUrl: './loginform.component.html',
-  styleUrls: ['./loginform.component.scss']
+  selector: 'app-editlogin',
+  templateUrl: './editlogin.component.html',
+  styleUrls: ['./editlogin.component.scss']
 })
-export class LoginformComponent implements OnInit{
+export class EditloginComponent {
   submitted = false;
   registerForm: FormGroup;
   bgcolor: any;
   color: any;
   // alignverticle:any;
   theme:any;
-  themecolor:any; 
+  themecolor:any;
+  timeoutvalue:any;
   @Output() onclose = new EventEmitter<any>;
   nodefaultimage:any;
   storage:any;
   imageform:any; 
-
+  loginsignupdata:any;
+  type:any;
+  loaderwidth:any;
+  loadercolor:any;
+  loadertimeout:any;
+  boxshadowchecked:any;
+  noboxshadowchecked:any;
   constructor(private router: Router,
     private formBuilder: FormBuilder) {
 
@@ -29,19 +36,28 @@ export class LoginformComponent implements OnInit{
   
   ngOnInit() {
 
+    if(localStorage.getItem("loginsignupdata")) {
+      var data1:any =  localStorage.getItem("loginsignupdata");
+      this.loginsignupdata = JSON.parse(data1);
 
-    this.registerForm = this.formBuilder.group({ 
+      // console.log(">>>",this.loginsignupdata);
+      this.type = this.loginsignupdata.typefields;
+      this.loaderwidth = this.loginsignupdata.cardwidth;
+      this.loadercolor = this.loginsignupdata.theme;
+      this.loadertimeout =this.loginsignupdata.timeout;
+    }
+
+    this.registerForm = this.formBuilder.group({
       typefields:['',[Validators.required]],
       cardwidth:['',[Validators.required]],  
-      validateforms:['',[Validators.required]],  
-      validateforms2:['',[Validators.required]],  
+      validateforms:[this.boxshadowValue(),[Validators.required]],  
+      validateforms2:[this.boxshadowValue1(),[Validators.required]],  
       color: ['', [Validators.required]],  
       username: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]], 
       email: [''], 
       password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]], 
       minvalue: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(15)]], 
       maxvalue: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(15)]], 
-      
     });
 
     this.registerForm.get("typefields")?.valueChanges.subscribe((result)=>{ 
@@ -56,15 +72,56 @@ export class LoginformComponent implements OnInit{
     })
 
   }
-
-
+  boxshadowValue(){
+    if(this.loginsignupdata.validateforms=="Yes"){
+      this.boxshadowchecked="checked";
+      return "Yes";
+    }else if(this.loginsignupdata.validateforms=="No"){
+      this.noboxshadowchecked="checked";
+      return "No";
+    }
+  }
+  handleChange(event:any){
+    if(event.target.value=="Yes"){
+      this.noboxshadowchecked="nochecked";
+    }else if(event.target.value=="No"){
+      this.boxshadowchecked="nochecked";
+    }
+    console.log(event.target.value,"Vishn")
+  }
+  
+  boxshadowValue1(){
+    if(this.loginsignupdata.validateforms2=="Yes"){
+      this.boxshadowchecked="checked";
+      return "Yes";
+    }else if(this.loginsignupdata.validateforms2=="No"){
+      this.noboxshadowchecked="checked";
+      return "No";
+    }
+  }
+  handleChange1(event:any){
+    if(event.target.value=="Yes"){
+      this.noboxshadowchecked="nochecked";
+    }else if(event.target.value=="No"){
+      this.boxshadowchecked="nochecked";
+    }
+    console.log(event.target.value,"Vishn")
+  }
 
   get f(){
     return this.registerForm.controls;
   }
- 
-  
 
+  reloadComponent(self:boolean,urlToNavigateTo ?:string){
+    //skipLocationChange:true means dont update the url to / when navigating
+   const url=self ? this.router.url : "component/login&signup";
+   this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
+     this.router.navigate([`/${url}`]).then(()=>{
+      //  console.log(`After navigation I am on:${this.router.url}`)
+     })
+   })
+  }
+ 
   onSubmit(){ 
     this.submitted = true;
     console.log("Checkbox registerForm",this.f);
@@ -72,7 +129,7 @@ export class LoginformComponent implements OnInit{
     if(this.registerForm.invalid) {
       return true;
     } else { 
- 
+
       if (this.registerForm.value['color'] == "blue") {
         this.bgcolor = "#0070ad";
         this.color = "white";
@@ -111,14 +168,14 @@ export class LoginformComponent implements OnInit{
         "password":this.registerForm.value['password'],  
         "minvalue":this.registerForm.value['minvalue'],  
         "maxvalue":this.registerForm.value['maxvalue'],  
-        "cardwidth":this.registerForm.value.cardwidth,  
+        "cardwidth":this.registerForm.value.cardwidth,
       }
-        
       console.log(">>>>>",this.registerForm.value);
       this.onclose.emit();
       localStorage.setItem("loginsignupdata",JSON.stringify(data));
       this.router.navigate(['/component/login&signup']);
+      this.reloadComponent(true);
     }
   }
-
 }
+
