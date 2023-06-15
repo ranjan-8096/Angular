@@ -51,7 +51,7 @@
                     <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                         <div class="validationcolor" *ngIf="f.password.errors.required">Password is required</div>
                         <div class="validationcolor" *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
-                        <div class="validationcolor" *ngIf="f.password.errors.pattern">Password must contain a capital letter, number and a symbol.</div>
+                        <div class="validationcolor" *ngIf="f.password.errors.pattern">Password must contain a capital letter, a number, a symbol, min value {{loginsignupdata.minvalue}} and max value {{loginsignupdata.maxvalue}}.</div>
                     </div>
                 </div>
 
@@ -68,7 +68,7 @@
                 </div>
 
 
-                <button [ngStyle]="{'background':loginsignupdata.color, 'color':loginsignupdata.bgcolor}"
+                <button [ngStyle]="{'background':loginsignupdata.themecolor, 'color':loginsignupdata.btncolor}"
                     type="submit">
                     {{loginsignupdata.typefields}}
                     <i class="fa fa-arrow-right"></i>

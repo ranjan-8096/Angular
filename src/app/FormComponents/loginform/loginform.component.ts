@@ -12,6 +12,8 @@ export class LoginformComponent implements OnInit{
   registerForm: FormGroup;
   bgcolor: any;
   color: any;
+  btncolor:any;
+  lengthvalidation:boolean =  false;
   // alignverticle:any;
   theme:any;
   themecolor:any; 
@@ -39,8 +41,8 @@ export class LoginformComponent implements OnInit{
       username: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]], 
       email: [''], 
       password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]], 
-      minvalue: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(15)]], 
-      maxvalue: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(15)]], 
+      minvalue: ['', [Validators.required, Validators.min(1), Validators.minLength(1), Validators.maxLength(15)]], 
+      maxvalue: ['', [Validators.required, Validators.min(1), Validators.minLength(1), Validators.maxLength(15)]], 
       
     });
 
@@ -82,56 +84,65 @@ export class LoginformComponent implements OnInit{
   onSubmit(){ 
     this.submitted = true;
     console.log("Checkbox registerForm",this.f);
-
-    if(this.registerForm.invalid) {
-      return true;
-    } else { 
- 
-      if (this.registerForm.value['color'] == "blue") {
-        this.bgcolor = "#0070ad";
-        this.color = "white";
-        this.theme="blue";
-        this.themecolor = "#03A9F4";
+    if(this.registerForm.value.minvalue > this.registerForm.value.maxvalue) {
+      this.lengthvalidation = true;
+    } else{
+      if(this.registerForm.invalid) {
+        return true;
+      } else { 
+   
+        if (this.registerForm.value['color'] == "blue") {
+          this.bgcolor = "#0070ad";
+          this.color = "white";
+          this.theme="blue";
+          this.btncolor="#fff"
+          this.themecolor = "#03A9F4";
+        }
+        if (this.registerForm.value['color'] == "purple") {
+          this.bgcolor = "#2b0a3d";
+          this.color = "white";
+          this.theme="purple";
+          this.btncolor="#fff"
+          this.themecolor = "#4c0f6c";
+  
+        }
+        if (this.registerForm.value['color'] == "dark") {
+          this.bgcolor = "black";
+          this.color = "white";
+          this.theme="dark";
+          this.btncolor="#fff"
+          this.themecolor = "#2e2b2b";
+        }
+        if (this.registerForm.value['color'] == "light") {
+          this.bgcolor = "#eee";
+          this.color = "#000";
+          this.theme="light";
+          this.btncolor="#fff"
+          this.themecolor = "#000";
+        }
+        const data = { 
+          "bgcolor":this.bgcolor,  
+          "color":this.color,  
+          "themecolor":this.themecolor, 
+          "theme":this.theme, 
+          "btncolor":this.btncolor, 
+          "typefields":this.registerForm.value.typefields, 
+          "validateforms2":this.registerForm.value.validateforms2,  
+          "validateforms":this.registerForm.value.validateforms,  
+          "username":this.registerForm.value['username'], 
+          "email":this.registerForm.value['email'], 
+          "password":this.registerForm.value['password'],  
+          "minvalue":this.registerForm.value['minvalue'],  
+          "maxvalue":this.registerForm.value['maxvalue'],  
+          "cardwidth":this.registerForm.value.cardwidth,  
+        }
+        console.log(">>>>>",this.registerForm.value);
+        this.onclose.emit();
+        localStorage.setItem("loginsignupdata",JSON.stringify(data));
+        this.router.navigate(['/component/login&signup']);
       }
-      if (this.registerForm.value['color'] == "purple") {
-        this.bgcolor = "#2b0a3d";
-        this.color = "white";
-        this.theme="purple";
-        this.themecolor = "#4c0f6c";
-
-      }
-      if (this.registerForm.value['color'] == "dark") {
-        this.bgcolor = "black";
-        this.color = "white";
-        this.theme="dark";
-        this.themecolor = "#2e2b2b";
-      }
-      if (this.registerForm.value['color'] == "light") {
-        this.bgcolor = "#eee";
-        this.color = "#000";
-        this.theme="light";
-        this.themecolor = "lightcolor";
-      }
-      const data = { 
-        "bgcolor":this.bgcolor,  
-        "color":this.color,  
-        "themecolor":this.themecolor, 
-        "theme":this.theme, 
-        "typefields":this.registerForm.value.typefields, 
-        "validateforms2":this.registerForm.value.validateforms2,  
-        "validateforms":this.registerForm.value.validateforms,  
-        "username":this.registerForm.value['username'], 
-        "email":this.registerForm.value['email'], 
-        "password":this.registerForm.value['password'],  
-        "minvalue":this.registerForm.value['minvalue'],  
-        "maxvalue":this.registerForm.value['maxvalue'],  
-        "cardwidth":this.registerForm.value.cardwidth,  
-      }
-      console.log(">>>>>",this.registerForm.value);
-      this.onclose.emit();
-      localStorage.setItem("loginsignupdata",JSON.stringify(data));
-      this.router.navigate(['/component/login&signup']);
     }
+   
   }
 
 }

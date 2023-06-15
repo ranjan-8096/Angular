@@ -112,7 +112,7 @@ export class EditloaderComponent {
         this.themecolor = "darkcolor";
       }
       if (this.registerForm.value['color'] == "light") {
-        this.bgcolor = "#fff";
+        this.bgcolor = "#eee";
         this.color = "#000";
         this.theme="light";
         this.themecolor = "lightcolor";
