@@ -12,7 +12,7 @@
 
 
     <div class="container mt-4">
-      <h3>{{dynamictabsdata?.title}}</h3>
+      <h4>{{dynamictabsdata?.title}}</h4>
         <div class="dynamics_tab" #tabs *ngIf="updatedropdown">
         <ul class="nav nav-tabs">
           <li *ngFor="let data of tabdata" (click)="onClick(data?.id)" (onkey)="onClick(data?.id)"><button [ngClass]="[data?.class, dynamictabsdata.theme]"><span>{{data?.label}}</span></button></li>
