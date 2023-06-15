@@ -1,19 +1,20 @@
-import { Component, OnInit , EventEmitter , Output} from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CommonService } from 'src/app/common-service';
 
 @Component({
-  selector: 'app-breakpointlayoutform',
-  templateUrl: './breakpointlayoutform.component.html',
-  styleUrls: ['./breakpointlayoutform.component.scss']
+  selector: 'app-editbreakpoint',
+  templateUrl: './editbreakpoint.component.html',
+  styleUrls: ['./editbreakpoint.component.scss']
 })
-export class BreakpointlayoutformComponent {
+export class EditbreakpointComponent {
+
 
   title = "";
   layout:any;
   registerForm: FormGroup;
   submitted = false;
+  breakdata:any;
 
   @Output() onclose = new EventEmitter<any>;
  
@@ -23,6 +24,15 @@ export class BreakpointlayoutformComponent {
 
 
   ngOnInit() {
+
+    if(localStorage.getItem("breakdata")) {
+      var data1:any =  localStorage.getItem("breakdata");
+      this.breakdata = JSON.parse(data1);
+      console.log(">>>>>",this.breakdata);
+      this.layout = this.breakdata.nolayout;
+    }
+
+
     this.registerForm = this.formBuilder.group({
       nolayout:['',[Validators.required]],
       title1:[''],
@@ -230,6 +240,17 @@ export class BreakpointlayoutformComponent {
     });
   }
 
+
+  reloadComponent(self:boolean,urlToNavigateTo ?:string){
+    //skipLocationChange:true means dont update the url to / when navigating
+   const url=self ? this.router.url : "component/breakpoint";
+   this.router.navigateByUrl('/',{skipLocationChange:true}).then(()=>{
+     this.router.navigate([`/${url}`]).then(()=>{
+      //  console.log(`After navigation I am on:${this.router.url}`)
+     })
+   })
+  }
+
   get f(){
     return this.registerForm.controls;
   }
@@ -272,8 +293,7 @@ export class BreakpointlayoutformComponent {
       this.onclose.emit();
       localStorage.setItem("breakdata",JSON.stringify(data));
       this.router.navigate(['/component/breakpoint']);
+      this.reloadComponent(true);
     }
   }
-
-};
-
+}

@@ -68,10 +68,10 @@ import { FilterPipeModule } from 'ngx-filter-pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter'; 
 import { ImagesliderformComponent } from './FormComponents/imagesliderform/imagesliderform.component';
 import { BreakpointlayoutformComponent } from './FormComponents/breakpointlayoutform/breakpointlayoutform.component';
-import { BreakpointlayoutComponent } from './Components/breakpointlayout/breakpointlayout.component';
 import { LoginformComponent } from './FormComponents/loginform/loginform.component';
 import { LoginComponent } from './Components/login/login.component';
-import { EditloginComponent } from './FormComponents/editlogin/editlogin.component';  
+import { BreakpointComponent } from './Components/breakpoint/breakpoint.component';
+import { EditbreakpointComponent } from './FormComponents/editbreakpoint/editbreakpoint.component';
 
 
 @NgModule({
@@ -132,10 +132,10 @@ import { EditloginComponent } from './FormComponents/editlogin/editlogin.compone
     ImagesliderComponent,
     ImagesliderformComponent,
     BreakpointlayoutformComponent,
-    BreakpointlayoutComponent,
     LoginformComponent,
     LoginComponent,
-    EditloginComponent
+    BreakpointComponent,
+    EditbreakpointComponent
    
   ],
   imports: [

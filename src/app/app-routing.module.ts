@@ -23,6 +23,7 @@ import { TablecomponentComponent } from './Components/tablecomponent/tablecompon
 import { DynamictabsComponent } from './Components/dynamictabs/dynamictabs.component';
 import { ImagesliderComponent } from './Components/imageslider/imageslider.component';
 import { LoginComponent } from './Components/login/login.component';
+import { BreakpointComponent } from './Components/breakpoint/breakpoint.component';
 
 
 const routes: Routes = [
@@ -50,7 +51,8 @@ const routes: Routes = [
   {path : "component/table", component:TablecomponentComponent},
   {path : "component/dynamics", component:DynamictabsComponent},
   {path : "component/imageslider", component:ImagesliderComponent},
-  {path : "component/login&signup", component:LoginComponent}
+  {path : "component/login&signup", component:LoginComponent},
+  {path : "component/breakpoint", component:BreakpointComponent}
 
 ];
 
