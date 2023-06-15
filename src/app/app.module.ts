@@ -71,7 +71,7 @@ import { BreakpointlayoutformComponent } from './FormComponents/breakpointlayout
 import { LoginformComponent } from './FormComponents/loginform/loginform.component';
 import { LoginComponent } from './Components/login/login.component';
 import { BreakpointComponent } from './Components/breakpoint/breakpoint.component';
-import { EditbreakpointComponent } from './FormComponents/editbreakpoint/editbreakpoint.component';  
+import { EditbreakpointComponent } from './FormComponents/editbreakpoint/editbreakpoint.component';
 
 
 @NgModule({

@@ -105,6 +105,14 @@ background-color: #0070ad;
     border-bottom: 1px solid black !important;
     padding-bottom: 5px !important;
 }
+
+@media only screen and (max-width: 767px) {
+   
+    .modaldialog-width {
+        margin-top: 60px;
+        max-width: 100% !important;
+    }
+}
     
 // .carousel-inner.dark h5, .carousel-inner.dark p {
 //   color: #000;

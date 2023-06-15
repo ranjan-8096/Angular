@@ -63,7 +63,7 @@ export class ImagesliderComponent {
   // }`
   closeicon="../assets/images/close.png";
   @ViewChild('myModalClose10') ModalClose10:any;
-  @ViewChild('imageslider') elRef: ElementRef;
+  @ViewChild('imagesliders') elRef: ElementRef;
 
   constructor(private router: Router, elRef: ElementRef, private commonservice:CommonService) {
     
@@ -71,6 +71,8 @@ export class ImagesliderComponent {
 
 
   ngOnInit() {
+  this.htmlcontent="active";
+
     if(localStorage.getItem("imagesliderdata")) {
       var data1:any =  localStorage.getItem("imagesliderdata");
       this.imagesliderdata = JSON.parse(data1);
@@ -134,7 +136,10 @@ export class ImagesliderComponent {
     const formattedCode = lines.join('\n');
     // console.log(formattedCode);
     return formattedCode;
-  }openhtml(){
+  }
+  
+  
+  openhtml(){
     this.htmlcontent = "active";
     this.csscontent = "noactive";
   }
