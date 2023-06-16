@@ -85,8 +85,9 @@ export class LoginformComponent implements OnInit{
     this.submitted = true;
     console.log("Checkbox registerForm",this.f);
     console.log("Checkbox minvalue",this.registerForm.value['minvalue'] , 'and ', this.registerForm.value['maxvalue']);
-
-    if(this.registerForm.value['minvalue'] > this.registerForm.value['maxvalue']) {
+    const minValues =this.registerForm.value['minvalue'];
+    const maxValues =this.registerForm.value['maxvalue'];
+    if( parseInt(minValues) > parseInt(maxValues)) {
       this.lengthvalidation = true;
     } else{
       if(this.registerForm.invalid) {
