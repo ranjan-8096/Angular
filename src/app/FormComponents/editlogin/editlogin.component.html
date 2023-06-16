@@ -86,11 +86,11 @@
                 <div class="error" role="alert" aria-atomic="true" *ngIf="f.minvalue.errors.required">Min value is
                     required
                 </div>
-                <div class="error" role="alert" aria-atomic="true" *ngIf="f.minvalue.errors.minlength">Minimum 3 word
+                <div class="error" role="alert" aria-atomic="true" *ngIf="f.minvalue.errors.minlength">Minimum 1 word
                     required</div>
-                <div class="error" role="alert" aria-atomic="true" *ngIf="f.minvalue.errors.maxlength">maxlength 15
+                <div class="error" role="alert" aria-atomic="true" *ngIf="f.minvalue.errors.maxlength">maxlength 3 word required
                 </div>
-                <div class="error" role="alert" aria-atomic="true" *ngIf="f.minvalue.errors.max">Value should be greater then 0
+                <div class="error" role="alert" aria-atomic="true" *ngIf="f.minvalue.errors.min">Value should be greater then 3
                 </div>
             </div>
         </div>
@@ -107,9 +107,9 @@
                 </div>
                 <div class="error" role="alert" aria-atomic="true" *ngIf="f.maxvalue.errors.minlength">Minimum 3 word
                     required</div>
-                <div class="error" role="alert" aria-atomic="true" *ngIf="f.maxvalue.errors.maxlength">maxlength 15
+                <div class="error" role="alert" aria-atomic="true" *ngIf="f.maxvalue.errors.maxlength">maxlength 3 word required
                 </div>
-                <div class="error" role="alert" aria-atomic="true" *ngIf="f.maxvalue.errors.max">Value should be greater then 0
+                <div class="error" role="alert" aria-atomic="true" *ngIf="f.maxvalue.errors.min">Value should be greater then 0
                 </div>
             </div>
             <div class="error" role="alert" aria-atomic="true" *ngIf="lengthvalidation">max value should be greater than min value</div>

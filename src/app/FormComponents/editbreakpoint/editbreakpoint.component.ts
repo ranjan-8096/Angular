@@ -63,7 +63,7 @@ export class EditbreakpointComponent {
       // console.log("vishnu",result);
 
       if(result == 1) {
-        this.registerForm.get("title11")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(100)]);
+        this.registerForm.get("title11")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
         this.registerForm.get("description11")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
         this.registerForm.get("title1")?.clearValidators();
         this.registerForm.get("description1")?.clearValidators();
@@ -104,9 +104,9 @@ export class EditbreakpointComponent {
         this.registerForm.get("title33")?.setValue("");
         this.registerForm.get("description33")?.setValue("");
       } else if(result == 2){
-        this.registerForm.get("title21")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(100)]);
+        this.registerForm.get("title21")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
         this.registerForm.get("description21")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
-        this.registerForm.get("title22")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(100)]);
+        this.registerForm.get("title22")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
         this.registerForm.get("description22")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
 
         this.registerForm.get("title1")?.clearValidators();
@@ -145,11 +145,11 @@ export class EditbreakpointComponent {
         this.registerForm.get("description33")?.setValue("");
 
       } else if(result == 3){
-        this.registerForm.get("title31")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(100)]);
+        this.registerForm.get("title31")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
         this.registerForm.get("description31")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
-        this.registerForm.get("title32")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(100)]);
+        this.registerForm.get("title32")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
         this.registerForm.get("description32")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
-        this.registerForm.get("title33")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(100)]);
+        this.registerForm.get("title33")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
         this.registerForm.get("description33")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
 
         this.registerForm.get("title1")?.clearValidators();
@@ -184,13 +184,13 @@ export class EditbreakpointComponent {
         this.registerForm.get("description22")?.setValue("");
 
       } else if(result == 4){
-        this.registerForm.get("title1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(100)]);
+        this.registerForm.get("title1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
         this.registerForm.get("description1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
-        this.registerForm.get("title2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(100)]);
+        this.registerForm.get("title2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
         this.registerForm.get("description2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
-        this.registerForm.get("title3")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(100)]);
+        this.registerForm.get("title3")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
         this.registerForm.get("description3")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
-        this.registerForm.get("title4")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(100)]);
+        this.registerForm.get("title4")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(15)]);
         this.registerForm.get("description4")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(200)]);
       } else {
         this.registerForm.get("title1")?.clearValidators();
