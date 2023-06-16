@@ -58,8 +58,8 @@ export class EditloginComponent {
       username: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]], 
       email: [''], 
       password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]], 
-      minvalue: ['', [Validators.required, Validators.min(4), Validators.minLength(1), Validators.maxLength(3)]], 
-      maxvalue: ['', [Validators.required,Validators.min(1), Validators.minLength(1), Validators.maxLength(3)]], 
+      minvalue: ['', [Validators.required, Validators.min(4), Validators.max(15), Validators.minLength(1), Validators.maxLength(3)]], 
+      maxvalue: ['', [Validators.required,Validators.min(4), Validators.max(25), Validators.minLength(1), Validators.maxLength(3)]], 
     });
 
     this.registerForm.get("typefields")?.valueChanges.subscribe((result)=>{ 
