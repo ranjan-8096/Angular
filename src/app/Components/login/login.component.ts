@@ -298,7 +298,7 @@ export class LoginComponent implements OnInit {
         email: ['', this.loginsignupdata.typefields=="Sign Up"?[Validators.required,  
           Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]:null],
         password: ['', [Validators.required,   
-          Validators.pattern(`(?=.*[a-z])${this.loginsignupdata.validateforms2==`Yes`? `(?=.*[A-Z])` :''}(?=.*[0-9])${this.loginsignupdata.validateforms2==`Yes`? `(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]` :''}.{${this.loginsignupdata.minvalue},${this.loginsignupdata.maxvalue}}`)]],
+          Validators.pattern(`(?=.*[a-z])${this.loginsignupdata.validateforms==='Yes'? `(?=.*[A-Z])` :``}(?=.*[0-9])${this.loginsignupdata.validateforms2==='Yes'? `(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]` :``}.{${this.loginsignupdata.minvalue},${this.loginsignupdata.maxvalue}}`)]],
         confirmpassword: ['', this.loginsignupdata.typefields=="Sign Up" ? Validators.required:null]
       }, 
       {

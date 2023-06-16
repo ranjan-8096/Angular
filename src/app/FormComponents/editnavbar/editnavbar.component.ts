@@ -164,6 +164,12 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("imagedrp2")?.setValidators([Validators.required]);
       this.registerForm.get("imagedrp3")?.setValidators([Validators.required]);
       this.registerForm.get("imagedrp4")?.setValidators([Validators.required]); 
+      this.registerForm.get("text2")?.clearValidators();
+      this.registerForm.get("text2")?.setValue("");
+      this.registerForm.get("text3")?.clearValidators();
+      this.registerForm.get("text3")?.setValue("");
+      this.registerForm.get("text4")?.clearValidators();
+      this.registerForm.get("text4")?.setValue("");
     } 
      else if(result == 2) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -172,6 +178,10 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("imagedrp2")?.setValidators([Validators.required]);
       this.registerForm.get("imagedrp3")?.setValidators([Validators.required]);
       this.registerForm.get("imagedrp4")?.setValidators([Validators.required]);
+      this.registerForm.get("text3")?.clearValidators();
+      this.registerForm.get("text3")?.setValue("");
+      this.registerForm.get("text4")?.clearValidators();
+      this.registerForm.get("text4")?.setValue("");
     } 
     else if(result == 3) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -181,6 +191,8 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("imagedrp2")?.setValidators([Validators.required]);
       this.registerForm.get("imagedrp3")?.setValidators([Validators.required]);
       this.registerForm.get("imagedrp4")?.setValidators([Validators.required]);
+      this.registerForm.get("text4")?.clearValidators();
+      this.registerForm.get("text4")?.setValue("");
     } 
     else if(result == 4) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -196,7 +208,8 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("text1")?.clearValidators();
       this.registerForm.get("text2")?.clearValidators();
       this.registerForm.get("text3")?.clearValidators();
-      this.registerForm.get("text4")?.clearValidators();
+      this.registerForm.get("text4")?.clearValidators(); 
+      
     }
   })
   this.registerForm.get("optionsv")?.valueChanges.subscribe((result)=>{

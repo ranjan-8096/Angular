@@ -41,8 +41,8 @@ export class LoginformComponent implements OnInit{
       username: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]], 
       email: [''], 
       password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]], 
-      minvalue: ['', [Validators.required, Validators.min(4), Validators.minLength(1), Validators.maxLength(3)]], 
-      maxvalue: ['', [Validators.required, Validators.min(1), Validators.minLength(1), Validators.maxLength(3)]], 
+      minvalue: ['', [Validators.required, Validators.min(4), Validators.minLength(1), Validators.maxLength(15)]], 
+      maxvalue: ['', [Validators.required, Validators.min(1), Validators.minLength(1), Validators.maxLength(15)]], 
       
     });
 
@@ -84,7 +84,9 @@ export class LoginformComponent implements OnInit{
   onSubmit(){ 
     this.submitted = true;
     console.log("Checkbox registerForm",this.f);
-    if(this.registerForm.value.minvalue > this.registerForm.value.maxvalue) {
+    console.log("Checkbox minvalue",this.registerForm.value['minvalue'] , 'and ', this.registerForm.value['maxvalue']);
+
+    if(this.registerForm.value['minvalue'] > this.registerForm.value['maxvalue']) {
       this.lengthvalidation = true;
     } else{
       if(this.registerForm.invalid) {

@@ -51,7 +51,7 @@
                     <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                         <div class="validationcolor" *ngIf="f.password.errors.required">Password is required</div>
                         <div class="validationcolor" *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
-                        <div class="validationcolor" *ngIf="f.password.errors.pattern">Password must contain a capital letter, a number, a symbol, min value {{loginsignupdata.minvalue}} and max value {{loginsignupdata.maxvalue}}.</div>
+                        <div class="validationcolor" *ngIf="f.password.errors.pattern">Password must contain <span *ngIf="loginsignupdata.validateforms=='Yes'">a capital letter,</span> a number, <span *ngIf="loginsignupdata.validateforms2=='Yes'">a unique symbol,</span> min {{loginsignupdata.minvalue}} and max  {{loginsignupdata.maxvalue}} value.</div>
                     </div>
                 </div>
 
