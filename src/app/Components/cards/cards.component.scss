@@ -138,6 +138,9 @@ button.clearbtn {
 .cardfotter button.text1.gap {
     padding: 5px 15px !important;
 }
+.card {
+    box-shadow: 2px 2px 9px 2px #ccc;
+}
 @media only screen and (max-width: 767px) {
     .width100{
         width: 100% !important;

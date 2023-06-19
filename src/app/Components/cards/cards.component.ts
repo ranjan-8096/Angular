@@ -11,7 +11,7 @@ export class CardsComponent implements OnInit {
 
 carddata:any;
 img:any;
-defaultimage="https://azwelzdevappwbh.azurewebsites.net/assets/7FE422D6-6C37-4E3D-A5B7-8D1085281553";
+defaultimage="../assets/images/card.jpg";
 cardwidth:any;
 cardheight:any;
 backgroundcard:any;
