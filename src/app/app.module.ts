@@ -73,6 +73,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { BreakpointComponent } from './Components/breakpoint/breakpoint.component';
 import { EditbreakpointComponent } from './FormComponents/editbreakpoint/editbreakpoint.component';
 import { EditloginComponent } from './FormComponents/editlogin/editlogin.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -154,6 +155,7 @@ import { EditloginComponent } from './FormComponents/editlogin/editlogin.compone
     NgxPaginationModule,
     FilterPipeModule,
     Ng2SearchPipeModule,
+    NgSelectModule,
     // NgxSpinnerModule,
     NgMultiSelectDropDownModule.forRoot(),
     ToastrModule.forRoot({

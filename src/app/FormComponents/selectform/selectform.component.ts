@@ -112,11 +112,11 @@ export class SelectformComponent {
       this.registerForm.get("optionvalue")?.setValue(this.selectdata?.optionvalue);
       this.registerForm.get("selectwidth")?.setValue(this.selectdata?.selectwidth);
       this.registerForm.get("selector")?.setValue(this.selectdata?.selector);
-      this.registerForm.get("helpertext1")?.setValue(this.selectdata?.selectordata[0]?.helpertext);
-      this.registerForm.get("helpertext2")?.setValue( this.selectdata?.selectordata[1]?.helpertext);
-      this.registerForm.get("helpertext3")?.setValue( this.selectdata?.selectordata[2]?.helpertext);
-      this.registerForm.get("helpertext4")?.setValue( this.selectdata?.selectordata[3]?.helpertext);
-      this.registerForm.get("helpertext5")?.setValue( this.selectdata?.selectordata[4]?.helpertext);
+      this.registerForm.get("helpertext1")?.setValue(this.selectdata?.selectordata[0]?.name);
+      this.registerForm.get("helpertext2")?.setValue( this.selectdata?.selectordata[1]?.name);
+      this.registerForm.get("helpertext3")?.setValue( this.selectdata?.selectordata[2]?.name);
+      this.registerForm.get("helpertext4")?.setValue( this.selectdata?.selectordata[3]?.name);
+      this.registerForm.get("helpertext5")?.setValue( this.selectdata?.selectordata[4]?.name);
   }
   }
 
@@ -147,20 +147,20 @@ export class SelectformComponent {
 
       this.selectordata = [];
       if(this.registerForm.value.helpertext1) {
-        this.selectordata.push({id:1,"helpertext":this.registerForm.value.helpertext1})
+        this.selectordata.push({id:1,"name":this.registerForm.value.helpertext1})
       } 
       if(this.registerForm.value.helpertext2) {
-        this.selectordata.push({id:2,"helpertext":this.registerForm.value.helpertext2})
+        this.selectordata.push({id:2,"name":this.registerForm.value.helpertext2})
       }
       if(this.registerForm.value.helpertext3) {
-        this.selectordata.push({id:3,"helpertext":this.registerForm.value.helpertext3})
+        this.selectordata.push({id:3,"name":this.registerForm.value.helpertext3})
       }
 
       if(this.registerForm.value.helpertext4) {
-        this.selectordata.push({id:4,"helpertext":this.registerForm.value.helpertext4})
+        this.selectordata.push({id:4,"name":this.registerForm.value.helpertext4})
       }
       if(this.registerForm.value.helpertext5) {
-        this.selectordata.push({id:5,"helpertext":this.registerForm.value.helpertext5})
+        this.selectordata.push({id:5,"name":this.registerForm.value.helpertext5})
       }
 
       console.log(">>>>>",this.selectordata);

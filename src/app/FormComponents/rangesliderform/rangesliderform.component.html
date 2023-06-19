@@ -17,7 +17,7 @@
 
         <div class="form-group pt-3">
             <label>Min Value:</label><span class="star">*</span>
-            <input type="text" (keypress)="numeric($event)" maxlength="3" class="form-control inputbox" aria-describedby="title-err-text" aria-required="true" placeholder="Please enter minvalue" name="minvalue" formControlName="minvalue" [ngClass]="{ 'is-invalid': submitted && f.minvalue.errors }" autofocus/>
+            <input type="number" (keypress)="numeric($event)" maxlength="3" min="1" class="form-control inputbox" aria-describedby="title-err-text" aria-required="true" placeholder="Please enter minvalue" name="minvalue" formControlName="minvalue" [ngClass]="{ 'is-invalid': submitted && f.minvalue.errors }" autofocus/>
             <div *ngIf="(f.minvalue.touched || submitted) && f.minvalue.errors" class="invalid-feedback">
                 <div class="error" role="alert" aria-atomic="true"  *ngIf="f.minvalue.errors.required">Min value is required</div>
                 <div class="error" role="alert" aria-atomic="true"   *ngIf="f.minvalue.errors.minlength">Minimum 3 word required for title</div>
@@ -31,16 +31,16 @@
 
             <div class="form-group pt-3">
                 <label>max Value:</label><span class="star">*</span>
-                <input type="text" (keypress)="numeric($event)" maxlength="3" class="form-control inputbox" aria-describedby="maxvalue-err-text" aria-required="true" placeholder="Please enter maxvalue" name="maxvalue" formControlName="maxvalue" [ngClass]="{ 'is-invalid': submitted && f.maxvalue.errors }" autofocus/>
+                <input type="number" (keypress)="numeric($event)" maxlength="3" min="1" class="form-control inputbox" aria-describedby="maxvalue-err-text" aria-required="true" placeholder="Please enter maxvalue" name="maxvalue" formControlName="maxvalue" [ngClass]="{ 'is-invalid': submitted && f.maxvalue.errors }" autofocus/>
                 <div *ngIf="(f.maxvalue.touched || submitted) && f.maxvalue.errors" class="invalid-feedback">
                     <div class="error" role="alert" aria-atomic="true"  *ngIf="f.maxvalue.errors.required">maxvalue is required</div>
                     <div class="error" role="alert" aria-atomic="true"   *ngIf="f.maxvalue.errors.minlength">Minimum 3 word required for title</div>
                     <div class="error" role="alert" aria-atomic="true" *ngIf="f.maxvalue.errors.maxlength">maxlength 20 for title</div>
                     <div class="error" role="alert" aria-atomic="true" *ngIf="f.maxvalue.errors.min">max value more than 1 value</div>
-
-                    
                   </div>
-                  <div class="error" role="alert" aria-atomic="true" *ngIf="lengthvalidation">max value should be greater than min value</div>
+                  <div class="error" role="alert" aria-atomic="true" *ngIf="registerForm.errors && registerForm.errors.greater">max value more than 1 value</div>
+
+                  <!-- <div class="error" role="alert" aria-atomic="true" *ngIf="lengthvalidation">max value should be greater than min value</div> -->
 
                 </div>
 

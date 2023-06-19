@@ -20,7 +20,7 @@
     <div class="container mt-3 width100 select_container" [ngStyle]="{'width':selectdata.selectwidth}" [style.border]="'2px solid ' +  selectdata?.color">
         <label>{{selectdata?.title}}</label>
         <div class="select"> 
-          <ng-multiselect-dropdown *ngIf="updatedropdown"
+          <!-- <ng-multiselect-dropdown *ngIf="updatedropdown"
             [placeholder]="'Select value'"
             [settings]="dropdownSettings"
             [data]="dropdownList"
@@ -28,7 +28,13 @@
             (onSelect)="onItemSelect($event)"
             (onSelectAll)="onSelectAll($event)"
           >
-          </ng-multiselect-dropdown>
+          </ng-multiselect-dropdown> -->
+         <ng-select [items]="dropdownList" *ngIf="updatedropdown"
+          bindLabel="name"
+          placeholder="Select data"
+          [multiple]=selectdata.showmultiselct
+          [(ngModel)]="selectedItems">
+      </ng-select> 
         </div>
     </div>
   </div>
