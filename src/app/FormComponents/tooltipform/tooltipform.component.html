@@ -4,11 +4,11 @@
     <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="form-group pt-3">
         <label>Button Name:</label><span class="star">*</span>
-        <input type="text" maxlength="20" class="form-control inputbox" aria-describedby="title-err-text" aria-required="true" placeholder="Please enter button name" name="title" formControlName="title" [ngClass]="{ 'is-invalid': submitted && f.title.errors }" autofocus/>
+        <input type="text" maxlength="13" class="form-control inputbox" aria-describedby="title-err-text" aria-required="true" placeholder="Please enter button name" name="title" formControlName="title" [ngClass]="{ 'is-invalid': submitted && f.title.errors }" autofocus/>
         <div *ngIf="(f.title.touched || submitted) && f.title.errors" class="invalid-feedback">
             <div class="error" role="alert" aria-atomic="true"  *ngIf="f.title.errors.required">Button name is required</div>
             <div class="error" role="alert" aria-atomic="true"   *ngIf="f.title.errors.minlength">Minimum 3 word required for title</div>
-            <div class="error" role="alert" aria-atomic="true" *ngIf="f.title.errors.maxlength">maxlength 20 for title</div>
+            <div class="error" role="alert" aria-atomic="true" *ngIf="f.title.errors.maxlength">maxlength 15 for title</div>
           </div>
         </div>
 
