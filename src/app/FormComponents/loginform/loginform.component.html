@@ -1,5 +1,5 @@
 <div class="modal-body">
-    <p><b>Please fill the mandotary fields according your preference to design of the Login/Signup.</b> </p>
+    <p><b>Please fill the mandatory fields according your preference to design of the Login/Signup.</b> </p>
 
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <!-- <div class="form-group pt-2">
@@ -143,7 +143,7 @@
                     name="validateforms" value="No" formControlName="validateforms" aria-describedby="image-err-text" aria-label="No">
                 <label class="image1" for="image7">No</label>
                 <div *ngIf="(f.validateforms.touched || submitted) && f.validateforms.errors" class="invalid-feedback">
-                    <div class="error" role="alert" id="image-err-text" *ngIf="f.validateforms.errors.required">Please select Yes or No.</div>
+                    <div class="error" role="alert" id="image-err-text" *ngIf="f.validateforms.errors.required">Please select yes or no.</div>
                 </div>
             </div>
 
@@ -159,7 +159,7 @@
                     name="validateforms2" value="No" formControlName="validateforms2" aria-describedby="image-err-text" aria-label="No">
                 <label class="image1" for="image7">No</label>
                 <div *ngIf="(f.validateforms2.touched || submitted) && f.validateforms2.errors" class="invalid-feedback">
-                    <div class="error" role="alert" id="image-err-text" *ngIf="f.validateforms2.errors.required">Please select Yes or No.</div>
+                    <div class="error" role="alert" id="image-err-text" *ngIf="f.validateforms2.errors.required">Please select yes or no.</div>
                 </div>
             </div>
 

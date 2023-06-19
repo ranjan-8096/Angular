@@ -1,7 +1,7 @@
  
 
 <div class="modal-body">
-    <p><b>Please fill the mandotary fields according your preference to design of the login/signup.</b> </p>
+    <p><b>Please fill the mandatory fields according your preference to design of the login/signup.</b> </p>
 
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
        
@@ -131,7 +131,7 @@
                     (change)="handleChange($event)" [ngClass]="noboxshadowchecked">
                 <label class="image1" for="image7">No</label>
                 <div *ngIf="(f.validateforms.touched || submitted) && f.validateforms.errors" class="invalid-feedback">
-                    <div class="error" role="alert" id="image-err-text" *ngIf="f.validateforms.errors.required">Please select Yes or No.</div>
+                    <div class="error" role="alert" id="image-err-text" *ngIf="f.validateforms.errors.required">Please select yes or no.</div>
                 </div>
             </div>
 
@@ -149,7 +149,7 @@
                     (change)="handleChange1($event)" [ngClass]="noboxshadowchecked">
                 <label class="image1" for="image7">No</label>
                 <div *ngIf="(f.validateforms2.touched || submitted) && f.validateforms2.errors" class="invalid-feedback">
-                    <div class="error" role="alert" id="image-err-text" *ngIf="f.validateforms2.errors.required">Please select Yes or No.</div>
+                    <div class="error" role="alert" id="image-err-text" *ngIf="f.validateforms2.errors.required">Please select yes or no.</div>
                 </div>
             </div>
 

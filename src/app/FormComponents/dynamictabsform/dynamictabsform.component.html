@@ -1,12 +1,12 @@
 <div class="modal-body">
-    <p><b>Please fill the mandotary fields according your preference to design of the tab</b> </p>
+    <p><b>Please fill the mandatory fields according your preference to design of the tab</b> </p>
 
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label>Tab Heading:</label><span class="star">*</span>
-        <input type="text" maxlength="20" class="form-control inputbox" aria-describedby="title-err-text" aria-required="true" placeholder="Please enter Label" name="title" formControlName="title" [ngClass]="{ 'is-invalid': submitted && f.title.errors }" autofocus/>
+        <input type="text" maxlength="20" class="form-control inputbox" aria-describedby="title-err-text" aria-required="true" placeholder="Please enter tab heading" name="title" formControlName="title" [ngClass]="{ 'is-invalid': submitted && f.title.errors }" autofocus/>
         <div *ngIf="(f.title.touched || submitted) && f.title.errors" class="invalid-feedback">
-            <div class="error" role="alert" aria-atomic="true" *ngIf="f.title.errors.required">Title is
+            <div class="error" role="alert" aria-atomic="true" *ngIf="f.title.errors.required">Tab heading is
                 required</div>
             <div class="error" role="alert" aria-atomic="true" *ngIf="f.title.errors.maxlength">maxlength 20
             </div>
