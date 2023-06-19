@@ -1,9 +1,9 @@
 <div class="modal-body">
-    <p><b>Please fill the mandotary fields according your preference to design of the Range</b> </p>
+    <p><b>Please fill the mandatory fields according your preference to design of the Range</b> </p>
 
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-            <label>Label:</label><span class="star">*</span>
+            <label>Title:</label><span class="star">*</span>
         <input type="text" maxlength="20" class="form-control inputbox" aria-describedby="title-err-text" aria-required="true" placeholder="Please enter title" name="title" formControlName="title" [ngClass]="{ 'is-invalid': submitted && f.title.errors }" autofocus/>
         <div *ngIf="(f.title.touched || submitted) && f.title.errors" class="invalid-feedback">
             <div class="error" role="alert" aria-atomic="true" *ngIf="f.title.errors.required">Title is

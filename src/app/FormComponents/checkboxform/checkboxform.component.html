@@ -1,12 +1,12 @@
 <div class="modal-body">
-    <p><b>Please fill the mandotary fields according your preference to design of the Checkbox/Radio</b> </p>
+    <p><b>Please fill the mandatory fields according your preference to design of the Checkbox/Radio</b> </p>
 
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="form-group pt-2">
             <label>Label:</label><span class="star">*</span>
             <div class="form-group d-flex align-items-center shadow-sec background">
                 <input type="text" maxlength="15" class="form-control inputbox" aria-describedby="title-err-text"
-                    placeholder="Please enter title" name="title" formControlName="title"
+                    placeholder="Please enter label" name="title" formControlName="title"
                     [ngClass]="{ 'is-invalid': submitted && f.title.errors }" autofocus />
             </div>
             <div *ngIf="(f.title.touched || submitted) && f.title.errors" class="invalid-feedback">

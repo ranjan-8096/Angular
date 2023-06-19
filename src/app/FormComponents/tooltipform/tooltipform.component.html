@@ -1,5 +1,5 @@
 <div class="modal-body">
-    <p><b>Please fill the mandotary fields according your preference to design tooltip</b> </p>
+    <p><b>Please fill the mandatory fields according your preference to design tooltip</b> </p>
 
     <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="form-group pt-3">
@@ -15,7 +15,7 @@
 
     <div class="form-group">
         <label>Tooltip Name:</label><span class="star">*</span>
-        <input type="text" class="form-control inputbox" aria-describedby="profile-err-text" placeholder="Please enter tooltip Name" name="tooltipname" formControlName="tooltipname" [ngClass]="{ 'is-invalid': submitted && f.tooltipname.errors }" autofocus/>
+        <input type="text" class="form-control inputbox" aria-describedby="profile-err-text" placeholder="Please enter tooltip name" name="tooltipname" formControlName="tooltipname" [ngClass]="{ 'is-invalid': submitted && f.tooltipname.errors }" autofocus/>
         <div *ngIf="(f.tooltipname.touched || submitted) && f.tooltipname.errors" class="invalid-feedback">
             <div class="error" role="alert" id="profile-err-text" *ngIf="f.tooltipname.errors.required">Tooltip name is required</div>
             <div class="error" role="alert" id="profile-err-text" *ngIf="f.tooltipname.errors.maxlength">maxlength 20</div>
