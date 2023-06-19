@@ -187,7 +187,11 @@ export class LoginComponent implements OnInit {
     cursor: pointer;
   }
   .login-wrapper :focus-visible {
-      outline: 2px solid;
+      outline: 2px solid gray !important;
+  }
+  .validationcolor {
+      font-weight: 500;
+      color: red;
   }
   .input-group label {
       color: #fff;
@@ -202,6 +206,10 @@ export class LoginComponent implements OnInit {
     color: #F09819;
     font-size: var(--step--2);
     text-align: left;
+  }
+  
+  .modal-dialog.modaldialog-width {
+      margin-top: 90px;
   }
   
   .login-wrapper .copy {
@@ -272,11 +280,33 @@ export class LoginComponent implements OnInit {
       height: 400px;
       margin: auto;
       margin-top: 30px;
-  }
-  
+  } 
   
   @media screen and (min-width:320px) and (max-width:765px) {
-    
+      .login-form {
+          width: 100% !important;
+          padding: 1rem !important;
+      }
+      .form-floating.form-floating-filled {
+          max-width: 100% !important;
+      }     
+      .width100{
+          width: 100% !important;
+      }
+      .top-header div:first-child {
+          width: 50%;
+      }
+      h4.subheader {
+          margin: 0px;
+          font-size: 1.2rem;
+      }
+      section.main header {
+          padding: 1rem .85rem;
+      }
+      .modaldialog-width { 
+          max-width: 100% !important;
+      }
+      
   }
   `
 

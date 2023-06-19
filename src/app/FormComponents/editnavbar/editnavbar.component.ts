@@ -154,6 +154,7 @@ export class EditnavbarComponent implements OnInit {
   }
 
 
+  
   this.registerForm.get("menus")?.valueChanges.subscribe((result)=>{
 
     console.log("menus",result);
@@ -222,7 +223,14 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("firstsubmenu2")?.setValidators([Validators.required]);
       this.registerForm.get("firstsubmenu3")?.setValidators([Validators.required]);
       this.registerForm.get("firstsubmenu4")?.setValidators([Validators.required]);
-    }  
+      this.registerForm.get("firstsubmenu2")?.clearValidators();
+      this.registerForm.get("firstsubmenu2")?.setValue("");
+      this.registerForm.get("firstsubmenu3")?.clearValidators();
+      this.registerForm.get("firstsubmenu3")?.setValue("");
+      this.registerForm.get("firstsubmenu4")?.clearValidators();
+      this.registerForm.get("firstsubmenu4")?.setValue("");
+    }    
+    
      else if(result == 2) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
       this.registerForm.get("text2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -230,6 +238,10 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("firstsubmenu2")?.setValidators([Validators.required]);
       this.registerForm.get("firstsubmenu3")?.setValidators([Validators.required]);
       this.registerForm.get("firstsubmenu4")?.setValidators([Validators.required]);
+      this.registerForm.get("firstsubmenu3")?.clearValidators();
+      this.registerForm.get("firstsubmenu3")?.setValue("");
+      this.registerForm.get("firstsubmenu4")?.clearValidators();
+      this.registerForm.get("firstsubmenu4")?.setValue("");
     } 
     else if(result == 3) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -239,6 +251,8 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("firstsubmenu2")?.setValidators([Validators.required]);
       this.registerForm.get("firstsubmenu3")?.setValidators([Validators.required]);
       this.registerForm.get("firstsubmenu4")?.setValidators([Validators.required]);
+      this.registerForm.get("firstsubmenu4")?.clearValidators();
+      this.registerForm.get("firstsubmenu4")?.setValue("");
     } 
     else if(result == 4) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -268,6 +282,12 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("secondsubmenu2")?.setValidators([Validators.required]);
       this.registerForm.get("secondsubmenu3")?.setValidators([Validators.required]);
       this.registerForm.get("secondsubmenu4")?.setValidators([Validators.required]);
+      this.registerForm.get("secondsubmenu2")?.clearValidators();
+      this.registerForm.get("secondsubmenu2")?.setValue("");
+      this.registerForm.get("secondsubmenu3")?.clearValidators();
+      this.registerForm.get("secondsubmenu3")?.setValue("");
+      this.registerForm.get("secondsubmenu4")?.clearValidators();
+      this.registerForm.get("secondsubmenu4")?.setValue("");
     } 
      else if(result == 2) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -276,6 +296,10 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("secondsubmenu2")?.setValidators([Validators.required]);
       this.registerForm.get("secondsubmenu3")?.setValidators([Validators.required]);
       this.registerForm.get("secondsubmenu4")?.setValidators([Validators.required]);
+      this.registerForm.get("secondsubmenu3")?.clearValidators();
+      this.registerForm.get("secondsubmenu3")?.setValue("");
+      this.registerForm.get("secondsubmenu4")?.clearValidators();
+      this.registerForm.get("secondsubmenu4")?.setValue("");
     } 
     else if(result == 3) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -285,6 +309,8 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("secondsubmenu2")?.setValidators([Validators.required]);
       this.registerForm.get("secondsubmenu3")?.setValidators([Validators.required]);
       this.registerForm.get("secondsubmenu4")?.setValidators([Validators.required]);
+      this.registerForm.get("secondsubmenu4")?.clearValidators();
+      this.registerForm.get("secondsubmenu4")?.setValue("");
     } 
     else if(result == 4) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -314,6 +340,12 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("thirdsubmenu2")?.setValidators([Validators.required]);
       this.registerForm.get("thirdsubmenu3")?.setValidators([Validators.required]);
       this.registerForm.get("thirdsubmenu4")?.setValidators([Validators.required]);
+      this.registerForm.get("thirdsubmenu2")?.clearValidators();
+      this.registerForm.get("thirdsubmenu2")?.setValue("");
+      this.registerForm.get("thirdsubmenu3")?.clearValidators();
+      this.registerForm.get("thirdsubmenu3")?.setValue("");
+      this.registerForm.get("thirdsubmenu4")?.clearValidators();
+      this.registerForm.get("thirdsubmenu4")?.setValue("");
     } 
      else if(result == 2) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -322,6 +354,10 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("thirdsubmenu2")?.setValidators([Validators.required]);
       this.registerForm.get("thirdsubmenu3")?.setValidators([Validators.required]);
       this.registerForm.get("thirdsubmenu4")?.setValidators([Validators.required]);
+      this.registerForm.get("thirdsubmenu3")?.clearValidators();
+      this.registerForm.get("thirdsubmenu3")?.setValue("");
+      this.registerForm.get("thirdsubmenu4")?.clearValidators();
+      this.registerForm.get("thirdsubmenu4")?.setValue("");
     } 
     else if(result == 3) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -331,6 +367,8 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("thirdsubmenu2")?.setValidators([Validators.required]);
       this.registerForm.get("thirdsubmenu3")?.setValidators([Validators.required]);
       this.registerForm.get("thirdsubmenu4")?.setValidators([Validators.required]);
+      this.registerForm.get("thirdsubmenu4")?.clearValidators();
+      this.registerForm.get("thirdsubmenu4")?.setValue("");
     } 
     else if(result == 4) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -361,6 +399,12 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("forthsubmenu2")?.setValidators([Validators.required]);
       this.registerForm.get("forthsubmenu3")?.setValidators([Validators.required]);
       this.registerForm.get("forthsubmenu4")?.setValidators([Validators.required]);
+      this.registerForm.get("forthsubmenu2")?.clearValidators();
+      this.registerForm.get("forthsubmenu2")?.setValue("");
+      this.registerForm.get("forthsubmenu3")?.clearValidators();
+      this.registerForm.get("forthsubmenu3")?.setValue("");
+      this.registerForm.get("forthsubmenu4")?.clearValidators();
+      this.registerForm.get("forthsubmenu4")?.setValue("");
     } 
      else if(result == 2) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -369,6 +413,10 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("forthsubmenu2")?.setValidators([Validators.required]);
       this.registerForm.get("forthsubmenu3")?.setValidators([Validators.required]);
       this.registerForm.get("forthsubmenu4")?.setValidators([Validators.required]);
+      this.registerForm.get("forthsubmenu3")?.clearValidators();
+      this.registerForm.get("forthsubmenu3")?.setValue("");
+      this.registerForm.get("forthsubmenu4")?.clearValidators();
+      this.registerForm.get("forthsubmenu4")?.setValue("");
     } 
     else if(result == 3) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
@@ -378,6 +426,8 @@ export class EditnavbarComponent implements OnInit {
       this.registerForm.get("forthsubmenu2")?.setValidators([Validators.required]);
       this.registerForm.get("forthsubmenu3")?.setValidators([Validators.required]);
       this.registerForm.get("forthsubmenu4")?.setValidators([Validators.required]);
+      this.registerForm.get("forthsubmenu4")?.clearValidators();
+      this.registerForm.get("forthsubmenu4")?.setValue("");
     } 
     else if(result == 4) {
       this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(10)]);
