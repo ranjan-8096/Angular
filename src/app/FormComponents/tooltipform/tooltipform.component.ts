@@ -24,8 +24,8 @@ export class TooltipformComponent implements OnInit  {
   ngOnInit() {
 
   this.registerForm = this.formBuilder.group({
-    title: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
-    tooltipname: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]],
+    title: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],
+    tooltipname: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
     color: ['light', [Validators.required]],
     direction: ['right', [Validators.required]],
   });

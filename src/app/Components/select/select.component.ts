@@ -2,6 +2,7 @@ import { Component ,ElementRef,OnInit, ViewChild } from '@angular/core';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import { Router } from '@angular/router';
 import { CommonService } from 'src/app/common-service';
+import {NgSelectModule, NgOption} from '@ng-select/ng-select';
 
 @Component({
   selector: 'app-select',
@@ -77,7 +78,7 @@ export class SelectComponent implements OnInit {
     if(localStorage.getItem("selectdata")) {
       var data1:any =  localStorage.getItem("selectdata");
       this.selectdata = JSON.parse(data1);
-      this.dropdownSettings.singleSelection = this.selectdata.selector == "multiselect" ? false : true;
+      this.selectdata.showmultiselct = this.selectdata.selector == "multiselect" ? true : false;
       // var uniqueSet = new Set();
       // this.selectloaddata();
       this.dropdownList = this.selectdata.selectordata;

@@ -203,16 +203,16 @@ export class TooltipComponent {
 
   tooltipcolorvalue() {
     if (this.tooltipdata?.color == 'dark') {
-      this.tooltipdata.class = "ngdark"
+      this.tooltipdata.class = "dark"
     }
     if (this.tooltipdata?.color == 'light') {
-      this.tooltipdata.class = "nglight"
+      this.tooltipdata.class = "normal"
     }
     if (this.tooltipdata?.color == 'blue') {
-      this.tooltipdata.class = "ngblue"
+      this.tooltipdata.class = "blue"
     }
     if (this.tooltipdata?.color == 'purple') {
-      this.tooltipdata.class = "ngpurple"
+      this.tooltipdata.class = "purple"
     }
 
   }

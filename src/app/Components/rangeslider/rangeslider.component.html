@@ -19,12 +19,12 @@
          <div class="rangeslider width100" >
           <div class="marginauto" [ngClass]="rangesliderdata?.theme" [ngStyle]="{'width':rangesliderdata?.rangewidth}">
           <div class="minmax">
-            <p>Min: <span [ngClass]="rangesliderdata?.theme">{{ minValue }}</span></p>
-            <p>Max: <span [ngClass]="rangesliderdata?.theme">{{ maxValue }}</span></p>
+            <p><span class="light_dark">Min:</span> <span [ngClass]="rangesliderdata?.theme">{{ minValue }}</span></p>
+            <p><span class="light_dark">Max:</span> <span [ngClass]="rangesliderdata?.theme">{{ maxValue }}</span></p>
           </div>
           <input type="range" class="slider" min={{minValue}} max={{maxValue}} (change)="changeFn($event)"   [ngClass]="rangesliderdata?.theme" id="customRange3">
              <!-- <ngx-slider  *ngIf="updatedropdown" [(value)]="minValue" [(highValue)]="Valuenumber"  [options]="options"></ngx-slider> -->
-             <div> Value : <span [ngClass]="rangesliderdata?.theme">{{ Valuenumber }}</span></div>
+             <div><span class="light_dark"> Value : </span><span [ngClass]="rangesliderdata?.theme">{{ Valuenumber }}</span></div>
             </div> 
       </div>
     </div>

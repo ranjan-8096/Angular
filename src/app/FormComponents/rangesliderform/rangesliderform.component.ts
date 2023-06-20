@@ -1,9 +1,17 @@
 
 import { Component, OnInit , EventEmitter , Output} from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonService } from 'src/app/common-service';
 
+export const minmaxValidator: any = (formGroup: FormGroup): ValidationErrors | null => {
+  let min = formGroup.get('minvalue')?.value
+  let max = formGroup.get('maxvalue')?.value
+  if (min && max && min > max) {
+    return { 'greater': true };
+  }
+  return null; //period is ok, return null
+}
 @Component({
   selector: 'app-rangesliderform',
   templateUrl: './rangesliderform.component.html',
@@ -30,11 +38,13 @@ export class RangesliderformComponent {
 
     this.registerForm = this.formBuilder.group({
       selectedtitle:['success',[Validators.required]],
-      title:['',[Validators.required,Validators.maxLength(20)]],
-      minvalue:['',[Validators.required,Validators.min(1)]],
-      maxvalue:['',[Validators.required,Validators.min(1)]],
+      title:['',[Validators.required]],
+      minvalue:[null,[Validators.required]],
+      maxvalue:[null,[Validators.required]],
       rangewidth:['',[Validators.required]],
       theme:['dark',[Validators.required]],
+    },{
+      validators:minmaxValidator
     });
 
     
@@ -54,7 +64,7 @@ export class RangesliderformComponent {
 
 
   get f(){
-    return this.registerForm.controls;
+    return this.registerForm.controls as any;
   }
 
   numeric(e:any) {
@@ -74,13 +84,8 @@ export class RangesliderformComponent {
   
   onSubmit(){
     console.log(">>>>",this.registerForm);
-    console.log(">>>>",this.f.minvalue);
+
     this.submitted = true;
-    console.log(">>>>>>>>>",this.registerForm.value.minvalue > this.registerForm.value.maxvalue);
-    if(this.registerForm.value.minvalue > this.registerForm.value.maxvalue) {
-      this.lengthvalidation = true;
-    } else {
-      this.lengthvalidation = false;
       if(this.registerForm.invalid) {
         return true;
       } else {
@@ -108,7 +113,7 @@ export class RangesliderformComponent {
         this.commonservice.rangeslidercompletedata(data);
         localStorage.setItem("rangesliderdata",JSON.stringify(data));
         this.router.navigate(['/component/range']);
-      }    }
+      }    
 
     // console.log(">>>>>>>>>",this.lengthvalidation);
 

@@ -4,8 +4,8 @@
         <h4 class="subheader"> Slider <span>Component</span></h4>
       </div>
       <div class="button-sec">
-        <button class=" backbutton" (click)="backwindow()">Back</button>
-        <button class=" backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal014">Edit</button>
+        <button tabindex="1" class=" backbutton" (click)="backwindow()">Back</button>
+        <button tabindex="1" class=" backbutton" data-bs-toggle="modal" data-bs-target="#exampleModal014">Edit</button>
       </div> 
     </div>
     
@@ -41,11 +41,11 @@
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" [ngClass]="imagesliderdata?.theme">
+        <button tabindex="2" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" [ngClass]="imagesliderdata?.theme">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" [ngClass]="imagesliderdata?.theme">
+        <button  tabindex="2" class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" [ngClass]="imagesliderdata?.theme">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
