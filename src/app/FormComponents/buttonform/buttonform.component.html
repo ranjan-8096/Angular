@@ -89,7 +89,7 @@
                     
                     <label class="image1" ><input [ngClass]="{ 'is-invalid': submitted && f.imagev.errors }" autofocus type="radio"  
                         name="imagev" value="No" formControlName="imagev" aria-describedby="image-err-text" aria-label="No"> <span>No</span></label>
-                    <div *ngIf="(f.imagev.touched || submitted) && f.imagev.errors" class="invalid-feedback">
+                    <div *ngIf="(f.imagev.touched || submitted) && f.imagev.errors">
                         <div class="error" role="alert" id="image-err-text" *ngIf="f.imagev.errors.required">Box shadow is required</div>
                     </div>
                 </div>
