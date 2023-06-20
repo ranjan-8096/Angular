@@ -27,10 +27,10 @@
     <div class="pt-3">
         <label class="accessbility">Would you like to have Capgemini logo in the header section</label><span class="star">*</span>
         <div class="form-group">
-            <input type="radio" id="image5" name="image3" value="Yes" aria-describedby="capglogo-err-text" aria-label="Yes" aria-checked="Yes" formControlName="image3">
-            <label class="image1" for="image5">Yes</label>
-            <input type="radio" id="image6" name="image3" value="No" aria-describedby="capglogo-err-text" aria-label="No" aria-checked="No" formControlName="image3">
-            <label class="image1" for="image6">No</label>
+            
+            <label class="image1"> <input type="radio"  name="image3" value="Yes" aria-describedby="capglogo-err-text" aria-label="Yes" aria-checked="Yes" formControlName="image3"> <span>Yes</span></label>
+            
+            <label class="image1"> <input type="radio" name="image3" value="No" aria-describedby="capglogo-err-text" aria-label="No" aria-checked="No" formControlName="image3"> <span>No</span></label>
            
             <div *ngIf="submitted && f.image3.errors" class="invalid-feedback">
                 <div class="error" role="alert" id="capglogo-err-text" *ngIf="f.image3.errors.required">Capgemini logo is required</div>
@@ -42,10 +42,10 @@
     <div class="pt-3">
         <label class="accessbility">Would you like to have App Logo in the header section</label><span class="star">*</span>
         <div class="form-group">
-            <input type="radio" id="image1" name="image1" value="Yes" aria-describedby="applogo-err-text" aria-label="Yes" formControlName="image1">
-            <label class="image1" for="image1">Yes</label>
-            <input type="radio" id="image2" name="image1" value="No" aria-describedby="applogo-err-text" aria-label="No" formControlName="image1">
-            <label class="image1" for="image2">No</label>
+            
+            <label class="image1" ><input type="radio" name="image1" value="Yes" aria-describedby="applogo-err-text" aria-label="Yes" formControlName="image1"> <span>Yes</span></label>
+            
+            <label class="image1" ><input type="radio"  name="image1" value="No" aria-describedby="applogo-err-text" aria-label="No" formControlName="image1"> <span>No</span></label>
         </div>
         <div *ngIf="submitted && f.image1.errors" class="invalid-feedback">
             <div class="error" role="alert" id="applogo-err-text" *ngIf="f.image1.errors.required">App logo is required</div>
@@ -56,10 +56,10 @@
     <div class="pt-3">
         <label class="accessbility">Would you like to have profile Image</label><span class="star">*</span>
         <div class="form-group">
-            <input type="radio" id="image3" name="image2" value="Yes" aria-describedby="image-err-text" aria-label="Yes" formControlName="image2">
-            <label class="image1" for="image3">Yes</label>
-            <input type="radio" id="image4" name="image2" value="No" aria-describedby="image-err-text" aria-label="No" formControlName="image2">
-            <label class="image1" for="image4">No</label>
+            
+            <label class="image1" for="image3"><input type="radio" id="image3" name="image2" value="Yes" aria-describedby="image-err-text" aria-label="Yes" formControlName="image2"> <span>Yes</span></label>
+            
+            <label class="image1" for="image4"><input type="radio" id="image4" name="image2" value="No" aria-describedby="image-err-text" aria-label="No" formControlName="image2"> <span>No</span></label>
         </div>
         <div *ngIf="submitted && f.image2.errors" class="invalid-feedback">
             <div class="error" role="alert" id="image-err-text" *ngIf="f.image2.errors.required">Profile image is required</div>

@@ -83,12 +83,12 @@
                 <label class="accessbility">Would you like to have Box shadow </label><span class="star">*</span>
                  
                 <div class="mt-2">
-                    <input [ngClass]="{ 'is-invalid': submitted && f.imagev.errors }" autofocus type="radio" id="image6"
-                        name="imagev" value="Yes" formControlName="imagev" aria-describedby="image-err-text" aria-label="Yes">
-                    <label class="image1" for="image6">Yes</label>
-                    <input [ngClass]="{ 'is-invalid': submitted && f.imagev.errors }" autofocus type="radio" id="image7"
-                        name="imagev" value="No" formControlName="imagev" aria-describedby="image-err-text" aria-label="No">
-                    <label class="image1" for="image7">No</label>
+                    
+                    <label class="image1" > <input [ngClass]="{ 'is-invalid': submitted && f.imagev.errors }" autofocus type="radio"  
+                        name="imagev" value="Yes" formControlName="imagev" aria-describedby="image-err-text" aria-label="Yes"> <span>Yes</span></label>
+                    
+                    <label class="image1" ><input [ngClass]="{ 'is-invalid': submitted && f.imagev.errors }" autofocus type="radio"  
+                        name="imagev" value="No" formControlName="imagev" aria-describedby="image-err-text" aria-label="No"> <span>No</span></label>
                     <div *ngIf="(f.imagev.touched || submitted) && f.imagev.errors" class="invalid-feedback">
                         <div class="error" role="alert" id="image-err-text" *ngIf="f.imagev.errors.required">Box shadow is required</div>
                     </div>

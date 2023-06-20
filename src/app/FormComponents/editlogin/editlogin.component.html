@@ -122,14 +122,14 @@
             <label class="accessbility">Would you like to have Cap letter on form. </label><span class="star">*</span>
              
             <div class="mt-2">
-                <input [ngClass]="{ 'is-invalid': submitted && f.validateforms.errors }" autofocus type="radio" id="image6"
+              
+                <label class="image1">  <input [ngClass]="{ 'is-invalid': submitted && f.validateforms.errors }" autofocus type="radio"  
                     name="validateforms" value="Yes" formControlName="validateforms" aria-describedby="image-err-text" aria-label="Yes"
-                    (change)="handleChange($event)" [ngClass]="boxshadowchecked">
-                <label class="image1" for="image6">Yes</label>
-                <input [ngClass]="{ 'is-invalid': submitted && f.validateforms.errors }" autofocus type="radio" id="image7"
+                    (change)="handleChange($event)" [ngClass]="boxshadowchecked"> <span>Yes</span></label>
+                
+                <label class="image1"> <input [ngClass]="{ 'is-invalid': submitted && f.validateforms.errors }" autofocus type="radio"  
                     name="validateforms" value="No" formControlName="validateforms" aria-describedby="image-err-text" aria-label="No"
-                    (change)="handleChange($event)" [ngClass]="noboxshadowchecked">
-                <label class="image1" for="image7">No</label>
+                    (change)="handleChange($event)" [ngClass]="noboxshadowchecked"> <span>No</span></label>
                 <div *ngIf="(f.validateforms.touched || submitted) && f.validateforms.errors" class="invalid-feedback">
                     <div class="error" role="alert" id="image-err-text" *ngIf="f.validateforms.errors.required">Please select yes or no.</div>
                 </div>
@@ -140,14 +140,14 @@
             <label class="accessbility">Would you like to have symbol on form. </label><span class="star">*</span>
              
             <div class="mt-2">
-                <input [ngClass]="{ 'is-invalid': submitted && f.validateforms2.errors }" autofocus type="radio" id="image6"
+              
+                <label class="image1" >  <input [ngClass]="{ 'is-invalid': submitted && f.validateforms2.errors }" autofocus type="radio"  
                     name="validateforms2" value="Yes" formControlName="validateforms2" aria-describedby="image-err-text" aria-label="Yes"
-                    (change)="handleChange1($event)" [ngClass]="boxshadowchecked">
-                <label class="image1" for="image6">Yes</label>
-                <input [ngClass]="{ 'is-invalid': submitted && f.validateforms2.errors }" autofocus type="radio" id="image7"
+                    (change)="handleChange1($event)" [ngClass]="boxshadowchecked"> <span>Yes</span></label>
+              
+                <label class="image1" >  <input [ngClass]="{ 'is-invalid': submitted && f.validateforms2.errors }" autofocus type="radio"  
                     name="validateforms2" value="No" formControlName="validateforms2" aria-describedby="image-err-text" aria-label="No"
-                    (change)="handleChange1($event)" [ngClass]="noboxshadowchecked">
-                <label class="image1" for="image7">No</label>
+                    (change)="handleChange1($event)" [ngClass]="noboxshadowchecked"> <span>No</span></label>
                 <div *ngIf="(f.validateforms2.touched || submitted) && f.validateforms2.errors" class="invalid-feedback">
                     <div class="error" role="alert" id="image-err-text" *ngIf="f.validateforms2.errors.required">Please select yes or no.</div>
                 </div>

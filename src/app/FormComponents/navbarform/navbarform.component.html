@@ -44,12 +44,12 @@
                             <label class="accessbility">Dropdown menu</label>
                             <span class="star">*</span>
                             <div class="form-group pt-1">
-                                <input type="radio" id="imagedrp" name="imagedrp" value="Yes"
-                                    formControlName="imagedrp">
-                                <label class="image1" for="imagedrp">Yes</label>
-                                <input type="radio" id="1imagedrp" name="imagedrp" value="No"
-                                    formControlName="imagedrp">
-                                <label class="image1" for="1imagedrp">No</label>
+                                
+                                <label class="image1" for="imagedrp"><input type="radio" id="imagedrp" name="imagedrp" value="Yes"
+                                    formControlName="imagedrp"> <span>Yes</span></label>
+                               
+                                <label class="image1" for="1imagedrp"> <input type="radio" id="1imagedrp" name="imagedrp" value="No"
+                                    formControlName="imagedrp"> <span>No</span></label>
                             </div>
                             <div *ngIf="submitted && f.imagedrp.errors" class="invalid-feedback">
                                 <div class="error" role="alert" *ngIf="f.imagedrp.errors.required">Dropdown menu is required</div>
@@ -170,12 +170,12 @@
                             <label class="accessbility">Dropdown menu</label>
                             <span class="star">*</span>
                             <div class="form-group pt-1">
-                                <input type="radio" id="imagedrp2" name="imagedrp2" value="Yes"
-                                    formControlName="imagedrp2">
-                                <label class="image1" for="imagedrp2">Yes</label>
-                                <input type="radio" id="2imagedrp" name="imagedrp2" value="No"
-                                    formControlName="imagedrp2">
-                                <label class="image1" for="2imagedrp">No</label>
+                                
+                                <label class="image1" for="imagedrp2"><input type="radio" id="imagedrp2" name="imagedrp2" value="Yes"
+                                    formControlName="imagedrp2"> <span>Yes</span></label>
+                               
+                                <label class="image1" for="2imagedrp"> <input type="radio" id="2imagedrp" name="imagedrp2" value="No"
+                                    formControlName="imagedrp2"> <span>No</span></label>
                             </div>
                             <div *ngIf="submitted && f.imagedrp2.errors" class="invalid-feedback">
                                 <div class="error" role="alert" *ngIf="f.imagedrp2.errors.required">Dropdown menu is required</div>
@@ -296,12 +296,12 @@
                             <label class="accessbility">Dropdown menu</label>
                             <span class="star">*</span>
                             <div class="form-group pt-1">
-                                <input type="radio" id="imagedrp3" name="imagedrp3" value="Yes"
-                                    formControlName="imagedrp3">
-                                <label class="image1" for="imagedrp3">Yes</label>
-                                <input type="radio" id="3imagedrp" name="imagedrp3" value="No"
-                                    formControlName="imagedrp3">
-                                <label class="image1" for="3imagedrp">No</label>
+                                
+                                <label class="image1" for="imagedrp3"><input type="radio" id="imagedrp3" name="imagedrp3" value="Yes"
+                                    formControlName="imagedrp3"> <span>Yes</span></label>
+                                
+                                <label class="image1" for="3imagedrp"><input type="radio" id="3imagedrp" name="imagedrp3" value="No"
+                                    formControlName="imagedrp3"> <span>No</span></label>
                             </div>
                             <div *ngIf="submitted && f.imagedrp3.errors" class="invalid-feedback">
                                 <div class="error" role="alert" *ngIf="f.imagedrp3.errors.required">Dropdown menu is required</div>
@@ -422,12 +422,12 @@
                             <label class="accessbility">Dropdown menu</label>
                             <span class="star">*</span>
                             <div class="form-group pt-1">
-                                <input type="radio" id="imagedrp4" name="imagedrp4" value="Yes"
-                                    formControlName="imagedrp4">
-                                <label class="image1" for="imagedrp4">Yes</label>
-                                <input type="radio" id="4imagedrp" name="imagedrp4" value="No"
-                                    formControlName="imagedrp4">
-                                <label class="image1" for="4imagedrp">No</label>
+                                
+                                <label class="image1" for="imagedrp4"><input type="radio" id="imagedrp4" name="imagedrp4" value="Yes"
+                                    formControlName="imagedrp4"> <span>Yes</span></label>
+                               
+                                <label class="image1" for="4imagedrp"> <input type="radio" id="4imagedrp" name="imagedrp4" value="No"
+                                    formControlName="imagedrp4"> <span>No</span></label>
                             </div>
                             <div *ngIf="submitted && f.imagedrp4.errors" class="invalid-feedback">
                                 <div class="error" role="alert" *ngIf="f.imagedrp4.errors.required">Dropdown menu is required</div>
@@ -531,10 +531,10 @@
             <label class="accessbility">Would you like to add FAQ option</label><span
                 class="star">*</span>
             <div class="form-group">
-                <input type="radio" id="imagefaq" name="faqicon" value="Yes" formControlName="faqicon">
-                <label class="image1" for="imagefaq">Yes</label>
-                <input type="radio" id="imagefaq1" name="faqicon" value="No" formControlName="faqicon">
-                <label class="image1" for="imagefaq1">No</label>
+                
+                <label class="image1" > <input type="radio"  name="faqicon" value="Yes" formControlName="faqicon"> <span>Yes</span></label>
+                
+                <label class="image1"><input type="radio"  name="faqicon" value="No" formControlName="faqicon"> <span>No</span></label>
 
                 <div *ngIf="submitted && f.faqicon.errors" class="invalid-feedback">
                     <div class="error" role="alert" *ngIf="f.faqicon.errors.required">FAQ is required</div>
@@ -546,10 +546,10 @@
             <label class="accessbility">Would you like to add File option</label><span
                 class="star">*</span>
             <div class="form-group">
-                <input type="radio" id="imagefaq" name="fileicon" value="Yes" formControlName="fileicon">
-                <label class="image1" for="imagefaq">Yes</label>
-                <input type="radio" id="imagefaq1" name="fileicon" value="No" formControlName="fileicon">
-                <label class="image1" for="imagefaq1">No</label>
+                
+                <label class="image1" ><input type="radio"  name="fileicon" value="Yes" formControlName="fileicon"> <span>Yes</span></label>
+                
+                <label class="image1"><input type="radio"  name="fileicon" value="No" formControlName="fileicon"> <span>No</span></label>
 
                 <div *ngIf="submitted && f.fileicon.errors" class="invalid-feedback">
                     <div class="error" role="alert" *ngIf="f.fileicon.errors.required">File is required</div>
@@ -560,10 +560,10 @@
             <label class="accessbility">Would you like to add Logout option</label><span
                 class="star">*</span>
             <div class="form-group">
-                <input type="radio" id="imagefaq" name="outicon" value="Yes" formControlName="outicon">
-                <label class="image1" for="imagefaq">Yes</label>
-                <input type="radio" id="imagefaq1" name="outicon" value="No" formControlName="outicon">
-                <label class="image1"  for="imagefaq1">No</label>
+                
+                <label class="image1"><input type="radio" name="outicon" value="Yes" formControlName="outicon"> <span>Yes</span></label>
+                
+                <label class="image1" ><input type="radio"  name="outicon" value="No" formControlName="outicon"> <span>No</span></label>
 
                 <div *ngIf="submitted && f.outicon.errors" class="invalid-feedback">
                     <div class="error" role="alert" *ngIf="f.outicon.errors.required">Logout is required</div>

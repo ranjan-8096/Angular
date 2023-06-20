@@ -27,15 +27,7 @@ input[type="radio"] {
   background-color: white;
   -webkit-appearance: none; /*to disable the default appearance of radio button*/
   -moz-appearance: none;
-}
-.image1{
-  position: relative;
-  top: -17px;
-  left: -37px;
-  font-size: 14px !important;
-  color: black;
-  font-weight: 400 !important;
-}
+} 
 input[type="radio"]:checked{
   background-color: #0070ad;
 }
@@ -56,6 +48,29 @@ input[type="radio"]:checked+label{ /*no need, if you don't disable default appea
         float: right;
         color: white !important;
       }
+}
+
+label.image1 span {
+  position: absolute;
+  z-index: 99;
+  left: 12px;
+  top: 8px;
+}
+.form-group input{
+margin-right: 10px;
+}
+
+.image1{
+position: relative;
+top: 8px;
+cursor: pointer;
+left: 0;
+font-size: 14px !important;
+color: black;
+font-weight: 400 !important;
+} 
+.image1 input[type=radio]:checked + span {
+color: #fff;
 }
 @media only screen and (max-width: 767px) {
   

@@ -15,10 +15,10 @@
     <div class="pt-3">
         <label class="accessbility">Would you like to have Pagination</label><span class="star">*</span>
         <div class="form-group">
-            <input type="radio" id="image1" name="pagination" value="Yes" aria-describedby="image-err-text" aria-label="Yes" formControlName="pagination">
-            <label class="image1" for="image1">Yes</label>
-            <input type="radio" id="image2" name="pagination" value="No" aria-describedby="image-err-text" aria-label="No" formControlName="pagination">
-            <label class="image1" for="image2">No</label>
+            
+            <label class="image1"><input type="radio"  name="pagination" value="Yes" aria-describedby="image-err-text" aria-label="Yes" formControlName="pagination"> <span>Yes</span></label>
+            
+            <label class="image1" ><input type="radio"  name="pagination" value="No" aria-describedby="image-err-text" aria-label="No" formControlName="pagination"> <span>No</span></label>
         </div>
         <div *ngIf="submitted && f.pagination.errors" >
             <div class="error" role="alert" id="image-err-text" *ngIf="f.pagination.errors.required">Choose an option</div>
@@ -28,10 +28,10 @@
     <div class="pt-3">
         <label class="accessbility">Would you like to have Table with strip</label><span class="star">*</span>
         <div class="form-group">
-            <input type="radio" id="image3" name="tablestrip" value="Yes" aria-describedby="image-err-text" aria-label="Yes" formControlName="tablestrip">
-            <label class="image1" for="image3">Yes</label>
-            <input type="radio" id="image4" name="tablestrip" value="No" aria-describedby="image-err-text" aria-label="No" formControlName="tablestrip">
-            <label class="image1" for="image4">No</label>
+            
+            <label class="image1"><input type="radio" name="tablestrip" value="Yes" aria-describedby="image-err-text" aria-label="Yes" formControlName="tablestrip"> <span>Yes</span></label>
+            
+            <label class="image1" ><input type="radio" name="tablestrip" value="No" aria-describedby="image-err-text" aria-label="No" formControlName="tablestrip"> <span>No</span></label>
         </div>
         <div *ngIf="submitted && f.tablestrip.errors">
             <div class="error" role="alert" id="image-err-text" *ngIf="f.tablestrip.errors.required">Choose an option</div>
