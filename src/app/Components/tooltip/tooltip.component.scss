@@ -436,9 +436,9 @@
 // .component{
 //   color: black;
 // }
-// .modal-dialog{
-//   margin-top: 90px;
-// }
+.modal-dialog{
+  margin-top: 90px;
+}
 // .backbutton{
 //   border-radius: 8px;
 //   background: #0070ad !important;
@@ -650,7 +650,7 @@
 }
 
 
-// @media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
 
 //   .tooltip_sec button.btn-secondary {
 //     width: 65%;
@@ -690,8 +690,9 @@
 //   width: 100% !important;
 // }
   .modaldialog-width {
-    margin-top: 60px;
+    margin-top: 50px;
     max-width: 100% !important;
+}
 }
 
 // span.tooltiptext.left{
