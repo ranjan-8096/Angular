@@ -12,7 +12,7 @@
 
 
 
-  <div class="main-page container">
+  <!-- <div class="main-page container">
       <div class="tooltip_sec">
 
         <div class="tooltip_sec"  #tooltiphtml>
@@ -21,9 +21,15 @@
           </div>
           
           
-    </div>
+    </div> -->
 
+    <div #tooltiphtml>
+      <div class="Tooltip_Button onlyfor-{{tooltipdata.direction}}" aria-label="This is the tooltip" tabIndex='0' role="tooltip">{{tooltipdata?.title}}
+          <span class= "tooltiptext-{{tooltipdata.direction}} {{tooltipdata?.class}}">{{tooltipdata?.tooltipname}}</span>
+      </div>
   </div>
+
+
   <ul class="list-inline">
     <li (click)="openhtml()"><button [class]="htmlcontent">HTML</button></li>
     <li (click)="opencss()"><button [class]="csscontent">CSS</button></li>

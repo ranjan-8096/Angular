@@ -65,7 +65,7 @@
                         d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
                       />
                     </svg> -->
-                    <img [src]="arrowicon" class="arrow-first" alt="first"><span class="first">Previous</span>
+                    <button class="nextbutton"><img [src]="arrowicon" class="arrow-first" alt="first"><span class="first">Previous</span></button>
                   </a>
                 </div>
 
@@ -78,15 +78,15 @@
                     (click)="p.setCurrent(page.value)"
                     *ngIf="p.getCurrent() !== page.value"
                   >
-                    <span>{{ page.label }}</span>
+                  <button class="pagebutton"><span>{{ page.label }}</span></button>
                   </a>
                   <div *ngIf="p.getCurrent() === page.value">
-                    <span>{{ page.label }}</span>
+                    <button class="activebutton"><span>{{ page.label }}</span></button>
                   </div>
                 </div>
 
                 <div class="pagination-next" [class.disabled]="p.isLastPage()">
-                  <a  (click)="p.next()">
+                 <a  (click)="p.next()">
                     <!-- <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="24px"
@@ -97,8 +97,8 @@
                       <path d="M0 0h24v24H0z" fill="none" />
                       <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
                     </svg> -->
-                    <img [src]="arrowicon" alt="first"><span class="first">Next</span>
-                  </a>
+                    <button class="nextbutton" (keypress)="!p.isLastPage()"><img [src]="arrowicon" alt="first"><span class="first">Next</span></button>
+                  </a> 
                 </div>
               </pagination-template>
             </div>
