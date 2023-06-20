@@ -350,8 +350,7 @@ export class LoginComponent implements OnInit {
     //     this.registerForm.get("email")?.setValue(""); 
     //   }
     // })
-
-
+ 
     // this.registerForm.get("loginsignupdata.typefields")?.valueChanges.subscribe((result)=>{ 
     //   console.log("Vishnu",result); 
     //   if(result == "Sign Up") {

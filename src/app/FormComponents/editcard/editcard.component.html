@@ -27,10 +27,10 @@
   <div class="pt-3">
         <label class="accessbility">Add Button</label><span class="star">*</span>
         <div class="form-group">
-            <input type="radio" id="image5" name="addbutton" value="Yes" aria-describedby="btn-err-text" aria-label="Yes" aria-checked="Yes" formControlName="addbutton" [ngClass]="addbutonchecked" (change)="handle1change($event)">
-            <label class="image1" for="image5" >Yes</label>
-            <input type="radio" id="image6" name="addbutton" value="No" aria-describedby="btn-err-text" aria-label="No" aria-checked="No" formControlName="addbutton" [ngClass]="noaddbutonchecked" (change)="handle1change($event)">
-            <label class="image1" for="image6">No</label>
+            
+            <label class="image1" for="image5" ><input type="radio" id="image5" name="addbutton" value="Yes" aria-describedby="btn-err-text" aria-label="Yes" aria-checked="Yes" formControlName="addbutton" [ngClass]="addbutonchecked" (change)="handle1change($event)"> <span>Yes</span></label>
+            
+            <label class="image1" for="image6"><input type="radio" id="image6" name="addbutton" value="No" aria-describedby="btn-err-text" aria-label="No" aria-checked="No" formControlName="addbutton" [ngClass]="noaddbutonchecked" (change)="handle1change($event)"> <span>No</span></label>
            
             <div *ngIf="submitted && f.addbutton.errors" class="invalid-feedback">
                 <div class="error" role="alert" id="btn-err-text"  *ngIf="f.addbutton.errors.required">Please select an option</div>
@@ -88,10 +88,10 @@
      <div class="">
         <label class="accessbility">Would you like to Add an image?</label><span class="star">*</span>
         <div class="form-group">
-            <input type="radio" id="image1" name="image" value="Yes" aria-describedby="image-err-text" aria-label="Yes" formControlName="image" >
-            <label class="image1" for="image1">Yes</label>
-            <input type="radio" id="image2" name="image" value="No" aria-describedby="image-err-text" aria-label="No" formControlName="image" >
-            <label class="image1" for="image2">No</label>
+            
+            <label class="image1" for="image1"><input type="radio" id="image1" name="image" value="Yes" aria-describedby="image-err-text" aria-label="Yes" formControlName="image" > <span>Yes</span></label>
+            
+            <label class="image1" for="image2"><input type="radio" id="image2" name="image" value="No" aria-describedby="image-err-text" aria-label="No" formControlName="image" > <span>No</span></label>
         </div>
         <div *ngIf="submitted && f.image.errors" class="invalid-feedback">
             <div class="error"  role="alert" id="image-err-text" *ngIf="f.image.errors.required">Please select an option</div>

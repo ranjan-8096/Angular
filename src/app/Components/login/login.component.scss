@@ -248,6 +248,9 @@
     margin: auto;
     margin-top: 30px;
 } 
+.passworderror p {
+    margin: 5px 0;
+}
 
 @media screen and (min-width:320px) and (max-width:765px) {
     .login-form {

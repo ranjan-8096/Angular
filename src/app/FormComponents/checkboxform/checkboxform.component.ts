@@ -52,15 +52,27 @@ export class CheckboxformComponent implements OnInit{
 
       if(result == 1) {
         this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
+        this.registerForm.get("text2")?.clearValidators();
+        this.registerForm.get("text2")?.setValue("");
+        this.registerForm.get("text3")?.clearValidators();
+        this.registerForm.get("text3")?.setValue("");
+        this.registerForm.get("text4")?.clearValidators();
+        this.registerForm.get("text4")?.setValue("");
       } 
        else if(result == 2) {
         this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
         this.registerForm.get("text2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
+        this.registerForm.get("text3")?.clearValidators();
+        this.registerForm.get("text3")?.setValue("");
+        this.registerForm.get("text4")?.clearValidators();
+        this.registerForm.get("text4")?.setValue("");
       } 
       else if(result == 3) {
         this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
         this.registerForm.get("text2")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
         this.registerForm.get("text3")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);
+        this.registerForm.get("text4")?.clearValidators();
+        this.registerForm.get("text4")?.setValue("");
       } 
       else if(result == 4) {
         this.registerForm.get("text1")?.setValidators([Validators.required,Validators.minLength(3), Validators.maxLength(20)]);

@@ -86,10 +86,10 @@
             <div class="form-group pt-3">
                 <label class="accessbility">Would you like to have Box shadow </label><span class="star">*</span> 
                 <div class="mt-2">
-                    <input type="radio" id="image6" name="imagev" (change)="handleChange($event)" aria-describedby="image-err-text" aria-label="Yes" [ngClass]="boxshadowchecked" value="Yes" formControlName="imagev">
-                    <label class="image1" for="image6">Yes</label>
-                    <input type="radio" id="image7" name="imagev" (change)="handleChange($event)" aria-describedby="image-err-text" aria-label="No" [ngClass]="noboxshadowchecked" value="No" formControlName="imagev">
-                    <label class="image1" for="image7">No</label>
+                    
+                    <label class="image1"  ><input type="radio"  name="imagev" (change)="handleChange($event)" aria-describedby="image-err-text" aria-label="Yes" [ngClass]="boxshadowchecked" value="Yes" formControlName="imagev"> <span>Yes</span></label>
+                    
+                    <label class="image1" ><input type="radio"   name="imagev" (change)="handleChange($event)" aria-describedby="image-err-text" aria-label="No" [ngClass]="noboxshadowchecked" value="No" formControlName="imagev"> <span>No</span></label>
                     
                     
                     <div *ngIf="(f.imagev.touched || submitted) && f.imagev.errors" class="invalid-feedback">
