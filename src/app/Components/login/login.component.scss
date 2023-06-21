@@ -251,7 +251,11 @@
 .passworderror p {
     margin: 5px 0;
 }
-
+.validationtext {
+    text-align: right;
+    width: 100%;
+    font-size: 14px;
+}
 @media screen and (min-width:320px) and (max-width:765px) {
     .login-form {
         width: 100% !important;

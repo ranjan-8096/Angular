@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'; 
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
@@ -17,15 +17,21 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, elRef: ElementRef,
     // ,private spinner: NgxSpinnerService
     private formBuilder: FormBuilder,
-    private toastr:ToastrService
+    private toastr: ToastrService
   ) {
     this.elRef = elRef;
   }
 
 
-
+  capValuevalidation: boolean = false;
+  numValuevalidation: boolean = false;
+  symbolValuevalidation: boolean = false;
+  lenghtValuevalidation: boolean = false;
+  maxlenghtValuevalidation: boolean = false;
+  // spcValuevalidation: boolean = false;
   loginsignupdata: any;
   submitted = false;
+  valisubmitted = "No";
   closeicon = "../assets/images/close.png";
   registerForm: FormGroup;
   htmlcontent = "active";
@@ -314,31 +320,34 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
 
-    
+
 
     if (localStorage.getItem("loginsignupdata")) {
       var data1: any = localStorage.getItem("loginsignupdata");
-      this.loginsignupdata = JSON.parse(data1); 
-     
+      this.loginsignupdata = JSON.parse(data1);
+
     }
     // Validators.pattern(`(?=.*[a-z])(?=.)(?=.*[0-9])(?=.${this.loginsignupdata.validateforms2===`Yes` ? `*[$@$!%*?&])[A-Za-z\d$@$!%*?&]`:null}.{${this.loginsignupdata.minvalue},${this.loginsignupdata.maxvalue}}`)]],
     this.registerForm = this.formBuilder.group(
-      { 
-        username: ['', Validators.required],
-        email: ['', this.loginsignupdata.typefields=="Sign Up"?[Validators.required,  
-          Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]:null],
-        password: ['', [Validators.required,   
-          Validators.pattern(`(?=.*[a-z])${this.loginsignupdata.validateforms==='Yes'? `(?=.*[A-Z])` :``}(?=.*[0-9])${this.loginsignupdata.validateforms2==='Yes'? `(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]` :``}.{${this.loginsignupdata.minvalue},${this.loginsignupdata.maxvalue}}`)]],
-        confirmpassword: ['', this.loginsignupdata.typefields=="Sign Up" ? Validators.required:null]
-      }, 
       {
-        validator: this.loginsignupdata.typefields=="Sign Up"? this.MustMatch("password", "confirmpassword"):null
+        username: ['', Validators.required],
+        email: ['', this.loginsignupdata.typefields == "Sign Up" ? [Validators.required,
+        Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')] : null],
+        password: ['', [
+          // Validators.required,
+          // Validators.pattern(`(?=.*[a-z])`)
+          // Validators.pattern(`(?=.*[a-z])${this.loginsignupdata.validateforms === 'Yes' ? `(?=.*[A-Z])` : ``}(?=.*[0-9])${this.loginsignupdata.validateforms2 === 'Yes' ? `(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]` : ``}.{${this.loginsignupdata.minvalue},${this.loginsignupdata.maxvalue}}`)
+        ]],
+        confirmpassword: ['', this.loginsignupdata.typefields == "Sign Up" ? Validators.required : null]
+      },
+      {
+        validator: this.loginsignupdata.typefields == "Sign Up" ? this.MustMatch("password", "confirmpassword") : null
       }
     );
-    
-   
+
+
     // this.registerForm.get("loginsignupdata.typefields")?.valueChanges.subscribe((result)=>{ 
-      
+
     //   console.log("Vishnu",result); 
 
     //   if(result == "Sign Up") {
@@ -350,7 +359,8 @@ export class LoginComponent implements OnInit {
     //     this.registerForm.get("email")?.setValue(""); 
     //   }
     // })
- 
+
+
     // this.registerForm.get("loginsignupdata.typefields")?.valueChanges.subscribe((result)=>{ 
     //   console.log("Vishnu",result); 
     //   if(result == "Sign Up") {
@@ -412,32 +422,97 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/modal']);
   }
 
-  MustMatch(controlName:string, matchingControlName:string){
-    return (formGroup:FormGroup)=>{
-      const control=formGroup.controls[controlName];
-      const matchingControl=formGroup.controls[matchingControlName];
-      if(matchingControl.errors && !matchingControl.errors.MustMatch){
+  MustMatch(controlName: string, matchingControlName: string) {
+    return (formGroup: FormGroup) => {
+      const control = formGroup.controls[controlName];
+      const matchingControl = formGroup.controls[matchingControlName];
+      if (matchingControl.errors && !matchingControl.errors.MustMatch) {
         return
       }
-      if(control.value  !==matchingControl.value){
-        matchingControl.setErrors({MustMatch:true})
+      if (control.value !== matchingControl.value) {
+        matchingControl.setErrors({ MustMatch: true })
       }
-      else{
+      else {
         matchingControl.setErrors(null);
       }
     }
   }
 
-  onSubmit() {
-    this.submitted = true;
-    console.log("Vishnu", this.f);
-    if (this.registerForm.invalid) {
-      // alert("Error");
-      return true;
-    } else {
-      this.toastr.success("Save Successfully");
-      // alert("Successfully");
 
-    }
+
+
+
+
+  onSubmit() {
+
+    this.submitted = true;
+    console.log("Vishnu", this.f.password);
+     
+      const passwordvalue = this.registerForm.value['password'];
+
+      const mindata = this.loginsignupdata.minvalue;
+      const maxdata = this.loginsignupdata.maxvalue;
+      const isContainsUppercase = /^(?=.*[A-Z]).*$/;
+      const isContainsNumber = /^(?=.*[0-9]).*$/;
+      const isContainsSymbol = /^(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).*$/;
+
+
+      if (!isContainsNumber.test(passwordvalue)) {
+        this.valisubmitted = "No";
+        this.numValuevalidation = true;
+
+      } else {
+        this.numValuevalidation = false;
+      }
+      if (!isContainsUppercase.test(passwordvalue)) {
+        this.valisubmitted = "No";
+        this.capValuevalidation = true;
+
+      } else {
+        this.capValuevalidation = false;
+      }
+      if (!isContainsSymbol.test(passwordvalue)) {
+        this.valisubmitted = "No";
+        this.symbolValuevalidation = true;
+
+      } else {
+        this.symbolValuevalidation = false;
+
+      }
+      if (passwordvalue && passwordvalue.length < mindata) {
+        this.valisubmitted = "No";
+        this.lenghtValuevalidation = true;
+
+      } else {
+        this.lenghtValuevalidation = false;
+
+      }
+
+      if (passwordvalue && passwordvalue.length > maxdata) {
+        this.valisubmitted = "No";
+        this.maxlenghtValuevalidation = true;
+
+
+      } else {
+        this.maxlenghtValuevalidation = false;
+
+      }
+
+      if (this.registerForm.invalid) {
+        this.valisubmitted = "No";
+        return true;
+
+      } else {
+        this.valisubmitted = "Yes";
+      }
+
+    
+
+   if(isContainsNumber.test(passwordvalue) || isContainsUppercase.test(passwordvalue) || isContainsSymbol.test(passwordvalue) ||  passwordvalue && passwordvalue.length < mindata || passwordvalue && passwordvalue.length > maxdata){
+    // alert("Successfully");
+    this.toastr.success("Save Successfully");
+   }
+
+
   }
 }

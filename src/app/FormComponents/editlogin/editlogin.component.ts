@@ -146,6 +146,7 @@ export class EditloginComponent {
     if( parseInt(minValues) > parseInt(maxValues)) {
       this.lengthvalidation = true;
     } else{
+      this.lengthvalidation = false;
     if(this.registerForm.invalid) {
       return true;
     } else { 

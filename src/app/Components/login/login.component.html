@@ -23,12 +23,12 @@
                     <label [ngStyle]="{'color':loginsignupdata.color}">{{loginsignupdata.username}}</label>
 
                     <input type="username" placeholder="username"
-                        [ngStyle]="{'border':'1px solid' + loginsignupdata.color}" 
-                        formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+                        [ngStyle]="{'border':'1px solid' + loginsignupdata.color}" formControlName="username"
+                        [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
 
                     <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
                         <div class="validationcolor" *ngIf="f.username.errors.required">Username is required</div>
-                    </div> 
+                    </div>
                 </div>
 
                 <div class="input-group" *ngIf="loginsignupdata.typefields=='Sign Up'">
@@ -38,7 +38,8 @@
                     <!-- <i class="fa-solid fa-user"></i> -->
                     <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                         <div class="validationcolor" *ngIf="f.email.errors.required">Email is required</div>
-                        <div class="validationcolor" *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                        <div class="validationcolor" *ngIf="f.email.errors.email">Email must be a valid email address
+                        </div>
                         <div class="validationcolor" *ngIf="f.email.errors.pattern">Email must be a valid pattern</div>
                     </div>
                 </div>
@@ -48,16 +49,38 @@
                         [ngStyle]="{'border':'1px solid' + loginsignupdata.color}" formControlName="password"
                         [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
                     <!-- <i class="fa-solid fa-lock"></i> -->
-                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    
+                    <!-- <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                         <div class="validationcolor" *ngIf="f.password.errors.required">Password is required</div>
-                        <div class="validationcolor" *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                        <div class="validationcolor" *ngIf="f.password.errors.minlength">Password must be at least 6
+                            characters</div>
                         <div class="validationcolor passworderror" *ngIf="f.password.errors.pattern"> 
-                            <p *ngIf="loginsignupdata.validateforms=='Yes'">Password should contain a capital letter.</p>
+                            <p *ngIf="loginsignupdata.validateforms=='Yes'" >Password should contain a capital letter.</p>
                             <p *ngIf="loginsignupdata.validateforms2=='Yes'">Password should contain a symbol.</p> 
                             <p>Password should contain a digit.</p>
                             <p>Password must have a value greater than {{loginsignupdata.minvalue}} and less than  {{loginsignupdata.maxvalue}}.</p>
+                    </div> 
+                    </div> -->
+                    <div class="validationtext">
+                        <!-- <div class="validationcolor passworderror" *ngIf="spcValuevalidation"> 
+                            <p>Password is required.</p>
+                        </div> -->
+                        <div class="validationcolor passworderror" *ngIf="loginsignupdata.validateforms=='Yes' && capValuevalidation"> 
+                            <p>Password should contain a capital letter.</p>
+                        </div>
+                        <div class="validationcolor passworderror" *ngIf="numValuevalidation"> 
+                            <p>Password should contain a digit.</p>
+                        </div>
+                        <div class="validationcolor passworderror" *ngIf="loginsignupdata.validateforms2=='Yes' && symbolValuevalidation"> 
+                            <p>Password should contain a symbol.</p>
+                        </div>
+                        <div class="validationcolor passworderror" *ngIf="lenghtValuevalidation"> 
+                            <p>Password must have a value greater than {{loginsignupdata.minvalue}}.</p>
+                        </div>
+                        <div class="validationcolor passworderror" *ngIf="maxlenghtValuevalidation"> 
+                            <p>Password must have a value less than  {{loginsignupdata.maxvalue}}.</p>
+                        </div>
                     </div>
-                    </div>  
                 </div>
 
                 <div class="input-group" *ngIf="loginsignupdata.typefields=='Sign Up'">
@@ -67,8 +90,10 @@
                         [ngClass]="{ 'is-invalid': submitted && f.confirmpassword.errors }">
                     <!-- <i class="fa-solid fa-lock"></i> -->
                     <div *ngIf="submitted && f.confirmpassword.errors" class="invalid-feedback">
-                        <div class="validationcolor" *ngIf="f.confirmpassword.errors.required">Confirm Password is required</div>
-                        <div class="validationcolor" *ngIf="f.confirmpassword.errors.MustMatch">Confirm Password must be Match.</div>
+                        <div class="validationcolor" *ngIf="f.confirmpassword.errors.required">Confirm Password is
+                            required</div>
+                        <div class="validationcolor" *ngIf="f.confirmpassword.errors.MustMatch">Confirm Password must be
+                            Match.</div>
                     </div>
                 </div>
 
@@ -111,7 +136,7 @@
             <button ngxClipboard [cbContent]="CSS" (click)="copy()"><i class="fa fa-copy copyicon"></i>{{Copy}}</button>
         </div>
         <pre><code [highlight]="CSS">{{CSS}}</code></pre>
-    </div> 
+    </div>
 
 </div>
 

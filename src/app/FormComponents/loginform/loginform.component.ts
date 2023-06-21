@@ -90,6 +90,7 @@ export class LoginformComponent implements OnInit{
     if( parseInt(minValues) > parseInt(maxValues)) {
       this.lengthvalidation = true;
     } else{
+      this.lengthvalidation = false;
       if(this.registerForm.invalid) {
         return true;
       } else { 
