@@ -99,7 +99,7 @@ export class SelectComponent implements OnInit {
           this.dropdownList =  this.selectdata.selectordata;
 
          setTimeout(() => {
-          this.dropdownSettings.singleSelection = responsive.selector == "multiselect" ? false : true;
+          this.selectdata.showmultiselct = this.selectdata.selector == "multiselect" ? true : false;
         }, 0);
         // this.selectloaddata();
          if(this.selectdata.theme == "dark" || this.selectdata.theme == "blue" || this.selectdata.theme == "purple"){

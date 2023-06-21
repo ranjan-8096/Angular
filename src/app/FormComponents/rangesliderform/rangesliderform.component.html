@@ -38,7 +38,7 @@
                     <div class="error" role="alert" aria-atomic="true" *ngIf="f.maxvalue.errors.maxlength">maxlength 20 for title</div>
                     <div class="error" role="alert" aria-atomic="true" *ngIf="f.maxvalue.errors.min">max value more than 1 value</div>
                   </div>
-                  <div class="error" role="alert" aria-atomic="true" *ngIf="registerForm.errors && registerForm.errors.greater">max value more than 1 value</div>
+                  <div class="error" role="alert" aria-atomic="true" *ngIf="registerForm.errors && registerForm.errors.greater">max value should be  more than min value</div>
 
                   <!-- <div class="error" role="alert" aria-atomic="true" *ngIf="lengthvalidation">max value should be greater than min value</div> -->
 
